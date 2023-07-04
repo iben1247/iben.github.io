@@ -2988,3 +2988,27 @@
 		
 
 	}
+	
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+
+	/*★*/
+	ul.toggle > li {
+		list-style: none;
+	}
+
+	/*★*/
+	.toggle {
+		padding: 5px 5px 5px 5px;
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	/*★*/
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	/*★*/
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
