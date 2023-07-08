@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+	<title>分析和解决问题（一些思考）</title>
+
+
+
+  
+	<meta charset='utf-8'>
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方1/2 展示-->
+	<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+	
+	<!--原页面中，有一大段内部样式为markdown笔记润色，这里把它改为外部样式。-->
+	<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/markdown_polish.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <article>
+	
+	<!--
+		<a href="../../index.html" target="_blank">Ben</a>
+	-->
+      <!-- start -->
+	  <div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="分析和解决问题一些思考">分析和解决问题（一些思考）</h1>
+
+<blockquote>
+  <p>Edited by <strong><a href="https://itaoo.github.io/" target="_blank">Ben</a></strong>. <br>
+  <em>Get the knowledge flowing and circulating! :)</em></p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p>以下内容均摘录自<code>非吃Book<a href="#fn:bookkyyf" id="fnref:bookkyyf" title="See footnote" class="footnote">1</a></code>.  <br>
+  不同的是：内容中穿插了自己的一些<code>感受</code> | <code>注解</code>。</p>
+  
+  <p><u><strong>特别强调</strong>：这部分内容是Ben人在学习过程中的笔记，偏向于计算机相关方向，但是知识是通用的，<strong>大家可以根据需要采撷(cǎi xié)</strong>。</u></p>
+  
+  <p>持续关注，持续成长。欢迎志同道合的小伙伴共同讨论。</p>
+</blockquote>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#分析和解决问题一些思考">分析和解决问题（一些思考）</a><ul>
+<li><a href="#1-性能分析与优化算法">1 性能分析与优化算法</a></li>
+<li><a href="#2-具体数学工具">2 具体数学工具</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="1-性能分析与优化算法">1 性能分析与优化算法</h2>
+
+<blockquote>
+  <p>原文摘录 <br>
+  <em><u>本节我们将介绍分析问题所通常采用的数学方法</u>。我们主要针对通信学科，尤其是网络通信方向。… 我们所要解决的科研问题通常可以分为两类：<code>性能分析</code>与<code>优化算法</code>。</em></p>
+</blockquote>
+
+<ul><li><p><code>性能分析</code>：主要针对通信系统的需求来设计通信协议，然后采用数学建模和分析的方法来建立系统参数与系统性能之间的关系，从而优化系统参数以获取最佳性能。</p></li>
+<li><p><code>优化算法</code>：根据通信用户的服务需求，直接将系统设计建模为优化问题。由于优化算法通常有固定的算法，因此根据此方法设计出的通信协议将融合优化算法的固定算法行为。</p></li>
+</ul>
+
+<p><strong>比较</strong></p>
+
+<blockquote>
+  <ul><li><p>通过<code>性能分析</code>来设计系统，可以获得系统性能的准确数学表达式，因此可以较为精确地了解参数对性能的影响，从而指导现实世界中的部署。</p></li>
+  <li><p>采用<code>优化算法</code>，如果可以找到问题的最优解，就可以获得最优的系统性能，但是无法获取这个性能的具体数学表达式。优化算法给出的协议，只是以一种数值计算的方法来逼近这个最优的性能。</p></li>
+  </ul>
+</blockquote>
+
+<p>读到这里我想说2点：<u style="color:brown">❶不一定非得是通信方向才能借鉴这部分内容，事实上，其他方向也可以考虑，这样不仅拓展自己的知识面，或许在交叉融合方面还能产生一些有趣的火花也不一定呢。❷现在看到这段陈述，瞬间感觉自己本科的学习，还是没有做到“学以致用”，当时学了计算方法，也学了数值分析，但是现在一点也记不得了。不过看到了这段陈述，让我明白，wa·o，原来，性能分析可以获得准确的数学表达式，而优化算法只能通过数值计算的方法去逼近最优的性能，无法获取这个性能的具体数学表达式。</u>我学废了！:P</p>
+
+<p><strong>结合</strong></p>
+
+<blockquote>
+  <p>原文摘录</p>
+  
+  <p><em>这两类问题可以在设计中<code>结合</code>。例如，我们根据用户的通信需求和实际部署的环境， 设计简单、实际并直击问题根本的通信方案和协议。接着在定义的通信系统框架下进行性能分析，来确定关键参数对系统的影响。然后通过优化算法，获取最后的参数选取。最后，将系统的性能用数学推演展示出来。这种课题的解决方案，我认为是最佳的或者最优贡献的论文。</em> <br>
+  <em>下面介绍通信领域中常用的几种数学方法。这些数学方法都有自己的特性，可能分别使用上述两类方法（性能分析 | 优化算法）中的一种。<u>即使看似类似，并且主要用于解决同样类别问题的数学方法，也通常存在着根本性的差别，适用于分析不同状态下的性能而无法相互取代</u>。<u style="color:brown">了解这些数学方法的性质是我们搞科研的基础。这样，<strong>一旦遇到了一个科研问题，我们就可以先从大方向上确定所要采用的数学方法，然后再深入学习和思考如何采用该方法，按照自己的设想完成这个课题</strong>。</u></em></p>
+</blockquote>
+
+<hr>
+
+<p><strong>性能分析工具</strong></p>
+
+<ul><li><p><code>性能分析</code>主要采用随机建模的方法，使用概率论、排队论、马尔科夫链等数学工具。了解这些工具是从事通信领域研究的基础。</p></li>
+<li><p>上述分析方法通常用于分析随机系统，也就是分析通信过程中的随机事件，如用户请求、通信噪声与不稳定因素造成的随机系统性能。其中，随机过程主要研究随机变量的建模和分析，它是排队论、马尔科夫链等高级工具的基础。</p></li>
+</ul>
+
+<p><strong>数学规划</strong></p>
+
+<ul><li><p><code>数学规划或优化</code>有很多不同的类别，如凸函数优化、整数优化等。不同的优化方法，主要是通过所要优化的系统的不同特性来采用的。比如系统是否是个非常动态的系统，是否存在随机变化的系统参数量，是否有集中的控制等。</p></li>
+</ul>
+
+<h2 id="2-具体数学工具">2 具体数学工具</h2>
+
+<blockquote>
+  <p><strong>写在前面</strong></p>
+  
+  <p>自，开始计算机相关学习以来，我一直觉得，数学和英语是两个必不可少的能力。 <br>
+  慢慢地，学习的过程中我形成了一种认知，即英语、计算机都是一种语言。 <br>
+  现在<time style="color:brown">2023.07.08 10:51</time>，我觉得，数学、英语、计算机是学科没错，但是更是一种工具。</p>
+  
+  <ul><li><p>数学是工具；</p></li>
+  <li><p>英语是语言，也是工具；</p>
+  
+  <blockquote>
+    <p>关于英语，我的部分目标可罗列如下</p>
+    
+    <ul>
+    <li><p>用英语无障碍吸收咨询！（书籍，网页）</p></li>
+    <li><p>用英语无障碍表达信息！（书面）</p></li></ul>
+  </blockquote></li>
+  <li><p>计算机是语言，是和计算机进行沟通的语言，如果想要计算机更好地协助我们，我们需要学会和计算机沟通。</p></li>
+  </ul>
+</blockquote>
+
+<hr>
+
+<p><code>学科</code> | <code>名词</code> | <code>工具</code> | <code>算法</code>（按照Section 2.3部分出现的内容依次罗列）</p>
+
+<ul><li><p>概率论</p></li>
+<li><p>排队论</p></li>
+<li><p>马尔科夫链</p></li>
+<li><p>再生过程</p></li>
+<li><p>随机系统</p></li>
+<li><p>随机事件</p></li>
+<li><p>随机变量</p></li>
+<li><p>数学规划或优化</p></li>
+<li><p>凸函数优化</p></li>
+<li><p>整数优化</p></li>
+<li><p>Markov Decision Process(MDP)</p></li>
+<li><p>Network Utility Maximization(NUM)</p></li>
+<li><p>动态优化 | 静态优化</p></li>
+<li><p>Steepest Descent</p></li>
+<li><p>Curse of Dimension(维度诅咒)</p></li>
+<li><p>Game Theory </p></li>
+<li><p>Convex Optimization</p></li>
+<li><p>理性的自私（Rational Selfish）</p></li>
+<li><p>纳什均衡（Nash Equilibrium）</p></li>
+<li><p>Price of Anarchy</p></li>
+<li><p>Stochastic Optimization</p></li>
+<li><p>Non-Convex Optimization</p></li>
+<li><p>Worst Case Analysis</p></li>
+<li><p>稳态和瞬态分析</p></li>
+<li><p>Network Calculus</p></li>
+<li><p>微分方程</p></li>
+<li><p>随机微分方程（Stochastic Differential Equation）</p></li>
+<li><p>瞬态马尔科夫分析</p></li>
+<li><p>动态分析 | 静态分析 | 瞬态分析</p></li>
+<li><p>离散系统</p></li>
+<li><p>连续系统</p></li>
+</ul>
+
+<p>我的一点感受：这部分的陈述过程，姑且把上述罗列的称为知识点罢。<u style="color:brown">可以看出，作者对上述知识点的了解达到了游刃有余的地步。但是从我的角度看，主要启发我的有如下几个方面：❶ 作者对这些知识点的了解绝非一朝一夕的事儿，肯定是日积月累形成的，更有甚者，应该是在一篇一篇的paper研究中习得的；❷ 数学知识的重要性不言而喻，如果我想要达到这样的效果，首先要开始着手学习和积累，日常积累。多动手实践才能对这些工具的内涵理解的更深入。其次，要结合实际的问题进行应用，不用很快就会忘记。所谓，用进废退。</u></p>
+
+<hr>
+
+<blockquote>
+  <p><strong>接下来我的行动</strong></p>
+  
+  <p>至此，本书中关于对科研的思考和如何科研的主体内容我做了主要的摘录和思考。下面我的行动将从如下几点开始：</p>
+  
+  <ol><li rel="1"><p>践行：行动是学习的第一步；</p></li>
+  <li rel="2"><p>不时吸收其他相关指导方法，形成自己的科研方法；</p></li>
+  <li rel="3"><p>积累数学工具。</p></li>
+  </ol>
+  
+  <p><strong>最后谈谈自己对<code>学习数学工具</code>的一些思考</strong> <br>
+  通过分析和经验，我感觉要想学好一个数学工具需要弄清楚如下<code>4</code>个问题。 <br>
+  <code>❶</code> 概念是什么？找一个生活实例或者简单的数学问题加深对概念的理解； <br>
+  <code>❷</code> 怎样用的？找到这个工具的适用条件、场景以及可以处理的数据对象； <br>
+  <code>❸</code> 代码怎样实现？用一个Demo对这个工具进行代码实现，重点关注输入输出； <br>
+  <code>❹</code> 这个工具的来龙去脉图可以绘制成怎样的形式？分析一下这个数学工具的相关知识点，来龙与去脉。这样以后可以随着自己积累的深入，慢慢地把知识编织成网，达到触类旁通的效果。</p>
+</blockquote>
+
+<hr>
+
+<p>🎈 <em>持续关注，持续成长。欢迎志同道合的小伙伴共同讨论。</em></p><div class="footnotes"><hr><ol><li id="fn:bookkyyf">栾浩, 樊凯, 项阳. <strong>科研有方：科研需要“想好”再“做”</strong>[M]. 西安: 西安电子科技大学出版社, 2014.5: 1-128. <a href="#fnref:bookkyyf" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div>
+
+<br />
+	  
+      <!-- end -->
+      <a href="#preview-contents" id="scroll-up" style="display: block;">
+        <i class="material-icons md-20 md-middle"></i>
+      </a>
+    </article>
+</div>
+
+</body></html>
