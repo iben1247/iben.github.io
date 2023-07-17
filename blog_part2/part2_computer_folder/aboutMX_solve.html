@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>马克飞象本地缓存在哪里？</title>
+
+
+
+  
+	<meta charset='utf-8'>
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方1/2 展示-->
+	<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+	
+	<!--原页面中，有一大段内部样式为markdown笔记润色，这里把它改为外部样式。-->
+	<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/markdown_polish.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <article>
+	
+	<!--
+		<a href="../../index.html" target="_blank">Ben</a>
+	-->
+      <!-- start -->
+	  
+	  <div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="记一次马克飞象死机之后的操作">记一次马克飞象死机之后的操作</h1>
+
+<blockquote>
+  <p>Edited by <strong><a href="https://itaoo.github.io/" target="_blank">Ben</a></strong>. <br>
+  Turn to <em><a href="https://itaoo.github.io/blog_part2/part2_computer.html" target="_blank">ContentPage</a></em></p>
+  
+  <p><i style="color:brown">Get the knowledge flowing and circulating!  <strong>:)</strong> </i></p>
+</blockquote>
+
+<p>今天上午兴高采烈在咖啡厅边喝咖啡边写文档，临近结束~  卡！ </p>
+
+<hr>
+
+<p><strong>马克飞象死机了！</strong></p>
+
+<hr>
+
+<p>（以我的经验和我的观察开始疯狂排查具体的问题）我以为是我的电脑没电了，打开任务管理器发现，马克飞象的进程（<code>进程名：Electron</code>）占用内存很大，而且电源使用情况非常高。所以我猜测是因为此时的电池没法支撑马克飞象的消耗了。所以我就回家开始充电。（到家后）但是心里的毛毛躁躁的感觉还是让我一插上电源就开机查看了一下，最终还是没法打开，<strong>具体的症状就是</strong>：<mark style="background:#cebbfc;">卡在马克飞象的主界面。没有任何的反应，没有任何的显示，左右两屏全为空，点击任何地方都没反应</mark>。鼠标放在任务栏的图标上，显示的还是我在咖啡厅编辑的那个文档的名字。</p>
+
+<p>然后我又开始大量尝试。</p>
+
+<blockquote>
+  <p>主要进行了4种尝试：</p>
+  
+  <ol><li rel="1"><p>重启电脑，反复打开软件；</p></li>
+  <li rel="2"><p>关机，给电脑充完电，再打开软件；</p></li>
+  <li rel="3"><p>开机，打开软件一直等，期待卡住的它能够恢复过来；</p></li>
+  <li rel="4"><p>卸载当前软件（此时发现，马克飞象这个软件根本没有卸载选项，安装包里也没有uninstall的可执行文件，只能直接删除安装包），然后又重新安装一下这个软件；</p></li>
+  </ol>
+</blockquote>
+
+<p>以上的顺序全部尝试过后，还是不得行！</p>
+
+<p>索性，我开始尝试用另一款软件，typora，但是下载之后，发现收费太贵$14.99，合计RMB100+。舍不得啊~</p>
+
+<p><u><strong>遂，又回过头来找解决方法！</strong></u></p>
+
+<p>【猜想】这次，我操作之前进行了仔细地猜想：我每次写的内容，都应该保存在了本地。</p>
+
+<p>【实践】猜想完之后，我又到软件的安装文件里，查看每个文件夹和子文件的内容。通过它们的命名或者尝试打开文件的内容，来判断这些文件是不是本地缓存的文件。</p>
+
+<p><img src="..\..\images\typora-user-images\image-20230716170914782.png" alt="image-20230716170914782" title=""></p>
+
+<p>好，我然后又到搜索引擎去搜索，马克飞象本地缓存！<i style="color:red">没答案。</i></p>
+
+<p>然后我又一次想放弃了。但是回想起来，还是不甘心，我还有很多草稿啊！无奈还是去搜了一下马克飞象的卸载方法。<i style="color:red">没答案。</i></p>
+
+<p>但是这时候我心里有了一个感觉~  我刚刚删除的时候，好像没有清理注册表。好吧~ 这次来清理注册表（在注册表里搜关键词：maxiang，哎嗨，果然，我发现了除了软件的安装位置，还有一个位置是windows的隐藏文件夹，专用于存放一些软件的附属文件，索性我就顺着注册表中的地址，在资源管理器的地址栏里直接输入地址，进入了文件夹，从头开始找。</p>
+
+<p>果然，我找到了好几个非常相似的文件，最终锁定了一个名字叫做：Marxico的文件夹。为什么是这个名字？<mark style="background:#f8e272;">因为我之前用马克飞象做过个人博文主页，里面用到的.css文件，就是这个名字。）</mark></p>
+
+<p>好，我开始找到这个文件夹，然后开始去探索这个文件夹里所有的内容，但是也没有明显的.md或者.txt为后缀的、看上去像是缓存文件的东西啊~  无奈我就把所有可能的文件都打开看看，具体的依据主要是用文件的大小和日期来判断，比如我今天刚刚编辑过，最后一次编辑是上午11点20分左右，大概猜测我的缓存文件有3MB大小左右，但是反复找，又没啥感觉，确实找到了一个文件是上午11点20分左右的更新时间，但是这个文件无法打开。所，又一次感觉到了失望！</p>
+
+<blockquote>
+  <p>这个时候，我的做法是这样的。</p>
+  
+  <ol><li rel="1"><p>首先，把安装的文件夹和这个附属文件夹，都备份出来（拷贝到一个新的地方）；</p></li>
+  <li rel="2"><p>然后，检索注册表，清理所有能删除的痕迹；</p></li>
+  <li rel="3"><p>最后，重新安装马克飞象这个软件。打开，新建一个文件。</p></li>
+  </ol>
+</blockquote>
+
+<p>此时，我开始观察，我观察安装文件夹的大小变化和新建了一个新的.md文件之后，附属文件夹的变化。</p>
+
+<p><strong>果然！被我找到了。</strong></p>
+
+<p>安装文件夹没有什么变化。但是，当，我只要新建一个.md文件时，附属文件夹就会多出几个文件夹。</p>
+
+
+
+<p><img src="..\..\images\typora-user-images\image-20230716171750016.png" alt="image-20230716171750016" title=""></p>
+
+<p>好，我现在尝试把备份出来的Marxico中的文件夹Local Storage，复制进去替换掉刚刚生成的。打开马克飞象，果然，列表中出现了我的文档！开心！</p>
+
+<p><u>但是，我点开对应的文档名称，提示无法打开。我猜，应该是只复制了文件列表，内容并没有复制。</u></p>
+
+<p>这下，我把Marxico文件夹全部删除，重新一次性复制Local Storage, IndexedDB这两个文件夹，好的，可以看到文件内容了，但是我点了一下今天上午编辑的内容，突然又卡机了！</p>
+
+<p>这个时候，我大概知道，原来，是我上午编辑的那个单独的文档有问题。不能点击那个文档了~ 好，我这下又删除了新的Marxico文件夹，我先复制Local Storage, 然后再复制IndexedDB，最后点开了一个其他文档。</p>
+
+<p><strong>搞定！终于搞定了！</strong></p>
+
+<p>全网唯一一个关于马克飞象的本地缓存的博文！产生了！</p>
+
+<p>时间：2023.07.16</p>
+
+
+
+<h2 id="总结">总结</h2>
+
+<ol><li rel="1"><p><strong>马克飞象分为两个文件夹，一个是安装文件夹，一个是本地缓存文件夹；</strong></p>
+
+<ul>
+<li><p>C:\Program Files (x86)\Maxiang</p></li>
+<li><p>C:\Users\username\AppData\Roaming\Marxico</p></li></ul></li>
+<li rel="2"><p><strong>马克飞象本地安装软件，安装完之后，程序管理中看不到卸载按钮。只能通过下面两步卸载；</strong></p>
+
+<ul>
+<li><p>删除安装文件夹；</p></li>
+<li><p>打开注册表，全表搜索“maxiang”，然后一个一个地删除对应的条目；</p></li></ul></li>
+<li rel="3"><p><strong>本地缓存的文件存放在文件夹Marxico中，具体的文件夹名为</strong></p>
+
+<ul>
+<li><p>Local Storage</p></li>
+<li><p>IndexedDB</p></li></ul></li>
+<li rel="4"><p><strong>要想直接迁移，具体做法是</strong></p>
+
+<ol>
+<li rel="1"><p>先在另一台机器上，安装马克飞象软件；</p></li>
+<li rel="2"><p>然后打开马克飞象附属文件夹所在位置（Marxico文件夹所在位置）</p></li>
+<li rel="3"><p>最后，把旧的（就是你备份的文件夹：Local Storage &amp; IndexedDB）复制到新安装的马克飞象的Marxico文件夹内部。</p></li></ol></li>
+</ol></div>
+
+
+
+
+
+
+      <!-- end -->
+      <a href="#preview-contents" id="scroll-up" style="display: block;">
+        <i class="material-icons md-20 md-middle"></i>
+      </a>
+    </article>
+</div>
+
+</body></html>
