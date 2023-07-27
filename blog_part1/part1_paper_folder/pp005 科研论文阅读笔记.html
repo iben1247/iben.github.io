@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>pp005 科研论文阅读笔记</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='pp005-科研论文阅读笔记'><span>pp005 科研论文阅读笔记</span></h1><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<em><span>Get the knowledge flowing and circulating! :)</span></em></p></blockquote><p>&nbsp;</p><h3>记录指导</h3>要记录读过之后的感觉。<hr /><ol start='' ><li><p><span>有些概念就不要记录了~ 因为你不会第二次再看，而且文章中只是浅浅提了一下！</span></p></li><li><p><span>记录20%，不要记录太多，记录关键的20%</span></p></li><li><p><span>抓住关键信息</span></p></li><li><p><strong style="color:red"><span>※</span></strong><span>重要的是要多思考，多检索，有效学习，汲取不会的知识，而不是在会的知识上一直徘徊。</span></p></li><li><p><span>发现一个有趣的现象</span></p><ul><li><p><span>每篇文章都有自己的主要参考文献和次要参考文献。</span></p><ul><li><p><span>主要参考文献是重要技能来源；</span></p></li><li><p><span>次要参考文献是知识普及来源！</span></p></li></ul></li></ul><p><span>结论：要找到每篇文章的</span><strong><span>主要参考文献！</span></strong></p></li></ol><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n258"><a class="md-toc-inner" href="#pp005-科研论文阅读笔记">pp005 科研论文阅读笔记</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n291"><a class="md-toc-inner" href="#简单评价一下">简单评价一下</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n301"><a class="md-toc-inner" href="#工作主要做了什么">工作主要做了什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n312"><a class="md-toc-inner" href="#两句话总结">两句话总结</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n319"><a class="md-toc-inner" href="#不懂的地方">不懂的地方</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n331"><a class="md-toc-inner" href="#intro">Intro</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n346"><a class="md-toc-inner" href="#文章技术总结主要参考文献）">文章技术总结（主要参考文献）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n362"><a class="md-toc-inner" href="#contribution">Contribution</a></span></p></div><hr /><p><strong style="color:red"><span>※</span></strong><span> Today‘s paper</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></p><p><span>keywords:  </span><code>Activity Simulation</code><span>, </span><code>Spatiotemporal dynamics</code><span>, </span><code>GAIL</code></p><p>&nbsp;</p><h2 id='简单评价一下'><span>简单评价一下</span></h2><ol start='' ><li><p><span>文章的文字有点难读~  用了比较多的生僻词吧（或许是我的水平还不太够！）</span></p></li><li><p><span>如果有做COVID-19相关的研究，这篇文章里很多词汇还是可以值得参考的！</span></p></li><li><p><span>下次一定要，先通读一下abstract、introduction、conclusion之后再决定要不要继续读这篇文章！</span>
+<span>今天这篇文章总提不起劲！</span></p></li></ol><p>&nbsp;</p><p>&nbsp;</p><h2 id='工作主要做了什么'><span>工作主要做了什么？</span></h2><p><span>个人轨迹数据不好收集！本文提出来一个框架来</span><u><span>生成人工活动轨迹</span></u><span>。这个轨迹能够保真 &amp; 实用。(用到的技术点：based on generative adversarial imitation learning.）</span></p><p><span>为了处理内在的不规则活动采样点的随机和稀疏性，本文捕捉了藏在轨迹背后的spatio-temporal dynamics.（用到的技术点：by leveraging neural differential equations.）</span></p><p>&nbsp;</p><p><span>Abstract中，这句没理解：</span></p><p><span>We </span><mark><span>incorporate</span></mark><span> the </span><u><span>dynamics of continuous flow</span></u><span> between consecutive activities and </span><u><span>instantaneous updates</span></u><span> at </span><strong><span>observed</span></strong><span> activity points </span><mark><span>in</span></mark><span> temporal evolution and spatial transformation.</span></p><p><span>翻译软件：我们将连续活动之间的</span><u><span>连续流动动态</span></u><span>和观察到的活动点的瞬时更新纳入时间演化和空间变换中。</span></p><blockquote><p><span>v-ed: 表示过去式！</span></p><p><strong><span>observed</span></strong><span>: adj. 观察到的</span></p></blockquote><p>&nbsp;</p><h3 id='两句话总结'><span>两句话总结</span></h3><ol start='' ><li><p><span>to </span><u><span>simulate activity trajectories</span></u><span> by capturing underlying spatiotemporal dynamics </span></p></li><li><p><span>incorporating the dynamics of continuous flow and instantaneous updates in time and space,</span></p></li></ol><p>&nbsp;</p><h3 id='不懂的地方'><span>不懂的地方</span></h3><ol start='' ><li><p><span>什么是underlying spatiotemporal dynamics?</span></p><ul><li><p><span>这里的dynamics指的是什么？</span></p></li></ul></li><li><p><span>continuous flow是什么？</span></p></li><li><p><span>instantaneous updates是什么？</span></p></li></ol><p>&nbsp;</p><h2 id='intro'><span>Intro</span></h2><p><span>On the one hand, the </span><u><span>complex spatiotemporal associations</span></u><span> underlying daily activities can give rise to recessive infection that is difficult to deal with. </span></p><p><span>On the other hand, compared with general mobility trajectories, the semantic information, i.e., activity type, is provided in the activity trajectory, which is more useful for tracing close contacts and precision epidemiology [25, 35].</span></p><p><span>一方面，日常活动背后</span><u><span>复杂的时空关联</span></u><span>可能导致难以处理的隐性感染。</span></p><p><span>另一方面，与一般的移动轨迹相比，活动轨迹提供了</span><u><span>语义信息</span></u><span>，即活动类型，这对于追踪密切接触者和精确流行病学更有用[25,35]。</span></p><p>&nbsp;</p><p><span>也有许多工作研究了the problem of mobility prediction/simulation, 但是这些工作主要聚焦在regularities and variations of spatio movements而没有考虑具体的活动类型，恰恰这种信息对于建模pandemic spread是非常重要的。</span></p><p><span>RNN-based || Markov-based方法缺点</span></p><p><span>由于不规则采样活动的内在随机性和稀疏性，以及更大的间隔带来的更高的不确定性，现存的方法（例如基于RNN的方法、基于Markov的方法）无法基于discrete-time 或者 非时变（不随时间改变）的假设进行充分建模。</span></p><p><span>一些现象：</span></p><ul><li><p><span>不同的活动在不同的观察点展示出了多样的时间间隔分布（自己的理解：working, eating out这样的活动，时间间隔是不一样的！）</span></p></li><li><p><span>不同的活动还有不同的空间模式，这一轨迹看似是一系列活动的过渡，然而，正是潜在的时空动态内在地驱动着这些活动点，并表现出不同的时空分布。（自己的理解：轨迹展示的信息其实一些潜在的时空动态在内部驱动活动点才导致最终表现出这样的现象的！）</span></p></li></ul><h3 id='文章技术总结主要参考文献）'><span>文章技术总结（主要参考文献）</span></h3><p><span>这篇文章的主要工作（基于[15]，[4]，[6]）：</span></p><p><span>In this paper,we present a framework based on </span><mark><span>Generative Adversarial Imitation Learning (GAIL) [15]</span></mark><span> to generate artificial activity trajectories.</span></p><p><span>To tackle the challenge that irregular-sampled activities are inherently random and sparse, we model the dynamic evolution in continuous time and space by leveraging </span><mark><span>neural differential equations [4]</span></mark><span>.</span></p><hr /><p><span>Intro的最后一段理解起来有点难度，直接翻译看看吧！</span></p><blockquote><p><span>To effectively capture complex transition patterns with spatiotemporal dependency, we propose to model </span><u><span>continuous-time spatiotemporal dynamics</span></u><span> underlying the observed activities</span>
+<mark><span>翻译</span></mark><span>：为了有效地捕捉具有时空依赖性的复杂过渡模式，我们建议对观测活动背后的</span><u><span>连续时空动态</span></u><span>进行建模。</span></p><p><u><span>By characterizing trajectories as point processes</span></u><span>, we design the policy function with a neural spatiotemporal point process model, where </span><u><span>the evolution of spatiotemporal dynamics</span></u><span> is captured by the hidden states.</span>
+<mark><span>翻译</span></mark><span>：通过</span><u><span>将轨迹描述为点过程</span></u><span>，我们设计了一个神经时空点过程模型的</span><strong><span>策略函数</span></strong><span>，其中</span><u><span>时空动态的演变</span></u><span>被隐藏状态捕获。</span></p><p><span>Specifically, we jointly incorporate the dynamics of continuous flow </span><u><span>between consecutive activities</span></u><span> and instantaneous updates </span><u><span>at observed activity points</span></u><span> in temporal evolution and spatial transformation.</span>
+<mark><span>翻译</span></mark><span>：具体而言，我们将连续活动之间的连续流动动态与观测活动点在时间演化和空间转换中的瞬时更新动态结合起来。</span></p><p><span>To tackle the challenge that irregular-sampled activities are </span><u><span>inherently random and sparse</span></u><span>, we model the dynamic evolution in continuous time and space by leveraging </span><mark><span>neural differential equations [4]</span></mark><span>. Finally, based on the learned dynamics, the activity with time and location is generated sequentially.</span>
+<mark><span>翻译</span></mark><span>：为了解决不规则采样活动</span><u><span>本身具有随机性和稀疏性</span></u><span>的挑战，我们利用</span><mark><span>神经微分方程[4]</span></mark><span>对连续时间和空间中的动态演化进行建模。最后，基于学习到的动力学，依次生成具有时间和位置的活动。</span></p></blockquote><p>&nbsp;</p><p><strong><span>知识点</span></strong></p><p><span>though researchers </span><mark><span>[45]</span></mark><span> have proved that the overall distribution of spatial movements is fat-tailed that can</span>
+<span>be described by limited parameters</span>
+<span>空间移动的整体分布具有长尾效应，可以用有限的参数进行描述。</span></p><p><span>STPP </span><mark><span>[6]</span></mark><span> models a sequence of stochastic events occurred in continuous space and time.</span></p><p>&nbsp;</p><h3 id='contribution'><span>Contribution</span></h3><ul><li><p><span>the first to capture underlying spatiotemporal dynamics via neural differential equations for modeling activity trajectories.</span>
+<span>第一个通过模拟活动轨迹的</span><strong><span>神经微分方程</span></strong><span>捕捉潜在的时空动力学。</span></p></li><li><p><span>We propose a novel activity simulation framework based on </span><strong><span>GAIL</span></strong><span>, which models the activity decision as a spatio-temporal point process and designs an activity decision model informed by the learned spatiotemporal dynamics in continuous domain.</span>
+<span>翻译: 提出了一种新的基于GAIL的活动仿真框架，将活动决策建模为一个时空点过程，并设计了一个基于连续域中学习到的时空动态的活动决策模型。</span></p></li></ul><p>&nbsp;</p><blockquote><p><strong><span>今天读了一部分内容之后我的感受</span></strong></p><p><span>我觉得，以我现在的英文水平，虽然不是非常厉害的那种，但是可以基本上通读下Abstract和Introduction，所以，下次还是通读完再考虑要不要读这篇论文吧~  这次选的论文，感觉读起来总是提不起劲啊！</span></p></blockquote><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><blockquote><p><span>欢迎大家点开</span><strong><mark style="background:	#87CEFA;"><span>「这篇论文我读过」</span></mark></strong><span>系列。本系列笔记是我在科研学习过程中，非常非常重要组成部分之一！</span></p></blockquote><blockquote><p><strong><span>该系列的笔记主要包括：</span></strong></p><ul><li><p><span>论文中好的想法的理解和感受；</span></p></li><li><p><span>论文中的工作引发我的思考；</span></p></li><li><p><span>以及其他可以吸收的有价值 | 有意义的内容。</span></p></li></ul></blockquote><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Yuan Y, Ding J, Wang H, et al. Activity trajectory generation via modeling spatiotemporal dynamics[C]. Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 2022: 4752-4762.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div></div></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
