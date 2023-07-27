@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Steal Like an Artist 10</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Steal Like an Artist <i style="color:brown">10</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Things Nobody Told You About Being Creative</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n12"><a class="md-toc-inner" href="#creativity-is-subtraction"><u>Creativity</u> Is <u>Subtraction</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13"><a class="md-toc-inner" href="#choose-what-to-leave-out">Choose what to <u>leave out</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n230"><a class="md-toc-inner" href="#what-now">What Now?</a></span></p></div><hr /><h2 id='creativity-is-subtraction'><u><span>Creativity</span></u><span> Is </span><u><span>Subtraction</span></u><span>.</span></h2><h3 id='choose-what-to-leave-out'><span>Choose what to </span><u><span>leave out</span></u><span>.</span></h3><p><span>In this age of information abundance and </span><u><span>overload</span></u><span>, those who get ahead will be the folks who figure out what to leave out, so they can concentrate on what’s really important to them. Nothing is more </span><u><span>paralyzing</span></u><span> than the idea of limitless possibilities. The idea that you can do anything is absolutely terrifying.</span></p><p><span>The way to get over creative block is to simply place some constraints on yourself. It seems </span><u><span>contradictory</span></u><span>, </span><mark style="background:#f8e272;"><span>but when it comes to creative work, limitations mean freedom. </span></mark><span>Write a song on your lunch break. Paint a painting with only one color. Start a business without any </span><u><span>start-up</span></u><span> </span><u><span>capital</span></u><span>. </span><u><span>Shoot</span></u><span> a movie with your iPhone and a few of your friends. Build a machine out of </span><u><span>spare</span></u><span> parts. Don’t make excuses for not working—make things with the time, space, and materials you have, right now.</span></p><p><mark style="background:#f8e272;"><span>The right constraints can lead to your very best work.</span></mark><span> My favorite example? Dr. Seuss wrote The Cat in the Hat with only 236 different words, so his editor </span><u><span>bet</span></u><span> him he couldn’t write a book with only 50 different words. Dr. Seuss came back and </span><u><span>won the bet</span></u><span> with Green Eggs and Ham, one of the </span><u><span>bestselling</span></u><span> children’s books of all time.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>creativity: </span><em><span>n.</span></em><span>创造力，独创性</span></p><blockquote><p><span>Regulations on children stifled </span><strong><span>creativity</span></strong><span>.</span></p><p><span>对孩子们制定的各种规定压制了创造力。</span></p></blockquote><p><span>subtraction: </span><em><span>n.</span></em><span>减去；（数）减，减法</span></p><blockquote><p><span>She&#39;s ready to learn simple addition and </span><strong><span>subtraction</span></strong><span>.</span></p><p><span>她准备学习简单的加法和减法。</span></p></blockquote><p><span>leave out: 遗漏，省略：在某事物中不包括或不考虑某人或某物。</span></p><blockquote><p><span>Incorrect choices change the meaning in important ways or </span><strong><span>leave</span></strong><span> </span><strong><span>out</span></strong><span> essential information.</span></p><p><span>不正确的选择会改变（原文的）核心内容，或者遗漏重要的信息。</span></p></blockquote><p><span>overload: </span></p><ul><li><p><em><span>v.</span></em><span>（使）过载，超载；（使）负担过重；（使）电力系统超负荷</span></p></li><li><p><em><span>n.</span></em><span>超载量</span></p></li></ul><blockquote><p><span>Don&#39;t </span><strong><span>overload</span></strong><span> the boat or it will sink.</span></p><p><span>别让船超载了，否则它会沉。</span></p></blockquote><p><span>paralyze: </span><em><span>vt.</span></em><span>使麻痹；使瘫痪</span></p><blockquote><p><span>Fear of failure didn&#39;t </span><strong><span>paralyze</span></strong><span> them.</span></p><p><span>对失败的恐惧感不会让他们停止向前。</span></p></blockquote><p><span>paralyzing: </span><em><span>v.</span></em><span>使……瘫痪，使……麻痹（paralyze 的 ing 形式）</span></p><blockquote><p><span>Fear can be </span><strong><span>paralyzing</span></strong><span>, literally, for some people.</span></p><p><span>对有些人来说，恐惧可能让人瘫痪，恐惧是那样的确实。</span></p></blockquote><p><span>contradictory: </span></p><ul><li><p><em><span>adj.</span></em><span>相互矛盾的，对立的；好反驳的，爱争辩的</span></p></li><li><p><em><span>n.</span></em><span>矛盾命题</span></p></li></ul><blockquote><p><span>The advice I received was often </span><strong><span>contradictory</span></strong><span>.</span></p><p><span>我所得到的建议常常是相互矛盾的。</span></p></blockquote><p><span>start-up: </span></p><ul><li><p><em><span>n.</span></em><span>启动；初创企业</span></p></li><li><p><em><span>adj.</span></em><span>起动阶段的；开始阶段的（异体字startup）</span></p></li></ul><blockquote><p><span>I didn&#39;t receive any </span><strong><span>start</span></strong><span>-</span><strong><span>up</span></strong><span> funding for my lab.</span></p><p><span>我的实验室没有收到任何启动资金。</span></p></blockquote><p><span>capital: </span><em><span>n.</span></em><span>资本，资金；资本家，资方；首都，首府，省会；活动（或生产）中心；大写字母；柱顶，柱头</span></p><blockquote><p><span>Cairo is the </span><strong><span>capital</span></strong><span> of Egypt.</span></p><p><span>开罗是埃及的首都。</span></p></blockquote><p><span>shoot: </span><em><span>v.</span></em><span>开（枪或其他武器）；射杀，射伤；发射（子弹等）；狩猎，打（猎物）；投（球），射门；玩，打（某种游戏）；（高尔夫运动中）击出（……杆）；</span><u><span>拍摄（电影、照片等）</span></u><span>；（使）急速移动；将（目光、问题或话语）转向；（朝特定方向）急速延伸；迅速（成名），一举（成功）；猛长，激增（shoot up）；（疼痛）穿刺；闩（门闩），拔出（门闩）；（船只）急速穿过（急流、瀑布或桥）；&lt;非正式&gt;（机动车）闯（红灯）；（使）喷涌出，（使）喷射出；&lt;非正式&gt;注射（毒品）；（植物，种子）发芽；准确刨平（木板的边角）</span></p><blockquote><p><span>Cameras ready? OK, </span><strong><span>shoot</span></strong><span>!</span></p><p><span>摄影机准备好了吗？好，开拍！</span></p></blockquote><p><span>shoot a movie: 拍电影</span></p><blockquote><p><span>If clapped </span><strong><span>a</span></strong><span> </span><strong><span>movie</span></strong><span> at my school, so we would be very happy, I think we will therefore like </span><strong><span>a</span></strong><span> school, liking </span><strong><span>movie</span></strong><span>, our liking </span><strong><span>a</span></strong><span> school can </span><strong><span>shoot</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>movie</span></strong><span>.</span></p></blockquote><p><span>spare: </span><em><span>adj.</span></em><span>备用的，外加的；不用的，闲置的；空闲的，空余的；多余的；简单的，简朴的；瘦的，瘦高的；少量的；节约的</span></p><blockquote><p><span>How do you spend your </span><strong><span>spare</span></strong><span> time?</span></p><p><span>你在业余时间干什么？</span></p></blockquote><p><span>bet: </span></p><ul><li><p><em><span>v.</span></em><span>打赌，赌博；&lt;非正式&gt;敢肯定</span></p></li><li><p><em><span>n.</span></em><span>下注；赌金；预计，猜想；&lt;非正式&gt;有可能成功的人选（或备选行动）</span></p></li><li><p><em><span>abbr.</span></em><span>在……之间（between）</span></p></li></ul><blockquote><p><span>I </span><strong><span>bet</span></strong><span> you were good at games when you were at school.</span></p><p><span>我敢说你上学时很擅长比赛。</span></p><p><span>In </span><strong><span>the</span></strong><span> end, he actually </span><strong><span>won</span></strong><span> </span><strong><span>the</span></strong><span> </span><strong><span>bet</span></strong><span>.</span></p><p><span>最后，他打赌赢了。</span></p></blockquote><p><span>bestselling: </span><em><span>adj.</span></em><span>畅销的</span></p><blockquote><p><span>The New York Times is the third </span><strong><span>bestselling</span></strong><span> American newspaper, behind the Wall Street Journal and USA Today.</span></p><p><span>《纽约时报》是美国第三大畅销报纸，仅次于《华尔街日报》和《今日美国》。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>In this age of information overload and abundance, those who get ahead will be the folks who figure out what to leave out, so they can concentrate on what&#39;s important to them.</span>
+<span>在这个信息丰富与泛滥的时代，领先者将是懂得舍弃的人，因为这样他们才能专注于自认为重要的事情。</span></p><p><span>无限可能的想法，会让人麻痹。&quot;什么都能做&quot;的想法实在是太可怕了！</span></p><p><span>limitation对于creativity来说，意味着freedom。就是说，在有限的条件下可能会更富有创造性！</span></p><p><span>The right constraints can lead to your very best work.</span></p></blockquote><hr /><p style="color:brown; text-align:center; font-weight:bold;">“Telling yourself you have all the time in the world, all the money in the world, all the colors in the <u>palette</u>, anything you want—that just kills creativity.”
+    —Jack White</p><hr /><p><span>The artist Saul Steinberg said, “What we respond to in any work of art is the artist’s struggle against his or her limitations.” It’s often what an artist chooses to leave out that makes the art interesting. What isn’t shown </span><u><span>versus</span></u><span> what is. It’s the same for people: </span><mark style="background:#f8e272;"><span>What makes us interesting isn’t just what we’ve experienced, but also what we haven’t experienced.</span></mark><span> The same is true when you do your work: You must </span><u><span>embrace</span></u><span> your limitations and keep moving.</span></p><p><mark style="background:#ffaabf;"><span>In the end, creativity isn’t just the things we choose to put in, it’s the things we choose to leave out.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>palette: </span><code>/ ˈpælət /</code><em><span>n.</span></em><span>调色板；（画家或一幅画所用的）一组颜色；（计算机程序中的）选项板；（乐曲的）一组音调，音色</span></p><blockquote><p><span>Obviously the chosen color </span><strong><span>palette</span></strong><span> is down to you, but here I&#39;m using a mix of green and cyan.</span></p><p><span>显然，你也可以选用自己的调色板的颜色，在这里我就选择了我选择的是青绿色的混合。</span></p></blockquote><p><span>versus: </span><em><span>prep.</span></em><span>（比赛或诉讼中）以……为对手，与……竞争；与……相对，与……相比</span></p><blockquote><p><span>It is France </span><strong><span>versus</span></strong><span> Brazil in the final.</span></p><p><span>决赛是法国队对巴西队。</span></p></blockquote><p><span>embrace: </span><em><span>v.</span></em><span>拥抱；欣然接受，乐意采纳；包括，涉及；围绕，环绕</span></p><blockquote><p><span>He opened his arms wide to </span><strong><span>embrace</span></strong><span> her.</span></p><p><span>他张开双臂拥抱她。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你说你拥有世界上所有你需要的，那只会扼杀你的创造力。同样地，反过来看就是，你不要总是以为自己缺少很多东西所以迟迟不开始！现在就开始，limitations会让你更有创造力！</span></p><p><span>What we respond to in any work of art is the artist’s struggle against his or her limitations.</span>
+<span>我们对任何艺术作品的回应都是艺术家与他或她的局限性的斗争。</span></p><p><span>What makes us interesting isn’t just what we’ve experienced, but also what we haven’t experienced.</span>
+<span>让我们有趣的不仅仅是我们经历过的事情，还有我们没有经历过的事情。</span></p></blockquote><hr /><p style="color:brown; text-align:center; font-weight:bold;">Choose wisely.
+    And have fun.</p><hr /><blockquote><p><span>Choose wisely. And have fun.</span></p><p><span>做出明智的选择。玩得开心。</span></p></blockquote><h2 id='what-now'><span>What Now?</span></h2><ul><li><p><span>Talk a walk</span></p></li><li><p><span>Start your </span><u><span>swipe</span></u><span> file</span></p></li><li><p><span>Go to the library</span></p></li><li><p><span>Buy a notebook and use it</span></p></li><li><p><span>Get yourself a calendar</span></p></li><li><p><span>Start your logbook</span></p></li><li><p><span>Give a copy of this book away</span></p></li><li><p><span>Start a blog</span></p></li><li><p><span>Take a </span><u><span>nap</span></u></p></li></ul><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>swipe: </span></p><ul><li><p><em><span>v.</span></em><span>（挥动手臂或物体）击打，猛击；偷窃；刷（磁卡）；滑动</span></p></li><li><p><em><span>n.</span></em><span>批评，抨击；挥击，抡打；滑动</span></p></li></ul><blockquote><p><span>Genesis recorded a song which took a </span><strong><span>swipe</span></strong><span> at greedy property developers who bought up and demolished people&#39;s homes.</span></p><p><span>吉尼西丝录制了一首歌曲，对买下并拆毁他人家园的贪婪房地产开发商进行抨击。</span></p></blockquote><p><span>nap: </span></p><ul><li><p><em><span>n.</span></em><span>（尤指在白天）小睡，打盹；（织物、地毯等表面的）绒毛；&lt;英&gt;赛马情报；&lt;澳，非正式&gt;睡袋（野外用）；纳普牌戏（类似惠斯特牌戏，玩家自报可赢之墩数，全胜五墩）；&lt;英&gt;孤注一掷</span></p></li><li><p><em><span>v.</span></em><span>（尤指在白天）小睡，打盹；不留神，无准备；（马）（尤指习惯性地）不听从指令，徘徊不前；&lt;英&gt;预测（赛马，赛狗）获胜；使起绒，使拉毛</span></p></li></ul><blockquote><p><span>Don&#39;t take a </span><strong><span>nap</span></strong><span> in the afternoon.</span></p><p><span>不要在下午小睡。</span></p></blockquote><p><span>take a nap: 睡午觉；小睡一下</span></p><blockquote><p><span>She wants to retire, so she can </span><strong><span>take</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>nap</span></strong><span>.</span></p><p><span>她想退休，这样她就可以睡午觉了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>开始行动吧：</span></p><ul><li><p><span>出去走走；</span></p></li><li><p><span>买个本子写写画画；</span></p></li><li><p><span>记录一下自己的日常，连点成线！</span></p></li><li><p><span>适当休息；</span></p></li><li><p><span>limitations会带来更多的创造！</span></p></li></ul></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
