@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Illuminating the Path - Executive Summary CH1</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >Executive Summary</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n192"><a class="md-toc-inner" href="#executive-summary">Executive Summary</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n193"><a class="md-toc-inner" href="#motivation">Motivation</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n196"><a class="md-toc-inner" href="#focus-on-homeland-security">Focus on Homeland Security</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n208"><a class="md-toc-inner" href="#grand-challenge-enabling-profound-insights">Grand Challenge: Enabling Profound Insights</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n212"><a class="md-toc-inner" href="#analyzing-terrorist-threats">Analyzing terrorist threats</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n240"><a class="md-toc-inner" href="#safeguarding-borders-and-ports">Safeguarding borders and ports</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n243"><a class="md-toc-inner" href="#preparing-for-and-responding-to-emergencies">Preparing for and responding to emergencies</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n246"><a class="md-toc-inner" href="#visual-analytics-responding-to-the-challenge">Visual Analytics: Responding to the Challenge</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n260"><a class="md-toc-inner" href="#defining-the-research-and-development-agenda-for-visual-analytics">Defining the Research and Development Agenda for Visual Analytics</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n278"><a class="md-toc-inner" href="#执行摘要">执行摘要</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n279"><a class="md-toc-inner" href="#动机">动机</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n282"><a class="md-toc-inner" href="#专注于国土安全">专注于国土安全</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n294"><a class="md-toc-inner" href="#重大挑战实现深刻洞察">重大挑战：实现深刻洞察</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n298"><a class="md-toc-inner" href="#分析恐怖主义威胁">分析恐怖主义威胁</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n329"><a class="md-toc-inner" href="#保障safeguarding）边境和港口安全">保障（Safeguarding）边境和港口安全</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n332"><a class="md-toc-inner" href="#为应对紧急情况做好准备和响应">为应对紧急情况做好准备和响应</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n335"><a class="md-toc-inner" href="#视觉分析应对挑战">视觉分析：应对挑战</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n350"><a class="md-toc-inner" href="#定义可视化分析的研究和发展议程">定义可视化分析的研究和发展议程</a></span></p></div><h1 id='executive-summary'><span>Executive Summary</span></h1><h2 id='motivation'><span>Motivation</span></h2><p><span>Our country faces profound challenges that must be addressed to ensure our continued freedom and security. As the September 11,2001, attacks on the Pentagon and World Trade Center illustrate, threats to the United States are present within our borders. On that day, after at least 20 months of planning and preparation, 19 terrorists hijacked four airliners at three different airports in a coordinated attack that resulted in the deaths of nearly 3000 people.</span></p><p><span>As the attack unfolded, government agencies and emergency response personnel had to respond in real time to an event of unprecedented scope. They were forced to assess situations and make decisions under extreme pressure, often without having critical information that would help them save additional lives [National Commission on Terrorist Attacks, 2004].</span></p><h2 id='focus-on-homeland-security'><span>Focus on Homeland Security</span></h2><p><span>The September 11, 2001, terrorist attacks helped illuminate the need to focus and coordinate the efforts to secure our country. The US Department of Homeland Security(DHS) was established in 2003 to secure the American homeland and protect the American people. It responds to the nations security objectives of:</span></p><ul><li><p><span>Preventing terrorist attacks within the United States</span></p></li><li><p><span>Reducing Americas vulnerability to terrorism</span></p></li><li><p><span>Minimizing the damage and recovering from attacks that do occur [Department of Homeland Security, 2004].</span></p></li></ul><p><span>As stated in their Strategic Plan, the mission of DHS is to：</span></p><p><em><span>…lead the unified national effort to secure America. We will prevent and deter terrorist attacks and protect against and respond to threats and hazards to the Nation. We will ensure safe and secure borders, welcome lawful immigrants and visitors, and promote the free-flow of commerce.</span></em></p><p><span>DHS has identified strategic goals and objectives directed at accomplishing this mission (see box). Meeting these objectives requires the concerted efforts of professionals in fields as diverse as border and transportation security, intelligence analysis, law enforcement, and emergency preparedness and response (including firefighting and medical professions).</span></p><h2 id='grand-challenge-enabling-profound-insights'><span>Grand Challenge: Enabling Profound Insights</span></h2><p><span>One challenge underlies all of these objectives: the analysis of overwhelming amounts of disparate, conflicting, and dynamic information to identify and prevent emerging threats, protect our borders, and respond in the event of an attack or other disaster. This analysis process requires human judgment to make the best possible evaluation of incomplete, inconsistent, and potentially deceptive in formation in the face of rapidly changing situations.</span></p><p><span>Employing today’s best practices in these areas and using the best possible training, technologies, and processes will still not position the country to meet the growing needs to protect our security. The scale of data is staggering, and our ability to collect data is increasing at a faster rate than our ability to analyze it.Although massive amounts of information are available from multiple sources, the relevant information content exists in a few nuggets. New methods are required that will allow the analyst to examine this massive, multi-dimensional, multi-source, time-varying information stream to make decisions in a time-critical manner.</span></p><p><span>Three major areas deserve particular focus: analyzing terrorist threats, safeguarding borders and ports, and preparing for and responding to emergencies. Threat analytics is the initial priority, given its importance in preventing attacks. These three areas are discussed in greater detail in Chapter 1.</span></p><h3 id='analyzing-terrorist-threats'><span>Analyzing terrorist threats</span></h3><p><span>An urgent goal is to stop terrorist attacks before they occur. Analysts need the ability to piece together information buried in disparate data—including immigration records; patterns of travel; telephone calls; and names, affiliations, and locations of suspected terrorists-to enable them to spot an emerging attack before it can be executed. Current technologies do not address the needs for handing these massive, messy, diverse, and ever-changing volumes of information. Furthermore, current tools provide very little in the way of support for the complex tasks of the analysis and discovery process. Very few current tools address the need to communicate analytical results and products to their audiences.</span></p><p><span>Research is needed to create software that supports the most complex and time-consuming portions of the analytical process, so that analysts can respond to increasingly more complex questions.</span></p><p><span>DHS Strategic Goals and Objectives That Motivate This Agenda [US Department of Homeland Security, 2004]</span></p><ol start='' ><li><p><strong><span>Awareness</span></strong><span>：Identify and understand threats, assess vulnerabilities, determine potential impacts and disseminate timely information to our homeland security partners and the American public. </span></p><p><span>Gather and fuse all terrorism related intelligence; analyze, and coordinate access to information related to potential terrorist or other threats. (Objective 1.1) </span>
+<span>Identify and assess the vulnerability of critical infrastructure and key assets. (Objective 1.2) </span>
+<span>Develop timely, actionable, and valuable information based on intelligence analysis and vulnerability assessments. (Objective 1.3) </span>
+<span>Ensure quick and accurate dissemination of relevant intelligence information to homeland security partners, including the public. (Objective 1.4)</span></p></li><li><p><strong><span>Prevention</span></strong><span>：Detect, deter and mitigate threats to our homeland.</span></p><p><span>Secure our borders against terrorists, means of terrorism, illegal drugs and other illegal activity. (Objective 2.1) </span></p><p><span>Provide operational end users with the technology and capabilities to detect and prevent terrorist attacks, means of terrorism and other illegal activities.(Objective 2.3) </span></p><p><span>Ensure that national and international policy, law enforcement and other actions to prepare for and prevent terrorism are coordinated.(Objective 2.4)</span></p></li><li><p><strong><span>Protection</span></strong><span>：Safeguard our people and their freedoms, critical infrastructures, property and the economy of our nation from acts of terrorism, natural disasters, or other emergencies. </span></p><p><span>Strengthen nationwide preparedness and mitigation against acts of terrorism, natural disasters, or other emergencies. (Objective 3.7)</span></p></li><li><p><strong><span>Response</span></strong><span>：Lead, manage and coordinate the national response to act of terrorism, natural disasters, or other emergencies. </span></p><p><span>Reduce the loss of life and property by strengthening nationwide response readiness. (Objective 4.1)</span></p></li><li><p><strong><span>Recovery</span></strong><span>：Lead national state, local and private sector efforts to restore services and rebuild communities after acts of terrorism, natural disasters, or other emergencies. </span></p><p><span>Strengthen nationwide plans and capabilities. (Objective 5.1)</span></p></li><li><p><strong><span>Service</span></strong><span>：Serve the public effectively by facilitating lawful trade, travel and immigration. </span></p><p><span>Facilitate the efficient movement of legitimate cargo and people. (Objective 6.4)</span></p></li><li><p><strong><span>Organizational Excellence</span></strong><span>：Value our most important resource, our people. Create a culture that promotes a common identity, innovation, mutual respect,accountability, and teamwork to achieve efficiencies, effectiveness, and operational synergies. </span></p><p><span>Protect confidentiality and data integrity to ensure privacy and security. (Objective 7.1)</span></p></li></ol><h3 id='safeguarding-borders-and-ports'><span>Safeguarding borders and ports</span></h3><p><span>Safeguarding our borders is a complex task. Border guards and customs agents must prevent the illegal entry of goods and people into the country, while ensuring the free flow of legal commerce.</span></p><p><span>Daily, thousands of decisions must be made at each point of entry to discriminate between normal, legal activity and potential illegal activity. Although tools exist to help border and customs agents make these decisions, we need rapid advancement in these tools to better support the decision-making process.</span></p><h3 id='preparing-for-and-responding-to-emergencies'><span>Preparing for and responding to emergencies</span></h3><p><span>Even with the greatest of vigilance, attacks can still occur. Emergency preparedness and response is critical to ensuring that, in the event of an attack or any other national disaster, loss of life and property is minimized.</span></p><p><span>Even with the well-developed emergency plans and procedures that already exist, several areas remain in which understanding and sharing of information can enhance our ability to respond and reduce the impact of an attack. We need real-time analytical monitoring that can alert first responders to unusual situations in advance. We also need software that helps support the demands of all the varying types of communications needed for different audiences in an emergency situation.</span></p><h2 id='visual-analytics-responding-to-the-challenge'><span>Visual Analytics: Responding to the Challenge</span></h2><p><span>Research and development(R&amp;D) in visual analytics helps address these challenges.</span></p><p><em><strong><span>Visual analytics is the science of analytical reasoning facilitated by interactive visual interfaces.</span></strong></em><span> People use visual analytics tools and techniques to synthesize information and derive insight from massive, dynamic, ambiguous, and often conflicting data; detect the expected and discover the unexpected; provide timely, defensible, and understandable assessments; and communicate assessment effectively for action.</span></p><p><span>Visual analytics is a multidisciplinary field that includes the following focus areas:</span></p><ul><li><p><span>Analytical reasoning techniques that enable users to obtain deep insights that directly support assessment, planning, and decision making</span></p></li><li><p><span>Visual representations and interaction techniques that take advantage of the human eye’s broad bandwidth pathway into the mind to allow users to see, explore, and understand large amounts of information at once</span></p></li><li><p><span>Data representations and transformations that convert all types of conflicting and dynamic data in ways that support visualization and analysis</span></p></li><li><p><span>Techniques to support production, presentation, and dissemination of the results of an analysis to communicate information in the appropriate context to a variety of audiences.</span></p></li></ul><p><img src=".\..\..\images\typora-user-images\image-20230802210436292.png" referrerpolicy="no-referrer" alt="image-20230802210436292"></p><h2 id='defining-the-research-and-development-agenda-for-visual-analytics'><span>Defining the Research and Development Agenda for Visual Analytics</span></h2><p><span>DHS chartered the National Visualization and Analytics CenterTM (NVACTM) in 2004 with the goal of helping to counter future terrorist attacks in the US and around the globe. NVAC is a national resource that provides strategic direction and coordination of activities to discover, develop, and implement innovative visual information analysis methods. A major objective for NVAC is to define a 5-year R&amp;D agenda for visual analytics to address the most pressing needs for R&amp;D to facilitate advanced analytical insight. In spring 2004, NVAC formed a panel of distinguished researchers from academia, industry, and the national laboratory system, as well as select government experts. Through a series of work-shops and collaborative efforts, the team established the plan for action summarized in this book.</span></p><p><span>This agenda builds upon and extends recent government publications, most notably two reports by the National Academy of Sciences. Making the Nation Safer [Alberts &amp; Wulf, 2002] describes how science and technology can be used to protect the nation against terrorism. Information Technology for Counterterrorism [Hennessy et al., 2003] expands upon the work of Making the Nation Safer, focusing specifically on the opportunities for information technology to help counter and respond to terrorist attacks.</span></p><p><span>Although the agenda described herein is focused specifically on meeting homeland security challenges, the new capabilities created will have an impact on a wide variety of field ranging from business to scientific research, in which understanding complex and dynamic information is important.</span></p><p><span>This agenda presents recommendations to advance the state of the art in the major visual analytics research areas:</span></p><ul><li><p><span>The science of analytical reasoning</span></p></li><li><p><span>Visual representations and interaction techniques</span></p></li><li><p><span>Data representations and transformations</span></p></li><li><p><span>Production, presentation, and dissemination.</span></p></li></ul><p><span>However, advancing the state of the technology is not sufficient to protect our homeland. We must accelerate the ability to move the most promising research into practice, and we must set the stage for an enduring visual analytics research community through a combination of education and research collaboration. This research agenda includes recommendations to meet these needs as well.</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='执行摘要'><span>执行摘要</span></h1><h2 id='动机'><span>动机</span></h2><p><span>我们国家面临着深刻的（</span><code>profound</code><span>）挑战，必须加以解决，以确保我们持续的自由和安全。正如2001年9月11日针对五角大楼和世界贸易中心的袭击所表明的那样（</span><code>As the … illustrate</code><span>），对美国的威胁存在于我们的国境内。在那一天，经过至少20个月的策划和准备，19名恐怖分子在三个不同的机场劫持（</span><code>hijacked</code><span>）了四架客机，进行了一次协同攻击，导致近3000人死亡。</span></p><p><span>随着袭击的展开（</span><code>unfolded</code><span>），政府机构和应急响应人员不得不实时应对前所未有的（</span><code>unprecedented</code><span>）事件。他们被迫在极端的压力下评估情况并做出决策，通常没有关键信息来帮助他们挽救更多的生命。 【恐怖袭击国家委员会，2004年】</span></p><h2 id='专注于国土安全'><span>专注于国土安全</span></h2><p><span>2001年9月11日的恐怖袭击帮助启示（</span><code>illuminate</code><span>）我们需要为集中和协调保障我们的国家努力。美国国土安全部（DHS）于2003年成立，以保障美国国土和保护美国人民的安全。它响应于国家安全目标：</span></p><ul><li><p><span>预防恐怖袭击在美国境内发生</span></p></li><li><p><span>减少美国遭受恐怖主义(Terrorism)的脆弱性(Vulnerability)</span></p></li><li><p><span>最小化损害并从发生的袭击中恢复过来 [Department of Homeland Security, 2004].</span></p></li></ul><p><span>正如他们的战略计划(Strategic Plan)所述，DHS的使命是：</span></p><p><em><span>……领导统一的国家安全力量以确保美国的安全。我们将预防和遏制（</span><code>deter</code><span>）恐怖袭击，保护免受威胁和危害（</span><code>hazards</code><span>），确保边境安全，欢迎合法的移民和访客，促进自由流通的商业（</span><code>promote the free-flow of commerce</code><span>）。</span></em></p><p><span>DHS已确定了旨在完成这一使命的战略目标和目标（见方框）。实现这些目标需要不同领域的专业人士共同努力（</span><code>concerted efforts</code><span>），如边境和交通安全、情报分析、执法（</span><code>law enforcement</code><span>）以及应急准备和响应（包括消防和医疗行业）。</span></p><h2 id='重大挑战实现深刻洞察'><span>重大挑战：实现深刻洞察</span></h2><p><span>所有这些目标背后（</span><code>underly</code><span>）都有一个挑战：处理巨量的不同、冲突和动态信息，以识别和预防新出现的（</span><code>emerging</code><span>）威胁，保护我们的边境，并在发生攻击或其他灾害时做出反应。这个分析过程需要人类判断力，在快速变化的情况下做出最佳的评估，处理不完整、不一致和潜在的欺骗性信息（</span><code>potentially deceptive in formation</code><span>）。</span></p><p><span>在这些领域采用当今最佳的实践，并使用最好的培训、技术和流程仍然无法满足保护我们的安全日益增长的需求。数据的规模是惊人的（</span><code>staggering</code><span>），我们收集数据的能力增长的速度比分析数据的能力更快。虽然大量的信息来自多个来源，但相关信息内容只存在于少数几个关键信息点上（</span><code>nuggets</code><span>）。需要新的方法，使分析人员能够以关键时间做出决策，同时检查这种大规模、多维、多来源和时变的信息流。</span></p><p><span>有三个主要领域值得（</span><code>deserve</code><span>）特别关注：分析恐怖主义威胁，保障边境和港口，以及为紧急情况做好准备并做出反应。考虑到预防攻击的重要性，威胁分析是首要任务。这三个领域在第1章中将进行更详细的讨论。</span></p><h3 id='分析恐怖主义威胁'><span>分析恐怖主义威胁</span></h3><p><span>一个紧急的目标是在恐怖袭击发生之前阻止它们。分析人员需要能够整合（</span><code>piece together</code><span>）分散在不同数据中的信息——包括移民记录、旅行模式、电话记录、涉嫌恐怖分子的姓名、关联和位置等，以便他们能够在攻击执行之前发现（</span><code>spot</code><span>）威胁。目前的技术并不能满足处理这些海量、杂乱、多样且不断变化的（</span><code>ever-changing</code><span>）信息的需求。此外，现有工具在分析和发现过程的复杂任务方面提供的帮助极少。很少有现有工具满足将分析结果(Analytical results)和产品传达给受众的需要。</span></p><p><span>需要进行研究以创建支持分析过程中最复杂和耗时部分（</span><code>portions</code><span>）的软件，以便分析人员能够回答越来越复杂的问题。</span></p><p><span>DHS战略目标和激励这一议程的目标 [US Department of Homeland Security, 2004]</span></p><ol start='' ><li><p><strong><span>意识</span></strong><span>(</span><strong><span>Awareness</span></strong><span>)：识别和了解威胁，评估漏洞（</span><code>vulnerabilities</code><span>），确定潜在影响并向我们的国土安全伙伴和美国公众传递（</span><code>disseminate</code><span>）及时信息。 </span></p><p><span>收集和融合所有与恐怖主义有关的情报；分析和协调与潜在恐怖主义或其他威胁相关的信息。(目标1.1)</span></p><p><span> 识别和评估关键基础设施和关键资产的漏洞。(目标1.2) </span></p><p><span>基于情报分析和漏洞评估，开发及时、可操作（</span><code>actionable</code><span>）和有价值的信息。(目标1.3) </span></p><p><span>确保将相关情报信息快速准确地传递给国土安全伙伴，包括公众。(目标1.4)</span></p></li><li><p><strong><span>预防</span></strong><span>（</span><strong><span>Prevention</span></strong><span>）：发现、威慑和减轻（</span><code>mitigate</code><span>）对我们国土的威胁。</span></p><p><span>保护我们的边境免受恐怖分子、恐怖手段、非法毒品和其他非法活动的侵害。(目标2.1)</span></p><p><span>为操作用户提供检测和预防恐怖袭击、恐怖手段和其他非法活动的技术和能力。(目标2.3) </span></p><p><span>确保国家和国际政策、执法和其他行动协调，以应对和防止恐怖主义。(目标2.4)</span></p></li><li><p><strong><span>保护</span></strong><span>（</span><strong><span>Protection</span></strong><span>）：保护我们的人民和他们的自由、关键基础设施、财产和我们国家的经济免受恐怖主义、自然灾害或其他紧急情况的侵害。 </span></p><p><span>加强全国范围内应对恐怖主义、自然灾害或其他紧急情况的准备和减灾工作。(目标3.7)</span></p></li><li><p><strong><span>应对</span></strong><span>（</span><strong><span>Response</span></strong><span>）：领导、管理和协调应对恐怖主义、自然灾害或其他紧急情况的全国响应。 </span></p><p><span>通过加强全国范围内的应对准备（</span><code>response readiness</code><span>），减少人员和财产损失。(目标4.1)</span></p></li><li><p><strong><span>恢复</span></strong><span>（</span><strong><span>Recovery</span></strong><span>）：领导国家、州、地方和私营部门努力，在恐怖主义、自然灾害(Natural disasters)或其他紧急情况发生后恢复服务和重建社区。 </span></p><p><span>加强全国计划和能力。(目标5.1)</span></p></li><li><p><strong><span>服务</span></strong><span>（</span><strong><span>Service</span></strong><span>）：通过促进合法贸易、旅行和移民，有效地为公众提供服务。</span></p><p><span>促进合法（</span><code>legitimate</code><span>）货物和人员的高效流动。（目标6.4）</span></p></li><li><p><strong><span>组织卓越</span></strong><span>（</span><strong><span>Organizational Excellence</span></strong><span>）：珍视我们最重要的资源——我们的员工。创建一种促进共同身份、创新、相互尊重、责任（</span><code>accountability</code><span>）和团队合作的文化，以实现效率、效果和运营协同（</span><code>operational synergies</code><span>）。 </span></p><p><span>保护机密性和数据完整性（</span><code>integrity</code><span>），确保隐私和安全。（目标7.1）</span></p></li></ol><h3 id='保障safeguarding）边境和港口安全'><span>保障（Safeguarding）边境和港口安全</span></h3><p><span>保障我们的边境是一项复杂的任务。边境警卫和海关代理人必须防止非法物品和人员进入（</span><code>entry</code><span>）国家，同时确保合法商业（</span><code>commerce</code><span>）的自由流通。</span></p><p><span>每天，在每个入境口岸都必须做出数千个决策，以区分正常的合法活动和潜在的非法活动。虽然存在可以帮助边境警卫和海关代理人做出这些决策的工具，但我们需要在这些工具方面进行快速进展，以更好地支持决策过程（</span><code>decision-making process</code><span>）。</span></p><h3 id='为应对紧急情况做好准备和响应'><span>为应对紧急情况做好准备和响应</span></h3><p><span>即使保持高度警惕（</span><code>vigilance</code><span>），攻击仍可能发生。紧急情况的准备和响应对于确保在发生攻击或任何其他国家灾难时最大程度地减少人员和财产损失至关重要。</span></p><p><span>即使已经存在完善的应急计划和程序，仍有一些领域需要加强理解和信息共享，以增强我们应对攻击并减少其影响的能力。我们需要实时的分析监测，可以提前向急救人员（</span><code>first responders</code><span>）警报（</span><code>alert</code><span>）异常情况。我们还需要能够支持在紧急情况下针对不同受众需求的各种通信类型的软件。</span></p><h2 id='视觉分析应对挑战'><span>视觉分析：应对挑战</span></h2><p><span>可视化分析的研究和开发(R&amp;D)有助于解决这些挑战。</span></p><p><em><strong><span>视觉分析是一门通过交互式视觉界面进行分析推理的科学。</span></strong></em><span>人们使用可视化分析工具和技术来综合（</span><code>synthesize</code><span>）信息，并从大量的、动态的、模糊的、经常相互冲突的数据中获得洞察力；发现意料之中的事，发现意料之外的事；提供及时、合理（</span><code>defensible</code><span>）、可理解的评估;有效地沟通评估，以便采取行动。</span></p><p><span>视觉分析是一个多学科领域（</span><code>multidisciplinary field</code><span>），包括以下重点领域：</span></p><ul><li><p><span>分析推理技术，使用户能够获得直接支持评估、计划和决策制定的深刻见解</span></p></li><li><p><span>视觉表现和交互技术利用人眼进入大脑的宽带宽通道，使用户能够一次看到、探索和理解大量信息</span></p></li><li><p><span>数据表示和转换，以支持可视化和分析的方式转换所有类型的冲突和动态数据</span></p></li><li><p><span>支持分析结果的制作、呈现和传播的技术，以便在适当的上下文中向各种受众传达信息。</span></p></li></ul><p><img src=".\..\..\images\typora-user-images\image-20230802210436292.png" referrerpolicy="no-referrer" alt="image-20230802210436292"></p><p><span>Pic[可视化分析研究和开发促进了威胁识别、预防和响应（</span><code>response</code><span>）。]</span></p><h2 id='定义可视化分析的研究和发展议程'><span>定义可视化分析的研究和发展议程</span></h2><p><span>国土安全部于2004年成立了国家可视化和分析中心（NVAC），目的是帮助打击美国和全球范围内的未来恐怖袭击。NVAC是一种国家资源，为发现、开发和实施创新的可视化信息分析方法提供战略指导和协调活动。 NVAC的一个主要目标是为可视化分析定义一个5年的研发议程，以解决最迫切的（</span><code>pressing</code><span>）研发需求，促进先进的分析洞察力。2004年春，NVAC成立了一个由来自学术界、工业界和国家实验室系统的杰出研究人员以及精选的政府专家组成的小组（</span><code>panel</code><span>）。通过一系列的研讨会和协作努力，团队建立了本书中总结的行动计划。</span></p><p><span>这一议程建立在并扩展了最近的政府出版物，最引人注目的（</span><code>notably</code><span>）是美国国家科学院的两份报告。使国家更安全[Alberts &amp; Wulf, 2002]描述了如何利用科学技术来保护国家免受恐怖主义的侵害。反恐的信息技术[Hennessy等人，2003]扩展了“使国家更安全”的工作，特别关注信息技术帮助反击（</span><code>counter</code><span>）和应对恐怖袭击的机会。</span></p><p><span>尽管本文（</span><code>herein</code><span>）所述的议程特别侧重于应对国土安全挑战，但所创造的新能力将对从商业到科学研究等广泛领域产生影响，在这些领域中，理解复杂和动态的信息是很重要的。</span></p><p><span>本议程提出了在主要视觉分析研究领域推进最新技术的建议:</span></p><ul><li><p><span>分析推理科学</span></p></li><li><p><span>视觉表示和交互技术</span></p></li><li><p><span>数据表示和转换</span></p></li><li><p><span>生产，表示和传播（</span><code>dissemination</code><span>）。</span></p></li></ul><p><span>然而，提高技术水平不足以保护我们的家园。我们必须加快将最有前途的研究转化为实践的能力，我们必须通过教育和研究合作的结合，为持久的视觉分析研究社区奠定基础（</span><code>set the stage for</code><span>）。本研究议程也包括满足这些需求的建议。</span></p><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

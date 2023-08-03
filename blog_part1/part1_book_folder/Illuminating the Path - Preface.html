@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Illuminating the Path - Preface</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >Preface</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n9"><a class="md-toc-inner" href="#preface">Preface</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n14"><a class="md-toc-inner" href="#agenda-development-process"><strong>Agenda Development Process</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n20"><a class="md-toc-inner" href="#acknowledgements"><strong>Acknowledgements</strong></a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n71"><a class="md-toc-inner" href="#序言">序言</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n76"><a class="md-toc-inner" href="#议程的制定过程">议程的制定过程</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n82"><a class="md-toc-inner" href="#鸣谢">鸣谢</a></span></p></div><h1 id='preface'><span>Preface</span></h1><p><span>The threat of terrorism in our homeland became horrifically real on September 11, 2001. The shock was felt at home and around the world. The subsequent response to this threat has taken many forms, including the development of new technologies intended to provide a technical advantage that can aid in thwarting terrorism.</span></p><p><span>One important area for technical advancement is the development of advanced information technologies to support the homeland security mission. For centuries we have been improving our ability to collect information, and this will continue. However, our ability to analyze this information is sorely lacking. The information is massive, complex, incomplete, and uncertain, and it encompasses all data forms, languages, and cultures. Technologies are needed that will support the application of human judgment to make the best possible use of this information and share it with others as appropriate to prevent, deter, and respond to threats.</span></p><p><span>The US Department of Homeland Security (DHS) charted the National Visualization and Analytics Center</span><sup><span>TM</span></sup><span>  (NVAC</span><sup><span>TM</span></sup><span>) in 2004 with the goal of helping to counter future terrorist attacks in the United States and around the globe. A major objective for NVAC is to define a long-term research and development (R&amp;D) agenda for visual analytics to address the most pressing needs in R&amp;D to facilitate advanced analytical insight.</span></p><p><span>Under the leadership of the Pacific Northwest National Laboratory (PNNL), the R&amp;D agenda for visual analytics was development to define the directions and priorities for future R&amp;D programs focused on visual analytics tools. This agenda, </span><em><span>Illuminating the Path</span></em><span>, provides a coordinated technical vision for government and investments and helps ensure that a continual stream of technology and tools enter the hands of analysts and emergency responders.</span></p><h2 id='agenda-development-process'><strong><span>Agenda Development Process</span></strong></h2><p><span>Development of the visual analytics agenda began after a survey of leading universities’ researchers found that traditional views of the needed science, such as visualization, did not address the required capabilities. We needed to achieve a broad understanding of the requirements in order to enable the best talents to address the technical challenges. Achieving this understanding requirement training from those dealing with border protection, emergency response, and analysis. It also required the assembly of a dedicated team of highly motivated people to develop this agenda.</span></p><p><span>We placed an open call for leaders in many fields to participate by submitting short white papers and biographies. The response was overwhelming in terms of both the quality and quantity of submittals. The NVAC Advisory Board, composed of representatives from industry, academia, government, and national laboratories, had the difficult job of selecting about 25 representative leaders.</span></p><p><span>The selected scientists, analysts, and applied mission experts were challenged to develop this agenda within 9 months for its sponsor, DHS. To accomplish this, the panel met twice for 3-day structured workshops. During both workshops, about half the time was devoted to training by experienced instructors educating the scientific community on the user community’s needs. This training changed many views of the panel members about the technological advancements needed to support the homeland security mission. Our instructors fully participated in the workshops to provide their guidance to team.</span></p><p><span>Key topics were selected and organized into chapters; chapter leads and authors volunteered to develop the content; and drafts of the agenda were iteratively produced, reviewed, and edited. The product is documented in this book.</span></p><p><span>The R&amp;D agenda described herein is only a beginning. It constitutes a grand challenge for the scientific enterprise, but more importantly, achieving the agenda is vital to the mission to protect our homeland. As you read this book, we encourage you to think carefully about the role you can play in advancing the science of visual analytics toward helping to safeguard our nation.</span></p><h2 id='acknowledgements'><strong><span>Acknowledgements</span></strong></h2><p><span>We must first express our appreciation to DHS for their sponsorship of this effort, particularly Joseph Kielman, Maureen McCarthy, Alexandra Landsberg, and David Shepherd. Their unwavering support and guidance have been essential to this process.</span></p><p><span>We would like to personally thank the many authors and contributors who dedicated their time and effort to the development of this R&amp;D agenda. We would especially like to acknowledge the following individuals who acted as advisors on the creation of this book. We deeply appreciate their hard work, diligence, and perseverance on the many and complicated editorial aspects of this project. Their efforts enabled the completion of this book within a very short timeframe. Without their passion and drive, this book would not have been possible.</span></p><blockquote><p><span>Nancy Chinchor</span><span>						</span><span>Central Intelligence Agency</span></p><p><span>Pat Hanrahan</span><span>							</span><span>Stanford University</span></p><p><span>George Robertson</span><span>					</span><span>Microsoft Corporation</span></p><p><span>Russ Rose</span><span>									</span><span>Central Intelligence Agency</span></p></blockquote><p><span>We are sincerely grateful to the members of the R&amp;D agenda panel. These individuals were selected in 2004 as the best and brightest multidisciplinary team to define this agenda. The panel members’ individual technical strengths were applied in writing the agenda. The team made many personal sacrifices to see this project to completion. We are honored to have these great individuals as part of the agenda development and author team.</span></p><blockquote><p><span>Anthony Bartoletti</span><span>						</span><span>Lawrence Livermore National Laboratory</span></p><p><span>Mark Billinghust</span><span>							</span><span>Human Interface Technology Laboratory, New Zealand</span></p><p><span>Stuart Card</span><span>									</span><span>Palo Alto Research Center</span></p><p><span>Dan Carr</span><span>										</span><span>Geoge Mason University</span></p><p><span>John Dill</span><span>											</span><span>Simon Fraser University</span></p><p><span>Rae Earnshaw</span><span>								</span><span>University of Bradford, UK</span></p><p><span>Dave Ebert</span><span>										</span><span>Purdue University</span></p><p><span>Stephen Eick</span><span>									</span><span>University of Illinois, Chicago and SSS Research</span></p><p><span>Robert Grossman</span><span>							</span><span>University of Illinois, Chicago</span></p><p><span>Chuck Hansen</span><span>								</span><span>University of Utah</span></p><p><span>Don Jones</span><span>										</span><span>Pacific Northwest National Laboratory</span></p><p><span>Ken Joy</span><span>											</span><span>University of California, Davis</span></p><p><span>David Kasik</span><span>									</span><span>The Boeing Company</span></p><p><span>David Laidlaw</span><span>								</span><span>Brown University</span></p><p><span>Sharon Laskowski</span><span>							</span><span>National Insititute Of Standards and Technology</span></p><p><span>Alan Mac Earchren</span><span>							</span><span>The Pennsylvania State University</span></p><p><span>Catherine Plaisant</span><span>						</span><span>University of Maryland</span></p><p><span>Bill Ribarsky</span><span>									</span><span>University of North Carolina, Charlotte</span></p><p><span>John Stasko</span><span>									</span><span>Georgia Institute of Technology</span></p><p><span>Maureen Stone</span><span>								</span><span>Stone Soup Consulting</span></p><p><span>Alan Turner</span><span>									</span><span>Pacific Northwest National Laboratory</span></p><p><span>Matt Ward</span><span>										</span><span>Worcester Polytechnic Institute</span></p><p><span>David White</span><span>										</span><span>Sandia National Laboratory</span></p><p><span>Pak Chung Wong</span><span>							</span><span>Pacific Northwest National Laboratory</span></p><p><span>David Woods</span><span>									</span><span>The Ohio State University</span></p><p><span>Bill Wright</span><span>										</span><span>Oculus Info, Inc.</span></p></blockquote><p><span>In addition to the panel members, several other individual authors worked on the agenda. They all brought their unique perspective and technical background to this project. We are thankful for each of their contributions.</span></p><blockquote><p><span>Brian Fisher</span><span>											</span><span>University of British Columbia</span></p><p><span>Beth Hetzler</span><span>											</span><span>Pacific Northwest National Laboratory</span></p><p><span>Donna Peuquet </span><span>										</span><span>The Pennsylvania State University</span></p><p><span>Mark Whiting</span><span>										</span><span>Pacific Northwest National Laboratory</span></p><p><span>Paul Whiteny </span><span>										</span><span>Pacific Northwest National Laboratory</span></p></blockquote><p><span>We are also grateful for the participation and advice of Lucy Nowell of the Advanced Research and Development Activity. Lucy provided a valuable government perspective to the workshops.</span></p><p><span>Setting the context for the complexity and magnitude of problems faced by analysts and first responders required significant training by several intelligence community resources. We are especially grateful to David Moore from the National Security Agency and Frank Hughes from the Joint Military Intelligence College, who acted as consultants to the panel. Their training enabled a deep understanding of the need for visual analytics technologies to combat terrorism.</span></p><p><span>We also thank those individuals who contributed countless hours to the production of this book. Our sincere appreciation goes to Jill Farris, NVAC’s Operations Manager, for their efforts in coordinating the workshops and seeing the agenda through to production with the Institute of Electrical and Electronics Engineers(IEEE). We also thank Torsten Moller, who acted as the publishing liaison with IEEE. His expertise with the publication process at IEEE was invaluable to the team. We also want to thank the PNNL editorial and layout staff, Sharon Eaton and Jamie Gority, for their persistence in getting this book to production, and Dristin Manke and Barbara Wilson for generously sharing their wisdom and experience. We also gratefully acknowledge Lee Ann Dudny and Christian Posse for their insight and suggestions. Finally, we recognize Ian Roberts and Ted Tanasse for enabling graphics and web designs for the online and print versions of Illuminating the Path.</span></p><p><span>The teamwork and spirit of collaboration displayed in producing this R&amp;D agenda are exactly what is needed to make the agenda a reality. Thank you, team for being a model for carrying this important work forward.</span></p><p><span>James J. Thomas     Kristin A. Cook</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='序言'><span>序言</span></h1><p><span>2011年9月11日，美国的恐怖主义威胁变得令人恐惧地（</span><code>horrifically</code><span>）真实，在国内乃至世界都产生了非常大的震惊。随之而来应对这次威胁的对策涉及很多形式，包括新技术的发明，以此来提供技术优势从而帮助阻挠（</span><code>thwart</code><span>）恐怖主义。</span></p><p><span>技术进步的一个重要领域就是，发展先进的信息技术以支持国土安全任务。几个世纪以来，我们一直致力于改进收集信息的能力，并且未来还将继续进行。然而，我们分析信息的能力是非常缺乏的（</span><code>sorely lacking</code><span>）。信息是非常大量的、复杂的、不完整的、并且是不确定的。并且它包含（</span><code>encompass</code><span>）了所有的数据形式、语言以及文化。需要支持人类判断的应用的技术来帮助人类更好地利用这种信息，同时把这些信息视情况分享给其他人，以此来防止、阻止以及应对威胁。</span></p><p><span>美国国土安全部（DHS）在2014年特许建立（</span><code>charter</code><span>）国家可视化和分析中心（NVAC）， 目的是帮助打击未来在美国和全球范围内的恐怖袭击。NVAC的一个主要目标是为可视分析定义一个长期的研究和发展议程来解决研究与发展过程中最迫切的（</span><code>pressing</code><span>）需求来促进先进的分析洞察力。</span></p><p><span>在西北太平洋国家实验室（Pacific Northwest National Laboratory，PNNL）的领导下，可视分析的研究与发展议程被发展为定义未来研究和发展可视分析工具程序的</span><strong><span>方向</span></strong><span>和</span><strong><span>优先级</span></strong><span>。这个议程，</span><em><span>Illuminating the Path</span></em><span>，为政府和工业投资提供了一个一致的（</span><code>coordinated</code><span>）技术愿景，并且有助于确保一个持续不断的技术和工具进入分析师和应急响应人员的手中。</span></p><h2 id='议程的制定过程'><span>议程的制定过程</span></h2><p><span>视觉分析议程的发展始于一项针对顶尖（</span><code>leading</code><span>）大学研究人员的调查，该调查发现，对所需科学的传统观点（例如可视化）无法解决所需要的能力。我们需要实现对需求的广泛理解，以（</span><code>enable</code><span>）使最优秀的人才能够应对技术挑战。要实现这种理解需要来自那些应对边界保护、紧急情况应对以及分析人员的训练。它还需要成立一个由高度积极的人组成的专门小组（</span><code>the assembly of a dedicated team</code><span>）来制定这一议程。</span></p><p><span>我们通过提交简短的白皮书和传记公开呼吁（</span><code>open call for</code><span>）许多领域的领导者参与。从提交的质量（</span><code>quality</code><span>）和数量（</span><code>quantity</code><span>）来看，反响是压倒性（</span><code>overwhelming</code><span>）的。由来自工业界、学术界、政府和国家实验室的代表组成的NVAC咨询委员会，艰难地选出了大约25名代表领导人。</span></p><p><span>被选中的科学家、分析师以及任务应用专家面临着在9个月内为其赞助商DHS制定出议程的挑战。为了完成这个挑战，该小组举行了2次为期3天的结构化研讨会。在这两个讲习班期间，大概一半的时间都被用来由经验丰富的教员就用户群体的需要向科学界进行培训。这个培训改变了小组成员对支持国土安全任务所需的技术进步的许多看法。我们的导师全程参与工作坊，为团队提供指导。</span></p><p><span>关键主题被选出并被组织成章节；章节负责人和志愿者自愿开发内容；并且议程草案也经过反复（</span><code>iteratively</code><span>）拟定、审查和编辑。该产品在这本书中有详细说明。</span></p><p><span>本书中（</span><code>herein</code><span>）描述的研究与发展议程仅仅只是一个开始。它对于科研单位、企业构成了一个巨大的挑战（</span><code>grand challenge</code><span>），但更重要的是，实现这个议程对于</span><strong><span>保卫祖国</span></strong><span>的使命是非常关键的。当你阅读这本书的时候，我们鼓励你仔细思考你可以在促进视觉分析科学，帮助保卫（</span><code>safeguard</code><span>）我们的国家中可以扮演的角色。</span></p><h2 id='鸣谢'><span>鸣谢</span></h2><p><span>首先，我们必须感谢国土安全部（DHS）对这项工作的赞助，特别是约瑟夫·基尔曼、莫林·麦卡锡、亚历山德拉·兰茨伯格和大卫·谢泼德。他们坚定不移的（</span><code>unwavering</code><span>）支持和指导对这一进程至关重要。</span></p><p><span>我们要亲自感谢许多作者和贡献者，他们为制定这一研发议程投入了时间和精力。我们特别要感谢以下在本书创作过程中担任顾问的人。我们非常感谢他们在这个项目许多复杂的编辑方面的辛勤工作、勤奋和毅力（</span><code>perseverance</code><span>）。他们的努力使这本书在很短的时间（</span><code>timeframe</code><span>）内完成。没有他们的热情和动力（</span><code>drive</code><span>），就不可能有这本书。</span></p><blockquote><p><span>Nancy Chinchor</span><span>			</span><span>Central Intelligence Agency（</span><code>中央情报局</code><span>） </span></p><p><span>Pat Hanrahan</span><span>				</span><span>Stanford University（</span><code>斯坦福大学</code><span>） </span></p><p><span>George Robertson</span><span>			</span><span>Microsoft Corporation（</span><code>微软公司</code><span>） </span></p><p><span>Russ Rose</span><span>				</span><span>Central Intelligence Agency（</span><code>中央情报局</code><span>）</span></p></blockquote><p><span>我们衷心感谢研发议程小组的成员。这些人在2004年被选为定义这一议程的最优秀、最聪明的多学科（</span><code>multidisciplinary</code><span>）团队。小组（</span><code>panel</code><span>）成员在撰写议程时运用了各自的技术优势。为了完成这个项目，这个团队做出了许多个人牺牲（</span><code>sacrifice</code><span>）。我们很荣幸有这些伟大的人作为议程制定和作者团队的一部分。</span></p><blockquote><p><span>Anthony Bartoletti    Lawrence Livermore National Laboratory（</span><code>劳伦斯利弗莫尔国家实验室</code><span>）</span></p><p><span>Mark Billinghust      Human Interface Technology Laboratory, New Zealand（</span><code>人机界面技术实验室</code><span>）</span></p><p><span>Stuart Card         Palo Alto Research Center（</span><code>帕洛阿尔托研究中心</code><span>）</span></p><p><span>Dan Carr           Geoge Mason University（</span><code>乔治梅森大学</code><span>）</span></p><p><span>John Dill           Simon Fraser University（</span><code>西蒙弗雷泽大学</code><span>）</span></p><p><span>Rae Earnshaw       University of Bradford, UK（</span><code>英国布拉德福德大学</code><span>）</span></p><p><span>Dave Ebert          Purdue University（</span><code>普渡大学</code><span>）</span></p><p><span>Stephen Eick        University of Illinois, Chicago and SSS Research（</span><code>伊利诺伊大学芝加哥分校</code><span>）</span></p><p><span>Robert Grossman     University of Illinois, Chicago（</span><code>伊利诺伊大学芝加哥分校</code><span>）</span></p><p><span>Chuck Hansen       University of Utah（</span><code>犹他大学</code><span>）</span></p><p><span>Don Jones          Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>）</span></p><p><span>Ken Joy            University of California, Davis（</span><code>加州大学戴维斯分校</code><span>）</span></p><p><span>David Kasik         The Boeing Company（</span><code>波音公司</code><span>）</span></p><p><span>David Laidlaw       Brown University（</span><code>布朗大学</code><span>）</span></p><p><span>Sharon Laskowski    National Insititute Of Standards and Technology（</span><code>美国国家标准与技术研究所</code><span>）</span></p><p><span>Alan Mac Earchren    The Pennsylvania State University（</span><code>宾夕法尼亚州立大学</code><span>）</span></p><p><span>Catherine Plaisant    University of Maryland（</span><code>马里兰大学</code><span>）</span></p><p><span>Bill Ribarsky         University of North Carolina, Charlotte（</span><code>北卡罗来纳大学夏洛特分校</code><span>）</span></p><p><span>John Stasko         Georgia Institute of Technology（</span><code>佐治亚理工学院</code><span>）</span></p><p><span>Maureen Stone      Stone Soup Consulting（</span><code>石汤咨询</code><span>）</span></p><p><span>Alan Turner         Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>）</span></p><p><span>Matt Ward          Worcester Polytechnic Institute（</span><code>伍斯特理工学院</code><span>）</span></p><p><span>David White         Sandia National Laboratory（</span><code>桑迪亚国家实验室</code><span>）</span></p><p><span>Pak Chung Wong     Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>）</span></p><p><span>David Woods        The Ohio State University（</span><code>俄亥俄州立大学</code><span>）</span></p><p><span>Bill Wright          Oculus Info, Inc.（</span><code>Oculus 信息公司</code><span>）</span></p></blockquote><p><span>除了小组成员之外，还有其他几位个人作者参与了议程。他们都为这个项目带来了他们独特的观点和技术背景。我们感谢他们每一个人的贡献。</span></p><blockquote><p><span>Brian Fisher</span><span>			</span><span>University of British Columbia（</span><code>不列颠哥伦比亚大学</code><span>） </span></p><p><span>Beth Hetzler</span><span>			</span><span>Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>） </span></p><p><span>Donna Peuquet</span><span>		</span><span>The Pennsylvania State University（</span><code>宾夕法尼亚州立大学</code><span>） </span></p><p><span>Mark Whiting</span><span>			</span><span>Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>）</span></p><p><span>Paul Whiteny</span><span>			</span><span>Pacific Northwest National Laboratory（</span><code>太平洋西北国家实验室</code><span>）</span></p></blockquote><p><span>我们也感谢高级研究与发展活动的Lucy Nowell的参与和建议。露西为研讨会（</span><code>workshops</code><span>）提供了一个有价值的政府视角。</span></p><p><span>为分析人员和急救人员（</span><code>first responders</code><span>）所面临的问题的复杂性和严重性（</span><code>magnitude</code><span>）设定背景，需要多个情报界（</span><code>intelligence community</code><span>）资源进行大量培训。我们要特别感谢国家安全局的大卫·摩尔和联合军事情报学院的弗兰克·休斯，他们是专家组的顾问。他们的训练使他们深刻理解了视觉分析技术在打击（</span><code>combat</code><span>）恐怖主义方面的必要性。</span></p><p><span>我们也感谢那些为这本书的制作贡献了无数时间的人。我们衷心感谢NVAC的运营经理Jill Farris，感谢他与电气和电子工程师协会(IEEE)协调研讨会并将议程落实到生产中所做的努力。我们还要感谢与IEEE进行出版联络（</span><code>liaison</code><span>）的Torsten Moller。他在IEEE发表过程中的专业知识对团队来说是无价的。我们还要感谢PNNL的编辑和排版人员（</span><code>editorial and layout staff</code><span>）Sharon Eaton和Jamie Gority，感谢他们坚持不懈地将这本书制作出来，感谢Dristin Manke和Barbara Wilson慷慨地分享他们的智慧和经验。我们也感谢Lee Ann Dudny和Christian Posse提出的见解和建议。最后，我们要感谢Ian Roberts和Ted Tanasse为《照亮道路》的网络版和印刷版提供（</span><code>enabling</code><span>）了图形和网页设计。</span></p><p><span>在制定这一研发议程时所表现出的团队精神和协作精神正是使这一议程成为现实所需要的。谢谢你们，团队，你们是推动这项重要工作向前发展的榜样。</span></p><p><span>James J. Thomas</span><span>	</span><span>Kristin A. Cook</span></p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
