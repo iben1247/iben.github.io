@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Illuminating the Path - Executive Summary CH6</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >Executive Summary CH6</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#moving-research-into-practice-chapter-6">Moving Research into Practice (Chapter 6)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n39"><a class="md-toc-inner" href="#将研究转化为实践第六章）">将研究转化为实践（第六章）</a></span></p></div><h2 id='moving-research-into-practice-chapter-6'><span>Moving Research into Practice (Chapter 6)</span></h2><p><span>To truly leverage the successful research results described by this agenda, these results must be moved into practice. They must be deployed and used to address the national security and analysis needs of the country.</span></p><p><span>The issues associated with moving research into practice are often omitted from R&amp;D agendas of this type. However, this panel felt compelled to provide a frame-work for four fundamental issues associated with accelerating the process of getting technology into the hands of users. Each of these issues has the potential to make or break the successful deployment of the new technologies we are recommending.</span></p><p><span>First and foremost, the resulting tools, algorithms, and approaches must be evaluated to ensure that they represent a significant advance over current practice and to ensure that they operate correctly. Second, issues of security and privacy must be addressed from the start and throughout the research, development, and deployment process. Third, software interoperability, architecture, and data handling must be attended to in order to facilitate collaborative research, software evaluation, and software deployment into a wide variety of software environments. Finally, a concerted and sustained effort to insert the resulting technology into operational environments will be essential if the research results are to be of benefit.</span></p><p><span>The panel recommends several actions to accelerate the transitioning of research into practice.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Develop an infrastructure to facilitate evaluation of new visual analytics technologies.</span></strong></p><p><span>All too often we develop and deploy technology that has not been evaluated within the contexts of its intended use. This is especially true when dealing with the bridge between unclassified and classified applications. We need common methods and measures for evaluation, with a focus not only on performance but also on utility.</span></p><p><span>Evaluation is an iterative process that will require a support infrastructure in order to succeed. It begins with evaluations of research done by the inventors themselves. Good sources of unclassified test data will be required to support this evaluation. The most promising research will mature through further stages of development and refinement and will be combined with other technologies, with progressively more sophisticated evaluations conducted in unclassified visual analytics test beds that will be established to approximate the target deployment environment. Conducting these evaluations will require a test bed infrastructure with more representative, but still unclassified, test data streams to use for evaluation. Ultimately, tools will be evaluated in technology insertion facilities that directly replicate the target production environments, which will require close collaboration among government and research communities. The lessons learned throughout the evaluation process should be captured from this process and shared throughout the community.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Create and use a common security and privacy infrastructure, with support for incorporating privacy-supporting technologies, such as data minimization and data anonymization.</span></strong></p><p><span>Protecting confidentiality and data integrity to ensure privacy and security is a key objective of DHS. As stated in their Strategic Plan [DHS, 2004], “We will ensure the technologies employed sustain, and do not erode, privacy protections relating to the collection, use, and disclosure of personal information. We will eliminate inappropriate access to confidential data to preserve the privacy of Americans. We will maintain an appropriate balance between freedom and safety consistent with the values of our society.&quot;</span></p><p><span>The goal of visual analytics R&amp;D is to create fundamentally new ways for people to understand and act upon the data available to them. However, this must be done within a framework that fully considers and supports the need for privacy in all phases of the work, from the earliest research stages to the deployment phase.</span></p><p><span>To make attention to privacy a natural and routine part of the visual analytics R&amp;D process, we need to adopt a standard suite of anonymization technologies and make these available to the visual analytics research community. We further recommend that all researchers in visual analytics receive training so that they clearly understand privacy and security laws and policies and do not inadvertently invent technologies or use data that violate these laws and policies.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Use a common component-based software development approach for visual analytics software to facilitate evaluation of research results in integrated prototypes and deployment of promising components in diverse operational environments.</span></strong></p><p><span>Software interoperability is important to the visual analytics R&amp;D effort. Initially, complementary technologies created by different research teams will be evaluated together in test beds to determine how best to deploy them. Ultimately, though, the most promising breakthrough technologies are likely to have broad applicability and thus will be candidates for deployment into diverse analyst-focused systems in use within DHS and other government agencies. The only effective path to rapid and cost-effective deployment of new technologies is to develop them in the form of reusable software components.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Identify and publicize best practices for inserting visual analytics technologies into operational environments.</span></strong></p><p><span>One measure of success for this R&amp;D agenda is the extent to which the resulting research matures into software that finds broad usage. The process of transitioning software into wide analytical use is complex, and it requires the cooperative efforts of researchers, software engineers, systems infrastructure and operations staff, training and support staff, and the users themselves. Although the process can be difficult, there are examples of successful transitions that provide important lessons and guideposts for future technology insertion efforts. By identifying and publicizing these best practices, we can help speed the transition of the next generation of innovative research into the user&#39;s hands.</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2 id='将研究转化为实践第六章）'><span>将研究转化为实践（第六章）</span></h2><p><span>要真正利用本议程描述的成功研究成果，必须将这些成果付诸实践。必须部署和使用它们来解决该国的国家安全和分析需求。</span></p><p><span>与将研究付诸实践相关的问题在此类研发议程中经常被忽略。 但是，该小组感到有必要（</span><code>compelled</code><span>）为与加速将技术交到用户手中的过程相关的四个基本问题提供一个框架。 这些问题中的每一个都有可能影响或破坏我们推荐的新技术的成功部署。</span></p><p><span>首先也是最重要的是，必须对由此产生的工具、算法和方法进行评估，以确保它们代表了当前实践的重大进步，并确保它们能够正确运行。 其次，安全和隐私问题必须从一开始就在整个研究、开发和部署过程中得到解决。 第三，必须注意软件互操作性、体系结构和数据处理，以促进协作研究、软件评估和软件部署到各种软件环境中。 最后，如果要使研究结果受益，则将所产生的技术融入作战环境的协调一致和持续的努力将是必不可少的。 该小组建议采取多项行动来加速研究向实践的转变。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>开发基础设施以促进对新的可视化分析技术的评估。</span></strong></p><p><span>我们经常开发和部署未在其预期用途范围内进行评估的技术。 在处理未分类和分类应用程序之间的桥梁时尤其如此。 我们需要通用的评估方法和措施，不仅要关注绩效，还要关注效用。</span></p><p><span>评估是一个迭代过程，需要支持基础设施才能成功。 它从对发明者自己所做的研究的评估开始。 需要良好的未分类测试数据来源来支持此评估。 最有前途的研究将通过进一步的开发和完善阶段成熟，并将与其他技术相结合，在非机密的视觉分析试验台上进行越来越复杂的评估，这些试验台将被建立以接近目标部署环境。 进行这些评估将需要一个测试台基础设施，该基础设施具有更具代表性但仍未分类的测试数据流以用于评估。 最终，工具将在直接复制目标生产环境的技术插入设施中进行评估，这将需要政府和研究团体之间的密切合作。 在整个评估过程中吸取的经验教训应该从这个过程中获取并在整个社区中共享。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>创建和使用通用的安全和隐私基础设施，支持合并隐私支持技术，例如数据最小化和数据匿名化。</span></strong></p><p><span>保护机密性和数据完整性以确保隐私和安全是国土安全部的一个关键目标。正如他们的战略计划 [DHS，2004 年] 所述，“我们将确保所采用的技术维持而不是削弱与收集相关的隐私保护， 使用和披露个人信息。 我们将消除对机密数据的不当访问，以保护美国人的隐私。 我们将根据我们社会的价值观在自由和安全之间保持适当的平衡。”</span></p><p><span>可视化分析研发的目标是从根本上创造新的方式，让人们理解可用的数据并据此采取行动。 但是，这必须在一个框架内完成，该框架充分考虑并支持从最早的研究阶段到部署阶段的所有工作阶段的隐私需求。</span></p><p><span>为了使对隐私的关注成为视觉分析研发过程中自然而常规的一部分，我们需要采用一套标准的匿名化技术，并将这些技术提供给视觉分析研究社区。 我们进一步建议所有视觉分析研究人员接受培训，以便他们清楚地了解隐私和安全法律和政策，并且不会无意中（</span><code>inadvertently</code><span>）发明技术或使用违反这些法律和政策的数据。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>对可视化分析软件使用基于组件的通用软件开发方法，以促进集成原型中研究结果的评估以及在不同操作环境中部署有前途的组件。</span></strong></p><p><span>软件互操作性对于可视化分析研发工作很重要。 最初，不同研究团队创建的互补技术将在试验台上一起进行评估，以确定如何最好地部署它们。 但最终，最有前途的突破性技术可能具有广泛的适用性，因此将成为部署到国土安全部和其他政府机构使用的各种以分析师为中心的系统的候选技术。 快速且经济高效地部署新技术的唯一有效途径是以可重用软件组件的形式开发它们。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>确定并宣传（</span><code>publicize</code><span>）将可视化分析技术插入操作环境的最佳实践。</span></strong></p><p><span>衡量此研发议程成功与否的一个指标是所产生的研究在多大程度上成熟为可广泛使用的软件。 将软件转化为广泛的分析用途的过程是复杂的，需要研究人员、软件工程师、系统基础设施和操作人员、培训和支持人员以及用户本身的通力合作。 虽然这个过程可能很困难，但有一些成功的例子可以为未来的技术插入工作提供重要的经验教训和指导。 通过确定和宣传这些最佳实践，我们可以帮助加快将下一代创新研究转移到用户手中的速度。</span></p><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

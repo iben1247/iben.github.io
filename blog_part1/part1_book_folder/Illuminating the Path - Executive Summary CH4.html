@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Illuminating the Path - Executive Summary CH4</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >Executive Summary CH4</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#data-representations-and-transformations-chapter-4">Data Representations and Transformations (Chapter 4)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n65"><a class="md-toc-inner" href="#数据表示和转换第四章）">数据表示和转换（第四章）</a></span></p></div><h2 id='data-representations-and-transformations-chapter-4'><span>Data Representations and Transformations (Chapter 4)</span></h2><p><span>Visualization is intended to represent data and information in a way that can be acted upon by the analyst. The quality of the visualization is the most directly affected by the quality of the data representation that underlies the visualization.</span></p><p><span>Data must be transformed into a representation that is appropriate to the analytical task and appropriately conveys the important content of a large, complex, and dynamic collection. A data transformation is a computational procedure that converts between data representations. Data transformations are used to convert data into new, semantically meaningful forms. For example, linguistic analysis can be used to assign meaning to the words in a text document. Data transformations may be used to determine the optional way to display data, such as by creating a two-dimensional representation of data with hundreds or thousands of dimensions.</span></p><p><span>Transforming and representation data are complex for many reasons. The first issue is the sheer number of different types of data that may be analyzed: text in the form of short or long documents comprising many languages, numeric data form sensors, structured data from relational databases, audio and video, and image data. Each of these types of data may need to be transformed in different ways to facilitate visual analysis.</span></p><p><span>The massive scale and dynamic nature of data dictate that the transformations must be fast, flexible, and capable of operating at many levels of abstraction. Data are of varying levels of certainty and reliability, so these assessments of quality must be preserved and presented. Data of different types are often required to conduct an analysis, so it is very important to develop a data synthesis capability-a capability to bring data of different types together in a single environment so that analysts can concentrate on the meaning of data rather than on the form in which it was originally packaged.</span></p><p><span>The panel recommends several actions to advance the community’s capabilities for data representation and transformation.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Develop both theory and practice for transforming data into new scalable representations that faithfully represent the content of the underlying data.</span></strong></p><p><span>From the standpoint of the analyst, border guard, or first responder, information provides guidance, insight, and support for assessments and decision. Our goal is to illuminate the potentially interesting content within the data so that users may discover important and unexpected information buried within massive volumes of data. Each type of data presents its own challenges for data representation and transformation. In most cases, data representations are not meant to replace the original data but to augment them by highlighting relevant nuggets of information to facilitate analysis.</span></p><p><span>We must develop mathematical transformations and representations that can scale to deal with vast amounts of data in a timely manner. These approaches must provide a high-fidelity representation of the true information content of the underlying data. They must support the need to analyze a problem at varying levels of abstraction and consider the same data from multiple viewpoints.</span></p><p><span>Data are dynamic and may be found in ever-growing collections or in streams that may never be stored. New representation methods are needed to accommodate the dynamic and sometimes transient nature of data. Transformation methods must include techniques to detect changes, anomalies, and emerging trends.</span></p><p><span>Methods exist at varying levels of maturity for transforming data. For example, there are a variety of methods for transforming the content of textual documents using either statistical or semantic approaches. Combining the strengths of these two approaches may greatly improve the results of the transformation.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Create methods to synthesize information of different types and from different sources into a unified data representation so that analysts, first responders, and border personnel may focus on the meaning of the data.</span></strong></p><p><span>Complex analytical tasks require the user to bring together evidence from a variety of data types and sources, including text sources in multiple languages, audios, video, and sensor data. Today’s analytical tools generally require that the user consider data of different types separately. However, users need to be able to understand the meaning of their information and to consider all the evidence together, without being restricted by the type of data that the evidence originally came in. Furthermore, they need to be able to consider their information at different levels of abstraction.</span></p><p><span>Synthesis is essential to the analysis process. While it is related to the concept of data fusion, it entails much more than placing information of different types on a map display. The analytical insight required to meet homeland security missions requires the integration of relationships, transactions, images, and video at the true meaning level. While spatial elements may be displayed on map, the non-spatial information must be synthesized at the meaning level with that spatial information and presented to the user in a unified representation.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Develop methods and principles for representing data quality, reliability, and certainty measures throughout the data transformation and analysis process.</span></strong></p><p><span>By nature, data are of varying quality, and most data have levels of uncertainty associated with them. Furthermore, the reliability of data may differ based on a number of factors, including the data source. As data are combined and transformed, the uncertainties may become magnified. These uncertainties may have profound effects on the analytical process and must be portrayed to users to inform their thinking. They will also make their own judgments of data quality, uncertainty, and reliability based upon their expertise. These judgments must be captured and incorporated as well. Furthermore, in this environment of constant change, assessments of data quality or uncertainty may be called into question at any time based on the existence of new and conflicting information.</span></p><p><span>The complexity of this problem will require algorithmic advances to address the establishment and maintenance of uncertainty measures at varying levels of data abstraction.</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2 id='数据表示和转换第四章）'><span>数据表示和转换（第四章）</span></h2><p><span>可视化的目的是以一种可以被分析者采取行动的方式来表示数据和信息。可视化的质量最直接受到作为可视化基础的数据表示的质量的影响。</span></p><p><span>数据必须被转换为适合分析任务的表示，并适当地传达大型、复杂和动态集合的重要内容。数据转换是一种在数据表现形式之间进行转换的计算程序。数据转换被用来将数据转换成新的、有语义的形式。例如，语言学分析可以用来给文本文件中的单词赋予意义。数据转换可用于确定显示数据的可选方式，例如通过对具有数百或数千维度的数据创建一个二维表示。</span></p><p><span>由于许多原因，转换和表示数据是复杂的。第一个问题是可能被分析的不同类型的数据数量庞大：由多种语言组成的短或长文件形式的文本、传感器形式的数字数据、来自关系型数据库的结构化数据、音频和视频以及图像数据。这些类型的数据都可能需要以不同的方式进行转换，以促进可视化分析。</span></p><p><span>数据的大规模和动态性质决定了（</span><code>dictate</code><span>）转换必须快速、灵活，并且能够在许多抽象层次上操作。数据的确定性和可靠性水平各不相同，所以这些质量评估必须被保存和呈现。进行分析时往往需要不同类型的数据，因此开发数据综合能力非常重要--将不同类型的数据汇集到一个环境中的能力，这样分析人员就可以集中精力研究数据的意义，而不是数据最初被包装的形式。</span></p><p><span>该小组建议采取一些行动来提高社区的数据表示和转换能力。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>发展理论和实践，将数据转化为新的可扩展的表现形式，忠实地表现基础数据的内容。</span></strong></p><p><span>从分析家、边防军或第一反应者的角度（</span><code>standpoint</code><span>）来看，信息为评估和决策提供了指导、洞察力和支持。我们的目标是照亮数据中潜在的有趣内容，以便用户可以发现埋藏在大量数据中的重要和意外的信息。每种类型的数据都对数据表示和转换提出了自己的挑战。在大多数情况下，数据表示不是为了取代原始数据，而是通过突出相关的信息块（</span><code>nuggets</code><span>）来增强它们，以促进分析。</span></p><p><span>我们必须开发能够及时处理海量数据的数学转换和表示方法。这些方法必须为基础数据的真实信息内容提供高保真的表示（</span><code>high-fidelity representation</code><span>）。它们必须支持在不同的抽象层次上分析问题的需要，并从多个角度考虑同一数据。</span></p><p><span>数据是动态的，可能存在于不断增长的集合或可能永远不会被存储的流中。需要新的表示方法来适应数据的动态和有时是瞬时的性质。转换方法必须包括检测变化、异常和新兴趋势的技术。</span></p><p><span>转换数据的方法在不同的成熟度上存在。例如，有多种方法可以使用统计学或语义学方法来转换文本文件的内容。结合这两种方法的优势，可能会大大改善转化的结果。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>创建方法，将不同类型和不同来源的信息合成为统一的数据表示，以便分析员、第一反应者和边境人员可以专注于数据的意义。</span></strong></p><p><span>复杂的分析任务要求用户将各种数据类型和来源的证据汇集起来，包括多种语言的文本来源、音频、视频和传感器数据。今天的分析工具一般要求用户分别考虑不同类型的数据。然而，用户需要能够理解其信息的含义，并将所有的证据放在一起考虑，而不被证据最初的数据类型所限制。此外，他们需要能够在不同的抽象层次上考虑他们的信息。</span></p><p><span>综述对分析过程至关重要。虽然它与数据融合的概念有关，但它所需要的（</span><code>entails</code><span>）远远超过将不同类型的信息放在地图上显示。满足国土安全任务所需的分析洞察力需要在真正意义上整合关系、交易、图像和视频。虽然空间元素可以显示在地图上，但非空间信息必须在意义层面上与空间信息进行综合，并以统一的表示方式呈现给用户。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>制定方法和原则，在整个数据转换和分析过程中表示数据质量、可靠性和确定性的措施。</span></strong></p><p><span>从本质上讲，数据的质量是不同的，大多数数据都有与之相关的不确定性水平。此外，数据的可靠性可能因一些因素而不同，包括数据来源。当数据被组合和转换时，不确定性可能会被放大。这些不确定性可能会对分析过程产生深远的影响，必须向用户描述（</span><code>portrayed</code><span>），以告知他们的想法。他们也会根据自己的专业知识对数据质量、不确定性和可靠性做出自己的判断。这些判断也必须被捕捉和纳入。此外，在这个不断变化的环境中，对数据质量或不确定性的评估可能会因为新的和相互矛盾的信息的存在而在任何时候被质疑。</span></p><p><span>这个问题的复杂性需要算法的进步，以解决在不同的数据抽象水平上建立和维护不确定性的措施。</span></p><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

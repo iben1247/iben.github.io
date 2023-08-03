@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+
+
+
+
+</style><title>Illuminating the Path - Executive Summary CH7+</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >Executive Summary CH7+</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#positioning-for-enduring-success-chapter-7">Positioning for Enduring Success (Chapter 7)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n27"><a class="md-toc-inner" href="#-持久成功的定位第七章）">※ 持久成功的定位（第七章）</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n45"><a class="md-toc-inner" href="#call-to-action">Call to Action</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#-行动号召">※ 行动号召</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n67"><a class="md-toc-inner" href="#references">References</a></span></p></div><h2 id='positioning-for-enduring-success-chapter-7'><span>Positioning for Enduring Success (Chapter 7)</span></h2><p><span>Achieving the agenda outlined here will require the sustained efforts of a multidisciplinary community of researchers. Educational efforts and partnerships are necessary to establish and sustain an enduring visual analytics R&amp;D community capable of meeting these challenges.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Develop programs to support education of the research community about the drivers for visual analytics research.</span></strong></p><p><span>Two major educational efforts are required. First, we must work in conjunction with universities to influence university curricula to provide formal education about visual analytics needs and challenges. Second, we must provide an active continuing education program through workshops, tutorials, and conferences to provide a broad understanding of analytic needs, technical challenges, and state-of-the-art R&amp;D results. These forums should bring together practitioners from government, academia, industry, and the national laboratory system.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Form university-led centers of excellence as well as partnerships with government, industry, national laboratories, and selected international research entities to bring together the best talents to accomplish the visual analytics R&amp;D agenda.</span></strong></p><p><span>NVAC should be the coordinating point for the achievement of the visual analytics research agenda. University-led centers of excellence should be established to focus on advancement of specific high-priority portions of the agenda. Partnerships with government agencies must also be established to help accomplish this agenda.</span></p><p><span>In addition, opportunities must be provided so that experts outside academia can contribute to advancement of this agenda. Avenues must be provided for partnerships with researchers, both individually and organizationally, in industry, government, and the national laboratory system. Selected international collaborations and partnerships should also be established to accomplish portions of the research mission.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Establish special partnerships with the Corporate Information Office (CIO) organizations that support mission agencies to facilitate technology insertion within their operational environments.</span></strong></p><p><span>Transitioning technology into operation is a complex challenge and requires intimate knowledge of the domain into which the technology will be deployed. Partnerships with user organizations and their supporting CIO offices can supply the necessary insight to understand the analytical needs and the operational constraints for software being deployed. These insights are key to accelerating the process of transitioning research into operation.</span></p><p><strong style= "background:#89bfd3; color: white" ><span>Recommendation</span></strong></p><p><strong><span>Provide ongoing support for collaborations, internships, staff exchanges, educational material development, and other efforts that help build interest in the missions of homeland security.</span></strong></p><p><span>This is a critical need to meet DHS&#39;s mission of enduring security for the homeland. This educational outreach effort should be coordinated with the DHS Educational Programs Office and stimulated by coordinated learning and training investments.</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2 id='-持久成功的定位第七章）'><strong style="color:red"><span>※</span></strong><span> 持久成功的定位（第七章）</span></h2><p><span>实现这里概述的议程将需要一个多学科的研究群体的持续努力。为了建立和维持一个能够应对这些挑战的持久的视觉分析研发社区，教育工作和伙伴关系是必要的。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>制定方案，支持对研究界进行有关视觉分析研究驱动力的教育。</span></strong></p><p><span>需要两个主要的教育工作。首先，我们必须与大学合作，影响大学的课程，提供有关视觉分析需求和挑战的正式教育。第二，我们必须通过研讨会、教程和会议提供一个积极的持续教育项目，以提供对分析需求、技术挑战和最先进的研发成果的广泛理解。这些论坛应该把来自政府、学术界、工业界和国家实验室系统的从业人员聚集起来。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>组建由大学领导的卓越中心，并与政府、工业界、国家实验室和选定的国际研究实体建立伙伴关系，以汇集最优秀的人才来完成视觉分析研发议程。</span></strong></p><p><span>NVAC应该是实现视觉分析研究议程的协调点。应建立由大学领导的卓越中心，以专注于推进议程中特定的高度优先部分（</span><code>portions</code><span>）。还必须与政府机构建立伙伴关系，以帮助实现这一议程。</span></p><p><span>此外，必须提供机会，使学术界以外的专家能够为推进这一议程作 出贡献。必须提供与工业界、政府和国家实验室系统的研究人员建立伙 伴关系的途径，包括个人和组织。还应建立一些国际合作和伙伴关系， 以完成部分研究任务。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>与支持任务机构的企业信息办公室（CIO）组织建立特殊的伙伴关系 ，以促进技术在其业务环境中的嵌入。</span></strong></p><p><span>将技术过渡到运行是一个复杂的挑战，需要对将要部署技术的领域 有深入的了解。与用户组织及其支持的首席信息官办公室建立伙伴关系 ，可以提供必要的洞察力，以了解分析需求和正在部署的软件的运行限制。这些洞察力是加速研究向运行过渡进程的关键。</span></p><p><strong style= "background:#89bfd3; color: white" ><span>建议</span></strong></p><p><strong><span>为合作、实习、人员交流、教育材料开发和其他有助于建立对国土安全任务的兴趣的工作提供持续的支持。</span></strong></p><p><span>这是满足国土安全部为国土提供持久安全的使命的关键需求。这种教育推广（</span><code>outreach</code><span>）工作应与国土安全部教育项目办公室协调，并通过协调学习和培训投资来推动。</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2 id='call-to-action'><span>Call to Action</span></h2><p><span>The agenda described herein is only a beginning. As the new discipline of visual analytics matures during the next few years, our understanding of the research challenges and priorities will grow rapidly.</span></p><p><span>To remain on target for accomplishing this research agenda, we will periodically evaluate its progress. While success may be measured in many ways, we choose to focus on two specific areas for evaluation. This effort will be a success if:</span></p><ul><li><p><span>New visual analytic techniques are being transitioned into practice</span></p></li><li><p><span>A vibrant and growing community of practice has been established for visual analytics researchers and engineers.</span></p></li></ul><p><span>This R&amp;D agenda constitutes a grand challenge. While DHS is providing the foundation support for this effort, its success must be realized through the coordinated support and efforts of multiple government agencies, industry, academia, and the national laboratories. As we mobilize to address this challenge, we are mindful of the role we play in helping to safeguard our nation.</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2 id='-行动号召'><strong style="color:red"><span>※</span></strong><span> 行动号召</span></h2><p><span>这里所描述的议程只是一个开始。随着视觉分析这一新学科在未来几年的成熟，我们对研究挑战和优先事项的理解将迅速增长。</span></p><p><span>为了保持目标，完成这一研究议程，我们将定期评估其进展。虽然衡量成功的方法有很多，但我们选择集中在两个特定领域进行评估。这一努力将会成功，如果:</span></p><ul><li><p><span>新的视觉分析技术正在转化为实践</span></p></li><li><p><span>为视觉分析研究人员和工程师建立了一个充满活力（</span><code>vibrant</code><span>）和不断增长的实践社区。</span></p></li></ul><p><span>这一研发议程构成了一个巨大的挑战。虽然国土安全部正在为这项工作提供基础支持，但它的成功必须通过多个政府机构、工业界、学术界和国家实验室的协调支持和努力来实现。在我们动员起来应对这一挑战时，我们牢记我们在帮助保卫我们的国家方面所发挥的作用。</span></p><p>&nbsp;</p><h2 id='references'><span>References</span></h2><ul><li><p><span>Alberts B and WA Wulf. 2002. Making the Nation Safer: The Role of Science and Technology in Countering Terrorism. National Academy of Sciences, Washington, D.C.</span></p></li><li><p><span>Department of Homeland Security (DHS). 2004. Securing our Homeland: U.S. Department of Homeland Security Strategic Plan. Available at </span><a href='http://www.dhs.gov/interweb/assetlibrary/DHS_StratPlan_FINAL_spread.pdf' target='_blank' class='url'>http://www.dhs.gov/interweb/assetlibrary/DHS_StratPlan_FINAL_spread.pdf</a><span>.</span></p></li><li><p><span>Hennessy JL, DA Patterson, and HS LIN, eds. 2003. Information Technology for Counterterrorism: Immediate Actions and Future Possibilities. National Academy of Sciences, Washington, D.C.</span></p></li><li><p><span>National Commission on Terrorist Attacks. 2004. The 9/11 Commission Report. W.W. Norton and Company, Ltd., New York.</span></p></li></ul></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
