@@ -3011,3 +3011,7 @@
 	.toggle > li > details > summary {
 		margin-left: -1.1em;
 	}
+	
+	.posted-on {
+		font-size: 0.750rem;
+	}
