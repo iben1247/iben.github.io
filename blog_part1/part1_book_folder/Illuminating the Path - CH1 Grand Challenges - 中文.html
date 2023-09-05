@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>Illuminating the Path - CH1 Grand Challenges - 中文</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >CH1 Grand Challenges</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n221"><a class="md-toc-inner" href="#重大挑战">重大挑战</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n227"><a class="md-toc-inner" href="#保护我们的家园">保护我们的家园</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n233"><a class="md-toc-inner" href="#场景1沙林毒气袭击">场景1：沙林毒气袭击</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n244"><a class="md-toc-inner" href="#场景2生物攻击">场景2：生物攻击</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n255"><a class="md-toc-inner" href="#大挑战实现深刻的见解">大挑战：实现深刻的见解</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n259"><a class="md-toc-inner" href="#分析恐怖主义威胁">分析恐怖主义威胁</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" href="#保护边境和港口">保护边境和港口</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n274"><a class="md-toc-inner" href="#准备和应对突发事件">准备和应对突发事件</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n285"><a class="md-toc-inner" href="#可扩展性的挑战">可扩展性的挑战</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n295"><a class="md-toc-inner" href="#数据特征">数据特征</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n318"><a class="md-toc-inner" href="#可扩展性">可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n324"><a class="md-toc-inner" href="#信息可扩展性">信息可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n329"><a class="md-toc-inner" href="#视觉可扩展性">视觉可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n333"><a class="md-toc-inner" href="#显示可扩展性">显示可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n335"><a class="md-toc-inner" href="#人类可扩展性">人类可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n340"><a class="md-toc-inner" href="#软件可扩展性">软件可扩展性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n354"><a class="md-toc-inner" href="#其他可扩展性问题">其他可扩展性问题</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n363"><a class="md-toc-inner" href="#可视分析的需求">可视分析的需求</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n373"><a class="md-toc-inner" href="#可视化分析的研究与开发议程">可视化分析的研究与开发议程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n379"><a class="md-toc-inner" href="#分析推理-第二章">分析推理 (第二章)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n396"><a class="md-toc-inner" href="#视觉表示与交互技巧-第三章">视觉表示与交互技巧 (第三章)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n406"><a class="md-toc-inner" href="#数据表示和转换-第四章">数据表示和转换 (第四章)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n408"><a class="md-toc-inner" href="#制作展示和传播-第五章">制作、展示和传播 (第五章)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n410"><a class="md-toc-inner" href="#将研究推向实践-第六章">将研究推向实践 (第六章)</a></span></p></div><p><em><strong><span>“The purpose of computing is insight, not numbers.”</span></strong></em></p><p><span>— Richard Hamming (1915-1998)</span></p><p>&nbsp;</p><p><span>计算的目的是洞察，而不是数字。</span></p><p><span>— 理查德·卫斯里·汉明（理查德·卫斯里·汉明，美国数学家，主要贡献在计算机科学和电讯）(1915-1998)</span></p><p>&nbsp;</p><h1 id='重大挑战'><span>重大挑战</span></h1><p><span>我们的国家面临着深刻的挑战，必须加以解决，以确保我们的自由和安全。正如2001年9月11日对五角大楼和世界贸易中心的袭击所表明的那样，对美国的威胁存在于我们的国境之内。在那一天，经过至少20个月的策划和准备，19名恐怖分子在三个不同的机场劫持了四架客机进行了协调的袭击。劫机者将两架飞机撞向了世界贸易中心的双子塔，一架飞机撞向了五角大楼。第四架飞机原本打算袭击美国另一个地标，但在宾夕法尼亚州坠毁了。这些袭击造成了2973人死亡。</span></p><p><span>随着袭击的展开，政府机构和应急响应人员“</span><em><span>…在困难的情况下，努力进行国土防御，应对他们从未遇到过且从未接受过培训的前所未有的挑战。</span></em><span>”</span><u><span>他们被迫评估复杂和动态的情况，并在极端压力下迅速做出决策</span></u><span>，通常没有获取关键信息的途径，这些信息将帮助他们挽救更多的生命[National Commission on Terrorist Attacks, 2004]。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>可视分析最开始的出发点：</span><mark style="background:#f8e272;"><span>辅助处理被迫评估复杂和动态的情况，并在极端压力下迅速做出决策。</span></mark></p></blockquote><h2 id='保护我们的家园'><span>保护我们的家园</span></h2><p><span>为美国及其公民提供安全构成了我们国家的一项重大挑战。未来的袭击可能会导致大量人员伤亡，并动摇国家对其基本安全的信心。美国国土安全部（DHS）成立于2003年，旨在确保美国的国土安全和保护美国人民。它响应于国家的安全目标，即防止在美国境内发生恐怖袭击，减少美国面临恐怖主义的脆弱性，并将发生的袭击造成的损害最小化并从中恢复[Department of Homeland Security, 2004]。</span></p><p><span>正如其战略计划所述，国土安全部的任务是：</span></p><p><em><span>...领导统一的全国努力，以确保美国的安全。我们将防止和遏制恐怖袭击，保护免受威胁和危害，确保安全的边境，欢迎合法的移民和访客，并促进商业的自由流动。</span></em></p><p><span>DHS已经确定了实现这一重要任务的战略目标和目标。实现这些目标需要来自边境和交通安全、情报分析、执法以及应急准备和响应（包括消防和医疗专业）等各个领域的专业人员的共同努力。这些人每天都面临着理解大量相互矛盾且不断变化的信息以识别和预防新兴威胁、保护我们的边境并在发生攻击或其他灾难时做出反应的挑战。</span></p><p><span>了解这一挑战的复杂性。需要考虑两个设想的场景。</span></p><h3 id='场景1沙林毒气袭击'><span>场景1：沙林毒气袭击</span></h3><p><span>一个有组织的国际恐怖组织制定了一个计划，在美国进行沙林气体袭击。</span></p><p><span>根据疾病控制中心的说法，“沙林是一种人造的化学战剂，被归类为神经毒剂。神经毒剂是已知的化学战剂中毒性最强、作用最快的一种。” 纯沙林气体无味，因此人们可能不知道自己已经接触到了它。沙林气体会攻击呼吸系统，可能致命。[</span><a href='http://www.bt.cdc.gov/agent/sarin/basics/facts.asp' target='_blank' class='url'>http://www.bt.cdc.gov/agent/sarin/basics/facts.asp</a><span>]。</span></p><p><span>恐怖组织派出一个策划团队前往美国，以确定此次袭击的目标。经过考察多个选项后，他们选择了一个大都市地区的三座大型商业办公楼。他们制定了一个计划，将沙林气体释放到建筑物的通风系统中。目标建筑物是根据其大小和位置以及相对容易接近其通风系统而选择的。恐怖分子在目标城市设立了一个小组，并在这三座办公楼的维护部门获得了工作。</span></p><p><span>同时，一支海外恐怖分子小组获得了沙林神经毒剂，仔细包装以掩盖其真实内容，并通过海运货柜将其运入美国。它通过港口城市的海关，并通过租用的卡车运往靠近目标城市的安全屋，然后到达美国恐怖分子小组。海外小组还获得了防护安全装备，并将其运往美国恐怖分子小组。</span></p><p><span>当地恐怖分子制造了必要的喷雾扩散装置，根据需要从当地商店获取材料。在袭击当天，攻击目标建筑的恐怖分子穿上防护装备，并按照严格的时间表在通风系统中部署他们的扩散装置，进行协调攻击。然后，当袭击者逃离该地区时，沙林毒气渗透到三栋办公楼的空气中，并通过屋顶通风系统逃逸到室外空气中。</span></p><p><span>在几分钟内，三栋建筑内的人开始出现暴露症状。911电话被打了，紧急救援人员赶到现场。最初的紧急救援人员在现场时不太可能意识到已经发生了恐怖袭击，并且神经毒剂已经在整个建筑物中释放，导致他们没有任何防护装备就冲进建筑物中，自己也遭受了暴露。</span></p><p><u><span>可能需要很多分钟，且会有大量生命损失，紧急响应人员才能观察到足够的线索来拼凑出紧急情况的真实性质，并将代理识别为沙林气体。然后，他们必须迅速确定如何最好地营救和治疗幸存者。此外，由于沙林已经被释放到建筑物外的空气中，应急管理人员和市政官员必须与公众沟通，让他们在适当的地方避难，以避免暴露。这些官员和管理人员还需要明确说明潜在的暴露和危害，以避免引起公众的恐慌。</span></u></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>关键处理的步骤！</span></p></blockquote><h3 id='场景2生物攻击'><span>场景2：生物攻击</span></h3><p><span>一个国际恐怖组织进行了一次制造肺鼠疫爆发的行动。鼠疫是由细菌引起的，如果不迅速用抗生素治疗感染，就会死亡。它很容易在人类之间传播。</span></p><p><span>恐怖组织确定了一个主要的大都市作为释放鼠疫的目标。他们选择了三个交通繁忙的区域作为目标：</span><strong><span>城市主要机场的卫生间</span></strong><span>，</span><strong><span>专业体育场馆的卫生间</span></strong><span>，以及</span><strong><span>城市火车站的卫生间</span></strong><span>。</span></p><p><span>鼠疫细菌在一个主要的边境口岸通过卡车运送到该国，并被送往目标城市。在一天的时间里，恐怖组织的当地成员在三个目标地点释放鼠疫毒气罐，每次释放的时间都要与每个地点交通最繁忙的时间重合。释放没有被发现。</span></p><p><span>在机场被感染的旅客会飞往他们的目的地，包括美国各地和其他国家。同样地，在镇上观看体育赛事的游客也会回到他们在其他地方的家。</span></p><p><u><span>在首次发病后约36小时才出现患病迹象，感染者会迅速患上严重的呼吸道疾病，如果得不到适当治疗就会死亡。目标城市不明原因疾病的快速增加引发了该市公共卫生系统的警报，公共卫生官员第一次意识到，一种异常的模式正在出现。需要进行调查以确定是否发生了异常事件。进一步的调查使专家们能够确定疾病是鼠疫，并最终将病例与共同来源联系起来。多个政府机构参与调查，以确定疾病和解决公共卫生需求，并查明疫情背后的阴谋和缉拿责任人。</span></u></p><p><u><span>在调查进行的同时，这座城市的公众越来越担心，他们必须在初步信息的基础上得到指导，以帮助他们避免生病。在确定病因时，曾在该国各地或其他国家旅行的受感染者也在患病和死亡，但发病原因最初尚不清楚。</span></u></p><p><u><span>由于鼠疫很容易在人类之间传播，在最终被确认之前，该疾病将有可能传播到远远超出最初感染人群的范围。鼠疫与许多较轻的呼吸道疾病有相同的症状。重大紧急应对挑战的一部分将是区分真正的鼠疫病例和患有这些较轻疾病的担忧公众。此外，向公众提供关于如何保护自己免受感染的明确和具体信息将是一项高度优先事项。</span></u></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>关键处理的步骤！</span></p></blockquote><h2 id='大挑战实现深刻的见解'><span>大挑战：实现深刻的见解</span></h2><p><span>对大量不同的、相互冲突的、动态的信息进行</span><em><span>分析</span></em><span>，对于识别和预防新出现的威胁、保护我们的边境以及在发生袭击或其他灾难时做出反应至关重要。</span><u><span>这个分析过程需要人的判断，以便在面对快速变化的情况时，对不完整、不一致和可能具有欺骗性的信息做出最佳可能的评估，从而发现预期的和意外的信息</span></u><span>。人们必须在遵守隐私法律和政策的情况下，以一种允许他们在适当的时候共享信息的方式跨组织、机构和司法管辖区进行协作。</span></p><p><span>在这些领域采用今天的最佳做法，并使用最好的培训、技术和流程，仍然无法使我国应对日益增长的安全挑战。数据量惊人。虽然大量的信息可以从多个来源获得，但相关的信息内容存在于几个小块中。需要新的方法，使分析人员能够检查这种</span><strong style="color:red;"><span>大量的、多维的、多源的、时变的信息流</span></strong><span>，从而以时间紧迫的方式做出决策。通过向专家提供真正理解这些信息的能力，我们使他们能够做出更好的决策，以预防和准备袭击，改善应急反应，并挽救生命。</span></p><p><span>三个主要领域值得特别关注：分析恐怖主义威胁，保卫边境和港口，以及准备和应对紧急情况。要完成这三个任务，就需要强大的分析能力。威胁分析是最初的优先级，考虑到它在预防攻击方面的重要性。</span></p><h3 id='分析恐怖主义威胁'><span>分析恐怖主义威胁</span></h3><p><span>正如这些场景所表明的那样，恐怖分子非常小心地计划和精心策划他们的袭击。一个紧迫的目标是在恐怖袭击发生之前阻止它们，这就要求分析人员在袭击发生之前发现能够识别细节的微妙线索。</span><u><span>为了防止攻击，分析人员必须拼凑出关于谁将进行攻击、攻击者计划做什么以及攻击将在何时何地发生的细节。</span></u></p><p><span>一些观察，比如陌生人对大型建筑通风系统进行侦察的报告，在帮助当局发现问题方面发挥了关键作用。分析人员需要有能力整合隐藏在不同数据中的信息，包括移民记录，旅行方式，电话，以及恐怖分子嫌疑人的姓名、隶属关系和地点，以便他们在即将发生的袭击被执行之前，拼凑出必要的信息。此外，还必须考虑有关潜在威胁物、制造这些物质的材料和设施及其可能的部署的资料。</span></p><p><span>分析人员评估我国存在的潜在漏洞，并识别和监控可能出现的潜在威胁。它们还会对潜在的异常进行警报，这些异常可能表明发生了一些意想不到的事情。</span></p><p><span>如今，分析师有一些精选的软件程序可以帮助他们组织信息，获得信息的概述，探索信息，并检查高层趋势。虽然这些工具对分析师有帮助，但在满足真正的分析需求时，他们只是触及了表面。</span><u><span>当前的技术无法满足处理海量，杂乱，不断变化的信息量和信息类型的多样性的需求。</span></u><span>此外，当前的分析工具提供了基本的功能，如查询和搜索，但在支持分析，综合和发现过程的复杂任务方面提供的支持很少。</span><u><span>目前很少有工具能够解决将分析结果和产品传达给受众的需求。</span></u></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当前技术存在的弊端！</span></p></blockquote><p><span>需要进行研究，以创建支持分析过程中最复杂和最耗时部分的软件，以便分析人员能够响应日益复杂的问题。</span></p><h3 id='保护边境和港口'><span>保护边境和港口</span></h3><p><span>保卫边境是一项复杂的任务。边防警卫和海关人员必须防止货物或人员非法入境，同时允许他们确保合法商业的自由流动。</span></p><p><span>为了区分正常的合法活动和潜在的非法活动，</span><u><span>每个入境口岸每天都要做出数千项决定</span></u><span>。已经开发了工具和流程来帮助边境和海关人员做出这些决定。然而，由于潜在相关信息的数量和必须做出决策的速度，我们需要快速改进用于支持这一决策过程的软件系统。现场的个人需要后援支持，以便在必要时获得更深入的科学评估，从而更好的区分非法货物和合法货物。在国家层面，能够将有关港口和边境事件的信息与其他可用信息结合起来，使分析人员能够识别可能表现新出现的恐怖主义威胁的模式，这一点也很重要。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>决策，非常多！不是单个，有时候甚至高达数千！</span></p></blockquote><h3 id='准备和应对突发事件'><span>准备和应对突发事件</span></h3><p><span>即使采取高度的警惕，攻击仍可能发生。应急准备和响应对于最大程度减少在发生攻击或其他国家灾难时的人员伤亡和财物损失至关重要。</span></p><p><span>大量的潜在国家紧急情况已经制定了全面的准备和响应计划，并定期举行应急响应培训和实践演习，以磨练我们国家的能力。然而，恐怖袭击通常利用出其不意的因素来最大限度地发挥其作用。正如上述情况所示，有时候并不清楚发生了什么样的攻击，甚至在初始阶段可能根本就没有发生攻击。这种混乱会延误专家有效响应的能力。协调的攻击可能会定时进行，以便在应急响应人员到达后再进行二次攻击，以进一步增加攻击的影响。</span></p><p><span>即使存在完善的应急计划和程序，上述场景也说明了几个领域，</span><u><span>在这些领域中，对信息的理解和共享可以极大地增强我们的响应能力，并大大降低攻击的影响</span></u><span>。例如，在第一个场景中，实时分析监控可以提醒第一响应者注意911呼救的异常频率和位置，可以提高他们对异常情况的认识。紧急情况下，快速识别适当的反应，并在混乱和充满压力的时间内协调不断变化的事实。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>对信息的理解和共享。</span></p></blockquote><p><span>在紧急情况下，沟通也是至关重要的。第一反应者必须在多个管辖区之间进行协调和清晰的沟通。信息的共享必须谨慎进行，以保护隐私和国家安全。</span><u><span>正如方案所示，与普通民众的沟通也是一项要求。满足这些沟通要求是费时和具有挑战性的，因为每个受众需要不同类型的沟通来回答与他们最相关的问题。需要新的软件来帮助简化为不同受众定制通信的过程，以便人们能够在紧急情况下做出更明智的决定。</span></u></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不同的受众，需要的解释是不一样的！所以要开发这样的工具来简化这个过程！</span></p></blockquote><h2 id='可扩展性的挑战'><span>可扩展性的挑战</span></h2><p><span>数据正在以惊人的速度增长。Lyman和Varian[2003]估计，仅在2002年，世界上就产生了5 Exabyte（5x18bytes）的新存储信息，其形式包括纸张、胶片和电子媒体。2002年又产生了18 Exabyte的流媒体信息。他们的研究估计，新信息的存储以每年超过30%的速度增长。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>数据的载体：纸张、胶片、电子媒体，流媒体！</span></p></blockquote><p><span>分析师、应急小组和边境保护人员从多个来源获得了大量的信息，但重要的信息可能隐藏在几个小块中。我们必须创造新的方法，使分析员能够检查这种大量的、多维的、多源的、时间变化的信息流，以便在时间紧迫的情况下做出有效的决策。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>信息源很广，但是信息本身非常稀疏，重要的信息可能只存在于几个小块中。</span></p><p><span>信息的特点：大量、多维、多源、时间变化、流动。</span></p></blockquote><h3 id='数据特征'><span>数据特征</span></h3><p><span>考虑一下造成这种信息过载的一些数据类型的例子。</span></p><p><strong><span>文本数据。</span></strong><span>大量的文本数据可以来自文件、演讲、新闻、电子邮件或网页。这些数据的数量在不断增加。我们的目标是能够支持分析数据量以每小时10亿条新的结构化信息或交易，以及每小时100万条新的非结构化信息或文档的速度增长。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>学习、算法的时间复杂度，非常重要！</span></p></blockquote><p><strong><span>数据库。</span></strong><span>许多企业和政府实体已经构建了包含大量信息的巨大数据库。这些数据库既多样又分布。此外，个人和工作组可能有他们自己的本地数据库，以增加这些大型数据库。需要新的算法允许在这些不同的数据库中有效地发现以前未知的模式。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>数据库技术：增、删、改、查！</span></p></blockquote><p><strong><span>图像数据</span></strong><span>。 考虑卫星收集的地球成像数据。 商业卫星可以创建 1 米分辨率的图像，并在很短的时间内共同创建地球陆地表面的图像。 需要新的方法来有效地理解图像数据，尤其是在此处提到的其他类型数据的上下文中。</span></p><p><strong><span>传感器数据</span></strong><span>。 计算机系统小型化的革命催生了许多类型的传感器。 传感器可以收集有关其环境的数据（位置、距离、温度、光线、辐射等），可以分析这些数据，并且可以相互通信。 传感器集合可以产生非常大的</span><u><span>流数据集</span></u><span>。 需要分析传感器数据的方法，以有效地将数据整合到计算机化模型中，以支持边境保护和应急响应。</span></p><p><strong><span>视频数据</span></strong><span>。 视频通常用于提高高风险安全操作的有效性。 视频录制和内容分析被协同使用，作为改进业务流程和客户服务的强大工具。 必须开发新技术以将这些分析流视频数据的功能集成到分析师的工具包中。</span></p><p><u><span>数据带来的挑战不仅是因为它们的多样性、数量和动态性，还因为数据是模棱两可的、不确定的，并且可能有意欺骗。 必须经常协同分析多种类型的数据以获得洞察力。</span></u><span> 正确解释所需的重要数据可能会丢失，但这对分析师来说可能很明显，也可能不明显。 我们必须提供机制来帮助分析人员直观地了解正在评估的数据的性质。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>数据分析的难度，不仅是数据本身，还有需要协同不同的数据来进行分析。消除不确定性和虚假信息的影响。实现对信息的解释和评估。</span></p></blockquote><p><span>一个巨大的挑战是支持分析师</span><u><span>从广泛不同的信息流中提炼出相关的信息块，并创建一个包含相关信息的信息空间，分析师可以使用该信息空间对情况进行最及时和最明智的评估</span></u><span>。 我们必须提供一种机制，可以将信息流中相关信息之间的联系可视化，并允许分析师从数据中获得洞察力。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>提取信息、构建信息空间。</span></p><p><span>在这个信息控件中，对情况进行最及时和明智的评估。</span></p><p><span>然后把相关信息之间的联系进行可视化，允许分析师能够从中获得insight。</span></p></blockquote><h3 id='可扩展性'><span>可扩展性</span></h3><p><span>当前的技术无法支持日益增长的分析挑战的规模和复杂性。 需要新技术和基础科学基础来应对我们在威胁分析、应急管理和边境保护方面面临的问题规模。 规模问题贯穿这一挑战的各个方面。</span></p><p><span>在考虑可扩展性问题时，重要的是</span><u><span>要了解计算机行业的发展背景以及人类的自然技能和局限性</span></u><span>。 摩尔定律表明，基本的计算机技术性能（处理器速度和内存密度）每 18 个月就会翻一番。 最近，图形技术一直在以更快的速度提高性能，每 12 个月翻一番。 这种趋势已经持续了 50 年，一些预测表明，在遇到物理学的基本限制之前，它至少会再持续 10 年。所有这些增加的处理能力和存储密度使得能够收集和处理大量数据。</span></p><p><span>然而，基本的人类技能和能力不会随时间发生显着变化。 诚然，技术进步，谨慎应用，可以让我们使用更高比例的人类自然能力，但</span><u><span>我们正在逐渐接近一些基本限制</span></u><span>。 这种情况导致了流行的信息过剩概念。 也就是说，我们能够访问的信息远远超过我们作为人类可能处理的信息。 这种情况也使可扩展性问题更难解决。 此外，分析挑战通常需要同时处理、共享和使用多个尺度的信息。 </span><u><span>最终，必须将大规模问题缩小到人类可以理解和采取行动的规模。</span></u></p><p><span>规模也带来机遇。 例如，扩大规模可能有助于减少新情况的不确定性。 此外，大数据量使分析师能够发现有关情况的更完整信息。 因此，分析师可能能够更轻松地确定预期信息何时缺失； 有时，信息缺失这一事实为评估情况提供了重要线索。</span></p><p><span>在这里，我们考虑了五个必须解决的主要规模问题：</span><kbd><span>信息可扩展性</span></kbd><span>、</span><kbd><span>视觉可扩展性</span></kbd><span>、</span><kbd><span>显示可扩展性</span></kbd><span>、</span><kbd><span>人员可扩展性</span></kbd><span>和</span><kbd><span>软件可扩展性</span></kbd><span>。</span></p><h3 id='信息可扩展性'><span>信息可扩展性</span></h3><p><span>信息可扩展性意味着从海量数据流中提取相关信息的能力。 信息可扩展性的方法包括过滤和减少数据量的方法，以多分辨率方式表示数据的技术，以及抽象数据集的方法。</span></p><p><span>信息可扩展性的第二种形式与信息的变化率有关。 大多数现有技术不处理动态变化，但有一些可以。</span></p><p><span>最后，信息演示必须按比例调整或适应受众。 例如，一位分析师向其他分析师的报告将包含比向总裁提交的摘要分析更多的细节。 当前的技术要求以临时方式手动完成此操作。</span></p><p><span>相关信息可能以多种比例出现，用户必须能够以易于理解和跟踪的方式在不同比例之间切换。 我们必须能够理解跨尺度的相互作用。 我们必须能够处理范围广泛的动态变化，我们必须开发能够半自动缩放或调整信息呈现以匹配目标受众的系统。</span></p><h3 id='视觉可扩展性'><span>视觉可扩展性</span></h3><p><span>视觉可扩展性是指可视化表示和可视化工具在单个数据元素的数量或维度方面有效显示大规模数据集的能力[Eick &amp; Karr, 2002]。影响视觉可扩展性的因素包括</span><u><span>视觉显示的质量</span></u><span>、</span><u><span>信息显示中使用的视觉隐喻</span></u><span>、</span><u><span>用于与视觉代表互动的技术</span></u><span>以及</span><u><span>人类认知系统的感知能力</span></u><span>。</span></p><p><span>大多数已发表的信息可视化技术处理的数据集有数百到数千个元素。一些技术可以扩展到处理数万个元素，很少有技术可以处理数十万到一百万个元素。Info Vis 2003 Contest关注的是可视化和比较大型层次结构的问题。获胜的技术是TreeJutaposer [Munzner et al., 2003]，它可以处理两棵约10万个元素的树和一棵高达50万个元素的树。</span></p><p><span>然而，正如前面所述，一些极端情况可能需要每天处理数千万份新文档，总数据库大小达到数百亿份文档。据报道，至少有一个现有的数据库有1200亿份文档。这些数据库的大小似乎很可能随着时间的推移而增加。显然，目前的技术水平远远不能够可视化地表示今天的数据集合，而且这种需求将继续增长。需要新的技术来弥合这一差距。</span></p><h3 id='显示可扩展性'><span>显示可扩展性</span></h3><p><span>大多数已发表的可视化技术都是为一种尺寸的显示器设计的，通常是桌面显示器（通常为1280×1024像素）。我们需要开发能够适应各种显示器形式因素的技术，以利用任何可用的功能来支持分析和协作。工具应该能够有效地利用从紧急响应情况室中的墙壁大小显示器到现场一线响应者手中的PDA或手机大小显示器等所有设备。</span><u><span>一个主要挑战是开发与显示规模无关的交互技术。也就是说，无论显示器大小如何，都应该使用一致的可视化和交互技术。</span></u><span>需要进行研究，以确定如何有效地显示信息，特别是在小型显示器上。</span></p><h3 id='人类可扩展性'><span>人类可扩展性</span></h3><p><span>虽然人类的技能和能力不会扩展（即它们相对固定），但参与分析问题解决、边境保护以及紧急准备和响应活动的</span><u><span>人数</span></u><span>确实会扩展。大多数支持分析的已发表技术都是针对单个用户。我们必须开发能够从单个用户优雅地扩展到协作（多用户）环境的技术。大部分相关的协作研究都集中在小组协作（两三个人）上。在我们设想的场景中，用户可能是在同一组织内、组织不同层次或甚至不同组织之间进行协作。这些情况每一种都有自己必须解决的一系列问题。一个场景可能涉及许多一线响应者，几个地区紧急管理中心，以及一个国家紧急管理中心，</span><u><span>即数十名用户通过共享的分析工具进行协作，并关注不同层次的信息，这些信息对所有参与者都是可访问的</span></u><span>。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>用共享的分析工具协同分析，很重要的一个点！</span></p></blockquote><h3 id='软件可扩展性'><span>软件可扩展性</span></h3><p><span>软件可扩展性是指软件系统交互式地处理大型数据集的能力。</span><u><span>软件可扩展性包括生成新的算法，以适应我们今天产生的不断增加的信息集。</span></u><span>我们希望避免在构建和维护单一、不相互作用、不可扩展的软件时产生的隐藏成本。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>所以，新的算法怎样产生呢？</span></p><p><span>换个问题，如何产生一个新的工具？一个木匠，如何制造新工具？个人看法：</span></p><ol start='' ><li><p><span>熟悉所有的工具；</span></p></li><li><p><span>见的作品多；</span></p></li><li><p><span>用产生作品的方式熟悉工具，然后不断给自己正向反馈，给自己制造机会，让自己能够见到更多的作品，触发更多的灵感。</span></p></li></ol><p><span>总结：有效行动，积极反馈，激发无限可能。</span></p></blockquote><h3 id='其他可扩展性问题'><span>其他可扩展性问题</span></h3><p><span>跨越许多可扩展性问题的是与隐私和安全有关的问题，特别是在扩展到</span><u><span>多用户环境</span></u><span>时。必须严格遵守数据隐私和安全法律和政策，这意味着软件必须解决诸如保护信息免受不适当访问、直至数据项和个人用户级别等挑战。第6章将更详细地讨论隐私和安全问题。 </span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>多用户环境，对隐私、安全问题的考虑要充分！</span></p></blockquote><p><span>在处理使用不同语言或在同一语言中使用不同术语、以及跨越具有不同专业知识的人员团队的地理分散团队时，也会出现可扩展性问题。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>也就是统一标准问题，就像visual analysis，有的翻译为可视分析，有的翻译为视觉分析，在不同的文字下，可能大家会出现混乱甚至摸不着头脑的感觉。</span></p></blockquote><h2 id='可视分析的需求'><span>可视分析的需求</span></h2><p><span>为了满足本章描述的分析需求，科学界必须大幅加速研究与开发（R&amp;D）工作，以开发根本上新的解决方案。这些解决方案必须使分析人员能够将他们的全部认知和感知能力集中在他们的分析过程上，同时允许他们应用先进的计算能力来增强他们的发现过程。视觉分析领域的R&amp;D有助于应对这些挑战。</span></p><p><mark style="background:#ffaabf;"><em><strong><span>视觉分析是通过交互式视觉界面促进分析推理的科学。</span></strong></em><span>人们使用视觉分析工具和技术从海量、动态、模糊、往往相互冲突的数据中综合信息并获得洞察力；检测预期并发现意外；提供及时、有根据且易于理解的评估；并有效地传达评估以采取行动。</span></mark></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>概念点题！</span></p></blockquote><p><mark style="background:#ffaabf;"><span>视觉分析集成了新的计算和基于理论的工具与创新的交互技术和视觉表示，以实现人—信息对话。</span><u><span>这些工具和技术的设计基于认知、设计和感知原则。</span></u></mark></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>再次点题。</span></p></blockquote><h2 id='可视化分析的研究与开发议程'><span>可视化分析的研究与开发议程</span></h2><p><span>2004年，国土安全部特许成立国家可视化和分析中心(NVAC™)，目标是帮助对抗未来在美国和全球范围内的恐怖袭击。NVAC是一种国家资源，为发现、开发和实施创新的视觉信息分析方法提供战略指导和活动协调。NVAC的一个主要目标是确定可视化分析的5 年研发议程，以满足最紧迫的研发需求，促进高级分析洞察力。2004年春季，NVAC成立了一个由来自学术界、工业界和国家实验室系统的杰出研究人员以及精选的政府专家组成的小组。通过一系列研讨会和合作，该团队制定了本书中总结的行动计划。</span></p><p><span>这一议程建立在并扩展了最近的政府出版物上，最引人注目的是美国国家科学院的两份报告。让国家更安全[Alberts&amp;Wulf, 2002]描述了如何利用科学和技术来保护国家避免受恐怖主义的侵害。反恐信息技术 [Hennessy等人,2003]扩展了“使国家更安全”的工作，特别关注信息技术帮助打击和应对恐怖袭击的机会。</span></p><p><span>尽管本文所述的议程专门侧重于应对国土安全挑战，但所创建的新技能将对从商业到科学研究的各个领域产生影响，在这些领域中，理解复杂和动态的信息非常重要。</span></p><p><span>视觉分析的研发议程将要求组建多学科团队，以解决图1.1中所示的一组相互关联的研究领域。</span></p><p><mark><span>[pic]</span></mark></p><h3 id='分析推理-第二章'><span>分析推理 (第二章)</span></h3><p><u><span>分析推理技术是用户获得深入见解的方法，直接支持态势评估、规划和决策。</span></u><span>视觉分析必须以有限的分析者时间投入促进高质量的人类判断。可视化分析工具必须能够实现各种分析任务，例如：</span></p><ul><li><p><span>快速了解过去和现在的情况，以及产生当前情况的趋势和事件</span></p></li><li><p><span>确定可能的替代未来及其警告信号</span></p></li><li><p><span>监测当前事件是否出现警告信号以及意外事件</span></p></li><li><p><span>确定行动或个人意图的指标</span></p></li><li><p><span>在危机时刻为决策者提供支持。</span></p></li></ul><p><span>这些任务将</span><u><span>通过个人分析和协作分析相结合的方式</span></u><span>进行，通常</span><u><span>在极端的时间压力下进行</span></u><span>。可视化分析必须能够实现基于假设和基于场景的分析技术，为分析师根据现有证据进行推理提供支持。可视化分析必须帮助分析师发现意外，无论是通过检测意外关系还是显示预期关系缺失。视觉分析还必须专注于捕捉分析过程的发现和结果，并将其作为未来理解的基础提供给他人。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>突然的感受，如果你遇不到专家，或者你的环境无法和专家取得联系，那你展现自己的机会将大大缩小（确切来说，自己训练和学习的机会将会大大缩小；你都没有机会学习，哪来的机会展现自己~~）。</span></p></blockquote><h3 id='视觉表示与交互技巧-第三章'><span>视觉表示与交互技巧 (第三章)</span></h3><p><u><span>视觉表示和交互技术利用人眼进入大脑的宽带通道，允许用户一次看到、探索和理解大量信息。</span></u><mark style="background:#f8e272;"><span>信息可视化研究的重点是创造以直观方式传达抽象信息的方法。</span></mark><span>视觉分析必须建立在这个研究基础上，以创建视觉表示，在上下文中即时传达信息的重要内容。这种视觉表现对分析推理过程至关重要。</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>必须遵守的</span><mark style="background:#f8e272;"><span>研究基础</span></mark><span>！</span></p></blockquote><p><u><span>没有一个单一的视觉隐喻可以满足所有的分析需求。一套视觉隐喻和相关的视觉方法对于为用户提供信息的多个互补视图是必要的。分析师必须有能力定制这些可视化工具，以适应他们的任务和个人分析风格。需要各种方法来直观地表示所有类型的动态数据。随着事件的发生、分析理解的发展和需求的变化，这些表述必须能够传达不断变化的条件和态势评估。</span></u></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>这可不就是可视分析系统的基本原则嘛！</span></p></blockquote><p><span>单纯的视觉表现不能满足分析需要。需要</span><u><span>交互技术</span></u><span>来支持分析者和数据之间的对话。虽然基本的交互技术，如搜索技术在今天的软件中很常见，但也需要</span><u><span>更复杂的交互技术</span></u><span>来支持分析推理过程。必须为</span><u><span>交互科学</span></u><span>打下坚实的基础，使研究人员能够开发出最好的交互技术来支持任何特定的任务、时间尺度和交互环境。</span></p><h3 id='数据表示和转换-第四章'><span>数据表示和转换 (第四章)</span></h3><p><span>数据是分析挑战的核心。具有分析意义的数据被埋藏在各种类型的庞大数据流中。这些数据，以其原始形式，很少适合直接分析。</span><u><span>关键的挑战是创建数据表示和转换，将所有类型的冲突和动态数据转换成便于分析理解的形式。这些表征必须支持不同的抽象水平，以促进在多种规模和多种背景下对大量动态数据的分析</span></u><span>。数据表示必须代表已知的数据背景，但它们也必须适当地表示缺乏背景、不完整和不确定的信息。今天，数据通常是在一个类似数据类型的集合中进行分析。可视化分析必须将所有相关的信息带入一个统一的分析环境中，无论信息以何种形式开始，以支持分析和发现。</span></p><h3 id='制作展示和传播-第五章'><span>制作、展示和传播 (第五章)</span></h3><p><span>为了产生影响，必须将分析结果准确地传达给他人。</span><u><span>制作分析成果、 汇编适合不同受众的介绍、传播分析结果是分析过程中的重要步骤</span></u><span>。结果必须以明确和有意义的方式传达给众多受众，从政策制定者到普通民众。 </span><u><span>需要有新的方法来简化分析评估的制作，以便能够迅速将结果、相关的事实和证据以及相关的不确定因素集合起来，以适应不同受众的需要</span></u><span>。这些结果必须在接受者的背景下，以适当的详细程度来传达，以满足他们的需要。</span></p><h3 id='将研究推向实践-第六章'><span>将研究推向实践 (第六章)</span></h3><p><span>支持这些研究领域的是必须解决的四个重要领域，以加快从研究到实践的往往曲折的道路。</span></p><p><strong><span>评估</span></strong><span>。视觉分析必须解决评估特定工具或技术</span><u><span>是否真正产生积极影响</span></u><span>的方法。</span><u><span>可用性</span></u><span>评估，虽然有价值，但还不够。视觉分析必须开发有意义和有效的技术来评估任何特定视觉分析技术</span><u><span>可能提供的实际价值</span></u><span>。无菌测试条件往往会产生与实际分析实践中不同的评价结果。我们必须开发评估方法和测试数据集，以提供分析员手中真正价值的最佳指标。</span></p><p><strong><span>隐私和安全</span></strong><span>。分析师在工作中要处理来自多个来源的信息，每个来源都有相关的安全和隐私限制。法律规定了信息的使用和组合方式，而这些法律必须支持视觉分析方法的基础。</span><u><span>工具必须积极主动地采用和支持诸如数据匿名化、 数据最小化、审计跟踪和访问控制等方法，以保护隐私和确保信息安全</span></u><span>。</span></p><p><strong><span>系统互操作性</span></strong><span>。</span><u><span>系统互操作性问题是成功研究、评估和最终部署视觉分析工具的核心</span></u><span>。视觉分析工具将由不同的小组开发，但它们必须在一个 单一的无缝分析环境中成功地</span><u><span>相互补充</span></u><span>。在研发过程中的每一步都必须考虑互操作性，</span><u><span>从共享研究级代码到评估多个团队开发的工具套件</span></u><span>。视觉分析工具将被部署在不同的应用环境中，它们必须被设计成能够适应各种应用架构的灵活实现。</span></p><p><strong><span>技术插入</span></strong><span>。技术插入是指</span><u><span>将一项技术成功过渡到广泛的分析用途</span></u><span>。这种技术转让过程必须被明确规划。</span><u><span>我们必须了解新的可视分析技术如何融入用户的整体分析软件环境，以及它们如何融入用户的流程</span></u><span>。</span><mark style="background:#f8e272;"><span>我们必须确定培训路径，帮助用户了解如何最好地使用一项新技术并将其融入他们的实践。 </span></mark></p><p><span>要完全解决本议程中描述的研究需求，需要来自整个学术界、工业界 、政府和国家实验室系统的多学科专家团队的共同努力。当务之急是扩大解决这些问题的核心研究小组。为了扩大这个人才库，需要为研究人员建立正式的教育机会，包括教育推广计划和开发新课程。通过一系列协调的研究工作、伙伴关系和教育工作，我们可以动员研究界来解决现在和未来几年的这些需求。</span><strong><span>第七章</span></strong><span>描述了一系列必要的举措，以使视觉分析领域获得持久的成功，并发出了完成这一议程的行动呼吁。</span></p><p><span> </span></p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

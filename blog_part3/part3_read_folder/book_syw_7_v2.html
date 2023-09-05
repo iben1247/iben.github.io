@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>Show Your Work! [710]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">07</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#dont-turn-into-human-spam">Don't Turn into Human Spam.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n10"><a class="md-toc-inner" href="#shut-up-and-listen">Shut up and Listen.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n181"><a class="md-toc-inner" href="#you-want-hearts-not-eyeballs">You Want Hearts, Not Eyeballs.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n272"><a class="md-toc-inner" href="#the-vampire-test">The <u>Vampire</u> Test</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n373"><a class="md-toc-inner" href="#identify-your-fellow-knuckleballers">Identify Your Fellow <u>Knuckleballers</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n490"><a class="md-toc-inner" href="#meet-up-in-meatspace">Meet up in <u>meatspace</u>.</a></span></p></div><h2 id='dont-turn-into-human-spam'><span>Don&#39;t Turn into Human Spam.</span></h2><h3 id='shut-up-and-listen'><span>Shut up and Listen.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “<mark style="background:#f8e272;">When people realize they’re being listened to, they tell you things.</mark>”<br/>—Richard Ford</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>evident </span><em><span>adj.</span></em><span>清楚的，显然的</span></p><blockquote><p><span>The threat of inflation is already </span><strong><span>evident</span></strong><span> in bond prices.</span></p><p><span>通货膨胀的威胁在证券价格上已经是明显可见的。</span></p></blockquote><p><span>write off</span></p><blockquote><p><span>1．注销（债务）：将债务或损失从财务记录中删除，不再追求收回。这通常发生在债务无法收回或资产无法恢复的情况下。</span></p><p><span>· The company decided to write off the bad debt.</span></p><p><span>公司决定注销坏账。</span></p><p><span>2．报废（资产）：将资产从财务记录中删除，因为它们已经过时、破损或不再有价值。</span></p><p><span>3．不予考虑；不予理会：将某事视为无关紧要，不再关注或考虑。</span></p><p><span>· I just try to write off his rude comments as a bad day for him.</span></p><p><span>我试图将他的粗鲁评论视为他的坏心情。</span></p></blockquote><p><span>write off sb: 放弃某人</span></p><p><span> write sb off as: 认为…毫无益处</span></p><p><mark><strong><span>感受</span></strong></mark></p><p><span>当人们感觉到他们在被注释的时候，他们会告诉你一些事儿！我觉得，这里的事儿，肯定是一些有价值的，或者别人感觉到自己被注意的时候，他们会表现得更好。我以前做过一篇英语阅读理解，就是说的这个道理！赞哦！</span></p></blockquote><p><span>When I was in college, there was always one classmate in every creative writing workshop who claimed, “I love to write, but I don’t like to read.” It was </span><u><span>evident</span></u><span> right away that you could pretty much </span><u><span>write</span></u><span> that kid </span><u><span>off</span></u><span> completely. </span><mark style="background:#f8e272;"><span>As every writer knows, if you want to be a writer, you have to be a reader first.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>lame</span></p><ul><li><p><em><span>adj.</span></em><span>瘸的，跛的，残疾的；（尤指借口或论据）站不住脚的，无说服力的；差劲的，拙劣的；&lt;美，非正式&gt;幼稚的，无能的（尤指社交方面）</span></p></li><li><p><em><span>v.</span></em><span>使（人或动物）跛（瘸），使残废</span></p></li><li><p><em><span>n.</span></em><span>金银锦缎</span></p></li></ul><blockquote><p><span>He was aware that she was </span><strong><span>lame</span></strong><span> in one leg.</span></p><p><span>他知道她有一条腿是瘸的。</span></p></blockquote><p><span>lame-o |  &lt;俚&gt;失败者，一无是处的人；&lt;俚&gt;质量差的</span></p><blockquote><p><span>It was a COMPLETE Disaster for Disaster movie, trudging along in seventh spot - a sure sign that people are fed up with all these </span><strong><span>lame</span></strong><span>-</span><strong><span>o</span></strong><span> spoof movies.</span></p><p><span>而对于徘徊在第七的《灾难电影》来说，这几天完全是一个大灾难——这也明显的表明，观众已经厌倦那些恶搞影片。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>很明显，你几乎可以把这个孩子完全排除掉。只写不读，是不可能成为一个作家的。</span></p></blockquote><p><span>“The writing community is full of </span><u><span>lame-o</span></u><span> people who want to be published in journals even though they don’t read the magazines that they want to be published in,” says writer Dan Chaon. “These people </span><strong><span>deserve</span></strong><span> the rejections that they will undoubtedly receive, and no one should feel sorry for them when they cry about how they can’t get anyone to accept their stories.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spam</span></p><ul><li><p><em><span>n.</span></em><span>垃圾电邮；（斯帕姆）午餐肉（Spam）</span></p></li><li><p><em><span>v.</span></em><span>向……群发垃圾邮件</span></p></li></ul><blockquote><p><span>&quot;We zap millions and millions of </span><strong><span>spam</span></strong><span> mails a day from our servers,&quot; AOL spokesman Nicholas Graham said.</span></p><p><span>“我们一天要从我们的服务器上清除数以百万计的垃圾邮件，”美国在线公司发言人尼古拉斯·格雷厄姆说。</span></p></blockquote><p><span>profession </span><em><span>n.</span></em><span>（尤指需要长期训练和正规资格的）职业；（某）职业界同行，同业；（统称，指需要较高教育水平的）职业（the professions）；（信念、观点或感情的）公开表示，表白；入教誓言，修道誓约；入教仪式，入教</span></p><blockquote><p><span>Harper was a teacher by </span><strong><span>profession</span></strong><span>.</span></p><p><span>哈珀的职业是教师。</span></p></blockquote><p><span>thrust</span></p><ul><li><p><em><span>v.</span></em><span>猛推，猛塞；刺，扎；（人）推进，挤过；上伸，伸出；强使接受</span></p></li><li><p><em><span>n.</span></em><span>要点，要旨；猛推，刺；（飞机、火箭等的）驱动力，推力；强攻，挺进；（拱、椽的）侧向压力；（地质）冲断层，逆断层；苛评</span></p></li></ul><blockquote><p><span>He </span><strong><span>thrust</span></strong><span> at me with a knife.</span></p><p><span>他拿刀向我刺来。</span></p></blockquote><p><span>flyers </span><em><span>abbr.</span></em><span>未来雅皮士，正在走向成功之路而又贪玩的少年（15～25岁）专业人士（指全日制工作的年轻人）（Fun Loving Youth En Route to Success）</span></p><blockquote><p><span>You&#39;ve seen the </span><strong><span>flyers</span></strong><span> and posters around campus, I assume.</span></p><p><span>我想你已经看到校园里的传单和海报了。</span></p></blockquote><p><span>thrust flyers at you: 把传单塞给你</span></p><p><span>sidewalk: &lt;美&gt;人行道</span></p><p><span>scream: </span></p><ul><li><p><em><span>v.</span></em><span>（因伤痛、害怕、激动等）尖叫；（向某人或为某事）高声喊，大声叫；发出尖锐的响声；呼啸而过；（使）醒目，（使）触目惊心（=scream out）；呼吁，抗议；清晰地表明；颜色不相配</span></p></li><li><p><em><span>n.</span></em><span>（因疼痛、惊恐、兴奋等发出的）尖叫声；（动物的）高声尖叫；尖锐刺耳的声音；&lt;非正式，旧&gt;极其滑稽可笑的人（或事物、场面）</span></p></li></ul><blockquote><p><span>A piercing </span><strong><span>scream</span></strong><span> split the air.</span></p><p><span>一声刺耳的尖叫划破天空。</span></p></blockquote><p><span>scream at: 尖叫着责骂：高声尖叫着对某人或某事进行责骂或抱怨。</span></p><blockquote><p><span>The angry customer started to scream at the poor waiter.</span></p><p><span>愤怒的顾客开始对可怜的服务员尖叫着责骂。</span></p></blockquote><p><span>delusions: / dɪˈlʊʒən / </span><em><span>n.</span></em><span>[内科]妄想；错觉（delusion 的复数形式）</span></p><blockquote><p><span>She has some cockeyed </span><strong><span>delusions</span></strong><span> about becoming a pop star.</span></p><p><span>她有变成流行明星的不切实际的幻想。</span></p></blockquote><p><span>get the memo 得到通知：了解或被告知某事，通常用于表示某人未收到关于某事的信息或未理解某种情况。</span></p><blockquote><p><span>Did you not get the memo? We&#39;re supposed to wear casual clothes today.</span></p><p><span>你是不是没收到通知？今天我们应该穿休闲装。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你连读都不读目标杂志的文章，你就想发表文章到那个杂志上，你失败了也是正常的。你是deserve那个拒绝的。说白了，你就是该！向谁哭诉都没用！</span></p></blockquote><p><span>I call these people human </span><u><span>spam</span></u><span>. They’re everywhere, and they exist in every </span><u><span>profession</span></u><span>. </span><mark style="background:#f8e272;"><span>They don’t want to pay their dues(</span><strong><span>不想做任何贡献，什么都不想干</span></strong><span>), they want their piece right here, right now. They don’t want to listen to your ideas; they want to tell you theirs</span></mark><span> They don’t want to go to shows, but they </span><u><span>thrust</span></u><span> </span><u><span>flyers</span></u><span> at you on the </span><u><span>sidewalk</span></u><span> and </span><u><span>scream</span></u><span> at you to come to theirs. You should feel pity for these people and their </span><u><span>delusions</span></u><span>. At some point, they didn’t </span><u><span>get the memo</span></u><span> that the world owes none of us anything.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>什么都不想做，就想有收获，这样的people哪儿都有。但是事实上这个世界上没有欠我们任何东西，所以，需要我们努力去争取，而不是认为一切都理所当然。</span></p></blockquote><p><span>Of course, you don’t have to be a nobody to be human spam—I’ve watched plenty of interesting, successful people slowly turn into it. The world becomes all about them and their work. They can’t find the time to be interested in anything other than themselves.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>forward-thinking 有远见的</span></p><blockquote><p><strong><span>Forward</span></strong><span>-</span><strong><span>thinking</span></strong><span> or self-absorbed?</span></p><p><span>思想前瞻还是自私自利？</span></p></blockquote><p><span>collaborators </span><em><span>n.</span></em><span>[劳经]合作者；投敌者（collaborator 的复数）</span></p><blockquote><p><strong><span>Collaborators</span></strong><span> never work alone unless they are forced to.</span></p><p><span>除非迫不得已，合作者从不单独工作。</span></p></blockquote><p><span>co-conspirators </span><em><span>n</span></em><span>．共谋者，同谋者：参与共同密谋或阴谋的人。</span></p><blockquote><p><span>· The police arrested the co-conspirators in the robbery.</span></p><p><span>警方逮捕了抢劫案的同谋者。</span></p></blockquote><p><span>in a vaccum  在真空中：指在没有外部影响或与外界隔绝的情况下。</span></p><p><mark><strong><span>感受</span></strong></mark></p><p><span>【整段翻译】当然，你不一定要成为一个无名小卒才能成为垃圾——我看到过很多有趣、成功的人慢慢变成垃圾。整个世界都围绕着他们和他们的工作。他们找不到时间对自己以外的事情感兴趣。</span></p></blockquote><p><span>No matter how famous they get, </span><mark style="background:#f8e272;"><span>the </span><u><span>forward-thinking</span></u><span> artists of today aren’t just looking for fans or passive consumers of their work, they’re looking for potential </span><u><span>collaborators</span></u><span>, or </span><u><span>co-conspirators</span></u></mark><span>. </span><mark style="background:#a8e195;"><span>These artists acknowledge that good work isn’t </span><u><span>created in a vacuum</span></u><span>, and that the experience of art is always a two-way street, incomplete without feedback</span></mark><span>. These artists hang out online and answer questions. They ask for reading recommendations. They chat with fans about the stuff they love.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hang out</span></p><blockquote><p><span>1．闲逛；消磨时间：在某个地方闲逛或消磨时间，通常是与朋友或伙伴一起。</span></p><p><span>· Let&#39;s go to the park and hang out this afternoon.</span></p><p><span>我们今天下午去公园闲逛吧。</span></p><p><span>2．与朋友聚会；交往：与朋友或伙伴一起度过时间，进行社交活动。</span></p><p><span>· We used to hang out at his house every weekend.</span></p><p><span>我们过去每个周末都在他家聚会。</span></p><p><span>3．常去某地；经常出没：经常去某个地方，特别是与特定的人群或社区有关。</span></p><p><span>· He likes to hang out at the local coffee shop.</span></p><p><span>他喜欢经常在当地的咖啡店出没。</span></p></blockquote><p><span>erupt </span><em><span>v.</span></em><span>喷发；爆发，突然发生；（感情）迸发；（斑疹等）突然冒出；长牙</span></p><blockquote><p><span>The volcano could </span><strong><span>erupt</span></strong><span> at any time.</span></p><p><span>这座火山随时可能爆发。</span></p></blockquote><p><span>cosmic </span><em><span>adj.</span></em><span>宇宙的，外层空间的；巨大的，极重要的；精神的，神灵的</span></p><blockquote><p><span>NASA plans to launch a satellite to study </span><strong><span>cosmic</span></strong><span> rays.</span></p><p><span>美国国家航空航天局计划发射一颗卫星来研究宇宙射线。</span></p></blockquote><p><span>hit it off 一拍即合，合得来</span></p><blockquote><p><span>We </span><strong><span>hit</span></strong><span> </span><strong><span>it</span></strong><span> </span><strong><span>off</span></strong><span> straight away.</span></p><p><span>我们一见如故。</span></p></blockquote><p><span>brand-new </span><em><span>adj.</span></em><span>崭新的，未用过的；最近获得的</span></p><blockquote><p><span>Yesterday he went off to buy himself a </span><strong><span>brand</span></strong><span>-</span><strong><span>new</span></strong><span> car.</span></p><p><span>昨天他去给自己买了一辆崭新的车。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>好的作品不是闭门造车搞出来的；艺术体验永远是双向的，没有反馈是不完整的。征求建议，与人沟通。找合作，找潜在的机会。</span></p></blockquote><p><span>The music producer Adrian Younge was </span><u><span>hanging out</span></u><span> on Twitter one day and tweeted, “Who is better: The Dramatics or The Delfonics?” As his followers </span><u><span>erupted</span></u><span> in a debate over the two soul groups, one follower mentioned that the lead singer of The Delfonics, William Hart, was a friend of his dad’s and that Hart just happened to be a fan of Younge’s music. The follower suggested that the two should collaborate. “To make a long story short,” Younge says, “a day later, I’m on the phone with William Hart and we’re speaking for like two hours . . . we </span><u><span>hit it off</span></u><span> in a way that was just </span><u><span>cosmic</span></u><span>.” Younge then produced a </span><u><span>brand-new record</span></u><span> with Hart, Adrian Younge Presents The Delfonics.</span></p><p><span>That story is great for two reasons. One, it’s the only story of an album I know of whose existence can be traced to a single tweet. Two, it shows what happens when a musician interacts with his fans on the level of a fan himself.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>connector </span><em><span>n.</span></em><span>连接器，连接头</span></p><blockquote><p><span>Start the </span><strong><span>connector</span></strong><span> process.</span></p><p><span>启动连接器进程。</span></p></blockquote><p><span>thoughtful </span><em><span>adj.</span></em><span>体贴入微的，考虑周到的；沉思的，思考的；缜密思考过的，深思熟虑的</span></p><blockquote><p><span>He scratched his head and looked </span><strong><span>thoughtful</span></strong><span>.</span></p><p><span>他挠着头显出一副深思的样子。</span></p></blockquote><p><span>considerate </span><em><span>adj.</span></em><span>体贴的，考虑周到的；&lt;旧&gt;小心的，谨慎的</span></p><blockquote><p><span>It was very </span><strong><span>considerate</span></strong><span> of him to wait.</span></p><p><span>他一直在等候着，真是体贴人。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>这个句子很好呀！We hit it off in a way that was just cosmic. (我们一见如故，简直是天作之合)</span>
+<span>当音乐家和粉丝进行沟通之后，效果是多么大！一个很真实的例子！很棒！</span></p></blockquote><p><u><span>If you want fans, you have to be a fan first</span></u><span>. If you want to be accepted by a community, you have to first be a good citizen of that community. If you’re only pointing to your own stuff online, you’re doing it wrong. You have to be a </span><u><span>connector</span></u><span>. The writer Blake Butler calls this being an open node. If you want to get, you have to give. If you want to be noticed, you have to notice. Shut up and listen once in a while. Be </span><u><span>thoughtful</span></u><span>. Be considerate. Don’t turn into human spam. Be an open node.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>令我感受最深的话：If you want fans, you have to be a fan first.</span>
+<span>如果你想获取，你必须先给予。突然想起来电左的一期播客说：创造价值，传递价值，收获价值！赞！</span>
+<span>做一个打开的节点（Open node 开放节点，开型节点），连接网络。</span></p></blockquote><h3 id='you-want-hearts-not-eyeballs'><span>You Want Hearts, Not Eyeballs.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“What you want is to follow and be followed by human beings who care about issues you care about. This thing we make together. This thing is about hearts and minds, not <u style="color:blue">eyeballs</u>.”<br/>—Jeffrey Zeldman </p><hr style="background:brown"/><p><mark style="background:#f8e272;"><span>Stop worrying about how many people follow you online and start worrying about the quality of people who follow you</span></mark><span>. Don’t waste your time reading articles about how to get more followers. Don’t waste time following people online just because you think it’ll get you somewhere. Don’t talk to people you don’t want to talk to, and don’t talk about stuff you don’t want to talk about.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>eyeballs </span></p><ul><li><p><em><span>n.</span></em><span>[解剖]眼球（eyeball 的复数）</span></p></li><li><p><em><span>v.</span></em><span>注视；仔细打量（eyeball 的第三人称单数形式）</span></p></li></ul><blockquote><p><span>His </span><strong><span>eyeballs</span></strong><span> were an unhealthy yellow.</span></p><p><span>他的眼球是不健康的蜡黄色。</span></p></blockquote><p><span>attentive </span><em><span>adj.</span></em><span>注意的，专心的；贴心的</span></p><blockquote><p><span>The hotel staff are friendly and </span><strong><span>attentive</span></strong><span>.</span></p><p><span>旅馆人员友好而且照顾周到。</span></p></blockquote><p><span>continual </span><em><span>adj.</span></em><span>多次重复的，频繁的；持续的，不间断的</span></p><blockquote><p><span>Life was a </span><strong><span>continual</span></strong><span> struggle for them.</span></p><p><span>生活对他们来说就是不断的挣扎。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要在乎关注你的人的数量；要多注意关注你的人的质量。</span>
+<span>不要！不要！不要！say no to valueless. 那些你不想talk with的人，你不想talk with的事儿~</span></p></blockquote><p><span>If you want followers, be someone worth following. Donald Barthelme supposedly said to one of his students, “Have you tried making yourself a more interesting person?” </span><mark style="background:#f8e272;"><span>This seems like a really mean thing to say, unless you think of the word interesting the way writer Lawrence Weschler does</span></mark><span>: </span><mark style="background:#a8e195;"><span>For him, to be “interest-ing” is to be curious and </span><u><span>attentive</span></u><span>, and to practice “the </span><u><span>continual</span></u><span> projection of interest.</span></mark><span>” To put it more simply: If you want to be interesting, you have to be interested.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>outgrowth </span><em><span>n.</span></em><span>结果；副产物；自然的发展；分枝；生长晕</span></p><blockquote><p><span>Her first book is an </span><strong><span>outgrowth</span></strong><span> of an art project she began in 2003.</span></p><p><span>她的第一本书是一个她于2003年开始的艺术项目的衍生物。</span></p></blockquote><p><span>laments </span></p><blockquote><p><span>n．悲叹，悼词：表达悲痛、哀悼或抱怨的诗歌、歌曲或其他形式的文学作品。</span></p><p><span>· The poet wrote laments for the dead soldiers.</span></p><p><span>诗人为死去的士兵写下了悼词。</span></p><p><span>v．哀悼，悲叹：对失去的东西、死去的人或逝去的时光表示悲痛、哀悼或抱怨。</span></p><p><span>· She laments the loss of her friend.</span></p><p><span>她为失去的朋友感到悲痛。</span></p></blockquote><p><span>earns </span><em><span>v</span></em><span>．</span></p><blockquote><ol start='' ><li><p><span>赚得，挣得：通过努力工作或提供服务获得金钱或报酬。</span></p></li></ol><p><span>· She earns a good salary.</span></p><p><span>她挣得一份不错的薪水。</span></p><ol start='2' ><li><p><span>获得，赢得：通过努力或表现获得某种成果、荣誉或认可。</span></p></li></ol><p><span>· He earns the respect of his colleagues.</span></p><p><span>他赢得了同事们的尊敬。</span></p></blockquote><p><span>clout </span></p><ul><li><p><em><span>n.</span></em><span>破布；敲打；影响力；势力</span></p></li><li><p><em><span>vt.</span></em><span>给……打补钉；猛击</span></p></li></ul><blockquote><p><span>I knew his opinion carried a lot of </span><strong><span>clout</span></strong><span> with them.</span></p><p><span>我知道他的观点对他们很有影响力。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你想要追随者，那你要有值得追随的东西。要有你自己感兴趣的东西，并且不断投入。</span>
+<span>这个句式真不错：</span><u><span>think of the word interesting the way</span></u><span> writer Lawrence Weschler </span><u><span> does</span></u></p></blockquote><p><mark style="background:#f8e272;"><span>It is actually true that life is all about “who you know.” But who you know is largely dependent on who you are and what you do, and the people you know can’t do anything for you if you’re not doing good work</span></mark><span>. “Connections don’t mean shit,” says record producer Steve Albini. “I’ve never had any connections that weren’t a natural </span><u><span>outgrowth</span></u><span> of doing things I was doing anyway.” Albini </span><u><span>laments</span></u><span> how many people waste time and energy trying to make connections instead of getting good at what they do, when “</span><mark style="background:#f8e272;"><span>being good at things is the only thing that </span><u><span>earns</span></u><span> you </span><u><span>clout</span></u><span> or connections.</span></mark><span>”</span></p><blockquote><p><strong><mark><span>感受</span></mark></strong></p><p><span>这段太好了，我直接翻译后半段了。“我从来没有任何关系不是我做事情的自然 &quot;结果&quot;。”阿尔比尼哀叹，有多少人浪费时间和精力去建立人脉，而不是把自己的工作做好，而“擅长某件事是唯一能让你赢得影响力或人脉的事情。”</span>
+<span>咱就说：做好自己的工作，人脉自然来了！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Make stuff you love and talk about stuff you love and you’ll attract people who love that kind of stuff. It’s that simple.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>creepy </span><em><span>adj.</span></em><span>&lt;非正式&gt;怪异的，令人毛骨悚然的；爬行的</span></p><blockquote><p><span>It&#39;s kind of </span><strong><span>creepy</span></strong><span> but kind of cool at the same time that they just can do it well.</span></p><p><span>这有点令人毛骨悚然，但同时也很酷，因为他们就是可以做得很好。</span></p></blockquote><p><span>jerk</span></p><ul><li><p><em><span>n.</span></em><span>急拉，急推；&lt;美，非正式&gt;傻瓜，坏蛋；肌肉抽搐；（举重）挺举；腌制后放在木火上烤的肉；颠簸，震摇</span></p></li><li><p><em><span>v.</span></em><span>急拉，猛推；（举重）挺举过头；制肉干；（用调料浸泡及用木柴火烤）烹饪（猪肉，鸡肉）</span></p></li><li><p><em><span>adj.</span></em><span>腌泡过的</span></p></li></ul><blockquote><p><span>I&#39;m such a </span><strong><span>jerk</span></strong><span>.</span></p><p><span>我真是个混蛋。</span></p></blockquote><p><span>saddest </span><em><span>adj.</span></em><span>悲伤的（sad 的最高级）</span></p><p><mark><strong><span>感受</span></strong></mark></p><p><span>是啊！就是这么简单，做好你喜欢的，喜欢同样的人自然会随之而来！</span></p></blockquote><p><span>Don’t be </span><u><span>creepy</span></u><span>. Don’t be a </span><u><span>jerk</span></u><span>. Don’t waste people’s time. Don’t ask too much. And don’t ever ever ask people to follow you. </span><mark style="background:#f8e272;"><span>“Follow me back?” is the </span><u><span>saddest</span></u><span> question on the Internet.</span></mark></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要令人毛骨悚然。不要成为一个混蛋。不要浪费别人的时间。</span>
+<span>so, 我要把关注那句给删了！</span></p></blockquote><h3 id='the-vampire-test'><span>The </span><u><span>Vampire</span></u><span> Test</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>vampire </span><em><span>n.</span></em><span>（故事中的）吸血鬼；（喻）无情掠夺者，吸血鬼；吸血蝙蝠；（戏剧）（舞台的）活板门</span></p><blockquote><p><span>What about the </span><strong><span>vampire</span></strong><span> bats?</span></p><p><span>那吸血蝙蝠呢？</span></p></blockquote><p><span>drains </span></p><ul><li><p><em><span>n.</span></em><span>排水沟（drain 的复数）；吸血</span></p></li><li><p><em><span>v.</span></em><span>放出，排出（drain 的第三人称单数）</span></p></li></ul><blockquote><p><span>The </span><strong><span>drains</span></strong><span> are bunged up with dead leaves.</span></p><p><span>排水沟被枯树叶堵住了。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Whatever excites you, go do it. Whatever <u style="color:blue">drains</u> you, stop doing it.”<br/>—Derek Sivers </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>notorious </span><em><span>adj.</span></em><span>声名狼藉的，臭名昭著的</span></p><blockquote><p><span>His short temper had become </span><strong><span>notorious</span></strong><span>.</span></p><p><span>他的急性子已臭名远扬。</span></p></blockquote><p><span>squeezed: 挤压 | 塞进 | 压榨 | 设法腾出</span></p><blockquote><p><span>He </span><strong><span>squeezed</span></strong><span> her arm reassuringly.</span></p><p><span>他安慰地捏了捏她的手臂。</span></p></blockquote><p><span>tubes </span><em><span>n.</span></em><span>[材]管子，导管；管状虫；伦敦地铁（tube 的复数）</span></p><blockquote><p><span>More rarely, the </span><strong><span>tubes</span></strong><span> have been malformed from birth.</span></p><p><span>更罕见的是，这些管道先天畸形。</span></p></blockquote><p><span>exhausted </span></p><ul><li><p><em><span>adj.</span></em><span>筋疲力尽的；耗尽的，枯竭的</span></p></li><li><p><em><span>v.</span></em><span>使精疲力尽；耗尽；详尽讨论（exhaust 的过去式和过去分词形式）</span></p></li></ul><blockquote><p><span>She felt limp and </span><strong><span>exhausted</span></strong><span>.</span></p><p><span>她感到浑身无力，累极了。</span></p></blockquote><p><span>suck out of 吸干：从一个人、物品或地方中移除所有有用、有价值的品质或财产。</span></p><blockquote><p><span>The noise was deafening. Papers, clothing, everything was being </span><strong><span>sucked</span></strong><span> </span><strong><span>out</span></strong><span> </span><strong><span>of</span></strong><span> the windows.</span></p><p><span>一声巨响过后，飞机开始减压，机身在颠簸中向下俯冲，窗户一个个爆裂，纸啊布啊什么的纷纷被吸了出去。</span></p></blockquote></blockquote><p><span>There’s a funny story in John Richardson’s biography, A Life of Picasso. Pablo Picasso was </span><u><span>notorious</span></u><span> for sucking all the energy out of the people he met. His granddaughter Marina claimed that he </span><u><span>squeezed</span></u><span> people like one of his </span><u><span>tubes</span></u><span> of oil paints. You’d have a great time hanging out all day with Picasso, and then you’d go home nervous and </span><u><span>exhausted</span></u><span>, and Picasso would go back to his studio and paint all night, using the energy </span><mark><span>he’d </span><u><span>sucked out of</span></u><span> you.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>put up with 忍受、容忍或接受某事物或某人的存在、行为或不愉快的情况</span></p><blockquote><p><span>· I can&#39;t put up with his constant complaining anymore.</span></p><p><span>我再也无法忍受他不停地抱怨了。</span></p></blockquote><p><span>sculptor </span><em><span>n.</span></em><span>雕刻家，雕塑家</span></p><blockquote><p><span>He felt very strange and asked the </span><strong><span>sculptor</span></strong><span>, &quot;Why are you making two same sculptures?&quot;</span></p><p><span>他感到很奇怪，就问雕刻家：“你为什么要做两个一样的雕塑？”</span></p></blockquote><p><span>hailed from:（车、船）来自；（人）出生于</span></p><blockquote><p><span>His father </span><strong><span>hailed</span></strong><span> </span><strong><span>from</span></strong><span> Italy.</span></p><p><span>他父亲出生于意大利。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>tubes of oil paints. 油画颜料需要挤压出来。就像他挤压你一样！</span></p></blockquote><p><span>Most people </span><u><span>put up with</span></u><span> this because they got to hang out with Picasso all day, but not Constantin Brancusi, the Romanian-born </span><u><span>sculptor</span></u><span>. Brancusi </span><u><span>hailed from</span></u><span> the Carpathian Mountains, and he knew a vampire when he saw one. He was not going to have his energy or the fruits of his energy juiced by Picasso, so he refused to have anything to do with him.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>worn out</span></p><blockquote><p><span>1．疲劳的；</span></p><p><span>2．用坏的，磨损的；</span></p><p><span>· I need to buy new shoes, these ones are worn out.</span></p><p><span>我需要买新鞋，这双鞋已经磨损了。</span></p><p><span>3．（观点等）过时的，陈腐的</span></p></blockquote><p><span>depleted 耗竭区：指资源已经大量消耗或减少的区域，通常用于描述矿产资源、石油或天然气等资源的开采区。</span></p><blockquote><p><span>· The oil field has become a depleted zone after years of exploitation.</span></p><p><span>经过多年的开采，这个油田已经变成了一个耗竭区。</span></p></blockquote></blockquote><p><span>Brancusi practiced what I call The Vampire Test. It’s a simple way to know who you should let in and out of your life. If, after hanging out with someone you feel </span><u><span>worn out</span></u><span> and </span><u><span>depleted</span></u><span>, that person is a vampire. If, after hanging out with someone you still feel full of energy, that person is not a vampire. Of course, The Vampire Test works on many things in our lives, not just people—you can apply it to jobs, hobbies, places, etc.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cured</span></p><ul><li><p><em><span>adj.</span></em><span>熏制的，风干的</span></p></li><li><p><em><span>v.</span></em><span>治愈（人或动物）；治好（疾病）；解决（问题）；矫正（不良行为）；加工处理（薰、腌鱼、肉等）；（通过硫化等化学方法）使（橡胶等）硬化（cure 的过去式和过去分词）</span></p></li></ul><blockquote><p><span>A speech therapist </span><strong><span>cured</span></strong><span> his stammer.</span></p><p><span>一位语言矫治专家治好了他的口吃。</span></p></blockquote><p><span>banish </span><em><span>v.</span></em><span>驱逐，赶走；将……驱逐出境，流放；清除，消除；打消……的念头，驱除（想法）</span></p><blockquote><p><span>They used force to </span><strong><span>banish</span></strong><span> the natives from the more fertile land.</span></p><p><span>他们用武力将土著人驱逐出更加肥沃的土地。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>The Vampire Test的原理和操作方法。</span>
+<span>你要知道，谁可以进入你的生活，谁不行！</span>
+<span>同样适用于：什么可以进入你的生活，什么不行！</span></p></blockquote><p><span>Vampires cannot be </span><u><span>cured</span></u><span>. Should you find yourself in the presence of a vampire, be like Brancusi, and </span><u><span>banish</span></u><span> it from your life forever.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你发现了一个这样的vampire，把他赶走！</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Part of the act of creating is in discovering your own kind. They are everywhere. But don’t look for them in the wrong places.”<br/>—Henry Miller </p><hr style="background:brown"/><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>“创造的一部分就是发现自己的同类。他们无处不在。但不要在错误的地方寻找它们。”</span></p></blockquote><h3 id='identify-your-fellow-knuckleballers'><span>Identify Your Fellow </span><u><span>Knuckleballers</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fellow </span></p><ul><li><p><em><span>n.</span></em><span>小伙子，家伙；同伴，同事，同学；研究员；男朋友；（研究期间领取津贴的）研究生；&lt;英&gt;（大学的）董事；（学术或专业团体）会员；对等者，对手</span></p></li><li><p><em><span>adj.</span></em><span>同类的，同伴的</span></p></li></ul><blockquote><p><span>He was a young </span><strong><span>fellow</span></strong><span>, very green, very immature.</span></p><p><span>他是个年轻的家伙，没什么经验，很不成熟。</span></p></blockquote><p><span>knuckleballers </span><em><span>n.</span></em><span>指节变化球投球手</span></p><p><span>be fascinated by 被……迷住：对某事物或某人感到极度的兴趣和吸引，无法自拔。</span></p><blockquote><p><span>You&#39;d </span><strong><span>be</span></strong><span> </span><strong><span>fascinated</span></strong><span> </span><strong><span>by</span></strong><span> what there is on display.</span></p><p><span>你将会被陈列的文物完全吸引住。</span></p></blockquote><p><span>pitcher </span><em><span>n.</span></em><span>投手；大水罐</span></p><blockquote><p><span>The baseball </span><strong><span>pitcher</span></strong><span> had a brief affair with her.</span></p><p><span>那个棒球投手和她有段短暂恋情。</span></p></blockquote><p><span>pitch</span></p><ul><li><p><em><span>n.</span></em><span>&lt;英&gt;体育场地，球场；（感情或活动的）激烈，强烈；（音符的）高低度，音高；推销用语；（棒球中的）投，掷；沥青，柏油；&lt;英&gt;摊位，（街头艺人的）表演场所；（船或飞机的）颠簸；（尤指屋顶的）倾斜度；（登山）（尤指很陡的）坡段；（鹰扑向猎物前向上攀飞的）高度；（高尔夫）下旋高球（pitch shot）；（板球）弹跳点（pitch of the ball）；&lt;英&gt;露营地；（技）螺距，节距；印刷密度，打印密度</span></p></li><li><p><em><span>v.</span></em><span>投，掷，扔；（棒球中）投（球）；触地，（使球）定点落地；（使）跌倒（猛然移动）；（船、飞机）上下颠簸；把……定于某水平；使（产品）针对，面向；推销，争取支持（或生意等）；定音高；向下倾斜； 支，搭（帐篷）；击出大曲线球，击高球；（板球）固定球门（准备比赛）；（球）弹起；用石头铺（路）；迫使……进入（新的境地）；（酿酒用语）给（麦芽汁）加酵母；&lt;西印度，古&gt;盖上沥青，涂上沥青</span></p></li></ul><p><span>knuckleball </span><em><span>n.</span></em><span>指关节球，蝴蝶球（投手投出的不旋转球）</span></p><blockquote><p><span>Shifting an Internet friendship into the real world can be trickier than hitting a </span><strong><span>knuckleball</span></strong><span>.</span></p><p><span>将网络友谊搬到现实世界要比投蝴蝶球更加困难。</span></p></blockquote><p><span>spin </span></p><ul><li><p><em><span>v.</span></em><span>（使）快速旋转；（使）急转身；（头感到）眩晕；纺纱，纺织；飞驰，疾驰；编故事；有倾向性地陈述；（用甩干机或洗衣机）甩干（衣服）；（昆虫）吐（丝），结（网）；（用旋式诱饵）钓鱼；播放（唱片）；抛（硬币）；（球）旋转；（用车床将金属薄板）旋压成形</span></p></li><li><p><em><span>n.</span></em><span>高速旋转；兜风；带倾向性的解释（或说法）；（政治上的）倾向性报道；（尤指板球、网球、斯诺克球中的）旋转球；（飞机的）旋冲，螺旋下降；晕头转向，焦虑不安；（物理）核素总角动量</span></p></li></ul><blockquote><p><span>Let&#39;s go for a </span><strong><span>spin</span></strong><span>.</span></p><p><span>咱们兜风去。</span></p></blockquote><p><span>thrown </span><em><span>v.</span></em><span>抛（throw 的过去分词）；扔掉</span></p><blockquote><p><span>Fate had </span><strong><span>thrown</span></strong><span> them together.</span></p><p><span>命运使他们聚在一起。</span></p></blockquote><p><span>batter </span></p><ul><li><p><em><span>v.</span></em><span>接连猛打；殴打，毒打；肆虐，严重破坏；抨击，责难；给……裹面糊；（墙等的）向后倾斜</span></p></li><li><p><em><span>n.</span></em><span>面糊（煎料），面团；击球员；（墙等的）向后倾斜；（活字或铅版的）字面磨损处</span></p></li></ul><blockquote><p><span>Mix the </span><strong><span>batter</span></strong><span> and let it stand for twenty minutes.</span></p><p><span>搅好面糊以后，放上二十分钟。</span></p></blockquote><p><span>catcher </span><em><span>n.</span></em><span>捕手，捕捉者；接球手</span></p><blockquote><p><span>A fog </span><strong><span>catcher</span></strong><span> can collect 10,000 liters of water a day.</span></p><p><span>一个雾收集器一天可以收集一万公升的水。</span></p></blockquote><p><span>huh </span><em><span>int.</span></em><span>嗯（用于问题、建议之后）；嗯（表示没有听清楚）；啊，哈（表示轻蔑、疑问或惊异等）</span></p><blockquote><p><span>Let&#39;s get out of here, </span><strong><span>huh</span></strong><span>?</span></p><p><span>我们离开这里吧，嗯？</span></p></blockquote></blockquote><p><span>I recently </span><u><span>became fascinated by</span></u><span> the baseball </span><u><span>pitcher</span></u><span> R. A. Dickey. Dickey’s </span><u><span>pitch</span></u><span> is the </span><u><span>knuckleball</span></u><span>—a slow, awkward pitch that’s really hard to throw with any kind of consistency. When a pitcher throws a knuckleball, he releases the baseball with as little </span><u><span>spin</span></u><span> as possible. The air current moves against the baseball’s seams, and it makes the baseball move really strangely. Once a good knuckleball is </span><u><span>thrown</span></u><span>, it’s equally unpredictable to the </span><u><span>batter</span></u><span>, the </span><u><span>catcher</span></u><span>, and the pitcher who threw it. (Sounds a lot like the creative process, </span><u><span>huh?</span></u><span>)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>duckling </span><em><span>n.</span></em><span>小鸭子</span></p><blockquote><p><strong><span>Ducklings</span></strong><span> are little ducks.</span></p><p><span>小鸭子是幼小的鸭子。</span></p></blockquote><p><span>brotherhood </span><em><span>n.</span></em><span>兄弟关系；手足情谊；四海之内皆兄弟的信念</span></p><blockquote><p><span>They live and work together in complete equality and </span><strong><span>brotherhood</span></strong><span>.</span></p><p><span>他们完全平等和兄弟般地在一起生活和工作。</span></p></blockquote><p><span>memoir: / ˈmemwɑːr / </span><em><span>n.</span></em><span>回忆录，自传（memoirs）；传略，实录；专题学术论文；（学会）讨论事项纪要，议事录（memoirs）</span></p><blockquote><p><span>His 1998 </span><strong><span>memoir</span></strong><span> is a delightful trip down memory lane.</span></p><p><span>他1998年的回忆录是一次愉快的怀旧之旅。</span></p></blockquote><p><span>split finger fastball: 叉指快速球</span></p><p><span>state secrets: 国家机密</span></p><blockquote><p><span>She gave away </span><strong><span>state</span></strong><span> </span><strong><span>secrets</span></strong><span> to the enemy.</span></p><p><span>她把国家机密泄露给了敌人。</span></p></blockquote><p><span>fortunes </span></p><ul><li><p><em><span>n.</span></em><span>命运，机遇（fortune 复数形式）</span></p></li><li><p><em><span>v.</span></em><span>给……以大宗财富（fortune 的第三人称单数形式）</span></p></li></ul><blockquote><p><span>Was the revival in their </span><strong><span>fortunes</span></strong><span> entirely due to strategic innovation?</span></p><p><span>他们命运的逆转是否完全归功于战略创新？</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>有好的东西就要分享啊！你看这种state secrets的knuckleball的方法都被分享了！这是一个mission！传递下去！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Knuckleball pitchers are basically the ugly </span><u><span>ducklings</span></u><span> of baseball. Because there are so few of them, they actually form a kind of </span><u><span>brotherhood</span></u><span>, and they often get together and share tips with one another</span></mark><span>. Dickey writes about how rare this is in his </span><u><span>memoir</span></u><span>, Wherever I Wind Up: “There’s no chance that an opposing pitcher, no matter how nice a guy, is going to invite me to watch how he grips and throws his </span><u><span>split-fingered fastball</span></u><span> or slider. Those are </span><u><span>state secrets</span></u><span>.” With his fellow knuckleballers, however, things are different: “Knuckleballers don’t keep secrets. It’s as if we have a greater mission beyond our own </span><u><span>fortunes</span></u><span>. And that mission is to pass it on, to keep the pitch alive.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>obsessions </span><em><span>n.</span></em><span>癖好；着迷；使人痴迷的的人或物；强迫意念（obsession 的复数）</span></p><blockquote><p><span>But as I re-read Watson&#39;s advice, I think about my goals and </span><strong><span>obsessions</span></strong><span>.</span></p><p><span>但是，当我重读沃森的建议的时候，我一直在思考我的目标和执着的事情。</span></p></blockquote><p><span>Sing praises： 歌颂</span></p><blockquote><p><span>Praise the LORD; for the LORD is good: </span><strong><span>sing</span></strong><span> </span><strong><span>praises</span></strong><span> unto his name; for it is pleasant.</span></p><p><span>耶和华本为善。要歌颂他的名，因为这是美好的。</span></p></blockquote><p><span>universe </span><em><span>n.</span></em><span>宇宙，天地万物（the universe）；领域，体系；（已知宇宙以外的）宇宙</span></p><blockquote><p><span>The </span><strong><span>universe</span></strong><span> is slowly yielding up its secrets.</span></p><p><span>宇宙慢慢地展现出它的秘密。</span></p></blockquote></blockquote><p><mark style="background:#a5c4ff;"><span>As you put yourself and your work out there, you will run into your fellow knuckleballers.</span></mark><span> These are your real peers—the people who share your </span><u><span>obsessions</span></u><span>, the people who share a similar mission to your own, the people with whom you share a mutual respect. There will only be a handful or so of them, but they’re so, so important. </span><mark style="background:#f8e272;"><span>Do what you can to nurture your relationships with these people</span></mark><span>. </span><u><span>Sing their praises</span></u><span> to the </span><u><span>universe</span></u><span>. Invite them to collaborate. Show them work before you show anybody else. Call them on the phone and share your secrets. Keep them as close as you can.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>vitality </span><em><span>n.</span></em><span>活力，热情；生机，生命力</span></p><blockquote><p><span>An artificial language has no </span><strong><span>vitality</span></strong><span>.</span></p><p><span>人工语言没有生命力。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>分享 → 找到peers → nurture relationships → 邀请一起合作 → 保持紧密联系！</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “It’s all about paying attention. Attention is <u style="color:blue">vitality</u>. It connects you with others.”<br/>—Susan Sontag</p><hr style="background:brown"/><h3 id='meet-up-in-meatspace'><span>Meet up in </span><u><span>meatspace</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>meatspace: 实体世界；物质世界</span></p><blockquote><p><span>So it is in fact the case that more things are illegal online than are illegal in meatspace.</span></p><p><span>所以事实上，在网上违法的事情比在现实世界违法的事情要多。</span></p></blockquote><p><span>substitutes</span></p><ul><li><p><em><span>n.</span></em><span>替代品；替补（substitute 的复数）</span></p></li><li><p><em><span>v.</span></em><span>用……代替；由……接替（substitute 的第三人称单数形式）</span></p></li></ul><blockquote><p><span>Unfortunately, the current low prices for oil, gas, and coal may provide little incentive for research to find even cheaper </span><strong><span>substitutes</span></strong><span> for those fuels.</span></p><p><span>不幸的是，目前石油、天然气和煤炭的低价格可能无法激励研究人员去寻找更便宜的那些燃料的替代品。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> <mark style="background:#f8e272;">“You and I will be around a lot longer than Twitter, and nothing `substitutes` face to face.”</mark><br/>—Rob Delaney</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>freak </span></p><ul><li><p><em><span>n.</span></em><span>怪人，怪胎；&lt;非正式&gt;狂热爱好者；畸形人（或物）；怪异的事；&lt;古&gt;主意突变</span></p></li><li><p><em><span>v.</span></em><span>&lt;非正式&gt;（使）吃惊，不安，恼怒</span></p></li><li><p><em><span>adj.</span></em><span>反常的，怪异的</span></p></li></ul><blockquote><p><span>She was treated like a </span><strong><span>freak</span></strong><span> because she didn&#39;t want children.</span></p><p><span>她因为不要孩子而被当作怪人。</span></p></blockquote><p><span>freak out: 使处于极度兴奋中；崩溃</span></p><blockquote><p><span>Don&#39;t </span><strong><span>freak</span></strong><span> </span><strong><span>out</span></strong><span> when someone invades your personal space.</span></p><p><span>如果有人闯入你的私人空间，不要惊慌。</span></p></blockquote><p><span>freak sb. out: 使某人变得极度情绪化或惊恐</span></p><blockquote><p><span>Snakes really </span><strong><span>freak</span></strong><span> me out.</span></p><p><span>我一看见蛇便浑身发麻。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>“你和我在一起的时间会比Twitter长得多，没有什么可以代替面对面。”</span></p></blockquote><p><span>It </span><u><span>freaks</span></u><span> me </span><u><span>out</span></u><span> a little bit how many of my very favorite people in the world came into my life as ones and zeros.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>lubricant</span></p><ul><li><p><em><span>n.</span></em><span>润滑油；（比喻有利于事情顺利进行的）润滑剂</span></p></li><li><p><em><span>adj.</span></em><span>（用作）润滑的，减少摩擦的</span></p></li></ul><blockquote><p><span>I think humour is a great </span><strong><span>lubricant</span></strong><span> for life.</span></p><p><span>我认为幽默是一种上好的人生润滑剂。</span></p></blockquote></blockquote><p><span>I love meeting my online friends </span><mark><span>“IRL.” (IRL = in real life.)</span></mark><span> There’s never any small talk—we know all about one another and what one another does. </span><mark style="background:#f8e272;"><span>We can just sip beer or some other social </span><u><span>lubricant</span></u><span> and talk about big ideas</span></mark><span>. There’s been a few times that I’ve asked people what they think the best thing about being online is, and they’ll point around the table and say, “What we’re doing here.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>meetups </span><em><span>n.</span></em><span>（非正式的）聚会，见面会（meetup的复数）</span></p><blockquote><p><span>To provide Funny Exchange Functional </span><strong><span>Meetups</span></strong><span> for members to share, so that they can learn the experience that cannot get from outside.</span></p><p><span>提供更多新奇有趣的活动及聚会给所有会员去交流，从而学习到学校不能学到的知道及经验。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>线下约见比网络要好太多。这句话可真好！</span>
+<span>We can just sip beer or some other social lubricant and talk about big ideas. 我们可以啜饮啤酒或其他社交润滑剂，谈论一些伟大的想法。</span></p></blockquote><p><span>I love the phenomenon of “</span><u><span>meetups</span></u><span>”—an online community throwing a party at a bar or a restaurant and inviting everybody to show up at a certain place and time. There’s a lot of these kinds of events in Austin, and I’m sure there’s a bunch in your town, too. (If there aren’t any—set one up!) They’re a lot less stressful than traditional forms of networking because you already know a lot of the people who show up, and you’ve seen their work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>grab a coffee 去喝咖啡：通常指快速地去喝一杯咖啡，可以是在路上或者是在咖啡店里。</span></p><blockquote><p><span>· Let&#39;s grab a coffee before the meeting starts.</span></p><p><span>会议开始前我们去喝杯咖啡吧。</span></p></blockquote><p><span>get sick of browsing: 厌倦：对某事或某人感到厌烦，不再喜欢或感兴趣。</span></p><blockquote><p><span>Did he </span><strong><span>get</span></strong><span> </span><strong><span>sick</span></strong><span> </span><strong><span>of</span></strong><span> the sound of crying?</span></p><p><span>他对婴儿的哭声感到厌烦吗？</span></p></blockquote><p><span>browse </span></p><ul><li><p><em><span>v.</span></em><span>随意翻阅；（动物）吃草；（在商店里）随便看看；浏览信息</span></p></li><li><p><em><span>n.</span></em><span>随意的看，浏览；（动物吃的）植物</span></p></li></ul><blockquote><p><span>We only model for </span><strong><span>browse</span></strong><span>, select, purchase, and pay.</span></p><p><span>我们只为浏览、选择、购买和支付建模。</span></p></blockquote><p><span>grab </span></p><ul><li><p><em><span>v.</span></em><span>攫取，抓住；（尤指匆忙地）取，吃，喝；霸占，强夺；利用，抓住（机会）；引人注意，吸引</span></p></li><li><p><em><span>n.</span></em><span>攫取，赚取；抓具，抓斗；抓取（或截获、采集）的图像</span></p></li></ul><blockquote><p><span>He shot out his hand to </span><strong><span>grab</span></strong><span> her.</span></p><p><span>他猛地伸出手去抓她。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>整一个聚会，你会遇到很多有意思的人！</span></p></blockquote><p><span>Of course, a meetup doesn’t have to comprise a huge group of people. </span><mark style="background:#f8e272;"><span>If you’ve been friends for a while with somebody online and you live in the same town, ask them if they want to </span><u><span>grab a coffee</span></u><span>. If you want to go all out, offer to buy them lunch.</span></mark><span> </span><mark><span>If you’re traveling, let your online friends know you’re going to be in town.</span></mark><span> I like asking my artist friends to take me to their favorite art museums and asking my writer friends to take me to their favorite bookstore. If we </span><u><span>get sick of</span></u><span> talking to one another, we can browse, and if we </span><u><span>get sick of browsing</span></u><span>, we can </span><u><span>grab</span></u><span> a coffee in the café.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>awesome </span><em><span>adj.</span></em><span>让人惊叹的，令人敬畏的；非常棒的，极佳的</span></p><blockquote><p><span>I just bought this </span><strong><span>awesome</span></strong><span> new CD!</span></p><p><span>我刚买了这张特棒的新CD！</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>见面和讨论的形式可真的太多了！真的太棒了！</span></p></blockquote><p><mark style="background:#a8e195;"><span>Meeting people online is </span><u><span>awesome</span></u><span>, but turning them into IRL friends is even better.</span></mark></p><blockquote><p><span>Meeting online &gt; Turn into friends IRL.</span>
+<span>But both are awesome.</span></p></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

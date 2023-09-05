@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>Show Your Work! [310]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">03</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n144"><a class="md-toc-inner" href="#share-something-small-everyday">Share Something Small Everyday.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#send-out-a-daily-dispatch">Send out a Daily Dispatch.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n204"><a class="md-toc-inner" href="#the-so-what-test">The "So What?" Test</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n224"><a class="md-toc-inner" href="#turn-your-flow-into-stock">Turn Your Flow into Stock.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n243"><a class="md-toc-inner" href="#build-a-good-domain-name">Build a Good (Domain) Name.</a></span></p></div><h2 id='share-something-small-everyday'><span>Share Something Small Everyday.</span></h2><h3 id='send-out-a-daily-dispatch'><span>Send out a Daily Dispatch.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Put yourself, and your work, out there every day, and you’ll start meeting some amazing people.”<br/>—Bobby Solomon</p><hr style="background:brown"/><p><span>Overnight success is a myth. </span><u><span>Dig into</span></u><span> almost every </span><u><span>overnight</span></u><span> success story and you’ll find about a decade’s worth of hard work and </span><u><span>perseverance</span></u><span>. Building a </span><u><span>substantial</span></u><span> body of work takes a long time—a lifetime, really—but thankfully, you don’t need that time all in one big </span><u><span>chunk</span></u><span>. So forget about decades, forget about years, and forget about months. Focus on days.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>dig into: 深入研究或揭示信息：通过研究某物来尝试学习或揭示信息。</span></p><blockquote><p><span>The journalist decided to dig into the politician&#39;s past to uncover any scandals.</span></p><p><span>这位记者决定深入研究这位政治家的过去，以揭露任何丑闻。</span></p></blockquote><p><span>overnight: </span></p><ul><li><p><em><span>adv.</span></em><span>在夜间，在晚上；突然，一夜之间</span></p></li><li><p><em><span>adj.</span></em><span>夜间的，只供一夜的；突然的，一夜之间的</span></p></li><li><p><em><span>v.</span></em><span>过夜；&lt;美&gt;连夜快递（货物）</span></p></li><li><p><em><span>n.</span></em><span>一夜的逗留</span></p></li></ul><blockquote><p><span>I camped </span><strong><span>overnight</span></strong><span> in a field.</span></p><p><span>我在田野里露营过夜。</span></p></blockquote><p><span>perseverance </span><code>/ ˌpɜːrsəˈvɪrəns /</code><span> </span><em><span>n.</span></em><span>毅力，不屈不挠的精神</span></p><blockquote><p><span>He has never stopped trying and showed great </span><strong><span>perseverance</span></strong><span>.</span></p><p><span>他从末停止努力，表现出了极大的毅力。</span></p></blockquote><p><span>substantial: </span></p><ul><li><p><em><span>adj.</span></em><span>大量的，价值巨大的；牢固的，结实的；基本的，实质性的；（饭菜）丰盛的；重要的，真实的；有地位的，富有的</span></p></li><li><p><em><span>n.</span></em><span>重要材料</span></p></li></ul><blockquote><p><span>There has been a </span><strong><span>substantial</span></strong><span> amount of factionalism within the movement.</span></p><p><span>该运动中已有大量的派系斗争了。</span></p></blockquote><p><span>chunk: </span></p><ul><li><p><em><span>n.</span></em><span>大块，厚块；大量，大部分；话语组成部分，组块；矮胖的（男）人</span></p></li><li><p><em><span>v.</span></em><span>将……分成数份；将……组合（或归类）；扔，抛；发出“砰啷”声；切分，切割（数据）</span></p></li></ul><blockquote><p><span>The next time you see a </span><strong><span>chunk</span></strong><span> of seaweed … notice the beauty of it.</span></p><p><span>下次你看到一大块海草……注意它的美。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>一夜成名的故事背后，都是一直不断的坚持创作的过程。但是每天创作就行了。不用想那么久。</span></p></blockquote><p><span>The day is the only unit of time that I can really </span><u><span>get my head around</span></u><span>. Seasons change, weeks are completely human-made, but the day has a rhythm. The sun goes up; the sun goes down. I can handle that.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><strong><span>get my head around sth</span></strong><span> </span><strong><span>让我把…搞清楚</span></strong></p><p><span>get my head around: 理解，接受：努力理解或接受某事物，尤其是复杂或困难的事物。</span></p><blockquote><p><span>It took me a while to </span><strong><span>get my head around</span></strong><span> the new software.</span></p><p><span>我花了一些时间才理解这个新软件。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>搞清楚当前一天的工作就ok了。</span></p></blockquote><p><span>Once a day, after you’ve done your day’s work, go back to your documentation and find one little piece of your process that you can share. </span><mark style="background:#f8e272;"><span>Where you are in your process will determine what that piece is. </span></mark><span>If you’re in the very early stages, share your influences and what’s inspiring you. If you’re in the middle of executing a project, write about your methods or share works in progress. If you’ve just completed a project, show the final product, share scraps from the </span><u><span>cutting-room</span></u><span> floor, or write about what you learned. If you have lots of projects out into the world, you can report on how they’re doing—you can tell stories about how people are interacting with your work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cutting-room: （电影）剪接室</span></p><blockquote><p><span>Her scene ended up on the </span><strong><span>cutting</span></strong><span> </span><strong><span>room</span></strong><span> floor.</span></p><p><span>她的镜头最后被剪掉了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>每天的工作做完之后，找一些piece分享。</span></p><ul><li><p><span>如果在工作早期，分享是什么激励了你；</span></p></li><li><p><span>如果是项目中期，分享一些方法和过程性工作；</span></p></li><li><p><span>如果刚刚完成一个项目，分享最后的成品；分享片段或者学习成长的内容；</span></p></li><li><p><span>如果有很多项目，就报道一下他们在做什么，告诉一下人们如何能够和你取得连接。 </span></p></li></ul></blockquote><p><span>A daily </span><u><span>dispatch</span></u><span> is even better than a résumé or a portfolio, because it shows what we’re working on right now. When the artist Ze Frank was interviewing job candidates, he complained, “When I ask them to show me work, they show me things from school, or from another job, but I’m more interested in what they did last weekend.” A good daily dispatch is like getting all the DVD </span><u><span>extras</span></u><span> before a movie comes out—you get to watch deleted scenes and listen to director’s </span><u><span>commentary</span></u><span> while the movie is being made.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>dispatch: </span></p><ul><li><p><em><span>v.</span></em><span>派遣；发送；迅速处理，迅速办妥；杀死，处决</span></p></li><li><p><em><span>n.</span></em><span>派遣，发送；公文，急件；报道，电讯；杀死，除掉</span></p></li></ul><blockquote><p><span>The </span><strong><span>dispatch</span></strong><span> of the task force is purely a contingency measure.</span></p><p><span>派遣特遣队纯粹是应急措施。</span></p></blockquote><p><span> extras: </span><em><span>n.</span></em><span>附加设备；额外部分；另外收费的部分（extra 的复数）</span></p><blockquote><p><span>There are no hidden </span><strong><span>extras</span></strong><span>.</span></p><p><span>没有任何隐蔽的额外费用。</span></p></blockquote><p><span>commentary: </span><em><span>n.</span></em><span>现场解说，实况报道；评注性著作，评论文；讨论，评论；说明，写照</span></p><blockquote><p><span>You can hear </span><strong><span>commentary</span></strong><span> on the game at halftime.</span></p><p><span>你可在中场休息时听到对比赛的评论。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>每天发布要比什么简历或者作品集更好，因为能够实时告诉别人你在做什么。实况报道，更有趣！更有意义！更让人喜欢。</span></p></blockquote><p><span>The form of what you share doesn’t matter. Your daily dispatch can be anything you want—a blog post, an email, a tweet, a YouTube video, or some other little bit of media. There’s no </span><u><span>one-size-fits-all</span></u><span> plan for everybody.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>one-size-fits-all: </span><em><span>adj.</span></em><span>通用的</span></p><blockquote><p><span>When education becomes </span><strong><span>one</span></strong><span>-</span><strong><span>size</span></strong><span>-</span><strong><span>fits</span></strong><span>-</span><strong><span>all</span></strong><span>, it risks overlooking a nation&#39;s diversity of gifts.</span></p><p><span>当教育变得一刀切时，它会面临着忽视一个国家的天赋多样性所带来的风险。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>分享的形式无所谓！日程发布可以是任何形式，没有一个适用于所有人的通用计划。</span></p></blockquote><p><span>Social media sites are the perfect place to share daily updates. Don’t worry about being on every platform; </span><mark style="background:#f8e272;"><span>pick and choose based on what you do and the people you’re trying to reach.</span></mark><span> Filmmakers hang out on YouTube or Vimeo. Businesspeople, for some strange reason, love LinkedIn. Writers love Twitter. Visual artists tend to like Tumblr, Instagram, or Facebook. The </span><u><span>landscape is constantly changing</span></u><span>, and new platforms are always </span><u><span>popping up</span></u><span> . . . and disappearing.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>landscape is constantly changing: 环境在持续地变化；形势在不断变化</span></p><blockquote><p><span>It&#39;s hard to stay ahead of the game in network security when the </span><strong><span>landscape</span></strong><span> </span><strong><span>is</span></strong><span> </span><strong><span>constantly</span></strong><span> </span><strong><span>changing</span></strong><span>.</span></p><p><span>当形势不断变化时，在网络安全领域保持领先地位是困难的。</span></p></blockquote><p><span>pop up: 突然出现：指某物在没有预警的情况下突然出现。</span></p><blockquote><p><span>As noted above, indifferent relationships may not always be the most helpful approach in resolving some of the issues that </span><strong><span>pop</span></strong><span> </span><strong><span>up</span></strong><span> at work.</span></p><p><span>如上所述，在解决工作中出现的一些问题时，冷淡的关系并不总是最有用的方法。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要担心在所有平台分享。社交媒体是每天分享的绝佳场所。</span></p></blockquote><p><mark style="background:#f8e272;"><span>Don’t be afraid to be an early </span><u><span>adopter</span></u><span>—jump on a new platform and see if there’s something interesting you can do with it. If you can’t find a good use for a platform, feel free to abandon it</span></mark><span>. Use your creativity. Film </span><u><span>critic</span></u><span> Tommy Edison, who’s been blind since birth, takes photos of his day-to-day life and posts them to Instagram under @blindfilmcritic. He’s followed by more than 30,000 people!</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>adopter: </span><em><span>n.</span></em><span>养父母；（新技术）应用者；接受管</span></p><blockquote><p><span>Early </span><strong><span>adopter</span></strong><span> buyers tend to be picky consumers.</span></p><p><span>早期的购买者倾向于是吹毛求疵的消费者。</span></p></blockquote><p><span>critic: </span><em><span>n.</span></em><span>批评家，评论员；批评者，反对……的人</span></p><blockquote><p><span>Turner is a writer and </span><strong><span>critic</span></strong><span>.</span></p><p><span>特纳是一位作家和评论家。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要怕成为新技术的应用者，好就用，不好就果断放弃！万一尝试的过程中发现了自己的兴趣呢！</span></p></blockquote><p><span>A lot of social media is just about typing into boxes. What you type into the box often depends on the </span><u><span>prompt</span></u><span>. Facebook asks you to </span><u><span>indulge</span></u><span> yourself, with questions like “How are you feeling?” or “What’s on your mind?” Twitter’s is hardly better: “What’s happening?” I like the </span><u><span>tagline</span></u><span> at </span><u><span>dribbble.com</span></u><span>: “What are you working on?” </span><u><span>Stick to</span></u><span> that question and you’ll be good. Don’t show your lunch or your </span><u><span>latte</span></u><span>; show your work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>indulge: </span><em><span>v.</span></em><span>沉湎，沉溺；纵容，迁就；满足（情感、兴趣、欲望等）；参加，参与（尤指违法活动）</span></p><blockquote><p><span>Only rarely will she </span><strong><span>indulge</span></strong><span> in a glass of wine.</span></p><p><span>她只是偶尔才会喝上杯葡萄酒。</span></p></blockquote><p><span>indulge yourself: 放纵自己：给自己一些特别的享受或满足，通常是指在某些方面过度或过分地享受。</span></p><blockquote><p><span>Sometimes it&#39;s okay to </span><strong><span>indulge yourself</span></strong><span> with a little treat.</span></p><p><span>有时候，给自己一点小小的奖励也是可以的。</span></p></blockquote><p><span>prompt: </span></p><ul><li><p><em><span>v.</span></em><span>促使，导致；鼓励，提示（说话者）；（计算机上）提示；（给演员）提词，提白</span></p></li><li><p><em><span>adj.</span></em><span>迅速的，立刻的；（人）利索的，敏捷的；及时的，准时的；（商品）即期要送的，即期要付的</span></p></li><li><p><em><span>n.</span></em><span>（给演员的）提词；（计算机屏幕上显示准备接受指令的）提示； 鼓励，催促；（付款通知单上的）付款期限</span></p></li><li><p><em><span>adv.</span></em><span>准时地</span></p></li></ul><blockquote><p><span>There are many emergencies which need </span><strong><span>prompt</span></strong><span> first aid treatment.</span></p><p><span>有很多紧急情况需要迅速的急救治疗。</span></p></blockquote><p><span>tagline </span><em><span>n.</span></em><span>标语；品牌口号</span></p><p><span>Dribbble </span><em><span>n.</span></em><span>追波（设计网站名）</span></p><p><span>Stick to</span></p><blockquote><ul><li><p><span>1．坚持：坚持做某事，尤其是在困难的情况下。可以指继续进行某项活动或使用某物，也可以指不改变决定、信念等；</span></p></li><li><p><span>· If you want to succeed, you&#39;ve got to stick to it and not give up.</span></p></li><li><p><span>如果你想成功，你必须坚持不懈，不放弃。</span></p></li><li><p><span>2．不要偏离（脚本、主题、规则等）；</span></p></li><li><p><span>· Please stick to the script/subject/rules.</span></p></li><li><p><span>请不要偏离脚本/主题/规则。</span></p></li><li><p><span>3．不改变（决定、信念等）</span></p></li></ul></blockquote><p><span>latte </span><em><span>n.</span></em><span>热牛奶咖啡，拿铁咖啡</span></p><blockquote><p><span>&#39;</span><strong><span>Latte</span></strong><span>&#39; is a loanword from Italian.</span></p><p><span>latte 是借自意大利语的外来词。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>大多数社交每天都是在输入框里输入内容。你输入什么取决于输入框中提示的信息。持续坚持，你会变得越来越好！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Don’t worry about everything you post being perfect.</span></mark><span> Science fiction writer Theodore Sturgeon once said that 90 percent of everything is </span><u><span>crap</span></u><span>. The same is true of our own work. </span><mark style="background:#f8e272;"><span>The trouble is, we don’t always know what’s good and what </span><u><span>sucks</span></u></mark><span>.</span><strong><span>That’s why it’s important to get things in front of others and see how they react.</span></strong><span> “Sometimes you don’t always know what you’ve got,” says artist Wayne White. “It really does need a little social chemistry to make it show itself to you sometimes.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>crap</span></p><ul><li><p><em><span>n.</span></em><span>胡扯，废话；蹩脚货，废物；不公正的待遇；粪便，屎；拉屎；双骰子赌博游戏（同 craps）；（在双骰子赌博戏中）输去赌注的一掷（掷出2, 3或12点）</span></p></li><li><p><em><span>v.</span></em><span>拉屎；（长时间地）胡扯；&lt;非正式&gt;掷骰子输去赌注；（因害怕或疲劳）退出比赛（或活动）；失败；（机器）坏掉</span></p></li><li><p><em><span>adj.</span></em><span>质量差的，蹩脚的；不熟练的</span></p></li></ul><blockquote><p><span>She later said the book was &quot;</span><strong><span>crap</span></strong><span>.&quot;</span></p><p><span>她后来说这本书“狗屎不如”。</span></p></blockquote><p><span>sucks: &lt;非正式&gt;糟糕，差劲；</span></p><blockquote><p><span> it </span><strong><span>sucks</span></strong><span>(</span><strong><span>烂透了</span></strong><span>)</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要怕不完美，有时候我们也不知道什么是好的，什么是糟糕的。但是大多数都是糟糕的，所以不要怕。就是因为不知道，所以它真的</span><u><span>需要一点社会化学反应</span></u><span>才能让你看到它。</span></p></blockquote><p><span>Don’t say you don’t have enough time. We’re all busy, but we all get 24 hours a day. People often ask me, “How do you find the time for all this?” And I answer, “I look for it.” You find time the same place you find </span><u><span>spare</span></u><span> change: in the </span><u><span>nooks and crannies</span></u><span>. You find it in the cracks between the big stuff—your commute, your lunch break, the few hours after your kids go to bed. You might have to miss an </span><u><span>episode</span></u><span> of your favorite TV show, you might have to miss an hour of sleep, but you can find the time if you look for it. I like to work while the world is sleeping, and share while the world is at work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spare</span></p><ul><li><p><em><span>adj.</span></em><span>备用的，外加的；不用的，闲置的；空闲的，空余的；多余的；简单的，简朴的；瘦的，瘦高的；少量的；节约的</span></p></li><li><p><em><span>v.</span></em><span>抽出，拿出（时间、金钱等）；饶恕，赦免；省得，免去；节约，吝惜；保证（或满足）自己的需要（spare oneself）；剩余，剩下（时间、金钱或空间）；分让；删节</span></p></li><li><p><em><span>n.</span></em><span>备用品；（车辆或机器的）零件，备件；（十柱保龄球戏中的）二击全倒</span></p></li></ul><blockquote><p><span>He could have taken a </span><strong><span>spare</span></strong><span> key.</span></p><p><span>他原本可以带上一把备用钥匙的。</span></p></blockquote><p><span>spare change 零钱：某人不需要的少量钱。</span></p><blockquote><p><span>I always keep some spare change in my pocket in case I need to buy something small.</span></p><p><span>我总是在口袋里留一些零钱，以防需要买些小东西。</span></p></blockquote><p><span>nooks and crannies 每个角落和缝隙：用于描述一个地方非常小或复杂，需要仔细搜索或探索。</span></p><blockquote><p><span>· The old house was full of nooks and crannies, making it a perfect place for hide-and-seek.</span></p><p><span>这座老房子到处都是角落和缝隙，非常适合玩捉迷藏。</span></p></blockquote><p><span>episode </span><em><span>n.</span></em><span>一段经历，一段时期；（电视剧或广播剧的）集，一集；疾病的发作，发病；插句，插段；（希腊悲剧中）两段合唱之间的部分</span></p><blockquote><p><span>The final </span><strong><span>episode</span></strong><span> will be shown next Sunday.</span></p><p><span>最后一集将于下周日播放。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要说自己没时间，我们都很忙。都是一天24小时。重点是你要学会去找时间，就像空隙中的零钱。你可以在大块的事务中找到零碎的时间。你可能会错过很多大块的时间，但是你一定能找到一些时间。</span></p></blockquote><p><span>Of course, don’t let sharing your work </span><u><span>take precedence over</span></u><span> actually doing your work. If you’re having a hard time balancing the two, just </span><u><span>set a timer for 30 minutes</span></u><span>. Once the timer </span><u><span>goes off</span></u><span>, </span><u><span>kick</span></u><span> yourself </span><u><span>off</span></u><span> the Internet and get back to work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>precedence: </span><em><span>n.</span></em><span>（重要性或地位的）领先，优先权；地位先后，级别高低</span></p><blockquote><p><span>All existing supplies of helium ought to be conserved and released only by permit, with medical uses receiving </span><strong><span>precedence</span></strong><span> over other commercial or recreational demands.</span></p><p><span>现有的所有氦供给应该被保存下来，并且只有在获得许可的情况下才能释放，医疗用途优先于其他商业或娱乐需求。</span></p></blockquote><p><span>take precedence over 优先于：比其他事物更重要或更优先。</span></p><blockquote><p><span>When it comes to allocating resources, the needs of the most vulnerable populations should take precedence over other considerations.</span></p><p><span>在分配资源时，最弱势群体的需求应优先考虑，而不是其他因素。</span></p></blockquote><p><span>set a timer for 30 minutes: 将定时器设定为...</span></p><blockquote><p><span>Do it: With your next task, </span><strong><span>set</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>timer</span></strong><span> </span><strong><span>for</span></strong><span> </span><strong><span>30</span></strong><span> </span><strong><span>minutes</span></strong><span> and see how far you can get!</span></p><p><span>这么做：从你的下一个目标开始，设置30分钟的倒计时，看看你能坚持多久。</span></p></blockquote><p><span>go off: 爆炸；突然发生；离开；经历衰退；按预期进行；发出特定的声音</span></p><blockquote><p><span>He heard the alarm </span><strong><span>go</span></strong><span> </span><strong><span>off</span></strong><span>.</span></p><p><span>他听见警报器响了。</span></p></blockquote><p><span>kick off: 开始：指开始一个比赛或活动。</span></p><blockquote><p><span>The concert will kick off at 8pm.</span></p><p><span>音乐会将在晚上8点开始。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当然，不要让分享超过了你工作的优先级。如果你不好平衡这两者，那就设个闹钟，时间一到就滚去干活！</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“One day at a time. It sounds so simple. It actually is simple but it isn’t easy: It requires incredible support and <u style="color:blue">fastidious</u> structuring.”<br/>—Russell Brand </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fastidious: </span><em><span>adj.</span></em><span>挑剔的；苛求的，难取悦的；（微生物等）需要复杂营养地</span></p><blockquote><p><span>Everything was planned in </span><strong><span>fastidious</span></strong><span> detail.</span></p><p><span>样样都一丝不苟地计划好了。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>“过一天算一天。听起来很简单。它实际上很简单，但并不容易：它需要令人难以置信的支持和挑剔的结构。”</span></mark></p><p>&nbsp;</p><h3 id='the-so-what-test'><span>The &quot;So What?&quot; Test</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“<u style="color:blue">Make no mistake</u>: This is not your diary. You are not <u style="color:blue">letting it all hang out</u>. You are picking and choosing every single word.”<br/>—Dani Shapiro </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>let it all hang out: 放松并无忧无虑：放松自己，不再拘束。</span></p><blockquote><p><span>· After a long week of work, I just want to let it all hang out and have some fun.</span></p><p><span>经过一周的辛苦工作，我只想放松自己，尽情享乐。</span></p></blockquote><p><span>make no mistake: 强调某个陈述的真实性或准确性</span></p><blockquote><p><span>Make no mistake, this is a difficult task.</span></p><p><span>别搞错了，这是一项艰巨的任务。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>“别搞错了：这不是你的日记。你没有把一切都说出来。你在挑选每一个词。”</span></mark></p><p><span>Always remember that anything you post to the Internet has now become public. “The Internet is a copy machine,” writes author Kevin Kelly. “Once anything that can be copied is brought into contact with the Internet, it will be copied, and those copies never leave.” </span><mark style="background:#f8e272;"><u><span>Ideally</span></u><span>, you want the work you post online to be copied and spread to every corner of the Internet, so don’t post things online that you’re not ready for everyone in the world to see</span></mark><span>. As publicist Lauren Cerand says, </span><mark style="background:#f8e272;"><span>“Post as though everyone who can read it has the power to fire you.”</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>ideally </span><em><span>adv.</span></em><span>理想地；观念上地</span></p><blockquote><p><span>People should, </span><strong><span>ideally</span></strong><span>, be persuaded to eat a diet with much less fat or oil.</span></p><p><span>理想的做法是应该说服人们吃更低脂肪或更低油脂的食品。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>要注意，你只要把东西分享到了网上，那就意味着这些东西再也擦不掉了！所以，如果你没有准备好分享的，可别分享。</span><u><span>就像每个能读到它的人都有权解雇你一样</span></u></p></blockquote><p><span>Be open, share imperfect and unfinished work that you want feedback on, but don’t share </span><u><span>absolutely everything</span></u><span>. </span><mark style="background:#f8e272;"><span>There’s a big, big difference between sharing and over-sharing.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>absolutely everything: 一切，所有的事物：表示包括每一件事物或事情。</span></p><blockquote><p><span>I have packed absolutely everything I need for the trip.</span></p><p><span>我已经把旅行所需的一切都准备好了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>开放，分享所有你想得到反馈的不完美的东西。但是别什么都分享。分享和过度分享是不同的。</span></p></blockquote><p><span>The act of sharing is one of </span><u><span>generosity</span></u><span>—you’re putting something out there because you think it might be helpful or entertaining to someone </span><u><span>on the other side of</span></u><span> the screen.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>generosity </span><em><span>n.</span></em><span>慷慨，大方</span></p><blockquote><p><span>We were amazed by his </span><strong><span>generosity</span></strong><span>.</span></p><p><span>他的慷慨令我们喜出望外。</span></p></blockquote><p><span>chalkboard </span><em><span>n.</span></em><span>黑板</span></p><blockquote><p><span>The instructor writes an important term on the </span><strong><span>chalkboard</span></strong><span>, and you dutifully copy it in your notebook.</span></p><p><span>当老师在黑板上写下一个重要的术语时，你应该认真地把它抄在笔记本上。</span></p></blockquote></blockquote><p><span>I had a professor in college who returned our graded essays, walked up to the </span><u><span>chalkboard</span></u><span>, and wrote in huge letters: “SO WHAT?” She threw the piece of chalk down and said, “Ask yourself that every time you turn in a piece of writing.” It’s a lesson I never forgot.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>go with your gut 凭直觉做决定：根据自己的直觉或第一感觉来做决定或采取行动。</span></p><blockquote><p><span>Then I suggest you </span><strong><span>go</span></strong><span> </span><strong><span>with</span></strong><span> </span><strong><span>your</span></strong><span> </span><strong><span>gut</span></strong><span> instinct.</span></p><p><span>这样的话，我建议你按照直觉去行事。</span></p></blockquote><p><span>gut: </span></p><ul><li><p><em><span>n.</span></em><span>肠，肠道；内脏；&lt;非正式&gt;勇气，魄力；（尤指大的）胃，肚子；直觉，本能；核心，实质；肠线；&lt;非正式&gt;（机器或设备的）内部零件；狭道，狭海峡</span></p></li><li><p><em><span>v.</span></em><span>取出……的内脏（以便烹饪）；毁坏（建筑物）的内部</span></p></li><li><p><em><span>adj.</span></em><span>感情的，本能的</span></p></li></ul><blockquote><p><span>Let&#39;s have your </span><strong><span>gut</span></strong><span> reaction to the facts as we know them.</span></p><p><span>请告诉我们你对这些我们了解的事实的直觉反应。</span></p></blockquote><p><span>prophylactic </span><code>/ ˌproʊfəˈlæktɪk /</code></p><ul><li><p><em><span>adj.</span></em><span>预防性的，预防疾病的</span></p></li><li><p><em><span>n.</span></em><span>预防性药物（或器具、措施）；预防法；避孕用具</span></p></li></ul><blockquote><p><span>Vaccination and other </span><strong><span>prophylactic</span></strong><span> measures can be carried out.</span></p><p><span>接种疫苗和其他预防措施可以实施。</span></p></blockquote></blockquote><p><span>Always be sure to run everything you share with others through The “So What?” Test. Don’t overthink it; just go with your </span><u><span>gut</span></u><span>. If you’re unsure about whether to share something, let it </span><u><span>sit for</span></u><span> 24 hours. Put it in a drawer and walk out the door. The next day, take it out and look at it with fresh eyes. Ask yourself, “Is this helpful? Is it entertaining? Is it something I’d be comfortable with my boss or my mother seeing?” There’s nothing wrong with saving things for later. The save as draft button is like a </span><u><span>prophylactic</span></u><span>—it might not feel as good in the moment, but you’ll be glad you used it in the morning.</span></p><blockquote><p><span>在分享的时候，如果左右为难，就暂存一下，第二天再问问自己，如果分享了之后，别人听到了又怎样？这就是&quot;so what&quot;测试。没问题就分享！谨记，这个测试是非常有用的！</span></p></blockquote><h3 id='turn-your-flow-into-stock'><span>Turn Your Flow into Stock.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“If you work on something a little bit every day, you <u style="color:blue">end up with</u> something that is massive.”<br/>—Kenneth Goldsmith </p><hr style="background:brown"/><p><u><span>每天一点点，你会发现，终有一天你会有非常非常多！</span></u></p><p><span>“</span><u><span>Stock and flow</span></u><span>” is an economic concept that writer Robin Sloan has adapted into a </span><u><span>metaphor</span></u><span> for media: </span><mark style="background:#f8e272;"><span>“Flow is the feed. It’s the posts and the tweets. It’s the stream of daily and sub-daily updates that </span><strong><span>remind</span></strong><span> people you exist. Stock is the durable stuff. It’s the content you produce that’s as interesting in two months (or two years) as it is today.</span></mark><span> It’s what people discover via search. It’s what spreads slowly but surely, building fans over time.” Sloan says the magic formula is to maintain your flow while working on your stock in the background.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>Stock and flow 存量与流量：存量是指在某一特定时间点上的累积量，而流量是指在一段时间内的变化量。存量和流量是经济学、物流和其他领域中常用的概念。</span></p><blockquote><p><span>The relationship between stock and flow is crucial for understanding the dynamics of a system.</span></p><p><span>理解存量与流量之间的关系对于理解系统的动态变化至关重要。</span></p></blockquote><p><span>metaphor  </span><em><span>n.</span></em><span>隐喻，暗喻；象征，标志</span></p><blockquote><p><span>This </span><strong><span>metaphor</span></strong><span> is very appropriate.</span></p><p><span>这个比喻很贴切。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>保持流量，积累存量！存量是你生产的，一直有价值的东西，它随着时间给你带来朋友；流量是反馈，是提醒你的朋友，你还存在。</span>
+<strong><span>这段说的真好！</span></strong></p></blockquote><p><span>In my experience, your stock is best made by collecting, organizing, and expanding upon your flow. Social media sites function a lot like public notebooks—they’re places where we think out loud, let other people think back at us, then hopefully think some more. </span><mark style="background:#f8e272;"><span>But the thing about keeping notebooks is that you have to revisit them in order to make the most out of them</span></mark><span>. You have to </span><u><span>flip back</span></u><span> through old ideas to see what you’ve been thinking. Once you make sharing part of your daily routine, you’ll notice themes and trends emerging in what you share. You’ll find patterns in your flow.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>flip back 翻跟头：一种翻跟头的动作，包括向后翻转并落在双脚上。</span></p><blockquote><p><span>He did a flip back and landed perfectly on his feet.</span></p><p><span>他做了一个翻跟头，完美地落在了双脚上。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>存量是通过收集、组织以及从流量扩展而来的。</span></p><ul><li><p><span>但是保存笔记本的问题是你必须重新审视它们，以便最大限度地利用它们。你必须回顾一下以前的想法，看看你一直在想什么。一旦你分享你的日常，你将会从你分享的内容中注意到你的主题和趋势。你会发现你流量中的pattern。 </span></p></li></ul><p><strong><span>这段也说的很赞！</span></strong></p></blockquote><p><span>When you detect these patterns, you can start gathering these bits and pieces and turn them into something bigger and more </span><u><span>substantial</span></u><span>. </span><mark style="background:#f8e272;"><span>You can turn your flow into stock</span></mark><span>. For example, a lot of the ideas in this book </span><u><span>started out as</span></u><span> tweets, which then became blog posts, which then became book chapters. Small things, over time, can get big.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bits and pieces</span></p><blockquote><p><span>1．零散的东西：不同种类的事物或物体。</span></p><p><span>· The room was cluttered with bits and pieces of old furniture.</span></p><p><span>房间里堆满了各种旧家具的零散物品。</span></p><p><span>2．碎片：小块的碎片。</span></p><p><span>· She swept up the bits and pieces of broken glass from the floor.</span></p><p><span>她把地板上的破碎玻璃碎片扫掉了。</span></p></blockquote><p><span>substantial</span></p><ul><li><p><em><span>adj.</span></em><span>大量的，价值巨大的；牢固的，结实的；基本的，实质性的；（饭菜）丰盛的；重要的，真实的；有地位的，富有的</span></p></li><li><p><em><span>n.</span></em><span>重要材料</span></p></li></ul><blockquote><p><span>He made </span><strong><span>substantial</span></strong><span> donations to charity.</span></p><p><span>他做了大量的慈善捐赠。</span></p></blockquote><p><span>start out as 起初是，最初是：指某人或某物在开始时具有某种身份、职业或状态，后来可能发展成为其他形式或角色。</span></p><blockquote><p><span>Daly was a fast-talking Irish-American who had </span><strong><span>started</span></strong><span> </span><strong><span>out</span></strong><span> </span><strong><span>as</span></strong><span> a salesman.</span></p><p><span>戴利是个巧舌如簧的爱尔兰裔美国人，他起初是个推销员。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当你侦察到这些模式的时候，你可以开始聚集这些零碎物品成一个更大更牢固的东西。</span>
+<strong><span>你可以把流量转换为存量</span></strong><span>：比如这本书里的许多idea都是从tweets中衍生出来的。慢慢变成了posts，最后变成了chapters，现在成了books。</span></p></blockquote><h3 id='build-a-good-domain-name'><span>Build a Good (Domain) Name.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“<u style="color:blue">Carving out</u> a space for yourself online, somewhere where you can express yourself and share your work, is still one of the best possible investments you can make with your time.”<br/>—Andy Baio </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>carve out 创造：通过刻苦努力或仿佛切割一样创造（声誉、机会、角色、职位、事业、胜利）等。</span></p><blockquote><p><strong><span>Carve</span></strong><span> </span><strong><span>out</span></strong><span> an hour in your day.</span></p><p><span>每天匀出一小时。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><mark style="background:#f8e272;"><span>在网上为自己开辟一个空间，在那里你可以表达自己和分享你的工作，这仍然是你可以利用你的时间做的最好的投资之一。</span></mark></p></blockquote><p><span>Social networks are great, but they </span><u><span>come and go</span></u><span>. (Remember Myspace? </span><u><span>Friendster</span></u><span>? GeoCities?) If you’re really interested in sharing your work and expressing yourself, </span><mark style="background:#f8e272;"><span>nothing beats owning your own space online</span></mark><span>, a place that you control, a place that no one can take away from you, a world </span><u><span>headquarters</span></u><span> where people can always find you.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>come and go</span></p><blockquote><p><span>1．来来去去：随着时间的推移，出现并离开的人或事物；或者描述已经过去的时间。</span></p><p><span>· People come and go in this city, it&#39;s hard to keep track of everyone.</span></p><p><span>在这个城市，人来人往，很难追踪每个人。</span></p><p><span>2．出现并离开：随着时间的推移，出现并离开的人或事物；或者描述已经过去的时间。</span></p><p><span>· Opportunities come and go, so seize the moment when it arrives.</span></p><p><span>机会来了就要抓住，因为机会稍纵即逝。</span></p></blockquote><p><span>Friendster </span><em><span>n.</span></em><span>交友网站</span></p><blockquote><p><span>The story of </span><strong><span>Friendster</span></strong><span> became a textbook case of how not to manage a startup.</span></p><p><span>Friendster的故事也由此成为教科书里如何管理创业型企业的经典案例。</span></p></blockquote><p><span>headquarters </span><em><span>n.</span></em><span>总部，总公司；司令部，指挥部</span></p><blockquote><p><span>They located their </span><strong><span>headquarters</span></strong><span> in Swindon.</span></p><p><span>他们把总部设在了斯温登。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>没有什么比在网上拥有自己的空间更好的了。如果你真的对分享自己和表达自己感兴趣的话。就去做！</span></p></blockquote><p><span>More than 10 years ago, I </span><u><span>staked</span></u><span> my own little Internet claim and bought the domain name </span><strong><span>austinkleon.com</span></strong><span>. I was a complete </span><u><span>amateur</span></u><span> with no skills when I began building my website: It started off </span><u><span>bare bones</span></u><span> and ugly. Eventually, I figured out how to install a blog, and that changed everything. </span><mark style="background:#f8e272;"><span>A blog is the ideal machine for turning flow into stock: One little blog post is nothing on its own, but publish a thousand blog posts over a decade, and it turns into your life’s work</span></mark><span> My blog has been my </span><u><span>sketchbook</span></u><span>, my studio, my gallery, my </span><u><span>storefront</span></u><span>, and my </span><u><span>salon</span></u><span>. </span><mark style="background:#f8e272;"><span>Absolutely everything good that has happened in my career can be traced back to my blog</span></mark><span>. My books, my art shows, my speaking </span><u><span>gigs</span></u><span>, some of my best friendships—they all exist because I have my own little piece of </span><u><span>turf</span></u><span> on the Internet.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stake a claim: 主张所有权：采取行动，主张对某物的所有权。</span></p><blockquote><p><span>That is the most common way to </span><strong><span>stake</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>claim</span></strong><span> to ownership of land in the Amazon.</span></p><p><span>在亚马逊流域，打桩立界来表明自己对土地拥有所有权是最普通的做法。</span></p></blockquote><p><span>amateur: </span></p><ul><li><p><em><span>n.</span></em><span>业余爱好者；生手，外行</span></p></li><li><p><em><span>adj.</span></em><span>非专业的，业余爱好的；不熟练的</span></p></li></ul><blockquote><p><span>She was a keen </span><strong><span>amateur</span></strong><span> photographer.</span></p><p><span>她是一个痴迷的业余摄影师。</span></p></blockquote><p><span>bare bones: 基本要素：某物的基本要素，没有详细描述。</span></p><blockquote><p><span>The report only provided the bare bones of the proposal.</span></p><p><span>这份报告只提供了该提案的基本要素。</span></p></blockquote><p><span>sketchbook </span><em><span>n.</span></em><span>小品集；写生簿；随笔集</span></p><blockquote><p><span>The stage is your workspace. It can be a studio, a desk, or a </span><strong><span>sketchbook</span></strong><span>.</span></p><p><span>舞台就是你工作的场所，可以是工作室、书桌或写生簿。</span></p></blockquote><p><span>storefront </span><em><span>n.</span></em><span>[贸易] 店面；店头</span></p><blockquote><p><span>They run their business from a small </span><strong><span>storefront</span></strong><span>.</span></p><p><span>他们在一间狭小的铺面房中做生意。</span></p></blockquote><p><span>salon: </span><em><span>n.</span></em><span>美发厅，美容院；高级服装店，时装店；&lt;旧&gt;（大宅中的）客厅，会客室；沙龙（旧时作家、艺术家等在名流家中定期举行的聚会）；沙龙画展（Salon）</span></p><blockquote><p><span>She received a cosmetic makeover at a beauty </span><strong><span>salon</span></strong><span> as a birthday gift.</span></p><p><span>作为生日礼物，她得到了在一家美容院美容的机会。</span></p></blockquote><p><span>gigs</span></p><ul><li><p><em><span>n.</span></em><span>轻便两轮马车；（爵士乐、摇滚乐等）演奏会；鱼叉（gig 的复数）</span></p></li><li><p><em><span>v.</span></em><span>乘坐轻便两轮马车；用鱼叉捕鱼（gig 的三单形式）</span></p></li></ul><blockquote><p><span>The band is currently planning a series of stateside </span><strong><span>gigs</span></strong><span>.</span></p><p><span>该乐队目前正在策划在美国举办一系列演唱会。</span></p></blockquote><p><span>turf </span></p><ul><li><p><em><span>n.</span></em><span>草皮；泥炭；跑马场</span></p></li><li><p><em><span>vt.</span></em><span>覆草皮于；驱逐；强制赶走</span></p></li></ul><blockquote><p><span>They shuffled slowly down the </span><strong><span>turf</span></strong><span> toward the cliff&#39;s edge.</span></p><p><span>他们在草地上拖着脚步慢慢走向悬崖边。</span></p></blockquote><p><span>on my own turf: 在我自己的地盘上</span></p><p><mark><strong><span>感受</span></strong></mark></p><p><span>我也要学搭个人blog！必须要学！用blog感知世界！（touch the world）</span></p></blockquote><p><span>So, </span><mark style="background:#f8e272;"><span>if you get one thing out of this book make it this</span></mark><span>: Go register a domain name. Buy www.[insert your name here].com. If your name is common, or you don’t like your name, come up with a </span><u><span>pseudonym</span></u><span> or an </span><u><span>alias</span></u><span>, and register that. Then buy some web hosting and build a website. (These things sound technical, but they’re really not—a few Google searches and some books from the library will show you the way.) If you don’t have the time or </span><u><span>inclination</span></u><span> to build your own site, there’s a small army of web designers ready to help you. Your website doesn’t have to look pretty; it just has to exist.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pseudonym </span><em><span>n.</span></em><span>笔名；假名</span></p><blockquote><p><span>She writes under a </span><strong><span>pseudonym</span></strong><span>.</span></p><p><span>她用笔名写作。</span></p></blockquote><p><span>alias </span></p><ul><li><p><em><span>adv.</span></em><span>又名，化名（尤指演员或罪犯）</span></p></li><li><p><em><span>n.</span></em><span>（尤指罪犯所用的）化名，别名；（文件、互联网地址等用的）别名，假名；假频伪信号</span></p></li><li><p><em><span>v.</span></em><span>错误识别（信号频率），使失真</span></p></li></ul><blockquote><p><span>He checked into the hotel under an </span><strong><span>alias</span></strong><span>.</span></p><p><span>他用化名登记住进旅馆。</span></p></blockquote><p><span>inclination </span><em><span>n.</span></em><span>倾向，意愿；趋向，趋势；斜坡，斜度；轻微向下的动作；轨道交角</span></p><blockquote><p><span>She showed no </span><strong><span>inclination</span></strong><span> to go.</span></p><p><span>她没有表现出要走的意向。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>所以，如果你能从这本书中得到一样东西，那就是这个。</span>
+<span>随便就能搭建一个blog，只要你想。search  + some book will make it.</span></p></blockquote><p><span>Don’t think of your website as a self-promotion machine, think of it as a </span><u><span>self-invention</span></u><span> machine. Online, you can become the person you really want to be. Fill your website with your work and your ideas and the stuff you care about. Over the years, you will be tempted to abandon it for the newest, shiniest social network. Don’t give in. Don’t let it </span><u><span>fall into</span></u><span> neglect. Think about it in the long term. Stick with it, maintain it, and let it change with you over time.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>self-invention </span><em><span>n</span></em><span>．自我塑造：指一个人通过自我发现、学习和改变，创造出一个新的、更好的自我形象。</span></p><blockquote><p><span>His life is a story of self-invention.</span></p><p><span>他的生活是一个自我塑造的故事。</span></p></blockquote><p><span>fall into</span></p><ul><li><p><span>1．快速掉入（某物）；</span></p></li><li><p><span>2．陷入（不活跃或不理想的状态或条件）；</span></p></li><li><p><span>3．属于（特定类别或范围）；</span></p></li><li><p><span>4．被困在（陷阱）；</span></p></li><li><p><span>5．开始：开始做或经历某事，或受到某事的影响，而不是想或试图。</span></p></li></ul><blockquote><p><span>The problems generally </span><strong><span>fall</span></strong><span> </span><strong><span>into</span></strong><span> two categories.</span></p><p><span>这些问题一般属于两种类别。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要把website想象成自我提升的机器。应该把它当成自我发现、学习和改变的机器。</span>
+<span>不要轻易放弃它，不要抛弃它。Stick with it. Let it change with you!</span></p></blockquote><p><span>When she was young and starting out, Patti Smith got this advice from William Burroughs: “Build a good name. Keep your name clean. Don’t </span><u><span>make compromises</span></u><span>. Don’t worry about making a bunch of money or being successful. </span><u><span>Be concerned with</span></u><span> doing good work . . . and if you can build a good name, eventually that name will be its own </span><u><span>currency</span></u><span>.”</span></p><p><span>The beauty of owning your own turf is that you can do whatever you want with it. Your domain name is your domain. You don’t have to make compromises. Build a good domain name, keep it clean, and eventually it will be its own currency. Whether people show up or they don’t, you’re out there, doing your thing, ready whenever they are.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>make compromise 妥协：在不同意见或需求之间达成折衷，双方都做出一定的让步。</span></p><blockquote><p><span>In order to reach an agreement, both parties need to make compromises.</span></p><p><span>为了达成协议，双方都需要做出妥协。</span></p></blockquote><p><span>be concerned with 关注；担忧；涉及</span></p><blockquote><p><span>Women hate it most, since girls are pressurized from an early age to </span><strong><span>be</span></strong><span> </span><strong><span>concerned</span></strong><span> </span><strong><span>with</span></strong><span> appearances of all kinds.</span></p><p><span>女人最讨厌它，因为女孩从小就受到压力，要关注各种各样的外表。</span></p></blockquote><p><span>currency </span><em><span>n.</span></em><span>通货，货币；通用，流行；现时性</span></p><blockquote><p><span>Its </span><strong><span>currency</span></strong><span> is pegged to the dollar.</span></p><p><span>其货币与美元的汇率固定了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要妥协，不要担心去挣钱，持续经营你的websit，你的域名就是你的通用货币。不管别人在不在那里，你一直在那儿！等待别人发现。</span></p></blockquote><br /><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

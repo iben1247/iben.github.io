@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>Show Your Work! [910]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">09</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#sell-out">Sell Out.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n10"><a class="md-toc-inner" href="#even-the-renaissance-had-to-be-funded">Even the <u>renaissance</u> Had to Be Funded.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n155"><a class="md-toc-inner" href="#pass-around-the-hat">Pass Around the Hat.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n278"><a class="md-toc-inner" href="#keep-a-mailing-list">Keep a Mailing List.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n331"><a class="md-toc-inner" href="#make-more-work-for-yourself">Make More Work for Yourself.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n417"><a class="md-toc-inner" href="#pay-it-forward">Pay It Forward.</a></span></p></div><h2 id='sell-out'><span>Sell Out.</span></h2><h3 id='even-the-renaissance-had-to-be-funded'><span>Even the </span><u><span>renaissance</span></u><span> Had to Be Funded.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>renaissance </span><em><span>n.</span></em><span>复兴，再生；文艺复兴（时期）（the Renaissance）；文艺复兴文化，文艺复兴风格（Renaissance）</span></p><blockquote><p><span>Popular art is experiencing a </span><strong><span>renaissance</span></strong><span>.</span></p><p><span>通俗艺术正在复兴。</span></p></blockquote><p><span>sellout </span><em><span>n.</span></em><span>售完；客满的演出；背叛</span></p><blockquote><p><span>A racial </span><strong><span>sellout</span></strong><span> unwilling to stand up for himself?</span></p><p><span>一个不愿奋起力争、背叛种族的黑人？</span></p></blockquote><p><span>sell out 出卖：指为了个人利益或金钱而背叛他人或原则。</span></p><blockquote><p><span>· I can&#39;t believe he would sell out his own friends for a little bit of money.</span></p><p><span>我无法相信他会为了一点点钱而出卖自己的朋友。</span></p></blockquote><p><span>entrepreneurs </span><em><span>n.</span></em><span>企业家（entrepreneur 的复数）</span></p><blockquote><p><span>The forum is now open to all budding </span><strong><span>entrepreneurs</span></strong><span>.</span></p><p><span>该论坛现在向所有崭露头角的企业家开放。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“<u style="color:blue">Sellout</u> . . . I’m not crazy about that word. We’re all <u style="color:blue">entrepreneurs</u>. To me, I don’t care if you own a furniture store or whatever—the best sign you can put up is sold out.”<br/>—Bill Withers </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>make off </span><em><span>v.</span></em><span>逃走；离开；匆忙离开</span></p><blockquote><p><span>When someone steps away from their cart to look at something, quickly </span><strong><span>make</span></strong><span> </span><strong><span>off</span></strong><span> with it without saying a word.</span></p><p><span>当别人远离购物车，几步之遥，看其他商品，迅速推走，一句话都不说。</span></p></blockquote><p><span>make sth off: 从xxx赚钱</span></p><p><span>spouse </span></p><ul><li><p><em><span>n.</span></em><span>配偶</span></p></li><li><p><em><span>v.</span></em><span>和……结婚</span></p></li></ul><blockquote><p><span>It is often helpful to have your </span><strong><span>spouse</span></strong><span> in the room when major news is expected.</span></p><p><span>在等待重大消息时，让你的配偶在场往往是很有好处的。</span></p></blockquote><p><span>grant </span></p><ul><li><p><em><span>v.</span></em><span>授予，给予；承认</span></p></li><li><p><em><span>n.</span></em><span>补助金，拨款；（政府给予的）土地；&lt;正式&gt;给予，授予；合法转让</span></p></li></ul><blockquote><p><span>What&#39;s the form when you apply for a research </span><strong><span>grant</span></strong><span>?</span></p><p><span>申请科研补助金按常规应该怎么办？</span></p></blockquote><p><span>patron </span><em><span>n.</span></em><span>（艺术家的）赞助人，资助者；代言人，名义赞助人；（酒吧、旅馆等的）主顾，顾客；（古罗马）有权势的保护人，庇护人；（古罗马）已获得自由的奴隶的原主人和保护人；&lt;英&gt;有圣职授予权的人（或机构）</span></p><blockquote><p><span>Catherine the Great was a </span><strong><span>patron</span></strong><span> of the arts and sciences.</span></p><p><span>凯瑟琳大帝是艺术和科学的赞助人。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>每个人都需要pay for sth. 不管钱从哪里来，总是需要钱的！</span></p></blockquote><p><span>People need to eat and pay the rent. “An amateur is an artist who supports himself with outside jobs which enable him to paint,” said artist Ben Shahn. “A professional is someone whose wife works to enable him to paint.” Whether an artist </span><u><span>makes</span></u><span> money </span><u><span>off</span></u><span> his work or not, money has to come from somewhere, </span><mark style="background:#f8e272;"><span>be it a day job, a wealthy </span><u><span>spouse</span></u><span>, a trust fund, an arts </span><u><span>grant</span></u><span>, or a </span><u><span>patron</span></u><span>.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>romanticism </span><em><span>n.</span></em><span>浪漫主义；浪漫精神</span></p><blockquote><p><span>Her determined </span><strong><span>romanticism</span></strong><span> was worrying me.</span></p><p><span>她坚定的浪漫主义正让我担心着呢。 </span></p></blockquote><p><span>inherently </span><em><span>adv.</span></em><span>内在地，固有地</span></p><blockquote><p><span>Man is not </span><strong><span>inherently</span></strong><span> violent.</span></p><p><span>人类并非生来就暴力。</span></p></blockquote><p><span>corrupts </span><em><span>v</span></em><span>．</span></p><blockquote><ol start='' ><li><p><span>使腐化，使堕落：使道德、品质、价值等恶化或降低。</span></p></li></ol><p><span>· Power tends to corrupt, and absolute power corrupts absolutely.</span></p><p><span>权力容易使人腐化，绝对的权力使人绝对腐化。</span></p><ol start='2' ><li><p><span>贿赂，收买：用钱财或其他利益诱使他人违背道德、法律或职责。</span></p></li></ol></blockquote><p><span>pope </span><em><span>n.</span></em><span>教皇，罗马教皇；权威，大师</span></p><blockquote><p><span>I will be </span><strong><span>pope</span></strong><span> next.</span></p><p><span>我接下来要成为教皇。</span></p></blockquote><p><span>commissioned</span></p><ul><li><p><em><span>adj.</span></em><span>受委任的，受任命的；服役的，现役的</span></p></li><li><p><em><span>v.</span></em><span>委任（commission 的过去分词）</span></p></li></ul><blockquote><p><span>Publishers have </span><strong><span>commissioned</span></strong><span> a French translation of the book.</span></p><p><span>出版商已委托人把这本书译成法语。</span></p></blockquote><p><span>godfather</span></p><ul><li><p><em><span>n.</span></em><span>教父</span></p></li><li><p><em><span>vt.</span></em><span>当……的教父</span></p></li></ul><blockquote><p><span>The </span><strong><span>Godfather</span></strong><span> of gaming!</span></p><p><span>游戏界的教父！</span></p></blockquote><p><span>assorted </span></p><ul><li><p><em><span>adj.</span></em><span>各种各样的，混杂的</span></p></li><li><p><em><span>v.</span></em><span>把……分等级；把……归为一类（assort 的过去式和过去分词形式）</span></p></li></ul><blockquote><p><span>The meat is served with salad or </span><strong><span>assorted</span></strong><span> vegetables.</span></p><p><span>端上的肉配有色拉或什锦蔬菜。</span></p></blockquote><p><span>shylocks </span><em><span>n</span></em><span>．高利贷者，放高利贷的人：指向借款人收取高额利息的贷款人。这个词源于莎士比亚的戏剧《威尼斯商人》中的犹太高利贷者夏洛克。</span></p><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要觉得艺术家都应该饥饿地画画，很瘦弱，很辛苦，都得是为了钱的！为钱奔波！为钱工作！</span></p></blockquote><p><mark style="background:#f8e272;"><span>We all have to get over our “starving artist” </span><u><span>romanticism</span></u><span> and the idea that touching money </span><u><span>inherently</span></u><span> </span><u><span>corrupts</span></u><span> creativity.</span></mark><span> Some of our most meaningful and most cherished cultural artifacts were made for money. Michelangelo painted the Sistine Chapel ceiling because the </span><u><span>pope</span></u><span> </span><u><span>commissioned</span></u><span> him. Mario Puzo wrote The </span><u><span>Godfather</span></u><span> to make money: He was 45 years old, tired of being an artist, and owed $20,000 to </span><u><span>assorted</span></u><span> relatives, banks, bookmakers, and </span><u><span>shylocks</span></u><span>. Paul McCartney has said that he and John Lennon used to sit down before a Beatles songwriting session and say, </span><mark style="background:#f8e272;"><span>“Now, let’s write a swimming pool.”</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hates</span></p><ul><li><p><em><span>v.</span></em><span>讨厌；憎恨（hate 的三单形式）</span></p></li><li><p><em><span>n.</span></em><span>厌恶；讨厌的东西（hate 的复数）</span></p></li></ul><blockquote><p><span>He just </span><strong><span>hates</span></strong><span> being housebound.</span></p><p><span>他只是痛恨出不了门。</span></p></blockquote><p><span>spit out: 吐出</span></p><blockquote><p><span>You have to </span><strong><span>spit</span></strong><span> </span><strong><span>out</span></strong><span> any food leftover.</span></p><p><span>你不得不将任何食物吃剩的部分吐出来。</span></p></blockquote><p><span>bitterest </span><em><span>adj.</span></em><span>痛苦的；剧烈的；寒冷的（bitter 的形容词最高级）</span></p><blockquote><p><span>Our voices rose and fell; sometimes the </span><strong><span>bitterest</span></strong><span> remark was a whisper.</span></p><p><span>我们的声音时高时低；有时一句最尖刻的话竟如耳语一般。</span></p></blockquote><p><span>horrible </span><em><span>adj.</span></em><span>可怕的，令人恐惧的；糟糕的，讨厌的；不友好的</span></p><blockquote><p><span>I was repulsed by the </span><strong><span>horrible</span></strong><span> smell.</span></p><p><span>这种可怕的气味让我恶心。</span></p></blockquote><p><span>hit single 热门单曲：一首广受欢迎或广为人知的录制歌曲或乐曲，通常指通过重复的广播播放、观众印象、重要的流媒体数据和商业销售，在官方音乐排行榜上出现的单曲。</span></p><blockquote><p><span>· Their latest release has become a hit single, topping the charts for weeks.</span></p><p><span>他们最新的发行作品成为了一首热门单曲，在排行榜上连续几周位居榜首。</span></p></blockquote><p><span>jealous </span><em><span>adj.</span></em><span>妒忌的，好嫉妒的；珍惜的；猜疑的，留意提防的；（神祇）要求绝对忠实和崇敬的</span></p><blockquote><p><span>She was </span><strong><span>jealous</span></strong><span> of his wealth.</span></p><p><span>她嫉妒他的富有。</span></p></blockquote><p><span>victory </span><em><span>n.</span></em><span>胜利，成功，获胜</span></p><blockquote><p><span>The team hung on for </span><strong><span>victory</span></strong><span>.</span></p><p><span>这个队为了胜利坚持不懈。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当你喜欢的人，做的很好的时候，要庆祝她们，发自内心的！</span></p></blockquote><p><span>Everybody says they want artists to make money, and then when they do, everybody </span><u><span>hates</span></u><span> them for it. The word sellout is </span><u><span>spit out</span></u><span> by the </span><u><span>bitterest</span></u><span>, smallest parts of ourselves. Don’t be one of those </span><u><span>horrible</span></u><span> fans who stops listening to your favorite band just because they have a </span><u><span>hit single</span></u><span>. Don’t write off your friends because they’ve had a little bit of success. </span><u><span>Don’t be jealous</span></u><span> when the people you like do well—celebrate their </span><u><span>victory</span></u><span> as if it’s your own.</span></p><h3 id='pass-around-the-hat'><span>Pass Around the Hat.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I’d love to sell out completely. It’s just that nobody has been willing to buy.”<br/>—John Waters </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>take the leap 冒险尝试：采取冒险的行动或决定，尤指在面临不确定性或风险时勇敢地迈出一步。</span></p><blockquote><p><span>· She decided to take the leap and start her own business.</span></p><p><span>她决定冒险尝试，开始自己的事业。</span></p></blockquote><p><span>leap </span></p><ul><li><p><em><span>v.</span></em><span>猛冲，突然而迅速地移动；剧增，猛涨；赶紧抓住（机会）；（心）猛跳；跳，跳跃</span></p></li><li><p><em><span>n.</span></em><span>跳跃，跳高；骤变，激增；（对新事物的）认真尝试</span></p></li></ul><blockquote><p><span>His heart gave a sudden </span><strong><span>leap</span></strong><span> when he saw her.</span></p><p><span>他看见她时，心猛地一跳。</span></p></blockquote><p><span>equivalent</span></p><ul><li><p><em><span>adj.</span></em><span>等同的，等效的</span></p></li><li><p><em><span>n.</span></em><span>对等的人（或事物），对应的人（或事物）；当量（equivalent weight）</span></p></li></ul><blockquote><p><span>His party has just suffered the </span><strong><span>equivalent</span></strong><span> of a near-fatal heart attack.</span></p><p><span>他的政党刚经受了相当于一次几乎致命的心脏病发作的打击。</span></p></blockquote><p><span>gig</span></p><ul><li><p><em><span>n.</span></em><span>演唱会，现场演出；（尤指临时的）工作；（旧时用的）双轮马车；轻便划艇，轻便帆船；鱼叉；旋转物；&lt;非正式&gt;千兆字节，吉字节</span></p></li><li><p><em><span>v.</span></em><span>（公开）表演，演奏；在（流行音乐或爵士乐）演奏会上用乐器演奏；乘轻便双轮马车；使……起绒；用鱼叉捕鱼；记过处分</span></p></li></ul><blockquote><p><span>The </span><strong><span>gig</span></strong><span> was pulled at the last moment.</span></p><p><span>特约演奏临时取消了。</span></p></blockquote><p><span>digging </span></p><ul><li><p><em><span>n.</span></em><span>挖掘，采掘</span></p></li><li><p><em><span>v.</span></em><span>挖掘，发掘（dig 的现在分词形式）</span></p></li></ul><blockquote><p><span>I grabbed the spade and started </span><strong><span>digging</span></strong><span>.</span></p><p><span>我抓起铁锹开始挖了起来。</span></p></blockquote><p><span>buck </span></p><ul><li><p><em><span>n.</span></em><span>&lt;非正式&gt;（美）元；雄性动物；&lt;非正式&gt;小伙子；&lt;古&gt;纨绔子弟，花花公子；责任，过失</span></p></li><li><p><em><span>v.</span></em><span>反对，抵制；鼓舞，使振作；弓背跃起；猛烈颠簸</span></p></li><li><p><em><span>adj.</span></em><span>龅牙的</span></p></li></ul><blockquote><p><span>In the afternoon, they go back out, hoping for that </span><strong><span>buck</span></strong><span>.</span></p><p><span>下午，他们又回去了，渴望着那只雄鹿。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果有人在收集你在网上发布的作品，你可能想要进一步把他们变成你的顾客；最方便的方法就是请求捐赠。如果她们正在挖掘你的东西，他们会给你一些钱。</span></p></blockquote><p><span>When an audience starts gathering for the work that you’re freely putting into the world, </span><mark style="background:#f8e272;"><span>you might eventually want to take the leap of turning them into patrons. The easiest way to do this is to simply ask for donations</span></mark><span>: Put a little virtual tip jar or a donate now button on your website. These links do well with a little bit of human copy, such as </span><mark style="background:#a8e195;"><span>“Like this? Buy me a coffee.”</span></mark><span> This is a very simple transaction, which is the </span><u><span>equivalent</span></u><span> of a band passing a hat during a </span><u><span>gig</span></u><span>—if people are </span><u><span>digging</span></u><span> what you do, they’ll throw a few </span><u><span>bucks</span></u><span> your way.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>up-front capital 前期资本：在开始一个项目或业务之前需要投入的资金。</span></p><blockquote><p><span>· The company requires up-front capital to launch the new product line.</span></p><p><span>公司需要前期资本来推出新产品线。</span></p></blockquote><p><span>up-front </span><em><span>adj.</span></em><span>预先的；坦率的</span></p><blockquote><p><span>The eleven percent loan has no </span><strong><span>up</span></strong><span>-</span><strong><span>front</span></strong><span> costs.</span></p><p><span>11%的那笔贷款没有预付费用。</span></p></blockquote><p><span>fund-raising </span><em><span>n.</span></em><span>筹募基金活动</span></p><blockquote><p><span>Of course, </span><strong><span>fund</span></strong><span>-</span><strong><span>raising</span></strong><span> isn&#39;t the only skill outsiders offer.</span></p><p><span>当然，融资并不是外来者能提供的唯一技能。</span></p></blockquote><p><span>tiered </span><em><span>adj.</span></em><span>阶梯式的，分层的；（机构或系统）分等级的，有级差的</span></p><blockquote><p><span>Present a two-</span><strong><span>tiered</span></strong><span> set of options.</span></p><p><span>对于选项采用两级分类</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你想尝试获取一些预先资本，那你可以考虑用一些平台来众筹。如果有一群人很喜欢你的东西，这个平台会works well in this situation.</span>
+<span>这里有一个例子：就是一个音乐家为自己的下一张唱片众筹。</span></p></blockquote><p><span>If you have work you want to attempt that requires some </span><u><span>up-front capital</span></u><span>, platforms like Kickstarter and Indiegogo make it easy to run </span><u><span>fund-raising</span></u><span> campaigns with </span><u><span>tiered</span></u><span> rewards for donors. </span><u><span>It’s important to note that these platforms work best when you’ve already gathered a group of people who are into what you do.</span></u><span>The musician Amanda Palmer has had wild success turning her audience into patrons: After showing her work, sharing her music freely, and cultivating relationships with her fans, she asked for $100,000 from them to help record her next album. They gave her more than a million dollars.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>strings attached 附加条件：指未明示或淡化的限制、警告、限制、要求等。暗示着某些额外的条件或义务，通常是负面或繁重的。</span></p><ul><li><p><span>· The job offer seemed too good to be true, but there were strings attached that made it less appealing.</span></p></li><li><p><span>这份工作看起来太好了，但是有一些附加条件让它不那么吸引人。</span></p></li></ul><p><span>crowdfunding </span><em><span>n.</span></em><span>众筹</span></p><blockquote><p><span>For one, they use a </span><strong><span>crowdfunding</span></strong><span> platform that specializes in raising money for science, and not just any kind of project.</span></p><p><span>例如，他们使用的是专门为科学项目而非任意类型的项目筹集资金的众筹平台。</span></p></blockquote><p><span>crowdfunder: 众筹者</span></p><blockquote><p><span>This is a thought process I think every </span><strong><span>crowdfunder</span></strong><span> should go through before their campaign launches.</span></p><p><span>我认为这是每一个众筹人在他们的众筹活动开启之前必须经历的思考过程。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>众筹。“众筹”当然有一些附加条件——当人们成为赞助人时，他们觉得(并非完全错误)他们应该对自己的钱如何被使用有一些发言权。所以作者还没有完全使用crowdfunding这样的方法。</span></p></blockquote><p><span>There are certainly some </span><u><span>strings attached</span></u><span> to </span><u><span>crowdfunding</span></u><span>—when people become patrons, they feel, not altogether wrongly, that they should have some say in how their money is being used. It’s partly for this reason that my business model is still pretty old-fashioned: I make something and sell it for money. Instead of having a donate now button on my website, I have buy now and hire me buttons. But even though I operate more like a traditional salesman, I do use some of the same tactics as </span><u><span>crowdfunders</span></u><span>: I try to be open about my process, connect with my audience, and ask them to support me by buying the things I’m selling.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>poet </span><em><span>n.</span></em><span>诗人</span></p><blockquote><p><span>He is a very underrated </span><strong><span>poet</span></strong><span>.</span></p><p><span>他是个严重被低估了的诗人。</span></p></blockquote><p><span>poetry </span><em><span>n.</span></em><span>诗歌；诗一般的美丽，诗的意境；（学校或大学里的）诗歌课</span></p><blockquote><p><span>His </span><strong><span>poetry</span></strong><span> is very cerebral.</span></p><p><span>他的诗富涵理性。</span></p></blockquote><p><span>hand back 归还：将某物归还给给予你的人。</span></p><blockquote><p><span>· I need to hand back this book to the library.</span></p><p><span>我需要将这本书归还给图书馆。</span></p></blockquote><p><span>Geez: 唉…… 哎呀；老天</span></p><blockquote><p><span>Tony: </span><strong><span>Geez</span></strong><span>, have you guys never been here before or what?</span></p><p><span>老天，你们以前没来过这里？</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当你在出售你的作品的时候，或者你热爱的东西的时候，有多少人愿意拿出钱、愿意拿多少钱去买你做的东西。正好是一个对自己作品的检验！</span></p></blockquote><p><span>Beware of selling the things that you love: When people are asked to get out their wallets, you find out how much they really value what you do. My friend John T. Unger tells this terrific story from his days as a street </span><u><span>poet</span></u><span>. He would do a </span><u><span>poetry</span></u><span> reading and afterward some guy would come up to him and say, “Your poem changed my life, man!” And John would say, “Oh, thanks. Want to buy a book? It’s five dollars.” And the guy would take the book, hand it back to John, and say, “Nah, that’s okay.” To which John would respond, “Geez, how much is your life worth?”</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>ask for money for 自己的工作是一个leap。不要害怕收取费用，但是要注意合理收费！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Whether you ask for donations, crowdfund, or sell your products or services, asking for money in return for your work is a leap you want to take only when you feel confident that you’re putting work out into the world that you think is truly worth something</span></mark><span>. Don’t be afraid to charge for your work, but put a price on it that you think is fair.</span></p><h3 id='keep-a-mailing-list'><span>Keep a Mailing List.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>utilitarian </span></p><ul><li><p><em><span>adj.</span></em><span>功利主义的，实利主义的；功利的，实用的</span></p></li><li><p><em><span>n.</span></em><span>功利主义者</span></p></li></ul><blockquote><p><span>It was James Mill who was the best publicist for </span><strong><span>utilitarian</span></strong><span> ideas on government.</span></p><p><span>詹姆斯·米尔才是政府功利主义思想的最佳宣传家。</span></p></blockquote><p><span>stick around </span><em><span>v.</span></em><span>逗留；在附近徘徊</span></p><blockquote><p><strong><span>Stick</span></strong><span> </span><strong><span>around</span></strong><span> a while and see what develops.</span></p><p><span>稍呆一会儿，看看会发生什么。</span></p></blockquote><p><span>go to the trouble of  不辞劳苦(费心,费力) </span></p><blockquote><p><span>It&#39;s easy </span><strong><span>to</span></strong><span> buy our food from </span><strong><span>the</span></strong><span> local supermarket, so why do we </span><strong><span>go</span></strong><span> </span><strong><span>to</span></strong><span> </span><strong><span>the</span></strong><span> </span><strong><span>trouble</span></strong><span> </span><strong><span>of</span></strong><span> growing our own?</span></p><p><span>从当地的超市买到食物很容易，那么我们为什么要自找麻烦自己种植粮食呢？</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>即使你现在没有什么东西要马上去售卖，也是值得去做一件事：获取邮件地址。保持和听众的联系。</span>
+<span>邮箱是非常有意思的一个工具。why？你看看这段的描述就知道啦！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Even if you don’t have anything to sell right now, you should always be collecting email addresses from people who come across your work and want to stay in touch. Why email?</span></mark><span> You’ll notice a pattern with technology—often the most boring and </span><u><span>utilitarian</span></u><span> technologies are the ones that </span><u><span>stick around</span></u><span> the longest. Email is decades and decades old, but it’s nowhere close to being dead. Even though almost everybody hates it, everybody has an email address. And unlike RSS and social media feeds, if you send someone an email, it will land in her inbox, and it will come to her attention. She might not open it, but she definitely has to </span><u><span>go to the trouble of</span></u><span> deleting it.</span></p><p><span>I know people who run multimillion-dollar businesses off of their mailing lists. The model is very simple: They give away great stuff on their sites, they collect emails, and then when they have something remarkable to share or sell, they send an email. You’d be amazed at how well the model works.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>在个人站点上发布好的作品；收集mail addres； 然后等到有remarkable things to share or sell。:) 一封email，你会震惊它的效果的！</span></p></blockquote><p><mark style="background:#f8e272;"><span>Keep your own list, or get an account with an email </span><u><span>newsletter</span></u><span> company like MailChimp and put a little sign-up </span><u><span>widget</span></u><span> on every page of your website. Write a little bit of copy to encourage people to sign up</span></mark><span>. Be clear about what they can expect, whether you’ll be sending daily, monthly, or </span><u><span>infrequent</span></u><span> updates. Never ever add someone’s email address to your mailing list without her permission.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>widget </span><em><span>n.</span></em><span>装饰物；小机械；小部件；未定名的主要新产品</span></p><blockquote><p><span>The secret is a little </span><strong><span>widget</span></strong><span> in the can.</span></p><p><span>奥秘就在于罐中的一个小装置。</span></p></blockquote><p><span>infrequent </span><em><span>adj.</span></em><span>罕见的；稀少的；珍贵的；不频发的</span></p><blockquote><p><span>Muggings are relatively </span><strong><span>infrequent</span></strong><span> in this area.</span></p><p><span>在这个地区行凶抢劫事件相对少见。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>自己建立一个mailist. 鼓励大家去注册。说清楚大家能够在这里获取什么。你更新的频率；千万不要随意把别人的email加入自己的list，一定要获取本人的同意才行！</span></p></blockquote><p><span>The people who sign up for your list will be some of</span><u><span> your biggest supporters</span></u><span>, just by the simple fact that they signed up for the potential to be </span><u><span>spammed</span></u><span> by you.</span><mark style="background:#f8e272;"><span>Don’t betray their trust and don’t push your luck.</span></mark><span>Build your list and treat it with respect. </span><mark style="background:#a8e195;"><span>It will come in handy.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spammed </span><em><span>vt.</span></em><span>群发（垃圾）邮件（spam 的过去式和过去分词）</span></p><blockquote><p><span>Question: Will you get </span><strong><span>spammed</span></strong><span> by signing up for paid survey sites?</span></p><p><span>问：你注册调查问卷的网站会不会被骗？</span></p></blockquote><p><span>It will come in handy.  迟早会派上用场的！</span></p><blockquote><p><span>The ability to speak multiple languages is always an impressive skill. You never know when </span><strong><span>it</span></strong><span> </span><strong><span>will</span></strong><span> </span><strong><span>come</span></strong><span> </span><strong><span>in</span></strong><span> </span><strong><span>handy</span></strong><span>.</span></p><p><span>说多种语言的能力总是会让人印象深刻的。你永远不知道什么时候会派上用场。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>别人愿意sign up，那证明她们很相信你，你可别辜负这份信任，要认真、要尊重。</span></p></blockquote><h3 id='make-more-work-for-yourself'><span>Make More Work for Yourself.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “We don’t make movies to make money, we make money to make more movies.”<br/><u>“我们拍电影不是为了赚钱，我们赚钱是为了拍更多的电影。”</u><br/>—Walt Disney</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>whatsoever</span></p><ul><li><p><em><span>adj.</span></em><span>任何，无论什么</span></p></li><li><p><em><span>adv.</span></em><span>丝毫（用于强调否定句）</span></p></li><li><p><em><span>pron.</span></em><span>任何事物，无论什么</span></p></li></ul><blockquote><p><span>This guy is a superficial yuppie with no intellect </span><strong><span>whatsoever</span></strong><span>.</span></p><p><span>这个家伙是个肤浅的雅皮士，没有任何智慧。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>一些糟糕的人用“出卖”这个词来形容任何敢于有任何野心的艺术家。</span></p></blockquote><p><span>Some awful people use the term sellout to include any artist who dares to have any ambition </span><u><span>whatsoever</span></u><span>. They’ll say you’re a sellout if you try to make it outside your hometown. They say you’re a sellout if you buy better equipment. They’ll say you’re a sellout if you try anything new at all.</span></p><p><span>“There is a point in one’s life when one cares about selling out and not selling out,” writes author Dave Eggers. “Thankfully, for some, this all passes.” What really matters, Eggers says, is doing good work and taking advantage of every opportunity that </span><u><span>comes your way</span></u><span>. “I really like saying yes. I like new things, projects, plans, getting people together and doing something, trying something, even when it’s </span><u><span>corny</span></u><span> or stupid.” The people who </span><u><span>holler</span></u><span> “Sellout!” are all </span><u><span>hollering</span></u><span> “No!” They’re the people who don’t want things to ever change.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>come your way 到来，发生：指某事物或机会到达你的身边或出现在你的生活中。</span></p><blockquote><p><span>· Good luck will come your way if you work hard.</span></p><p><span>如果你努力工作，好运就会降临。</span></p></blockquote><p><span>corny </span><em><span>adj.</span></em><span>谷类的；粗野的；陈腐的；乡下味的</span></p><blockquote><p><span>I know it sounds </span><strong><span>corny</span></strong><span>, but I&#39;m really not motivated by money.</span></p><p><span>我知道这听起来有点俗，但是我真的不是为了钱。</span></p></blockquote><p><span>holler</span></p><ul><li><p><em><span>vi.</span></em><span>发牢骚；叫喊；抱怨</span></p></li><li><p><em><span>vt.</span></em><span>大声叫喊</span></p></li><li><p><em><span>n.</span></em><span>叫喊</span></p></li></ul><blockquote><p><span>She spun round as the man, with a </span><strong><span>holler</span></strong><span>, burst through the door.</span></p><p><span>当那个人大喊着冲进门时，她急忙转过身去。</span></p></blockquote><p><span>hollering </span><em><span>v</span></em><span>．大声喊叫，吼叫：用高声、粗犷的声音喊叫或呼唤。</span></p><blockquote><p><span>· The children were hollering in the playground.</span></p><p><span>孩子们在操场上大声喊叫。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>真正关键的还是“doing good work &amp; 好好利用每次走向你的机会” 那些叫卖的人，都在叫喊。不，他们是不希望发生任何事情的人！</span></p></blockquote><p><span>Yet a life of creativity is all about change—moving forward, taking chances, exploring new frontiers. “The real risk is in not changing,” said </span><u><span>saxophonist</span></u><span> John Coltrane. “I have to feel that I’m after something. If I make money, fine. But I’d rather be </span><u><span>striving</span></u><span>. It’s the striving, man, it’s that I want.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>saxophonist </span><em><span>n.</span></em><span>萨克斯管吹奏者</span></p><blockquote><p><span>The </span><strong><span>saxophonist</span></strong><span> doubled the drum in the band .</span></p><p><span>那位萨克斯管吹奏员在乐队中兼作鼓手。</span></p></blockquote><p><span>striving </span><em><span>v.</span></em><span>努力，奋斗；斗争，反抗（strive 的现在分词）</span></p><blockquote><p><span>That is really a goal worth </span><strong><span>striving</span></strong><span> for.</span></p><p><span>这确实是一个值得为之奋斗的目标。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>然而，创造性的生活就是关于改变——前进、冒险、探索新领域。</span></p></blockquote><p><span>Be ambitious. Keep yourself busy. Think bigger. Expand your audience. Don’t </span><u><span>hobble</span></u><span> yourself in the name of “keeping it real,” or “not selling out.” Try new things. </span><mark style="background:#f8e272;"><span>If an opportunity comes along that will allow you to do more of the kind of work you want to do, say </span><em><span>Yes</span></em><span>.</span></mark><span> </span><mark style="background:#a8e195;"><span>If an opportunity comes along that would mean more money, but less of the kind of work you want to do, say No.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hobble </span></p><ul><li><p><em><span>vi.</span></em><span>蹒跚；跛行</span></p></li><li><p><em><span>vt.</span></em><span>使跛行</span></p></li><li><p><em><span>n.</span></em><span>跛行步态</span></p></li></ul><blockquote><p><span>Women </span><strong><span>hobble</span></strong><span> about on walking frames.</span></p><p><span>妇女倚着行走架跛行。</span></p></blockquote><p><span>in the name of 以……的名义</span></p><blockquote><p><span>I&#39;ve reserved a room </span><strong><span>in</span></strong><span> </span><strong><span>the</span></strong><span> </span><strong><span>name</span></strong><span> </span><strong><span>of</span></strong><span> Jones.</span></p><p><span>我以琼斯的名字预订了一个房间。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>有雄心壮志。让自己忙碌起来。想更大。不要以“保持真实”或“不出卖”的名义束缚自己。</span>
+<span>尝试新事物！new things!</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“There is no <u style="color:blue">misery</u> in art. All art is about saying yes, and all art is about its own making.”<br/>—John Currin </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>misery </span><em><span>n.</span></em><span>痛苦，苦难；穷困，悲惨境遇；&lt;英，非正式&gt;老发牢骚的人</span></p><blockquote><p><span>Fame brought her nothing but </span><strong><span>misery</span></strong><span>.</span></p><p><span>名声只给她带来了痛苦。</span></p></blockquote></blockquote><h3 id='pay-it-forward'><span>Pay It Forward.</span></h3><p><span>When you have success, it’s important to use any </span><u><span>dough</span></u><span>, </span><u><span>clout</span></u><span>, or platform you’ve acquired to help along the work of the people who’ve helped you get to where you are. </span><u><span>Extol</span></u><span> your teachers, your mentors, your heroes, your influences, your peers, and your fans. Give them a chance to share their own work. Throw opportunities their way.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>dough </span><em><span>n.</span></em><span>生面团；&lt;旧&gt;钱</span></p><blockquote><p><span>If the </span><strong><span>dough</span></strong><span> is sticky, add more flour.</span></p><p><span>如果面团很粘，就再加些面粉。</span></p></blockquote><p><span>clout </span></p><ul><li><p><em><span>n.</span></em><span>破布；敲打；影响力；势力</span></p></li><li><p><em><span>vt.</span></em><span>给……打补钉；猛击</span></p></li></ul><blockquote><p><span>I knew his opinion carried a lot of </span><strong><span>clout</span></strong><span> with them.</span></p><p><span>我知道他的观点对他们很有影响力。</span></p></blockquote><p><span>extol </span><em><span>vt.</span></em><span>颂扬；赞美；赞颂</span></p><blockquote><p><span>Doctors often </span><strong><span>extol</span></strong><span> the virtues of eating less fat.</span></p><p><span>医生常常宣扬少吃脂肪的好处。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>当你获得成功时，重要的是利用你所获得的资金、影响力或平台来帮助那些帮助过你的人。给他们机会。</span></p></blockquote><p><span>There’s a </span><u><span>caveat</span></u><span> to all this: As a human being, you have a </span><u><span>finite</span></u><span> amount of time and attention. At some point, you have to switch from saying “yes” a lot to saying “no” a lot. “The biggest problem of success is that the world </span><u><span>conspires</span></u><span> to stop you doing the thing that you do, because you are successful,” writes author Neil Gaiman. “There was a day when I looked up and realised that I had become someone who professionally replied to email, and who wrote as a hobby. I started answering fewer emails, and </span><u><span>was relieved to</span></u><span> find I was writing much more.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>caveat </span><em><span>n.</span></em><span>&lt;正式&gt;警告，限制性条款；&lt;法律&gt;预告登记（尤指遗嘱检验中，非告知本人而不得进行某行为的通知）</span></p><blockquote><p><span>There was one </span><strong><span>caveat</span></strong><span>: he was not to enter into a merger or otherwise weaken the Roche family&#39;s control of the firm.</span></p><p><span>提醒一下：他不是要参与并购或其他削弱罗技家族对该公司控制的行动。</span></p></blockquote><p><span>finite</span></p><ul><li><p><em><span>adj.</span></em><span>有限的，有限制的；限定的</span></p></li><li><p><em><span>n.</span></em><span>有限之物</span></p></li></ul><blockquote><p><span>It is quite possible that space and time are </span><strong><span>finite</span></strong><span>.</span></p><p><span>很有可能空间和时间是有限的。</span></p></blockquote><p><span>conspire </span><em><span>v.</span></em><span>密谋，共谋；共同导致</span></p><blockquote><p><span>When you truly want something, all the universe </span><strong><span>conspires</span></strong><span> to help you finish it.</span></p><p><span>当你真心渴望一件东西的时候，整个宇宙都会联合起来帮你完成它。</span></p></blockquote><p><span>be relieved to: 松了一口气：感到宽慰或放心，因为某种不确定或紧张的情况已经结束或得到解决。</span></p><blockquote><p><span>You&#39;ll </span><strong><span>be</span></strong><span> </span><strong><span>relieved</span></strong><span> </span><strong><span>to</span></strong><span> know your jobs are safe.</span></p><p><span>现在知道你们的工作保住了，可以放心了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>成功的最大问题是，世界会合谋阻止你做你要做的事情，因为你是成功的。</span>
+<span>这句话，真的真心打动了我！太重要了！要注意，你说的Yes越多，意味着你说的No越多。</span></p></blockquote><p><span>I find myself in the </span><u><span>weird</span></u><span> position now where I get </span><u><span>way more</span></u><span> email from people than I could ever answer and still do everything I need to do. The way I get over my </span><u><span>guilt</span></u><span> about not answering email is to hold office hours. Once a month, I make myself available so that anybody can ask me anything on my website, and I try to give thoughtful answers that I then post so anyone can see.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>weird</span></p><ul><li><p><em><span>adj.</span></em><span>奇怪的，不寻常的；怪异的，超自然的</span></p></li><li><p><em><span>n.</span></em><span>命运；预言者</span></p></li><li><p><em><span>v.</span></em><span>&lt;美，非正式&gt;使心生疑惑，使感到疏远</span></p></li></ul><blockquote><p><span>Some of the music was </span><strong><span>weird</span></strong><span>.</span></p><p><span>这音乐有些地方有点怪。</span></p></blockquote><p><span>way more 更多得多：比某个数量或程度更多得多。</span></p><blockquote><p><span>· I have way more books than you do.</span></p><p><span>我有比你更多得多的书。</span></p></blockquote><p><span>way</span></p><ul><li><p><em><span>adv.</span></em><span>大大地，远远地；&lt;美&gt;非常，很</span></p></li><li><p><em><span>adj.</span></em><span>途中的</span></p></li></ul><blockquote><p><span>It&#39;s </span><strong><span>way</span></strong><span> past your bedtime.</span></p><p><span>你早该睡觉了。</span></p></blockquote><p><span>guilt </span><em><span>n.</span></em><span>内疚；罪行；罪责</span></p><blockquote><p><span>He refused to admit his </span><strong><span>guilt</span></strong><span>.</span></p><p><span>他拒不认罪。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>我克服不回邮件的“罪恶感”的方法是在办公时间不回邮件。</span></p></blockquote><p><mark style="background:#f8e272;"><span>You just have to be as generous as you can, but selfish enough to get your work done.</span></mark></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>你只需要尽可能地慷慨，但也要足够自私地完成你的工作。</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Above all, recognize that if you have had success, you have also had luck—and with luck comes <u style="color:blue">obligation</u>. You owe a debt, and not just to your gods. You owe a debt to the unlucky.”<br/><u>最重要的是，要认识到，如果你有成功，你也有运气，而运气带来了“义务”。你欠了一份债，不仅欠你的神。你欠那些不幸的人的债。</u><br/>—Michael Lewis </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>obligation </span><em><span>n.</span></em><span>（法律上或道义上的）义务，责任；恩惠，人情债；（承诺付款等的）合同，契约；必须要做的事情</span></p><blockquote><p><span>We have a moral </span><strong><span>obligation</span></strong><span> to protect the environment.</span></p><p><span>我们有道义责任保护环境。</span></p></blockquote></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

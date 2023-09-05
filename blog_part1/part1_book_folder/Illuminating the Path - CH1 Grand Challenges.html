@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+	font-weight: bold;
+    font-style: italic;
+  }
+  
+
+
+</style><title>Illuminating the Path - CH1 Grand Challenges</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;">Illuminating the Path <br/><i style="color:grey; font-size:20px;">The Research and Development Agenda for Visual Analytics</i></h1>
+<p style="text-align:center; font-weight:bold; font-style:italic; color:brown" >CH1 Grand Challenges</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part1/part1_book.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n159"><a class="md-toc-inner" href="#1-grand-challenges">1 Grand Challenges</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n162"><a class="md-toc-inner" href="#protecting-our-homeland">Protecting Our Homeland</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n168"><a class="md-toc-inner" href="#scenario-1-sarin-gas-attack">Scenario 1: Sarin Gas Attack</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n176"><a class="md-toc-inner" href="#scenario-2-biological-attack">Scenario 2: Biological Attack</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n184"><a class="md-toc-inner" href="#grand-challenge-enabling-profound-insights">Grand Challenge: Enabling Profound Insights</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n187"><a class="md-toc-inner" href="#analyzing-terrorist-threats">Analyzing Terrorist Threats</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n193"><a class="md-toc-inner" href="#safeguarding-borders-and-ports">Safeguarding Borders and Ports</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n196"><a class="md-toc-inner" href="#preparing-for-and-responding-to-emergencies">Preparing for and Responding to Emergencies</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n201"><a class="md-toc-inner" href="#the-scalability-challenge">The Scalability Challenge</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n204"><a class="md-toc-inner" href="#data-characteristics">Data Characteristics</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n213"><a class="md-toc-inner" href="#scalability">Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n219"><a class="md-toc-inner" href="#information-scalability">Information Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n224"><a class="md-toc-inner" href="#visual-scalability">Visual Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n228"><a class="md-toc-inner" href="#display-scalability">Display Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n230"><a class="md-toc-inner" href="#human-scalability">Human Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n232"><a class="md-toc-inner" href="#software-scalability">Software Scalability</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n234"><a class="md-toc-inner" href="#other-scalability-issues">Other Scalability Issues</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n237"><a class="md-toc-inner" href="#the-need-for-visual-analytics">The Need for Visual Analytics</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n241"><a class="md-toc-inner" href="#the-research-and-development-agenda-for-visual-analytics">The Research and Development Agenda for Visual Analytics</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n247"><a class="md-toc-inner" href="#analytical-reasoning-chapter-2">Analytical Reasoning (Chapter 2) </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n261"><a class="md-toc-inner" href="#visual-representations-and-interaction-techniques-chapter-3">Visual Representations and Interaction Techniques (Chapter 3) </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n265"><a class="md-toc-inner" href="#data-representations-and-transformations-chapter-4">Data Representations and Transformations (Chapter 4)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n267"><a class="md-toc-inner" href="#production-presentation-and-dissemination-chapter-5">Production, Presentation, and Dissemination (Chapter 5)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n269"><a class="md-toc-inner" href="#moving-research-into-practice-chapter-6">Moving Research into Practice (Chapter 6)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n277"><a class="md-toc-inner" href="#references">References</a></span></p></div><p><em><strong><span>“The purpose of computing is insight, not numbers.”</span></strong></em></p><p><span>— Richard Hamming (1915-1998)</span></p><p>&nbsp;</p><h1 id='1-grand-challenges'><span>1 Grand Challenges</span></h1><p><span>Our country faces profound challenges that must be addressed in order to ensure our continued freedom and security. As the September 11, 2001, attacks on the Pentagon and World Trade Center illustrate, threats to the United States are present within our borders. On that day, after at least 20 months of planning and preparation, 19 terrorists hijacked four airliners at three different airports in a coordinated attack. The hijackers crashed two planes into the World Trade Center&#39;s twin towers and one plane into the Pentagon. The fourth plane, intended to attack another US landmark, crashed in a field in Pennsylvania. These attacks claimed the lives of 2973 people.</span></p><p><span>As the attack unfolded, government agencies and emergency response personnel “...struggled, under difficult circumstances, to improvise a homeland defense against an unprecedented challenge they had never before encountered and had never trained to meet.” They were forced to assess complex and dynamic situations and make decisions rapidly under extreme pressure, often without access to critical information that would help them save additional lives [National Commission on Terrorist Attacks, 2004].</span></p><h2 id='protecting-our-homeland'><span>Protecting Our Homeland</span></h2><p><span>Providing for the security of the US and its citizens constitutes a grand challenge for our country. Future attacks could result in major loss of life and shake the nation&#39;s confidence in its fundamental security. The US Department of Homeland Security (DHS) was established in 2003 to secure the American homeland and protect the American people. It responds to the nation&#39;s security objectives of preventing terrorist attacks within the US, reducing America&#39;s vulnerability to terrorism, and minimizing the damage and recovering from attacks that do occur [Department of Homeland Security, 2004].</span></p><p><span>As described in their Strategic Plan, the mission of DHS is to:</span></p><p><em><span>... Lead the unified national effort to secure America. We will prevent and deter terrorist attacks and protect against and respond to threats and hazards to the nation. We will ensure safe and secure borders, welcome lawful immigrants and visitors, and promote the free-flow of commerce.</span></em></p><p><span>DHS has identified strategic goals and objectives to accomplish this important mission. Meeting these objectives requires the concerted efforts of professionals in fields as diverse as border and transportation security, intelligence analysis, law enforcement, and emergency preparedness and response (including the firefighting and medical professions). These people are challenged daily with making sense of vast amounts of conflicting and ever-changing information to identify and prevent emerging threats, protect our borders, and respond in the event of an attack or other disaster.</span></p><p><span>To understand the complexity of this challenge. Consider two imagined scenarios.</span></p><h3 id='scenario-1-sarin-gas-attack'><span>Scenario 1: Sarin Gas Attack</span></h3><p><span>An organized international terrorist group develops a plot to conduct a Sarin gas attack in the US.</span></p><p><span>According to the Centers for Disease Control, “Sarin is a human-made chemical warfare agent classified as a nerve agent. Nerve agents are the most toxic and rapidly acting of the known chemical warfare agents&quot; Pure Sarin gas is odorless, so people may not be aware that they have been exposed. Sarin gas attacks the respiratory system and can be fatal [</span><a href='http://www.bt.cdc.gov/agent/sarin/basics/facts.asp' target='_blank' class='url'>http://www.bt.cdc.gov/agent/sarin/basics/facts.asp</a><span>].</span></p><p><span>The terrorist organization sends a planning team to the US to identify the target for this attack. After examining several options, they select three large commercial office buildings in a major metropolitan area. They develop a plan to release the Sarin gas into the ventilation systems of the building. The target buildings are chosen based on their size and location, as well as the relative ease of access to their ventilation systems. The terrorists set up a cell in the target city, and three obtain jobs in building maintenance for the office buildings.</span></p><p><span>In the meantime, an overseas terrorist cell acquires the Sarin nerve agent, packs it carefully to conceal its true contents, and ships it into the US via a sea- borne cargo container. It passes through Customs at a port city and makes its way to the US-based terrorist cell via rental truck to a safe house near the target city. The overseas cell also acquires protective safety gear and ships it to the US-based terrorist cell.</span></p><p><span>The local terrorist cell builds the necessary spray dispersal devices, acquiring materials from local stores as needed. On the day of the attack, the terrorists working at the target buildings put on protective equipment and deploy their dispersal devices in the ventilation system, following a strict time schedule to conduct a coordinated attack. Then, as the attackers flee the area, the Sarin gas permeates the air in the three office buildings and escapes though rooftop ventilation systems to the outside air as well.</span></p><p><span>Within a couple of minutes, people in the three buildings begin to experience the symptoms of exposure. Calls to 911 are placed, and emergency personnel rush to the scene. Initial emergency crews on the scene are unlikely to realize that there has been a terrorist attack and that a nerve agent has been released throughout the buildings, leading them to rush into the building without any protective equipment and suffer exposure themselves.</span></p><p><span>It may take many minutes, and significant loss of life, before emergency response crews observe enough clues to piece together the true nature of the emergency and identify the agent as Sarin gas. Then they must quickly determine how best to rescue and treat survivors. In addition, because Sarin has been released into the air outside the buildings, emergency managers and city officials must communicate with the public to make clear to them to shelter in place to avoid exposure. Those officials and managers will need to also clearly state the potential for exposure and harm to avoid panic among the public.</span></p><h3 id='scenario-2-biological-attack'><span>Scenario 2: Biological Attack</span></h3><p><span>An international terrorist organization conducts an operation to produce an outbreak of pneumonic plague. Plague is caused by a bacterium, and death will ensue if the infection is not treated rapidly with antibiotics. It can readily spread among humans.</span></p><p><span>The terrorist organization identifies a major metropolitan area to target for the release of the plague. They select three high-traffic areas as targets: in the bathrooms of the city&#39;s major airport, in the bathrooms of its professional sports arena, and in the city&#39;s train station.</span></p><p><span>The plague bacteria are transported into the country via truck at a major border crossing and are driven to the target city. Over the course of one day, local members of the terrorist organization release the plague canisters in the three target locations, timing each release to coincide with the heaviest traffic at each of the locations. The release goes undetected.</span></p><p><span>Travelers infected in the airport fly to their destinations, both across the US and to other countries. Likewise, tourists in town for the sporting event return to their homes in other locations.</span></p><p><span>No sign of illness appears until about 36 hours after the initial attack, when infected people rapidly experience severe respiratory illness and die if not properly treated. The rapid increase in unexplained illnesses in the target city triggers alarms within the city&#39;s public health system, and public health officials become aware for the first time that an abnormal pattern is emerging. Investigation is required to determine that an abnormal event has occurred. Additional investigation allows the experts to identify that the illness is plague and eventually to tie the cases back to common sources. Multiple government agencies participate in investigations to identify the illness and address the public health needs, as well as to identify the plot behind the outbreak and apprehend those responsible.</span></p><p><span>While this investigation proceeds, the public in this city are growing worried, and they must be given instructions on the basis of preliminary information to help protect them from illness. By the time the cause is identified, infected individuals who have traveled across the country, and to other countries, are also falling ill and dying, but the reason for the illness will not initially be clear.</span></p><p><span>Because plague spreads easily among humans, the disease will have the potential to spread far beyond the originally infected population before it is finally identified. Plague has symptoms in common with many milder respiratory illnesses. Part of the major emergency response challenge will be to discriminate the true plague cases from worried members of the public with these milder illnesses. In addition, providing clear and specific information to the public about how to protect themselves from infection will be a high priority.</span></p><h2 id='grand-challenge-enabling-profound-insights'><span>Grand Challenge: Enabling Profound Insights</span></h2><p><span>The </span><em><span>analysis</span></em><span> of overwhelming amounts of disparate, conflicting, and dynamic information is central to identifying and preventing emerging threats, protecting our borders, and responding in the event of an attack or other disaster. This analysis process </span><em><span>requires human judgment</span></em><span> to make the best possible evaluation of incomplete, inconsistent, and potentially deceptive information in the face of rapidly changing situations to both detect the expected and discover the unexpected. People must collaborate across organizations, agencies, and jurisdictions in a way that allows them to share information when appropriate while adhering to privacy laws and policies. Employing today&#39;s best practices in these areas and using the best possible training, technologies, and processes will still not position the country to address the growing challenges to our security. The volume of data is staggering. Although massive amounts of information are available from multiple sources, the relevant information content exists in a few nuggets. New methods are required that will allow the analyst to examine this massive, multi-dimensional, multi-source, time- varying information stream to make decisions in a time-critical manner. By providing the experts with the capability to truly understand this information, we enable them to make better decisions that prevent and prepare for attacks, improve emergency response, and save lives.</span></p><p><span>Three major areas deserve particular focus: analyzing terrorist threats, safeguarding borders and ports, and preparing for and responding to emergencies. Strong analytic capabilities are required to accomplish all three of these tasks. Threat analytics is the initial priority, given its importance in the prevention of attacks.</span></p><h3 id='analyzing-terrorist-threats'><span>Analyzing Terrorist Threats</span></h3><p><span>As these scenarios illustrate, terrorists take great care to plan and orchestrate their attacks. An urgent goal is to stop terrorist attacks before they occur, which requires that analysts uncover the subtle clues that can identify specifics about the attack before it occurs. To prevent an attack, analysts must piece together details about who is going to conduct the attack, what the attackers plan to do, and where and when the attack will occur.</span></p><p><span>Observations, such as reports of strangers scouting out the ventilation systems of large buildings, play a critical role in helping to tip off authorities that something is amiss. Analysts need the ability to combine information buried in disparate data, including immigration records; patterns of travel; telephone calls; and names, affiliations, and locations of suspected terrorists, to allow them to piece together the information necessary to spot an emerging attack before it can be executed. In addition, information relating to potential threat agents, the materials and facilities used to make them, and their possible deployment must be considered.</span></p><p><span>Analysts evaluate potential vulnerabilities that exist in our country and identify and monitor potential threats that may arise. They are also alert for potential anomalies that may indicate that something unexpected is occurring.</span></p><p><span>Today, analysts have a select number of software programs available to help them organize their information, gain an overview of it, explore it, and examine high-level trends. Although these tools help the analyst, they are only scratching the surface in terms of meeting true analytical needs. Current technologies cannot address the needs for handling the massive, messy, and ever-changing volumes of information and the diversity of types of information. Furthermore, current analytical tools provide basic capabilities, such as query and search, but provide very little in the way of support for the complex tasks of the analysis, synthesis, and discovery process. Very few current tools address the need to communicate analytical results and products to their audiences.</span></p><p><span>Research is needed to create software that supports the most complex and time-consuming portions of the analytical process, so that analysts can respond to increasingly more complex questions. </span></p><h3 id='safeguarding-borders-and-ports'><span>Safeguarding Borders and Ports</span></h3><p><span>Safeguarding borders is a complex task. Border guards and customs agents must prevent the illegal entry of goods or people into the country, while allowing them to ensure the free flow of legal commerce.</span></p><p><span>Daily, thousands of decisions must be made at each point of entry to discriminate between normal, legal activity and potential illegal activity. Tools and processes have been developed to help border and customs agents make these decisions. However, because of the volume of potentially relevant information and the speed with which decisions must be made, we need rapid advancement in the software systems used to support this decision-making process. Individuals in the field need reach-back support to allow them to get more in-depth scientific assessment when necessary so that they can better discriminate illegal from legitimate cargo. At a national level, it is also important to be able to combine information about incidents at ports and borders with other available information to allow analysts to identify patterns that could indicate emerging terrorist threats.</span></p><h3 id='preparing-for-and-responding-to-emergencies'><span>Preparing for and Responding to Emergencies</span></h3><p><span>Even with the greatest of vigilance, attacks can still occur. Emergency preparedness and response are critical to ensuring that, in the event of an attack or any other national disaster, loss of life and property is minimized.</span></p><p><span>Thorough preparation and response plans have been put in place for a large number of potential national emergencies, and emergency response training and practice drills are regularly held to hone our nation’s capabilities. However, terrorist attacks often capitalize on the element of surprise to maximize their effectiveness. As the above scenarios illustrate, in some cases it is not apparent what kind of attack has taken place, or even (in the initial stages) that an attack has occurred at all. This kind of confusion delays the experts’ ability to respond effectively. Coordinated attacks may be timed so that a secondary attack occurs once emergency response personnel have arrived, in order to further increase the impact of the attack.</span></p><p><span>Even with the well-developed emergency plans and procedures that exist, the above scenarios illustrate several areas in which understanding and sharing of information can greatly enhance our ability to respond and greatly reduce the impact of an attack. In the first scenario, for example, real-time analytical monitoring that alerts first responders to the anomalous frequency and location of 911 calls can raise their awareness of the unusual situation in advance. Emergency situations, rapidly identify the appropriate response, and coordinate ever-shifting facts during a chaotic and pressure-filled time.</span></p><p><span>Communication is also critical in an emergency situation. First responders must coordinate and communicate clearly across multiple jurisdictions. Sharing of information must be done carefully to protect both privacy and national security. As the scenarios show, communication with the general population is also a requirement. Meeting these communication requirements is time-consuming and challenging, because each audience requires a different type of communication to answer the questions that are most pertinent to them. New software is needed to help streamline the process of customizing communications for different audiences so that people can make better-informed decisions in emergencies.</span></p><h2 id='the-scalability-challenge'><span>The Scalability Challenge</span></h2><p><span>Data are growing at an incredible rate. Lyman and Varian [2003] estimate that in 2002 alone, the world produced 5 Exabyte (5x18bytes) of new stored information in the form of paper, film, and electronic media. Another 18 Exabyte of streaming information was produced in 2002. Their study estimates that storage of new information is growing at a rate of more than 30% per year.</span></p><p><span>Analysts, emergency response teams, and border protection personnel have massive amounts of information available to them from multiple sources, but the important information may be hidden in a few nuggets. We must create new methods to allow the analyst to examine this massive, multi-dimensional, multi-source, time-varying information stream to make effective decisions in time-critical situations.</span></p><h3 id='data-characteristics'><span>Data Characteristics</span></h3><p><span>Consider some examples of data types that contribute to this information overload. </span></p><p><strong><span>Textual data</span></strong><span>. Massive textual data can come from documents, speeches, news, e-mails, or web pages. These data are ever increasing in volume. Our target is to be able to support analysis of data volumes growing at a rate of one billion new structured messages or transactions per hour, and one million new unstructured messages or documents per hour.</span></p><p><strong><span>Databases</span></strong><span>. Many corporate and government entities have constructed huge databases containing a wealth of information. These databases are both diverse and distributed. In addition, individuals and workgroups may have their own local databases that augment these large databases. New algorithms are required to permit efficient discovery of previously unknown patterns in these disparate databases.</span></p><p><strong><span>Image data</span></strong><span>. Consider the data collected by satellites that image the earth. Commercial satellites can create images at l-meter resolution and collectively create an image of the planet&#39;s land surface in a very short time. New methods are needed to permit efficient understanding of image data, especially in the context of other types of data mentioned here.</span></p><p><strong><span>Sensor data</span></strong><span>. The revolution in miniaturization for computer systems has resulted in the production of many types of sensors. The sensors can collect data about their environment (location，proximity, temperature, light，radiation，etc.), can analyze these data， and can communicate among themselves. Collections of sensors can produce very large streaming sets of data. Methods are needed for analyzing sensor data to efficiently incorporate the data into computerized models to support border protection and emergency response.</span></p><p><strong><span>Video data.</span></strong><span> Video is often used to enhance the effectiveness of high-risk security operations. Video recording and content analysis are being used in concert as a powerful tool for improving business processes and customer service. New techniques must be developed to integrate these capabilities for analyzing streaming video data into the analyst&#39;s toolkit.</span></p><p><span>The data present challenges not only because of their diversity,，volume, and dynamic nature but also because the data are ambiguous, uncertain, and potentially intentionally deceptive. Data of multiple types must often be analyzed in concert to gain insight. Important data needed for correct interpretation may be missing, but this may or may not be apparent to the analyst. We must provide mechanisms that help the analyst visually understand the nature of the data being evaluated.</span></p><p><span>A grand challenge is to support the analyst in distilling the relevant nuggets of information from widely disparate information streams and create an information space containing relevant information that can be used by the analyst in reaching the most timely and well-informed assessment of the situation. We must provide mechanisms that can visualize the connections among relevant information in the information streams and allow the analyst to gain insight from data.</span></p><h3 id='scalability'><span>Scalability</span></h3><p><span>Current technologies cannot support the scale and complexity of the growing analytical challenge. New techniques and underlying scientific foundations are needed to deal with the scale of the problems we are facing in threat analysis, emergency management, and border protection. Issues of scale cut across every aspect of this challenge.</span></p><p><span>When considering scalability issues, it is important to understand the context of the development of the computer industry as well as natural human skills and limitations. Moore&#39;s Law suggests that basic computer technology performance (processor speed and memory density) will double every 18 months. Recently, graphics technology has been improving performance at an even faster rate, doubling every 12 months. This trend has continued for 50 years, and some projections say it will continue for at least another 10 years before fundamental limitations of physics are encountered. All of this added processing power and memory density has enabled the gathering and processing of vast amounts of data.</span></p><p><span>However, basic human skills and abilities do not change significantly over time. It is true that technology advances, applied carefully, can enable us to use a higher percentage of natural human abilities, but there are fundamental limits that we are asymptotically approaching. This situation gives rise to the popular notion of information glut. That is, we are able to access far more information than we, as humans, can possibly process. The situation also makes scalability issues more difficult to resolve. In addition, analytical challenges often require coping with, sharing, and using information at multiple scales simultaneously. Ultimately, large-scale problems have to be reduced to a scale that humans can comprehend and act on.</span></p><p><span>Scale brings opportunities as well. For example, increased scale may help reduce uncertainty of an emerging situation. In addition, large data volumes allow analysts to discover more complete information about a situation. As a result, analysts may be able to determine more easily when expected information is missing; some-times the fact that information is missing offers important clues in the assessment of the situation.</span></p><p><span>Here, we consider five of the major scale issues that must be addressed: information scalability, visual scalability, display scalability, human scalability, and software scalability.</span></p><h3 id='information-scalability'><span>Information Scalability</span></h3><p><span>Information scalability implies the capability to extract relevant information from massive data streams. Methods of information scalability include methods to filter and reduce the amount of data，techniques to represent the data in a multi-resolution manner, and methods to abstract the data sets.</span></p><p><span>A second form of information scalability has to do with the rate of change of the information. Most existing techniques do not handle dynamic change, but a few do.</span></p><p><span>Finally, information presentations must be scaled or adapted to the audience. For example, an analyst&#39;s presentation to other analysts will contain far more detail than the summary analysis presented to the President. Current techniques require that this be done manually in an ad hoc fashion.</span></p><p><span>Relevant information may appear at a variety of scales, and the user must be able to change between scales in a way that is easy to understand and track. We must be able to understand the cross-scale interactions. We must be able to handle a wide range of dynamic change, and we must develop systems that semi-automatically scale or adapt information presentations to match a target audience.</span></p><h3 id='visual-scalability'><span>Visual Scalability</span></h3><p><span>Visual scalability is the capability of visualization representation and visualization tools to effectively display massive data sets, in terms of either the number or the dimension of individual data elements [Eick &amp; Karr, 2002]. Factors affecting visual scalability include the quality of visual displays, the visual metaphors used in the display of information, the techniques used to interact with the visual representations, and the perception capabilities of the human cognitive system.</span></p><p><span>Most published techniques in the field of information visualization handle data sets with hundreds to thousands of elements. Some techniques can scale to handle tens of thousands of elements, and a very few can handle hundreds of thousands up to one million elements. The Info Vis 2003 Contest focused on the problem of visualizing and comparing large hierarchies. The winning technique was TreeJutaposer [Munzner et al., 2003], which could handle two trees of about 100,000 elements and one tree up to 500,000 elements.</span></p><p><span>However, as described previously, some extreme situations may demand the processing of tens of millions of new documents per day, with a total database size of tens of billions of documents. It is reported that at least one existing database has 120 billion documents. It seems likely that these database sizes will increase over time. Clearly the current state of the art is far from able to visually represent today’s data collections, and the need will continue to grow. New techniques are needed to bridge this gap.</span></p><h3 id='display-scalability'><span>Display Scalability</span></h3><p><span>Most published visualization techniques are designed for one size display, generally a desktop display (typically 1280×1024 pixels). We need to develop techniques that scale to a variety of display form factors to take advantage of whatever capabilities are available to support analysis and collaboration. Tools should be able to make effective use of everything from a wall-sized display in an emergency response situation room to a PDA or phone-sized display in the hands of a first responder in the field. One major challenge is to develop interaction techniques that are display scale-independent. That is, consistent visualization and interaction techniques should be used regardless of display size. Studies need to be done to determine how to display information effectively, particularly on small displays.</span></p><h3 id='human-scalability'><span>Human Scalability</span></h3><p><span>While human skills and abilities do not scale (i.e., they are relatively fixed), the number of humans involved in analytical problem-solving, border protection, and emergency preparedness and response activities does scale. Most published techniques for supporting analysis are targeted for a single user at a time. We must develop techniques that gracefully scale from a single user to a collaborative (multi-user) environment. Much of the relevant collaboration research is focused on small groups of collaborators (two or three people). In the scenarios we envision, users may be collaborating from within the same team in an organization, at different levels of an organization, or even in different organizations. Each of these cases has its own set of problems that must be solved. One scenario might involve a number of first responders, several regional emergency management centers, and a national emergency management center that is, dozens of users collaborating through the use of shared analytical tools and focusing on different levels of information accessible by everyone involved.</span></p><h3 id='software-scalability'><span>Software Scalability</span></h3><p><span>Software scalability is the capability of a software system to interactively manipulate large data sets. Software scalability includes the generation of new algorithms that scale to the increasing information sets that we generate today. We wish to avoid the hidden costs that arise when we build and maintain monolithic, non-interacting, non-scalable software.</span></p><h3 id='other-scalability-issues'><span>Other Scalability Issues</span></h3><p><span>Cutting across many scalability issues are concerns with privacy and security, particularly when scaling to multiuser environments. Data privacy and security laws and policies must be adhered to rigorously, which means that software must address challenges such as protecting information from inappropriate access, down to the data item and individual user level. Privacy and security are discussed in more detail in Chapter 6.</span></p><p><span>Scalability issues also arise in dealing with geographically dispersed teams speaking different languages or using different terminology within the same language, and working across teams of people with differing expertise.</span></p><h2 id='the-need-for-visual-analytics'><span>The Need for Visual Analytics</span></h2><p><span>To meet the analytical needs described in this chapter, the scientific community must dramatically accelerate research and development (R&amp;D) efforts to develop fundamentally new solutions. These solutions must enable analysts to focus their full cognitive and perceptual capabilities on their analytical processes, while allowing them to apply advanced computational capabilities to augment their discovery process. R&amp;D in the field of visual analytics helps address these challenges.</span></p><p><em><strong><span>Visual analytics is the science of analytical reasoning facilitated by interactive visual interfaces</span></strong></em><span>. People use visual analytics tools and techniques to synthesize information and derive insight from massive, dynamic, ambiguous, and often conflicting data; detect the expected and discover the unexpected; provide timely, defensible, and understandable assessments; and communicate assessment effectively for action.</span></p><p><span>Visual analytics integrates new computational and theory-based tools with innovative interactive techniques and visual representations to enable human-information discourse. The design of the tools and techniques is based on cognitive, design, and perceptual principles.</span></p><h2 id='the-research-and-development-agenda-for-visual-analytics'><span>The Research and Development Agenda for Visual Analytics</span></h2><p><span>DHS chartered the National Visualization and Analytics Center&quot; (NVAC™) in 2004 with the goal of helping to counter future terrorist attacks in the US and around the globe. NVAC is a national resource that provides strategic direction and coordination of activities to discover, develop, and implement innovative visual information analysis methods. A major objective for NVAC is to define a 5-year R&amp;D agenda for visual analytics to address the most pressing needs for R&amp;D to facilitate advanced analytical insight. In spring 2004, NVAC formed a panel of distinguished researchers from academia, Industry, and the national laboratory system, as well as select government experts. Through a series of workshops and collaborative efforts, the team established the plan for action summarized in this book.</span></p><p><span>This agenda builds upon and extends recent government publications, most notably two reports by the National Academy of Sciences. </span><em><span>Making the Nation Safer</span></em><span> [Alberts&amp;Wulf, 2002] describes how science and technology can be used to protect the nation against terrorism. </span><em><span>Information Technology for Counterterrorism</span></em><span> [Hennessy et al, 2003] expands upon the work of </span><em><span>Making the Nation Safer</span></em><span>, focusing specifically the opportunities for information technology to help counter and respond to on terrorist attacks.</span></p><p><span>Although the agenda described herein is focused specifically on meeting homeland security challenges, the new capabilities created will have an impact on wide variety of fields ranging from business to scientific research, in which understanding complex and dynamic information is important.</span></p><p><span>The R&amp;D agenda for visual analytics will require the assembly of multidisciplinary team to address a set of interrelated research areas illustrated in Figure 1.1.</span></p><p><mark><span>[pic]</span></mark></p><h3 id='analytical-reasoning-chapter-2'><span>Analytical Reasoning (Chapter 2) </span></h3><p><span>Analytical reasoning techniques are the method by which users obtain deep insights that directly support situation assessment, planning and decision making. Visual analytics must facilitate high-quality human judgment with a limited investment of the analysts’ time. Visual analytics tools must enable diverse analytical tasks such as:</span></p><ul><li><p><span>Understanding past and present situations quickly, as well as the trends and events that have produced current conditions. </span></p></li><li><p><span>Identifying possible alternative futures and their warning signs.</span></p></li><li><p><span>Monitoring current events for emergence of warning signs as well as unexpected events</span></p></li><li><p><span>Determining indicators of the intent of an action or an individual.</span></p></li><li><p><span>Supporting the decision maker in times of crisis.</span></p></li></ul><p><span>These tasks will be conducted through a combination of individual and collaborative analysis, often under extreme time pressure. Visual analytics must enable hypothesis-based and scenario-based analytical techniques, providing support for the analyst to reason based on the available evidence. Visual analytics must help the analyst discover the unexpected, whether by detecting unexpected relationships or showing that expected relationships are missing. Visual analytics must also focus on capturing the discoveries and the results of the analytic process and on making them available to others as a basis for future understanding.</span></p><h3 id='visual-representations-and-interaction-techniques-chapter-3'><span>Visual Representations and Interaction Techniques (Chapter 3) </span></h3><p><span>Visual representations and interaction techniques take advantage of the human eye&#39;s broad bandwidth pathway into the mind to allow users to see, explore, and understand large amounts of information at once. Information visualization research has focused on the creation of approaches for conveying abstract information in intuitive ways. Visual analytics must build upon this research base to create visual representations that instantly convey the important content of information, within context. This visual representation is essential to the analytical reasoning process.</span></p><p><span>There is no single visual metaphor that can meet all analytical needs. A suite of visual metaphors and associated visual approaches is necessary to provide users with multiple complementary views of their information. Analysts must have the capability to tailor these visual tools to fit their task and their individual analytical style. Approaches are needed to visually represent dynamic data of all types. These representations must be able to convey changing conditions and situational assessments as events transpire, analytical understanding evolves, and requirements change.</span></p><p><span>Visual representations alone cannot satisfy analytical needs. Interaction techniques are required to support the dialogue between the analyst and the data. While basic interactions such as search techniques are common in software today, more sophisticated interactions are also needed to support the analytical reasoning process. A strong foundation must be developed for interaction science to enable researchers to develop the best interaction techniques to support any given task, timescale, and interaction environment.</span></p><h3 id='data-representations-and-transformations-chapter-4'><span>Data Representations and Transformations (Chapter 4)</span></h3><p><span>Data are at the heart of the analytical challenge. Analytically important data are buried in vast streams of all types. These data, in their raw form, are rarely appropriate for direct analysis. The key challenge is to create data representations and transformations that convert all types of conflicting and dynamic data into forms that facilitate analytical understanding. These representations must support varying levels of abstraction to facilitate the analysis of massive and dynamic data collections, at multiple scales, and within multiple contexts. Data representations must represent data context where known, but they also must appropriately represent information that is lacking context, incomplete, and uncertain. Today, data are generally analyzed within a collection of a similar data type. Visual analytic must bring all relevant information into a single consistent analytical context, regardless of the form in which the information began, to support analysis and discovery.</span></p><h3 id='production-presentation-and-dissemination-chapter-5'><span>Production, Presentation, and Dissemination (Chapter 5)</span></h3><p><span>To have impact, the results of an analysis must be communicated accurately to others. Production of analytical outputs, assembly of presentations appropriate for different audiences, and dissemination of analytical results are essential steps in the analytical process. Results must be communicated to numerous audiences, from policymakers to the general population, in unambiguous and meaningful ways. New approaches are needed to simplify the production of analytical assessments, so that presentations of results, relevant facts and evidence, and associated uncertainties can be assembled rapidly to fit the needs of different audiences. These results must be communicated within the context of the receiver and at the appropriate level of derail to meet their needs.</span></p><h3 id='moving-research-into-practice-chapter-6'><span>Moving Research into Practice (Chapter 6)</span></h3><p><span>Supporting these research areas are four important areas that must be address to accelerate the often tortuous path from research into practice.</span></p><p><strong><span>Evaluation.</span></strong><span> Visual analytics must address methods for evaluating whether or not a particular tool or technique is truly having a positive impact. Usability evaluation, while valuable, is insufficient. Visual analytics must develop meaningful and effective techniques to evaluate the actual value any species visual analytic technique may provide. Sterile test conditions can often produce different evaluation results than would be observed in actual analytical practice. We must develop evaluation approaches and test data sets that give the best possible indicators of true value in an analyst&#39;s hands.</span></p><p><strong><span>Privacy and Security</span></strong><span>. Analysts work with information drawn from multiple sources, each of which has associated security and privacy constraints. Laws exist that golem how information may be used and combined, and those laws must underpin visual analytics approaches. Tools must proactively adopt and support approaches such as data anonymization, data minimization, audit trails, and access controls to both protect privacy and ensure information security.</span></p><p><strong><span>System Interoperability.</span></strong><span> System interoperability issues are central to the successful research, evaluation, and ultimate deployment of visual an analytics tools. Visual analytics tools will be developed by disparate groups, yet they must successfully complement one another in a single seamless analytical environment. Interoperability must be considered at every step in the R&amp;D process, from sharing of research-level code to evaluation of tool suites developed by multiple teams. Visual analytics tools will be deployed in diverse application environments, and they must be engineered to permit flexible implementations that can fit within a variety of application architectures.</span></p><p><strong><span>Technology Insertion</span></strong><span>. Technology insertion is the successful transition of a technology into widespread analytical use. This technology transfer process must be planned explicitly. We must understand how new visual analytics techniques fit into the user&#39;s overall analytic software environment as well as how they fit into the user&#39;s processes. We must define the training paths that help users understand how best to use a new technology and integrate it into their practices.</span></p><p><span>Fully addressing the research needs described in this agenda will require the concerted efforts of multidisciplinary teams of experts from throughout academia, industry, government, and the national laboratory system. It is imperative to expand the core group of researchers who are addressing these problems. To expand this talent base will require establishing formal educational opportunities for researchers, including educational outreach programs and development of new curricula. Through a set of coordinated research efforts, partnerships, and educational efforts, we can mobilize the research community to address these needs now and in the years to come. Chapter 7 describes the set of initiatives necessary to position the field of visual analytics for enduring success and issues the call to action to accomplish this agenda.</span></p><p><span> </span></p><h2 id='references'><span>References</span></h2><ul><li><p><span>Alberts B and WA Wulf. 2002. Making the Nation Safer: The Role of Science and Technology in Countering Terrorism. National Academy of Sciences, Washington, D.C. </span></p></li><li><p><span>Department of Homeland Security. 2004. Securing our Homeland: U. S. Department of Homeland Security Strategic Plan. Available at </span><a href='http://ww.dhs.gov/interwebrassetlibrar/DHS' target='_blank' class='url'>http://ww.dhs.gov/interwebrassetlibrar/DHS</a><span>_ StratPlan_FINAL _spread.pdf.</span></p></li><li><p><span>Eick S and A Karr. 2002. &quot;Visual Scalability.&quot; Journal of Computational and Graphical Statistics 11(1): 22-43.</span></p></li><li><p><span>Hennessy JL, DA Patterson, and HS Lin, eds. 2003. Information Technology for Counterterrorism: Immediate Actions and Future Possibilities. National Academy of Sciences, Washington, D.C.</span></p></li><li><p><span>Lyman P and HR Varian. 2003. &quot;How Much Information?&quot; Available at </span><a href='http://www.sims.berkeley.edu/how-much-info' target='_blank' class='url'>http://www.sims.berkeley.edu/how-much-info</a><span>.</span></p></li><li><p><span>Munzner T, F Guimbretiere, S Tasiran, L Zhang, and Y Zhou. 2003. &quot;TreeJuxtaposer: Scalable Tree Comparison Using Focus+Context with Guaranteed Visibility.&quot; ACM Transactions on Graphics: Special Issue Proceedings of ACM SIGGRAPH 2003 22(3):453-462.</span></p></li><li><p><span>National Commission on Terrorist Attacks. 2004. The 9/11 Commission Report. W. W. Norton and Company, Ltd., New York.</span></p></li></ul><p><span> </span></p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
