@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 03</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">03</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#forget-the-noun-do-the-verb">Forget the Noun, Do the Verb</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#creative-is-not-a-noun">"Creative" is not a noun.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n77"><a class="md-toc-inner" href="#your-real-work-is-play">Your real work is play.</a></span></p></div><hr /><h2 id='forget-the-noun-do-the-verb'><span>Forget the Noun, Do the Verb</span></h2><h3 id='creative-is-not-a-noun'><span>&quot;Creative&quot; is not a noun.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“You have to have done something before you can be said to have done something. The title of artist or architect or musician needs to somehow be earned.”<br/>—Dave Hickey </p><hr style="background:brown"/><p><span>Lots of people want to be the noun without doing the verb. They want the job title without the work.</span></p><p><u><span>Let go of</span></u><span> the thing that you’re trying to be (the noun), and focus on the actual work you need to be doing (the verb). Doing the verb will take you someplace further and far more interesting.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>let go of: 放下，释放：停止握住或抓住某物或某人。</span></p><blockquote><p><span>· She finally let go of her anger and forgave him.</span></p><p><span>她最终放下了她的愤怒并原谅了他。</span></p></blockquote></blockquote><p><span>If you pick the wrong noun to </span><u><span>aspire</span></u><span> to, you’ll be stuck with the wrong verb, too. When people use the word “creative” as a job title, it not only falsely divides the world into “creatives” and “non-creatives,” but also implies that the work of a “creative” is “being creative.” But being creative is never an end; it is a means to something else. Creativity is just a tool. Creativity can be used to organize your living room, paint a masterpiece, or design a weapon of mass destruction. If you only aspire to be a “creative,” you might simply spend your time </span><u><span>signaling</span></u><span> that you are one: wearing designer eyeglasses, typing on your Macbook Pro, and Instagramming photos of yourself in your </span><u><span>sun-drenched</span></u><span> studio.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>aspire: </span><em><span>v.</span></em><span>渴望，有志于</span></p><blockquote><p><span>Nor do they </span><strong><span>aspire</span></strong><span> to such command themselves.</span></p><p><span>他们自己也不渴望这样的命令。</span></p></blockquote><p><span>signaling: </span><em><span>n.</span></em><span>发信号；打信号</span></p><blockquote><p><span>The male riflebird exploits both of these modes of </span><strong><span>signaling</span></strong><span> simultaneously in his courtship display.</span></p><p><span>雄性雷射鸟在求爱时会同时利用这两种信号模式。</span></p></blockquote><p><span>sun-drenched: </span><em><span>adj.</span></em><span>沐浴在阳光里的；阳光普照的</span></p><blockquote><p><span>He sat on the terrace of his </span><strong><span>sun</span></strong><span>-</span><strong><span>drenched</span></strong><span> villa in the South of France.</span></p><p><span>他坐在他位于法国南部的撒满阳光的别墅阳台上。</span></p></blockquote></blockquote><p><span>Job titles can mess you up. Job titles, if they’re taken too seriously, will make you feel like you need to work in a way that befits the title, not the way that fits the actual work. Job titles can also restrict the kinds of work that you feel like you can do. If you only consider yourself a “painter,” then what happens when you want to try out writing? If you only consider yourself a “filmmaker,” what happens when you want to try </span><u><span>sculpting</span></u><span>?</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>sculpting: </span></p><ul><li><p><em><span>n.</span></em><span>雕塑法</span></p></li><li><p><em><span>v.</span></em><span>雕刻；雕塑（sculpt 的现在分词）</span></p></li></ul><blockquote><p><span>He became interested in </span><strong><span>sculpting</span></strong><span> and pottery.</span></p><p><span>他变得对雕刻和制陶感兴趣了。</span></p></blockquote></blockquote><p><span>If you wait for someone to give you a job title before you do the work, you might never get to do the work at all. You can’t wait around for someone to call you an artist before you make art. You’ll never make it.</span></p><p><span>If and when you finally get to be the noun—when that </span><u><span>coveted</span></u><span> job title is </span><u><span>bestowed</span></u><span> upon you by others—don’t stop doing your verb.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>coveted: </span><code>/ ˈkʌvətɪd /</code></p><ul><li><p><em><span>adj.</span></em><span>垂涎的；梦寐以求的</span></p></li><li><p><em><span>v.</span></em><span>垂涎；渴望（covet 的过去分词形式）；贪图</span></p></li></ul><blockquote><p><span>She </span><strong><span>coveted</span></strong><span> his job so openly that their conversations were tense.</span></p><p><span>她如此公开地对他的工作垂涎三尺，以至两人之间的谈话很紧张。</span></p></blockquote><p><span>bestowed: </span><em><span>v</span></em><span>．</span></p><blockquote><ol start='' ><li><p><span>赠予，授予：将某物或某种荣誉、权力等给予某人。</span></p></li></ol><p><span>· The award was bestowed upon her for her outstanding achievements.</span></p><p><span>这个奖项是因为她的杰出成就而授予她的。</span></p><ol start='2' ><li><p><span>安置，安顿：将某人或某物放置在某个地方。</span></p></li></ol><p><span>· He bestowed the books on the top shelf.</span></p><p><span>他把书放在了顶层的书架上。</span></p></blockquote></blockquote><p><span>Job titles aren’t really for you, they’re for others. Let other people worry about them. Burn your business cards if you have to.</span></p><p><span>Forget the nouns altogether. Do the verbs.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “I don’t know what I am. I know that I am not a category. I am not a thing—a noun. I seem to be a verb, an evolutionary process.”<br/>—R. Buckminster Fuller</p><hr style="background:brown"/><h3 id='your-real-work-is-play'><span>Your real work is play.</span></h3><p><span>All children learn about the world through play. “Child’s play” is a term we use to denote things that are easy, but if you actually watch children play, it is anything but easy. “Play is the work of the child,” as Maria Montessori put it. When my children are playing, they are deeply invested in their work. They focus their </span><u><span>gazes</span></u><span> like </span><u><span>laser</span></u><span> </span><u><span>beams</span></u><span>. They scrunch up their faces in concentration. When they can’t get their materials to do what they want them to do, they throw </span><u><span>epic</span></u><span> </span><u><span>tantrums</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>gaze:</span></p><ul><li><p><em><span>v.</span></em><span>凝视，注视</span></p></li><li><p><em><span>n.</span></em><span>凝视，注视；特定视角，特定角度</span></p></li></ul><blockquote><p><span>His </span><strong><span>gaze</span></strong><span> settled on her face.</span></p><p><span>他的目光落在她脸上。</span></p></blockquote><p><span>laser: </span></p><ul><li><p><em><span>n.</span></em><span>激光（器）</span></p></li><li><p><em><span>v.</span></em><span>使用激光器</span></p></li></ul><blockquote><p><span>She&#39;s had </span><strong><span>laser</span></strong><span> surgery on her eye.</span></p><p><span>她做了眼部激光手术。</span></p></blockquote><p><span>beams: </span></p><ul><li><p><em><span>n.</span></em><span>梁，横梁；光线，光柱；喜色，笑容（beam 的复数）；（Beams）（英）比姆斯（人名）</span></p></li><li><p><em><span>v.</span></em><span>定向发出（无线电信号）；（光，光源）照耀；喜笑颜开，面露喜色（beam 的第三人称单数）</span></p></li></ul><blockquote><p><span>The </span><strong><span>beams</span></strong><span> are riddled with woodworm.</span></p><p><span>这些木梁被蛀虫蛀得都是洞。</span></p></blockquote><p><span>epic:</span></p><ul><li><p><em><span>n.</span></em><span>（讲述英雄冒险经历的）叙事诗，史诗；史诗般的书籍（或电影等）；壮举，惊人之举；&lt;非正式&gt;特别耗时费力的事（或活动）</span></p></li><li><p><em><span>adj.</span></em><span>史诗般的；漫长而艰难的；宏大的，壮丽的</span></p></li></ul><blockquote><p><span>Their four-hour match on Centre Court was an </span><strong><span>epic</span></strong><span>.</span></p><p><span>他们在中心球场历时四个小时的比赛是一个壮举。</span></p></blockquote><p><span>tantrums: </span><em><span>n</span></em><span>．发脾气，发火，暴怒：通常指儿童因为生气、沮丧或受挫而突然大发雷霆的行为。</span></p><blockquote><p><span>· The child threw tantrums when he didn&#39;t get what he wanted.</span></p><p><span>孩子得不到他想要的东西时就会发脾气。</span></p></blockquote></blockquote><p><span>Their best play, however, is acted out with a kind of lightness and </span><u><span>detachment</span></u><span> from their results. When my son Jules was two, I spent a ton of time watching him draw. I noticed that he cared not one bit about the actual finished drawing (the noun)—all his energy was focused on drawing (the verb). When he’d made the drawing, I could erase it, toss it in the recycling bin, or hang it on the wall. He didn’t really care. He was also medium </span><u><span>agnostic</span></u><span>: he was just as happy with crayon on paper, marker on a whiteboard, </span><u><span>chalk</span></u><span> on the </span><u><span>driveway</span></u><span>, or, in a medium that put his parents’ encouragement to the test, chalk on the outdoor </span><u><span>couch</span></u><span> </span><u><span>cushions</span></u><span>. (The drawings were so good my wife decided to </span><u><span>embroider</span></u><span> them. Again, he was completely indifferent.)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>detachment: </span><em><span>n.</span></em><span>客观，超然，冷漠；分遣队，独立小分队；拆卸，分离</span></p><blockquote><p><span>She felt a sense of </span><strong><span>detachment</span></strong><span> from what was going on.</span></p><p><span>她对眼前发生的事感到很超然。</span></p></blockquote><p><span>agnostic: </span></p><ul><li><p><em><span>n.</span></em><span>不可知论者</span></p></li><li><p><em><span>adj.</span></em><span>不可知论的；怀疑的</span></p></li></ul><blockquote><p><span>Ultimately, the pragmaticist may remain </span><strong><span>agnostic</span></strong><span>.</span></p><p><span>最终，实用主义者可能保持怀疑。</span></p></blockquote><p><span>chalk:</span></p><ul><li><p><em><span>n.</span></em><span>白垩；粉笔；白垩地层；用粉笔划的记号</span></p></li><li><p><em><span>v.</span></em><span>用粉笔写（或画）；用粉笔做记号；用白垩粉擦（桌球杆等）；&lt;英&gt;把（酒钱）记于（某人）账上；获（胜），得（分）；变成白垩状</span></p></li></ul><blockquote><p><span>You may </span><strong><span>chalk</span></strong><span> it on the wall.</span></p><p><span>你可以用粉笔把它记在墙上。</span></p></blockquote><p><span>driveway: </span><em><span>n.</span></em><span>（从建筑物，住房，车库等通往大路的）私人车道</span></p><blockquote><p><span>He pulled into the </span><strong><span>driveway</span></strong><span> in front of her garage.</span></p><p><span>他把车开进她家车库前的车道上停在那里。</span></p></blockquote><p><span>couch: </span></p><ul><li><p><em><span>n.</span></em><span>长沙发，长榻；诊察台</span></p></li><li><p><em><span>v.</span></em><span>表达，措辞；&lt;文&gt;躺下，躺卧；&lt;古&gt;平端（矛或枪）（准备攻击）；用下压及后压晶状体的方式治疗（白内障）；贴线缝绣</span></p></li></ul><blockquote><p><span>We were sitting on the </span><strong><span>couch</span></strong><span> in the living room watching TV.</span></p><p><span>我们那时正坐在起居室的沙发上看电视。</span></p></blockquote><p><span>cushions:</span></p><ul><li><p><em><span>n.</span></em><span>靠垫；衬垫（cushion 的复数）；酥心糖</span></p></li><li><p><em><span>v.</span></em><span>给……安上垫；加垫褥（cushion 的第三人称单数）</span></p></li></ul><blockquote><p><span>A few </span><strong><span>cushions</span></strong><span> formed a makeshift bed.</span></p><p><span>临时用几个垫子拼了一张床。</span></p></blockquote><p><span>embroider: </span></p><ul><li><p><em><span>vt.</span></em><span>刺绣；装饰；镶边</span></p></li><li><p><em><span>vi.</span></em><span>绣花；刺绣</span></p></li></ul><blockquote><p><span>I will </span><strong><span>embroider</span></strong><span> a memory inside.</span></p><p><span>我会在心里组织一段回忆。</span></p></blockquote></blockquote><p><span>Play is the work of the child and it is also the work of the artist. I was once taking a walk in the Mission in San Francisco and stopped to chat with a street painter. When I thanked him for his time and apologized for interrupting his work, he said, “Doesn’t feel like work to me. Feels more like play.”</span></p><p><span>The great artists are able to retain this sense of playfulness throughout their careers. Art and the artist both suffer most when the artist gets too heavy, too focused on results.</span></p><p><span>There are some tricks to staying light and getting back to that childlike play state. The writer Kurt Vonnegut wrote a letter to a group of high school students and assigned them this homework: Write a poem and don’t show it to anybody. Tear it up into little pieces and throw them into the trash </span><u><span>can</span></u><span>. “You will find that you have already been </span><u><span>gloriously</span></u><span> rewarded for your poem. You have experienced becoming, learned a lot more about what’s inside you, and you have made your soul grow.” That, said Vonnegut, was the whole purpose of making art: “Practicing an art, no matter how well or badly, is a way to make your soul grow, for heaven’s sake.” Vonnegut repeated variations of that advice throughout his life. He would suggest to his daughter Nanette that she should make a piece of art and burn it “as a spiritual exercise.” (There’s something </span><u><span>cathartic</span></u><span> about burning your work: Artist John Baldessari, disgusted by his previous work, had it all </span><u><span>cremated</span></u><span> and put in a </span><u><span>ceremonial</span></u><span> urn.)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>trash can: 垃圾桶，指用来装放被扔掉的物品的容器</span></p><blockquote><p><span>· Please throw the empty bottle into the trash can.</span></p><p><span>请把空瓶子扔进垃圾桶。</span></p></blockquote><p><span>gloriously: </span><em><span>adv.</span></em><span>光荣地；辉煌地；壮观地，壮丽地</span></p><blockquote><p><span>The answer is </span><strong><span>gloriously</span></strong><span> unclear.</span></p><p><span>我们无法给出明确的答案。</span></p></blockquote><p><span>cathartic: </span><code>/ kəˈθɑːrtɪk /</code></p><ul><li><p><em><span>adj.</span></em><span>导泻的；通便的</span></p></li><li><p><em><span>n.</span></em><span>[药] 泻药；[药] 通便药</span></p></li></ul><blockquote><p><span>It was a </span><strong><span>cathartic</span></strong><span> experience.</span></p><p><span>那是一次情感宣泄的体验。</span></p></blockquote><p><span>cremated: </span><em><span>v.</span></em><span>火葬，火化（cremate 的过去式和过去分词）</span></p><blockquote><p><span>He wants to be </span><strong><span>cremated</span></strong><span>, not buried.</span></p><p><span>他要火葬，不要土葬。</span></p></blockquote><p><span>ceremonial: </span></p><ul><li><p><em><span>adj.</span></em><span>仪式的，礼节的；（职务）礼仪性的，象征性的</span></p></li><li><p><em><span>n.</span></em><span>仪式，典礼，礼节</span></p></li></ul><blockquote><p><span>He represented the nation on </span><strong><span>ceremonial</span></strong><span> occasions.</span></p><p><span>他在礼仪场合代表着国家。</span></p></blockquote></blockquote><p><span>If you’ve lost your </span><u><span>playfulness</span></u><span>, practice for practice’s sake. You don’t have to go to such dramatic lengths as </span><u><span>combustion</span></u><span>. Musicians can </span><u><span>jam</span></u><span> without making a recording. Writers and artists can type or draw out a page and throw it away. Photographers can take photos and immediately delete them.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>playfulness: </span><em><span>n.</span></em><span>玩笑；嬉闹</span></p><blockquote><p><span>Many species have evolved clear signals to delineate </span><strong><span>playfulness</span></strong><span>.</span></p><p><span>很多动物进化出了明确表述玩耍的信号。</span></p></blockquote><p><span>combustion: </span><em><span>n.</span></em><span>燃烧；（化学）氧化，（化学）燃烧；骚动</span></p><blockquote><p><span>You might say, &quot;Well, gee, why don&#39;t we just power our cars with hydrogen placed on an internal </span><strong><span>combustion</span></strong><span> chamber.&quot;</span></p><p><span>你可能会说：“好吧，哎呀，为什么我们不把氢气放在汽车内部的燃烧室，来驱动我们的汽车呢。”</span></p></blockquote><p><span>jam: </span></p><ul><li><p><em><span>n.</span></em><span>果酱；堵塞，拥挤；麻烦，困境；&lt;非正式&gt;爵士乐（摇滚乐）即兴演奏会；卡住，轧住</span></p></li><li><p><em><span>v.</span></em><span>塞满，挤满；卡住，发生故障；压进，塞入；干扰（无线电或电子信号）；（电话系统因很多人同时打电话而）瘫痪；挤伤，压伤；&lt;非正式&gt; 即兴表演；（向击球手）投（内角球）；猛推（身体部位、杠杆等）</span></p></li></ul><blockquote><p><span>We were stuck in a traffic </span><strong><span>jam</span></strong><span>.</span></p><p><span>我们遇上了交通阻塞。</span></p></blockquote></blockquote><p><span>Nothing makes play more fun than some new toys. Seek out unfamiliar tools and materials. Find something new to </span><u><span>fiddle</span></u><span> with.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fiddle: </span></p><ul><li><p><em><span>v.</span></em><span>（尤指厌烦或紧张地）不停摆弄；&lt;非正式&gt;篡改，伪造；拉小提琴；略微变动；调整</span></p></li><li><p><em><span>n.</span></em><span>&lt;非正式&gt;小提琴；&lt;非正式&gt;欺诈，骗局；&lt;非正式&gt;修理，调整；&lt;非正式&gt;难事；（防止餐具在恶劣天气条件下滚落或滑落的）餐桌缘框</span></p></li></ul><p><span>fiddle with: </span></p><ul><li><p><span>1．玩弄，摆弄</span></p></li><li><p><span>2．调整，处理</span></p></li><li><p><span>3．篡改，损坏</span></p></li></ul><blockquote><p><span>Don&#39;t </span><strong><span>fiddle</span></strong><span> </span><strong><span>with</span></strong><span> the typewriter.</span></p><p><span>不要摆弄那架打字机了。</span></p></blockquote></blockquote><p><span>Another trick: When nothing’s fun anymore, try to make the worst thing you can. The </span><u><span>ugliest</span></u><span> drawing. The </span><u><span>crummiest</span></u><span> poem. The most </span><u><span>obnoxious</span></u><span> song. Making </span><u><span>intentionally</span></u><span> bad art is a ton of fun.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>ugliest: </span><em><span>adj.</span></em><span>最丑的（ugly 的最高级）</span></p><blockquote><p><span>It was one of the year&#39;s </span><strong><span>ugliest</span></strong><span> contests.</span></p><p><span>而那场初选，也成了年内最丑陋的竞选之一。</span></p></blockquote><p><span>crummiest: 丰满的（crummy 的最高级）</span></p><p><span>crummy: </span><em><span>adj.</span></em><span>微不足道的；寒酸的；肮脏的</span></p><blockquote><p><span>Most of his songs are pretty </span><strong><span>crummy</span></strong><span>.</span></p><p><span>他的歌曲大多糟糕透顶。</span></p></blockquote><p><span>obnoxious: </span><em><span>adj.</span></em><span>可憎的，粗鲁无礼的</span></p><blockquote><p><span>The people at my table were so </span><strong><span>obnoxious</span></strong><span> I had to change my seat.</span></p><p><span>我那桌的人非常讨厌，我只好换了座位。</span></p></blockquote><p><span>intentionally: </span><em><span>adv.</span></em><span>故意地，有意地</span></p><blockquote><p><span>She would never </span><strong><span>intentionally</span></strong><span> hurt anyone.</span></p><p><span>她从来不会故意伤害任何人。</span></p></blockquote></blockquote><p><span>Finally, try hanging out with young kids. Play a game of </span><u><span>hide-and-go-seek</span></u><span>. Finger paint. Build a tower out of blocks and knock it down. Steal whatever works for you. When the writer Lawrence Weschler needs to figure out a structure for one of his pieces, he’ll play with his own set of </span><u><span>wooden</span></u><span> blocks. “My daughter is not allowed to play with these blocks,” he says. “They are mine.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hide-and-go-seek: </span><em><span>n.</span></em><span>捉迷藏</span></p><blockquote><p><span>He would climb up her trunk </span><strong><span>and</span></strong><span> swing from her branches </span><strong><span>and</span></strong><span> eat apples. </span><strong><span>And</span></strong><span> they would play </span><strong><span>hide</span></strong><span>-</span><strong><span>and</span></strong><span>-</span><strong><span>go</span></strong><span>-</span><strong><span>seek</span></strong><span>.</span></p><p><span>男孩总是爬上树干，在树枝扛荡秋千，吃树上的苹果，他们还会一起玩捉迷藏的游戏。</span></p></blockquote><p><span>wooden: </span><em><span>adj.</span></em><span>木制的；（行为）僵硬的，呆板的；木头似的，木头特性的</span></p><blockquote><p><span>They sat on </span><strong><span>wooden</span></strong><span> boxes.</span></p><p><span>他们坐在木箱上。</span></p></blockquote></blockquote><p><span>Don’t get </span><u><span>bogged</span></u><span> down. Stay light. Play.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bogged: </span></p><ul><li><p><em><span>adj.</span></em><span>陷于泥沼的</span></p></li><li><p><em><span>v.</span></em><span>使……陷于泥淖；陷于泥淖（bog 的过去式和过去分词）</span></p></li></ul><p><span>get bogged down 深陷泥潭：陷入困境、陷入困难或陷入复杂的情况中，以至于无法做其他事情。</span></p><blockquote><p><span>We mustn&#39;t </span><strong><span>get</span></strong><span> </span><strong><span>bogged</span></strong><span> </span><strong><span>down</span></strong><span> in details.</span></p><p><span>我们一定不能因细节问题误事。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “You must practice being stupid, dumb, unthinking, empty. Then you will be able to DO . . . Try to do some BAD work—the worst you can think of and see what happens but mainly relax and let everything go to hell—you are not responsible for the world—you are only responsible for your work—so DO IT.”<br/>—Sol LeWitt to Eva Hesse</p><hr style="background:brown"/><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

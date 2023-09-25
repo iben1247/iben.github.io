@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 04</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">04</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#make-gifts">Make Gifts</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#protect-your-valuables">Protect your valuables.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n175"><a class="md-toc-inner" href="#ignore-the-numbers">Ignore the numbers.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n190"><a class="md-toc-inner" href="#where-there-is-no-gift-there-is-no-art">Where there is no gift, there is no art.</a></span></p></div><hr /><h2 id='make-gifts'><span>Make Gifts</span></h2><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“God walks out of the room when you’re thinking about money.”<br/>—Quincy Jones </p><hr style="background:brown"/><h3 id='protect-your-valuables'><span>Protect your valuables.</span></h3><p><span>Here’s a contemporary cultural phenomenon that drives me crazy.</span></p><p><span>You have a friend who </span><u><span>knits</span></u><span> beautiful </span><u><span>scarves</span></u><span>. </span><u><span>Knitting</span></u><span> is what he does to clear his mind and pass the time on his long train commute.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>knit:</span></p><ul><li><p><em><span>v.</span></em><span>编织，针织；织平针；（使）紧密结合；（骨头）愈合；皱紧，皱（眉）</span></p></li><li><p><em><span>n.</span></em><span>编织的衣物，织物；编织法</span></p></li></ul><blockquote><p><span>Ferris wore a heavy </span><strong><span>knit</span></strong><span> sweater.</span></p><p><span>菲立斯穿着一件织得厚厚的毛衣。</span></p></blockquote><p><span>knits:</span></p><ul><li><p><em><span>n.</span></em><span>针织品；皱痕（knit 的复数）</span></p></li><li><p><em><span>v.</span></em><span>[纺]编织；皱紧；接合（knit 的第三人称单数）</span></p></li></ul><blockquote><p><span>This wool </span><strong><span>knits</span></strong><span> up well.</span></p><p><span>这种毛线很好织。</span></p></blockquote><p><span>scarves: </span><em><span>n.</span></em><span>围巾；领带（scarf 的复数）；截面</span></p><blockquote><p><span>They were warmly dressed in coats and </span><strong><span>scarves</span></strong><span>.</span></p><p><span>他们身着大衣，围着围巾，穿得暖暖和和。</span></p></blockquote><p><span>knitting: </span></p><ul><li><p><em><span>n.</span></em><span>针织；编织物；[外科]骨愈合</span></p></li><li><p><em><span>v.</span></em><span>编织；皱眉（knit 的 ing 形式）</span></p></li></ul><blockquote><p><span>She&#39;s </span><strong><span>knitting</span></strong><span> the baby a shawl.</span></p><p><span>她在给宝宝织一床小被子。</span></p></blockquote></blockquote><p><span>You have another friend who loves to bake cakes. Baking is what she does on nights and weekends to </span><u><span>unwind</span></u><span> after working at her stressful corporate job.</span></p><p><span>All three of you attend a birthday party. Your </span><u><span>knitter</span></u><span> friend gives the birthday girl the </span><u><span>scarf</span></u><span> he recently finished. It’s absolutely beautiful.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>unwind: </span><em><span>v.</span></em><span>放松，松弛；解开，展开</span></p><blockquote><p><span>Shake the rope and let the coils </span><strong><span>unwind</span></strong><span>.</span></p><p><span>抖动绳索把绳圈展开。</span></p></blockquote><p><span>knitter: </span><em><span>n.</span></em><span>编织者；编织机</span></p><blockquote><p><span>She is showing me how to use a </span><strong><span>knitter</span></strong><span>.</span></p><p><span>她正在对我示？如何使用编织机。</span></p></blockquote><p><span>scarf:</span></p><ul><li><p><em><span>n.</span></em><span>围巾，披巾，头巾；（嵌接的）斜面，斜嵌槽；鲸脂的切口</span></p></li><li><p><em><span>v.</span></em><span>&lt;美，非正式&gt;狼吞虎咽地吃；嵌接，斜接（木材，金属）；切割（鲸）脂</span></p></li></ul><blockquote><p><span>Her </span><strong><span>scarf</span></strong><span> streamed behind her.</span></p><p><span>她的围巾在身后飘动。</span></p></blockquote></blockquote><p><span>What’s the standard reaction these days?</span></p><p><span>“You could sell this on </span><u><span>Etsy</span></u><span>!”</span></p><p><span>After the birthday girl opens her gifts, your baker friend serves her cake. Everyone is </span><u><span>moaning</span></u><span> in </span><u><span>delight</span></u><span>.</span></p><p><span>What do they all say?</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>Etsy: 易集（手工艺品交易网站）</span></p><blockquote><p><strong><span>Etsy</span></strong><span> is a rapidly growing online marketplace for hand-made goods.</span></p><p><span>Etsy是一家快速增长的针对手工商品的在线市场。</span></p></blockquote><p><span>moaning: </span><em><span>v.</span></em><span>呻吟；（物）发凄厉声；（非正式）抱怨；（诗、文）悲叹；（风）呼啸（moan 的现在分词）</span></p><blockquote><p><span>I&#39;ve had a bellyful of your </span><strong><span>moaning</span></strong><span>.</span></p><p><span>我已经听够了你的抱怨了。</span></p></blockquote><p><span>delight:</span></p><ul><li><p><em><span>n.</span></em><span>高兴；令人高兴的人或物，乐事</span></p></li><li><p><em><span>v.</span></em><span>使高兴；以……为乐</span></p></li></ul><blockquote><p><span>They all cackled with </span><strong><span>delight</span></strong><span>.</span></p><p><span>他们都高兴得嘎嘎地笑。</span></p></blockquote></blockquote><p><span>“You could start a </span><u><span>bakery</span></u><span>!”</span></p><p><span>We’re now trained to heap praise on our loved ones by using market terminology. The minute anybody shows any talent for anything, we suggest they turn it into a profession. This is our best </span><u><span>compliment</span></u><span>: telling somebody they’re so good at what they love to do they could make money at it.</span></p><p><span>We used to have hobbies; now we have “side </span><u><span>hustles</span></u><span>.” As things continue to get worse in America, as the safety net gets </span><u><span>torn</span></u><span> up, and as steady jobs keep disappearing, the free-time activities that used to </span><u><span>soothe</span></u><span> us and take our minds off work and add meaning to our lives are now presented to us as potential income streams, or ways out of having a traditional job.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bakery: </span><em><span>n.</span></em><span>面包店；烘焙食品（如面包，蛋糕）</span></p><blockquote><p><span>The smell is very familiar to everyone who lives near a </span><strong><span>bakery</span></strong><span>.</span></p><p><span>住在面包店附近的人都很熟悉这种气味。</span></p></blockquote><p><span>compliment: </span></p><ul><li><p><em><span>n.</span></em><span>赞扬，称赞；问候，祝贺</span></p></li><li><p><em><span>v.</span></em><span>赞美，恭维</span></p></li></ul><blockquote><p><span>Saying she&#39;s improved comes over as a backhanded </span><strong><span>compliment</span></strong><span>.</span></p><p><span>说她进步了是一种挖苦的恭维话。</span></p></blockquote><p><span>hustle: </span></p><ul><li><p><em><span>v.</span></em><span>推搡，硬挤；拼命干活；急速前进，奔忙；催促（某人）；&lt;非正式&gt;（常指非法地）兜售，取得；&lt;美，非正式&gt;拉客，卖淫</span></p></li><li><p><em><span>n.</span></em><span>忙碌，熙熙攘攘；&lt;美，非正式&gt;欺诈行为；&lt;美&gt;卖力，努力</span></p></li></ul><blockquote><p><span>You&#39;ll have to </span><strong><span>hustle</span></strong><span> if you&#39;re to get home for supper.</span></p><p><span>你想回家吃晚饭的话，得赶紧走了。</span></p></blockquote><p><span>torn: </span></p><ul><li><p><em><span>adj.</span></em><span>犹豫的</span></p></li><li><p><em><span>v.</span></em><span>撕碎，撕裂；撕破，划破；撕掉，扯掉（tear 的过去分词）</span></p></li></ul><blockquote><p><span>I&#39;ve </span><strong><span>torn</span></strong><span> a calf muscle.</span></p><p><span>我拉伤了小腿肌肉。</span></p></blockquote><p><span>soothe: </span><em><span>v.</span></em><span>使平静，安抚；减轻，缓和（疼痛）</span></p><blockquote><p><span>He became as wild as a beast and no one could </span><strong><span>soothe</span></strong><span> him.</span></p><p><span>他变得像野兽一样狂野，没有人能抚慰他。</span></p></blockquote></blockquote><p><span>I’m so </span><u><span>insanely</span></u><span> lucky right now. I live the dream, in a sense, because I get paid to do what I would probably do anyway for free. But things can get very, very tricky when you turn the thing you love into the thing that keeps you and your family clothed and fed. Everyone who’s turned their passion into their </span><u><span>breadwinning</span></u><span> knows this is dangerous territory. One of the easiest ways to hate something you love is to turn it into your job: taking the thing that keeps you alive spiritually and turning it into the thing that keeps you alive literally.</span></p><p><span>You must be mindful of what potential impact </span><u><span>monetizing</span></u><span> your passions could have on your life. You might find that you’re better off with a day job.</span></p><p><span>When you start making a living from your work, resist the urge to monetize every single bit of your creative practice. Be sure there’s at least a tiny part of you that’s </span><u><span>off-limits</span></u><span> to the marketplace. Some little piece that you keep for yourself.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>insanely: </span><em><span>adv.</span></em><span>疯狂地；狂暴地；精神错乱地</span></p><blockquote><p><span>Everyone is gibbering </span><strong><span>insanely</span></strong><span>, nerves frayed, as showtime approaches.</span></p><p><span>演出临近，人人疯狂地叽叽喳喳，神经紧张。</span></p></blockquote><p><span>breadwinning: 养家糊口；挣饭吃的</span></p><blockquote><p><span>Men’s egos are very much tied to their careers and their </span><strong><span>breadwinning</span></strong><span> capabilities.</span></p><p><span>男子的自尊心与他们的职业和养家能力联系得相当紧密。</span></p></blockquote><p><span>monetize: </span><em><span>v.</span></em><span>把……定为货币，使成为合法货币；铸造成货币；（通过网站访客）赚钱</span></p><blockquote><p><span>Do you actually want to </span><strong><span>monetize</span></strong><span> your blog?</span></p><p><span>你真的想利用你的博客来赚钱吗？</span></p></blockquote><p><span>off-limits: </span><em><span>adj.</span></em><span>禁止进入的，禁区的</span></p><blockquote><p><span>The subject was ruled </span><strong><span>off</span></strong><span>-</span><strong><span>limits</span></strong><span>.</span></p><p><span>规定禁止谈论这个话题。</span></p></blockquote></blockquote><p><span>Times are always tough economically for artists and freelancers, so define the sort of lifestyle you want to live, budget for your expenses, and draw the line between what you will and won’t do for money.</span></p><p><span>And remember: If you want maximum artistic freedom, keep your overhead low. A free creative life is not about living within your means, it’s about living below your means.</span></p><p><span>“Do what you love!” cry the motivational speakers. But I think anybody who tells people to do what they love no matter what should also have to teach a money management course.</span></p><p><span>“Do what you love” + low overhead = a good life.</span></p><p><span>“Do what you love” + “I deserve nice things” = a </span><u><span>time</span></u><span> bomb.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>time:</span></p><ul><li><p><em><span>n</span></em><span>.</span></p></li><li><p><em><span>v.</span></em><span>为……安排时间；把握（击球、射门等）的时机；为……计时，测定……所需的时间</span></p></li><li><p><em><span>conj.</span></em><span>乘以</span></p></li><li><p><em><span>adj.</span></em><span>定时的，定期的，分期的</span></p></li></ul><blockquote><p><span>The object you make is already </span><strong><span>a</span></strong><span> </span><strong><span>time</span></strong><span> </span><strong><span>bomb</span></strong><span>.</span></p><p><span>你做出来的东西迟早都会出问题。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“It’s always good to have a hobby where there’s no way to monetize it . . . So follow your dreams, but right up to the point where they become your job, and then run in the other direction.”<br/>—David Rees </p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “Not everything that can be counted counts, and not everything that counts can be counted.”<br/>—William Bruce Cameron</p><hr style="background:brown"/><h3 id='ignore-the-numbers'><span>Ignore the numbers.</span></h3><p><span>Money is not the only measurement that can corrupt your creative practice. Digitizing your work and sharing it online means that it is subject to the world of online metrics: website visits, likes, favorites, shares, reblogs, retweets, follower counts, and more.</span></p><p><span>It’s easy to become as obsessed with online metrics as money. It can then be tempting to use those metrics to decide what to work on next, without taking into account how shallow those metrics really are. An Amazon rank doesn’t tell you whether someone read your book twice and loved it so much she passed it on to a friend. Instagram likes don’t tell you whether an image you made stuck with someone for a month. A stream count doesn’t equal an actual human being showing up to your live show and dancing.</span></p><p><span>What do clicks really mean in the grand scheme of things? All clicks have meant in the short term is that everything online is now </span><u><span>clickbait</span></u><span>, optimized for the short attention span. The quick hit.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>clickbait: </span><em><span>n</span></em><span>．点击诱饵：指网络上为吸引用户点击而设计的具有误导性或夸张性的标题或内容。</span></p><blockquote><p><span>· The article&#39;s title was pure clickbait, but the content was actually informative.</span></p><p><span>这篇文章的标题纯粹是点击诱饵，但内容实际上很有信息量。</span></p></blockquote></blockquote><p><span>I noticed a long time ago that there’s actually very little correlation between what I love to make and share and the numbers of likes, favorites, and retweets it gets. I’ll often post something I loved making that took me forever and crickets chirp. I’ll post something else I think is sort of lame that took me no effort and it will go viral. If I let those metrics run my personal practice, I don’t think my heart could take it very long.</span></p><p><span>If you share work online, try to ignore the numbers at least every once in a while. Increase the time between your sharing and receiving feedback. Post something and don’t check the response for a week. Turn off the analytics for your blog and write about whatever you want. Download a browser plug-in that makes the numbers disappear from social media.</span></p><p><span>When you ignore quantitative measurements for a bit, you can get back to qualitative measurements. Is it good? Really good? Do you like it? You can also focus more on what the work does that can’t be measured. What it does to your soul.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“No artist can work simply for results; he must also like the work of getting them.”<br/>—Robert Farrar Capon </p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Don’t make stuff because you want to make money—it will never make you enough money. And don’t make stuff because you want to get famous—because you will never feel famous enough. Make gifts for people—and work hard on making those gifts in the hope that those people will notice and like the gifts.”<br/>—John Green </p><hr style="background:brown"/><h3 id='where-there-is-no-gift-there-is-no-art'><span>Where there is no gift, there is no art.</span></h3><p><span>You know what success is, or at least you have your own definition of it. (Mine: when my days look how I want them to look.)</span></p><p><span>“</span><u><span>Suckcess</span></u><span>,” on the other hand, is success on somebody else’s terms. Or undeserved success. Or when something you think sucks becomes successful. Or when success or chasing after it just plain starts to suck.</span></p><p><span>“Suckcess” is what poet Jean Cocteau was referring to when he said, “There is a kind of success worse than failure.”</span></p><p><span>In his book The Gift, Lewis Hyde argues that art exists in both gift and market economies, but “where there is no gift, there is no art.” When our art is taken over by market considerations—what’s getting clicks, what’s selling—it can quickly lose the gift element that makes it art.</span></p><p><span>We all go through cycles of </span><u><span>disenchantment</span></u><span> and </span><u><span>re-enchantment</span></u><span> with our work. When you feel as though you’ve lost or you’re losing your gift, the quickest way to recover is to step outside the marketplace and make gifts.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>disenchantment: </span><code>/ ˌdɪsɪnˈtʃæntmənt /</code><span> </span><em><span>n.</span></em><span>醒悟，清醒；不抱幻想</span></p><blockquote><p><span>The men have told him strikingly similar stories of </span><strong><span>disenchantment</span></strong><span>.</span></p><p><span>这些人向他叙述的觉醒故事惊人地相似。</span></p></blockquote><p><span>re-enchantment: 复魅；再魅化</span></p></blockquote><p><span>There’s nothing as pure as making something specifically for someone special. When my son Owen was five, he was obsessed with robots, so whenever I started hating myself and my work, I’d knock off for half an hour and make a robot collage out of tape and magazines. When I gave him the robot, he’d often turn right around and make a robot for me. We traded back and forth like that for a brief while until, as kids do, he dropped robots and became obsessed with something else. Those robots are still some of my favorite things I’ve ever made.</span></p><p><span>Try it: If you’re </span><u><span>bummed</span></u><span> out and hating your work, pick somebody special in your life and make something for them. If you have a big audience, make them something special and give it away. Or maybe even better: Volunteer your time and teach someone else how to make what you make and do what you do. See how it feels. See whether it puts you in a better place.</span></p><p><span>You never know when a gift made for a single person will turn into a gift for the whole world. Consider how many bestselling stories began their life as </span><u><span>bedtime</span></u><span> stories for specific children. A. A. Milne made up Winnie-the-Pooh for his son, Christopher Robin Milne. Astrid Lindgren’s </span><u><span>bedridden</span></u><span> daughter Karin asked her to tell a story about some girl named Pippi Longstocking. C. S. Lewis convinced J. R. R. Tolkien to turn the </span><u><span>fantastical</span></u><span> stories he told his children into The Hobbit. The list goes on and on.</span></p><p><span>Making gifts </span><u><span>puts us in touch with</span></u><span> our gifts.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bummed: </span></p><ul><li><p><em><span>adj.</span></em><span>不高兴的；烦恼的.</span></p></li><li><p><span>动词bum的过去式和过去分词形式</span></p></li></ul><blockquote><p><span>He </span><strong><span>bummed</span></strong><span> around the world for a year.</span></p><p><span>他在世界各地漫游了一年。</span></p></blockquote><p><span>bum:</span></p><ul><li><p><em><span>n.</span></em><span>&lt;英，非正式&gt;屁股；&lt;美，非正式&gt;流浪汉，流浪乞丐；&lt;非正式&gt;迷恋某项活动者；&lt;非正式&gt;懒汉，游手好闲者</span></p></li><li><p><em><span>v.</span></em><span>&lt;英，非正式&gt;讨，乞讨；&lt;非正式&gt;（漫无目的地）闲荡，漫游（bum around）；&lt;非正式&gt;（使）难过，使失望</span></p></li><li><p><em><span>adj.</span></em><span>&lt;非正式&gt;蹩脚的，毫无用处的；&lt;非正式&gt;不合法的，无效的；&lt;美，非正式&gt;受伤的，受损的</span></p></li></ul><blockquote><p><span>This </span><strong><span>bum</span></strong><span> is an unemployed man in the slum.</span></p><p><span>这个流浪汉是贫民区的一个失业者。</span></p></blockquote><p><span>bedtime: </span></p><ul><li><p><em><span>n.</span></em><span>就寝时间</span></p></li><li><p><em><span>adj.</span></em><span>适于睡前的</span></p></li></ul><blockquote><p><span>Will you read me a </span><strong><span>bedtime</span></strong><span> story?</span></p><p><span>给我读个睡前故事好吗？</span></p></blockquote><p><span>bedridden: </span><code>/ ˈbedrɪdn /</code><span> </span><em><span>adj.</span></em><span>卧床不起的</span></p><blockquote><p><span>Lost your job, or </span><strong><span>bedridden</span></strong><span> for days?</span></p><p><span>没工作了，或者整天卧床不起？</span></p></blockquote><p><span>fantastical: </span><em><span>adj.</span></em><span>奇异的，虚构的</span></p><blockquote><p><span>It is </span><strong><span>fantastical</span></strong><span>, falsidical and deceitful.</span></p><p><span>它是虚幻的，虚假的，欺骗的。</span></p></blockquote><p><span>puts us in touch with: 让我们联系到</span></p><p><span>in touch with: 与某人保持经常见面或交流的状态</span></p><blockquote><p><span>· I try to stay in touch with my old friends from college.</span></p><p><span>我尽力与我大学时的老朋友保持联系。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“What I’m really concerned about is reaching one person.”<br/>—Jorge Luis Borges </p><hr style="background:brown"/><p>&nbsp;</p><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

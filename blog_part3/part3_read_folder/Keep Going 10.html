@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 10</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">10</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#plant-your-garden">Plant Your Garden</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#creativity-has-seasons">Creativity has seasons.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#this-too-shall-pass">This, too, shall pass.</a></span></p></div><hr /><h2 id='plant-your-garden'><span>Plant Your Garden</span></h2><h3 id='creativity-has-seasons'><span>Creativity has seasons.</span></h3><p><span>After being a nun in Los Angeles for thirty years, Corita Kent moved across the country to Boston so she could live quietly and make her art. Her apartment had a big bay window and a </span><u><span>maple</span></u><span> tree out front, and she liked to sit there and observe the tree changing throughout the seasons. (Something much harder to do in Los Angeles, or here in Austin, Texas, where we have two seasons: hot and hotter.)</span></p><p><span>“That tree was the great teacher of the last two decades of her life,” her former student Mickey Myers said. “She learned from that tree. The beauty it produced in spring was only because of what it went through during the winter, and sometimes the harshest winters </span><u><span>yielded</span></u><span> the most </span><u><span>glorious</span></u><span> springs.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>maple: </span></p><ul><li><p><em><span>n.</span></em><span>（生长在加拿大等北方国家的）槭树，枫树（=maple tree）；槭木，枫木</span></p></li><li><p><em><span>n.</span></em><span>淡棕色</span></p></li></ul><blockquote><p><span>She was stoking the stove with sticks of </span><strong><span>maple</span></strong><span>.</span></p><p><span>她正在给炉子添枫树枝。</span></p></blockquote><p><span>yielded: </span><em><span>v.</span></em><span>[力]屈服；[经]生产（yield 的过去分词）；屈曲</span></p><blockquote><p><span>He reluctantly </span><strong><span>yielded</span></strong><span> to their demands.</span></p><p><span>他不情愿地屈从于他们的要求。</span></p></blockquote><p><span>glorious: </span><em><span>adj.</span></em><span>光荣的，值得称道的；辉煌的，绚丽的；极其愉快的；（天气）阳光灿烂的</span></p><blockquote><p><span>Harrison had a </span><strong><span>glorious</span></strong><span> career spanning more than six decades.</span></p><p><span>哈里森有过一段长达六十余年的辉煌的职业生涯。</span></p></blockquote></blockquote><p><span>A journalist came to visit her and asked what she’d been up to. “Well . . . watching that maple tree grow outside. I’ve never had time to watch a tree before,” she said.</span></p><p><span>She talked about how she moved into the apartment in October when the tree was in full leaf, and how she watched it lose its leaves for the rest of the fall. In the winter, the tree was covered in snow. In the spring, little flowers came out and the tree didn’t look like a maple tree at all. Finally, the leaves became recognizable, and the tree was itself again.</span></p><p><span>“That, in a way, is very much how I feel about my life,” she said. “Whether it will ever be recognizable by anyone else I don’t know, but I feel that great new things are happening very quietly inside me. And I know these things have a way, like the maple tree, of finally bursting out in some form.”</span></p><p><span>For Kent, the tree came to represent creativity itself. Like a tree, creative work has seasons. Part of the work is to know which season you’re in, and act accordingly. In winter, “the tree looks dead, but we know it is beginning a very deep process, out of which will come spring and summer.”</span></p><p><span>The comedian George Carlin lamented how obsessed we all are with the notion of forward, visible progress. “It’s the American view that everything has to keep climbing: productivity, profits, even comedy.” He felt we made no time for reflection. “No time to contract before another expansion. No time to grow up,” he said. “No time to learn from your mistakes. But that notion goes against nature, which is </span><u><span>cyclical</span></u><span>.”</span></p><p><span>You have to pay attention to the rhythms and cycles of your creative output and learn to be patient in the off-seasons. You have to give yourself time to change and observe your own patterns. “Live in each season as it passes,” wrote Henry David Thoreau, “and resign yourself to the influences of each.”</span></p><p><span>One way to get in touch with your own seasons is to follow Kent and Thoreau’s leads and observe the seasons in nature. Draw the same tree every week for a year. Take up casual </span><u><span>astronomy</span></u><span>. Watch the sun rise and set for a week. Observe the moon every night for a few cycles. Try to get a feel for </span><u><span>nonmechanical</span></u><span> time, and see if it </span><u><span>recalibrates</span></u><span> you and changes how you feel about your progress.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cyclical: </span><em><span>adj.</span></em><span>周期的，循环的</span></p><blockquote><p><span>Economic activity often follows a </span><strong><span>cyclical</span></strong><span> pattern.</span></p><p><span>经济活动常常遵循周期性模式。</span></p></blockquote><p><span>astronomy: </span><em><span>n.</span></em><span>天文学</span></p><blockquote><p><span>We are on the threshold of a new era in </span><strong><span>astronomy</span></strong><span>.</span></p><p><span>我们将迈入天文学的新时代。</span></p></blockquote><p><span>nonmechanical:</span></p><ul><li><p><span>非碎屑的</span></p></li><li><p><span>非机械破碎的</span></p></li></ul><p><span>recalibrates: </span><em><span>vt.</span></em><span>重新校准，再校准；重校准</span></p><blockquote><p><span>The only positive way out of this negative feedback loop is to </span><strong><span>recalibrate</span></strong><span> the whole system.</span></p><p><span>唯一脱离这个负面回馈循环圈的正面方式是调校整个系统。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Imitate the trees. Learn to lose in order to recover, and remember that nothing stays the same for long.”<br/>—May Sarton</p><hr style="background:brown"/><p><span>Our lives, too, have different seasons. Some of us blossom at a young age; others don’t </span><u><span>blossom</span></u><span> until old age. Our culture mostly celebrates early successes, the people who bloom fast. But those people often wither as quickly as they bloom. It’s for this reason that I ignore every “35 under 35” list published. I’m not interested in annuals. I’m interested in perennials. I only want to read the “8 over 80” lists.</span></p><p><span>I don’t want to know how a thirty-year-old became rich and famous; I want to hear how an eighty-year-old spent her life in obscurity, kept making art, and lived a happy life. I want to know how Bill Cunningham jumped on his bicycle every day and </span><u><span>rode</span></u><span> around New York taking photos in his eighties. I want to know how Joan Rivers was able to tell jokes up until the very end. I want to know how in his nineties, Pablo Casals still got up every morning and practiced his </span><u><span>cello</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>blossom:</span></p><ul><li><p><em><span>n.</span></em><span>（树木的）花，花簇；开花，花期</span></p></li><li><p><em><span>v.</span></em><span>开花；成长，繁盛，兴旺</span></p></li></ul><blockquote><p><span>The trees are in </span><strong><span>blossom</span></strong><span>.</span></p><p><span>树上鲜花盛开。</span></p></blockquote><p><span>rode: </span><em><span>v.</span></em><span>骑（ride 的过去式）</span></p><blockquote><p><span>He </span><strong><span>rode</span></strong><span> a Harley Davidson.</span></p><p><span>他骑着一辆哈雷摩托车。</span></p></blockquote><p><span>cello: </span><em><span>n.</span></em><span>大提琴</span></p><blockquote><p><span>The </span><strong><span>cello</span></strong><span> is lower than the violin.</span></p><p><span>大提琴的声音比小提琴低沉。</span></p></blockquote></blockquote><p><span>These are the people I look to for inspiration. The people who found the thing that made them feel alive and who kept themselves alive by doing it. The people who planted their seeds, tended to themselves, and grew into something lasting.</span></p><p><span>I want to be one of them. I want to make </span><u><span>octogenarian</span></u><span> painter David Hockney’s words my personal motto: “I’ll go on until I fall over.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>octogenarian:</span></p><ul><li><p><em><span>n.</span></em><span>八十岁到八十九岁的人</span></p></li><li><p><em><span>adj.</span></em><span>八十岁到八十九岁的</span></p></li></ul><blockquote><p><span>You can maintain a clever, astute and erudite persona whether you&#39;re adolescent or </span><strong><span>octogenarian</span></strong><span>.</span></p><p><span>不管你是青少年还是个八旬老人，你都可以持续你的聪明、机敏和博学。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“There is no measuring with time, no year matters, and ten years are nothing. Being an artist means, not <u style="color:blue">reckoning</u> and counting, but ripening like the tree which does not force its <u style="color:blue">sap</u> and stands confident in the storms of spring without the fear that after them may come no summer. It does come. But it comes only to the patient, who are there as though eternity lay before them, so <u style="color:blue">unconcernedly</u> still and wide. I learn it daily, learn it with pain to which I am grateful: patience is everything!”<br/>—Rainer Maria Rilke </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>reckoning: </span></p><ul><li><p><em><span>n.</span></em><span>计算；清算；算账</span></p></li><li><p><em><span>v.</span></em><span>计算；认为；指望（reckon 的现在分词）</span></p></li></ul><blockquote><p><span>The mechanical clock kept equal hours, and this implied a new time </span><strong><span>reckoning</span></strong><span>.</span></p><p><span>机械钟的时间是一样的，这就意味着要进行新的时间计算。</span></p></blockquote><p><span>sap: </span></p><ul><li><p><em><span>n.</span></em><span>（植物的）汁，液；&lt;非正式&gt;傻瓜，容易上当的人；元气，活力；&lt;史&gt;（用以偷袭设防场所的）坑道，地道；大头短棒，棍棒</span></p></li><li><p><em><span>v.</span></em><span>使削弱，使虚弱；&lt;史&gt;挖坑道；用大头短棒击，用棍棒打；（地理）（水或冰川作用）逐渐侵蚀；&lt;古&gt;破坏……的基础，侵蚀……的基础</span></p></li></ul><blockquote><p><span>The leaves, bark and </span><strong><span>sap</span></strong><span> are also common ingredients of local herbal remedies.</span></p><p><span>树叶、树皮和树液也是当地草药疗法的常用药材。</span></p></blockquote><p><span>unconcernedly: </span><em><span>adv.</span></em><span>不在乎地；漠不关心地</span></p><blockquote><p><span>The person, who is really lonely, will stand in the rain </span><strong><span>unconcernedly</span></strong><span>, no matter how heavy the rain is.</span></p><p><span>真正寂寞的人总是喜欢毫无保留的站在雨里，不管雨多大。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “It is said an Eastern <u style="color:blue">monarch</u> once charged his wise men to <u style="color:blue">invent</u> him a sentence, to be ever in view, and which should be true and appropriate in all times and situations. They presented him the words: ‘And this, too, shall pass away.’ How much it expresses! How <u style="color:blue">chastening</u> in the hour of pride! —how consoling in the depths of <u style="color:blue">affliction</u>! ‘And this, too, shall pass away.’”<br/>—Abraham Lincoln</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>monarch: </span><em><span>n.</span></em><span>君主，女王；黑脉金斑蝶；王鹟</span></p><blockquote><p><span>He had the ear of the </span><strong><span>monarch</span></strong><span>.</span></p><p><span>他在君主那里说得上话。</span></p></blockquote><p><span>invent: </span><em><span>v.</span></em><span>发明，创造；编造，虚构</span></p><blockquote><p><span>What excuse did he </span><strong><span>invent</span></strong><span> this time?</span></p><p><span>他这次编了什么借口？</span></p></blockquote><p><span>chastening: </span></p><ul><li><p><em><span>adj.</span></em><span>精练的；惩罚性的；矫正性的</span></p></li><li><p><em><span>v.</span></em><span>惩罚；遏制；使……精炼（chasten 的 ing 形式）</span></p></li></ul><blockquote><p><span>It was a </span><strong><span>chastening</span></strong><span> experience.</span></p><p><span>那是一次令人遗憾的经历。</span></p></blockquote><p><span>affliction: </span><em><span>n.</span></em><span>苦难；苦恼；折磨</span></p><blockquote><p><span>It was a heavy </span><strong><span>affliction</span></strong><span> to them to see the beloved prince so stricken.</span></p><p><span>看到心爱的王子如此受折磨，他们感到非常痛苦。</span></p></blockquote></blockquote><h3 id='this-too-shall-pass'><span>This, too, shall pass.</span></h3><p><span>The outer demons I mentioned in the last chapter—the men who are </span><u><span>hell-bent</span></u><span> on wrecking this planet, carving it up for profit like cartoon Lex Luthors—they’re not going to last forever. They are going to leave this place just like us. They might take us with them, for sure. But we’re all headed toward the same end. No matter what, this, too, shall pass, and they shall pass, too. I take comfort in that.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hell-bent: </span><em><span>adj.</span></em><span>拼命的；固执的</span></p><blockquote><p><span>He seems </span><strong><span>hell</span></strong><span>-</span><strong><span>bent</span></strong><span> on drinking himself to death.</span></p><p><span>他一个劲地喝酒，似乎命都不要了。</span></p></blockquote></blockquote><p><span>The house I live in is more than forty years old. Not that old, really, in the scheme of things, but my kids climb trees that were alive during the Nixon administration. I’ve learned from the older neighbors I chat with on our morning walk that the wife of the couple who built our house loved to garden. My wife has taken up gardening as well: She makes </span><u><span>bouquets</span></u><span> out of flowers the former lady of the house planted.</span></p><p><span>Our bathroom window looks out onto our </span><u><span>backyard</span></u><span> garden. When nature calls, I’ll take a break from writing and I’ll look out the window at my wife digging in the </span><u><span>dirt</span></u><span>, showing my sons the various plants, offering them the edible ones to taste. I look out on that scene and even on desperate days I’m filled with hope.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bonquets:</span></p><blockquote><p><span>Never let fear keep your from reaching for life&#39;s </span><strong><span>bonquets</span></strong><span>.</span></p><p><span>永远不要让害怕阻碍你追寻人生的幸福。</span></p></blockquote><p><span>backyard: </span><em><span>n.</span></em><span>后院；后庭</span></p><blockquote><p><span>We found a man nosing around in our </span><strong><span>backyard</span></strong><span>.</span></p><p><span>我们发现有个人在我们后院里找什么东西。</span></p></blockquote><p><span>dirt:</span></p><ul><li><p><em><span>n.</span></em><span>污物，尘土；泥土，松土；丑闻，流言蜚语</span></p></li><li><p><em><span>adj.</span></em><span>土的，泥的</span></p></li></ul><blockquote><p><span>His clothes were covered in </span><strong><span>dirt</span></strong><span>.</span></p><p><span>他的衣服沾满了污垢。</span></p></blockquote></blockquote><p><span>Because gardening requires so much patience and attention, gardeners have a unique sense of time and perspective.</span></p><p><span>The months leading up to World War II were some of the most terrible months in the life of Leonard and Virginia Woolf, as they “helplessly and hopelessly” watched events unfold. Leonard said one of the most horrible things was listening to Hitler’s </span><u><span>rants</span></u><span> on the radio—“the </span><u><span>savage</span></u><span> and insane ravings of a </span><u><span>vindictive</span></u><span> </span><u><span>underdog</span></u><span> who suddenly saw himself to be </span><u><span>all-powerful</span></u><span>.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>rants:</span></p><p><em><span>n</span></em><span>．激昂的长篇大论，激昂的演说：长篇大论或激昂的演说，通常表达强烈的情感或观点。</span></p><p><em><span>v</span></em><span>．咆哮，激昂地说：激昂地说或抱怨某事，通常表达强烈的情感或观点。</span></p><blockquote><p><span>It takes a lot of nervous energy for me to listen to other people&#39;s </span><strong><span>rants</span></strong><span>.</span></p><p><span>聆听他人的抱怨会消耗我大量的精力。</span></p></blockquote><p><span>savage:</span></p><ul><li><p><em><span>adj.</span></em><span>凶猛的，残暴的；猛烈的，恶狠狠的；极严重的，大幅度的；&lt;旧&gt;未开化的，野蛮的；（土地）荒凉的，无人烟的</span></p></li><li><p><em><span>n.</span></em><span>&lt;旧&gt;未开化的人，野蛮人； 凶狠残暴的人；（纹章）长须半裸带叶环男人形</span></p></li><li><p><em><span>v.</span></em><span>（动物）凶猛攻击，撕咬； 激烈抨击，猛烈批评</span></p></li></ul><blockquote><p><span>This was a </span><strong><span>savage</span></strong><span> attack on a defenceless young girl.</span></p><p><span>这是对一个无力自卫的小姑娘的野蛮袭击。</span></p></blockquote><p><span>vindictive: </span><em><span>adj.</span></em><span>怀恨的；有报仇心的；惩罚的</span></p><blockquote><p><span>A black frown settled down upon the hermit&#39;s face, and he clenched his bony hands with a </span><strong><span>vindictive</span></strong><span> energy.</span></p><p><span>隐士的脸上现出凶恶的神色，他握紧瘦骨嶙峋的双手，一副要报仇的样子。</span></p></blockquote><p><span>underdog: </span><em><span>n.</span></em><span>比赛中不被看好者；失败者；受压迫者；斗败了的狗；黑马</span></p><blockquote><p><span>Most of the crowd were cheering for the </span><strong><span>underdog</span></strong><span> to win just this one time.</span></p><p><span>人群中大多数人在为那位处于劣势者赢得一次比赛而加油鼓劲。</span></p></blockquote><p><span>all-powerful: </span><em><span>adj.</span></em><span>全能的</span></p><blockquote><p><span>The once </span><strong><span>all</span></strong><span>-</span><strong><span>powerful</span></strong><span> dollar isn&#39;t doing a Titanic against just the pound.</span></p><p><span>曾经无所不能的美元如今已经无法与英镑匹敌了。</span></p></blockquote></blockquote><p><span>One afternoon, he was planting purple </span><u><span>irises</span></u><span> in the orchard under an apple tree. “Suddenly I heard Virginia’s voice calling to me from the sitting room window.”</span></p><p><span>Hitler was making another speech.</span></p><p><span>But Leonard had had enough.</span></p><p><span>“I shan’t come!” he shouted back to Virginia. “I’m planting iris and they will be flowering long after he is dead.’”</span></p><p><span>He was right. In his </span><u><span>memoir</span></u><span>, Downhill All the Way, Leonard Woolf noted that twenty-one years after Hitler committed suicide in the bunker, a few of those purple flowers still </span><u><span>bloomed</span></u><span> in the </span><u><span>orchard</span></u><span> under the apple tree.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>irises: </span></p><ul><li><p><em><span>n.</span></em><span>虹，虹状物（iris 的复数）；鸢尾花</span></p></li><li><p><em><span>v.</span></em><span>使……呈彩虹色；使……呈虹状（iris 的第三人称单数）</span></p></li></ul><blockquote><p><span>Look at your eyes - the </span><strong><span>irises</span></strong><span>.</span></p><p><span>看看你的眼睛-虹膜。</span></p></blockquote><p><span>memoir: </span><code>/ ˈmemwɑːr /</code><em><span>n.</span></em><span>回忆录，自传（memoirs）；传略，实录；专题学术论文；（学会）讨论事项纪要，议事录（memoirs）</span></p><blockquote><p><span>His 1998 </span><strong><span>memoir</span></strong><span> is a delightful trip down memory lane.</span></p><p><span>他1998年的回忆录是一次愉快的怀旧之旅。</span></p></blockquote><p><span>bloomed:</span></p><ul><li><p><em><span>adj.</span></em><span>模糊的；无反射的</span></p></li><li><p><em><span>v.</span></em><span>盛开；兴旺；把钢锭等轧成坯块；使模糊（bloom 的过去分词）</span></p></li></ul><blockquote><p><span>The children had </span><strong><span>bloomed</span></strong><span> during their stay on the farm.</span></p><p><span>孩子们在农场期间健康活泼有生气。</span></p></blockquote><p><span>orchard: </span><em><span>n.</span></em><span>果园；果树林</span></p><blockquote><p><span>I went into the </span><strong><span>orchard</span></strong><span>.</span></p><p><span>我进了果园。</span></p></blockquote></blockquote><p><span>I don’t know for sure what kinds of flowers I’m planting with my days on this planet, but I intend to find out, and so should you.</span></p><p><span>Every day is a potential seed that we can grow into something beautiful. There’s no time for despair. “The thing to </span><u><span>rejoice</span></u><span> in is the fact that one had the good fortune to be born,” said the poet Mark Strand. “The odds against being born are </span><u><span>astronomical</span></u><span>.” None of us know how many days we’ll have, so it’d be a shame to waste the ones we get.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>rejoice: </span><em><span>v.</span></em><span>非常高兴，深感欣喜；&lt;英&gt;享有（用于吸引人注意奇特之处，尤指名字）（rejoice in）；&lt;古&gt;使感到高兴，使喜悦</span></p><blockquote><p><span>Should we </span><strong><span>rejoice</span></strong><span> in the death of another human being?</span></p><p><span>我们该为另一个人类的死亡而高兴吗？</span></p></blockquote><p><span>astronomical: </span><em><span>adj.</span></em><span>天文（学）的，天体的；（数量、价格或收费）天文数字的，极其巨大的</span></p><blockquote><p><span>The figures are </span><strong><span>astronomical</span></strong><span>.</span></p><p><span>这些都是天文数字。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “This is precisely the time when artists go to work. There is no time for despair, no place for <u style="color:blue">self-pity</u>, no need for silence, no room for fear. We speak, we write, we do language. That is how civilizations <u style="color:blue">heal</u>. I know the world is <u style="color:blue">bruised</u> and <u style="color:blue">bleeding</u>, and though it is important not to ignore its pain, it is also critical to refuse to <u style="color:blue">succumb</u> to its <u style="color:blue">malevolence</u>. Like failure, chaos contains information that can lead to knowledge—even wisdom. Like art.”<br/>—Toni Morrison</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>self-pity: </span><em><span>n.</span></em><span>自怜；自哀</span></p><blockquote><p><span>He was inclined to </span><strong><span>self</span></strong><span>-</span><strong><span>pity</span></strong><span>.</span></p><p><span>他总是自哀自怜。</span></p></blockquote><p><span>heal: </span><em><span>v.</span></em><span>痊愈，康复；（感情创伤）愈合，（情感）恢复常态；（使）（裂痕、创伤）弥合，（使）和好；止息（争斗），调停；修复（对土地的破坏）；减轻（痛苦）</span></p><blockquote><p><span>That cut is taking a long time to </span><strong><span>heal</span></strong><span>.</span></p><p><span>那伤口需要很长时间才能愈合。</span></p></blockquote><p><span>bruised: </span></p><ul><li><p><em><span>adj.</span></em><span>青肿的；瘀紫的</span></p></li><li><p><em><span>v.</span></em><span>擦伤（bruise 的过去式）</span></p></li></ul><blockquote><p><span>He was slightly </span><strong><span>bruised</span></strong><span> but otherwise unhurt.</span></p><p><span>他除了一点青肿之外没有受伤。</span></p></blockquote><p><span>bleeding:</span></p><ul><li><p><em><span>n.</span></em><span>出血；渗色</span></p></li><li><p><em><span>adj.</span></em><span>流血的；同情的</span></p></li><li><p><em><span>v.</span></em><span>出血；渗出（bleed 的 ing 形式）；感到疼痛</span></p></li></ul><blockquote><p><span>I&#39;m not a </span><strong><span>bleeding</span></strong><span> heart liberal.</span></p><p><span>我不是一个假装同情只说不做的自由主义者。</span></p></blockquote><p><span>succumb: </span><em><span>v.</span></em><span>屈服，屈从；病情加重，死于（某疾病）</span></p><blockquote><p><span>A common defense of sport hunting is that it serves a vital wildlife-management function, without which countless animals would </span><strong><span>succumb</span></strong><span> to starvation and disease.</span></p><p><span>运动狩猎的一个常见辩护是，它提供了至关重要的野生动物管理功能，没有它，无数的动物将会死于饥饿和疾病。</span></p></blockquote><p><span>malevolence:</span><code>/ məˈlevələns /</code><span> </span><em><span>n.</span></em><span>恶意，怨恨；狠毒</span></p><blockquote><p><span>But he did not know what </span><strong><span>malevolence</span></strong><span> was.</span></p><p><span>但是他却不知道什么是恶毒。</span></p></blockquote></blockquote><p><span>Whenever life gets </span><u><span>overwhelming</span></u><span>, go back to chapter one of this book and think about your days. Try your best to fill them in ways that get you a little closer to where you want to be. Go easy on yourself and take your time. Worry less about getting things done. Worry more about things worth doing. Worry less about being a great artist. Worry more about being a good human being who makes art. Worry less about making a mark. Worry more about leaving things better than you found them.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>overwhelming:</span></p><ul><li><p><em><span>adj.</span></em><span>难以抗拒的，令人不知所措的；巨大的，压倒性的</span></p></li><li><p><em><span>v.</span></em><span>（感情上）使受不了，使不知所措；压垮，使应接不暇；打败，击垮（overwhelm 的现在分词形式）</span></p></li></ul><blockquote><p><span>The sense of déjà vu was </span><strong><span>overwhelming</span></strong><span>.</span></p><p><span>似曾经历过的感觉非常强烈。</span></p></blockquote></blockquote><p><span>Keep working. Keep playing. Keep drawing. Keep looking. Keep listening. Keep thinking. Keep dreaming. Keep singing. Keep dancing. Keep painting. Keep sculpting. Keep designing. Keep composing. Keep acting. Keep cooking. Keep searching. Keep walking. Keep exploring. Keep giving. Keep living. Keep paying attention.</span></p><p><span>Keep doing your verbs, whatever they may be.</span></p><p><span>Keep going.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“There is art left to be made in this world.”<br/>—Anthony Bourdain(1956-2018) </p><hr style="background:brown"/><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

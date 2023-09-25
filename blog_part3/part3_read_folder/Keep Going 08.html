@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 08</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">08</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#when-in-doubt-tidy-up">When In Doubt, Tidy Up.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#keep-your-tools-tidy-and-your-materials-messy">Keep your tools tidy and your materials messy.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n148"><a class="md-toc-inner" href="#tidying-is-exploring">Tidying is exploring.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n210"><a class="md-toc-inner" href="#sleep-tidies-up-the-brain">Sleep tidies up the brain.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n271"><a class="md-toc-inner" href="#leave-things-better-than-you-found-them">Leave things better than you found them.</a></span></p></div><hr /><h2 id='when-in-doubt-tidy-up'><span>When In Doubt, Tidy Up.</span></h2><h3 id='keep-your-tools-tidy-and-your-materials-messy'><span>Keep your tools tidy and your materials messy.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The disorder of the desk, the floor; the yellow Post-it notes everywhere; the <u style="color:blue">whiteboards</u> covered with <u style="color:blue">scrawl</u>: all this is the <u style="color:blue">outward</u> manifestation of the <u style="color:blue">messiness</u> of human thought.”<br/>—Ellen Ullman </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>whiteboards: </span><em><span>n.</span></em><span>白色书写板</span></p><blockquote><p><span>Obviously </span><strong><span>whiteboards</span></strong><span> require markers and erasers.</span></p><p><span>当然，白板需要有配套的马克笔和板擦。</span></p></blockquote><p><span>scrawl:</span></p><ul><li><p><em><span>v.</span></em><span>马马虎虎（或潦草）地写</span></p></li><li><p><em><span>n.</span></em><span>潦草的笔迹；潦草的字条（或短信）</span></p></li></ul><blockquote><p><span>Her signature was an illegible </span><strong><span>scrawl</span></strong><span>.</span></p><p><span>她的签名潦草难辨。</span></p></blockquote><p><span>outward:</span></p><ul><li><p><em><span>adj.</span></em><span>外表的，表面的；（特定方面）可见的，外部的；朝外的，向外的；（旅程）往外地的，外出的</span></p></li><li><p><em><span>adv.</span></em><span>向外，朝外；自身之外；明显地，公然地</span></p></li><li><p><em><span>n.</span></em><span>外表，外面；外部世界，物质世界</span></p></li></ul><blockquote><p><span>Mark showed no </span><strong><span>outward</span></strong><span> signs of distress.</span></p><p><span>马克在外表上没有现出沮丧的神色来。</span></p></blockquote><p><span>messiness: </span><em><span>n.</span></em><span>乱糟糟；混乱</span></p><blockquote><p><span>Now all it can face is the noise; it must stare the </span><strong><span>messiness</span></strong><span> of life in the eye.</span></p><p><span>现在它所面对的只剩下噪音；它必须直面生命的杂乱。</span></p></blockquote></blockquote><p><span>This is a bad time to be a </span><u><span>pack</span></u><span> </span><u><span>rat</span></u><span>. The </span><u><span>propaganda</span></u><span> against </span><u><span>clutter</span></u><span> and the </span><u><span>mania</span></u><span> for tidying has been whipped up by TV shows like Hoarders and Storage Wars and countless blogs that </span><u><span>fetishize</span></u><span> orderly studios and perfect workspaces with “things organized neatly,” </span><u><span>culminating</span></u><span> in Marie Kondo’s </span><u><span>gigantic</span></u><span> bestseller, The Life-Changing Magic of Tidying Up. While Kondo’s tips can work wonders on your </span><u><span>sock</span></u><span> drawer or your kitchen </span><u><span>pantry</span></u><span>, I have serious doubts about their usefulness to artists.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pack rat: 囤积者：指一个收集或囤积不必要物品的人。</span></p><blockquote><p><span>· My neighbor is a pack rat, he has a garage full of old furniture and appliances.</span></p><p><span>我的邻居是个囤积者，他的车库里堆满了旧家具和电器。</span></p></blockquote><p><span>propaganda: </span><em><span>n.</span></em><span>宣传，鼓吹；（罗马天主教的）传信部（Propaganda）</span></p><blockquote><p><span>Art may be used as a vehicle for </span><strong><span>propaganda</span></strong><span>.</span></p><p><span>艺术可以用作宣传的工具。</span></p></blockquote><p><span>clutter:</span></p><ul><li><p><em><span>n.</span></em><span>杂乱的东西；杂乱</span></p></li><li><p><em><span>v.</span></em><span>乱堆，塞满；使（脑子里）塞满（乱七八糟的事）</span></p></li></ul><blockquote><p><span>There was a </span><strong><span>clutter</span></strong><span> of bottles and tubes on the shelf.</span></p><p><span>架子上胡乱堆满了瓶子和管子。</span></p></blockquote><p><span>mania: </span><em><span>n.</span></em><span>狂热，热衷；躁狂症</span></p><blockquote><p><span>Too much happiness (think </span><strong><span>mania</span></strong><span>) can be destructive.</span></p><p><span>太多的快乐（幻想狂躁症）可能是破坏性的。</span></p></blockquote><p><span>fetishize: </span><em><span>vt.</span></em><span>盲目迷恋；以……为偶像</span></p><blockquote><p><span>People </span><strong><span>fetishize</span></strong><span> food more than they did before.</span></p><p><span>人们比以往更迷恋食物。</span></p></blockquote><p><span>culminating: </span><em><span>v.</span></em><span>达到顶点；告终（culminate 的现在分词）</span></p><blockquote><p><span>As densities increased, domestic architecture became larger, </span><strong><span>culminating</span></strong><span> in crowded pueblos.</span></p><p><span>随着密度的增加，住宅建筑变得更大，最终形成拥挤的村庄。</span></p></blockquote><p><span>gigantic: </span><em><span>adj.</span></em><span>巨大的，庞大的</span></p><blockquote><p><span>The </span><strong><span>gigantic</span></strong><span> natural harbour is a haven for boats.</span></p><p><span>这个巨大的天然港是船舶的避风港。</span></p></blockquote><p><span>sock: </span></p><ul><li><p><em><span>n.</span></em><span>短袜；&lt;非正式&gt;猛击，重击；（马小腿处的）白色标记；&lt;美&gt;实力，重点；鞋垫</span></p></li><li><p><em><span>v.</span></em><span>&lt;非正式&gt;猛击；&lt;非正式&gt;使遭损失，损害；&lt;美&gt;（棒球运动中）猛击，狠打（球）；给……穿袜</span></p></li></ul><blockquote><p><span>You&#39;ve worn a hole in your </span><strong><span>sock</span></strong><span>.</span></p><p><span>你的袜子磨出了个洞。</span></p></blockquote><p><span>pantry: </span><em><span>n.</span></em><span>餐具室；食品室；食品储藏室</span></p><blockquote><p><span>Besides the meal and </span><strong><span>pantry</span></strong><span> food lockers, a fresh food locker is packed at KSC and installed on the shuttle 18 to 24 hours before launch.</span></p><p><span>除了饭和食品储藏室，一个新食品柜也在肯尼迪天空中心被打包，并在发射前18到24小时装上航天飞机。</span></p></blockquote></blockquote><p><span>My studio, like my mind, is always a bit of a mess. Books and newspapers are piled everywhere, pictures are </span><u><span>torn</span></u><span> out and stuck on the wall, cut-up scraps litter the floor. But it’s not an accident that my studio is a mess. I love my mess. I intentionally cultivate my mess.</span></p><p><span>Creativity is about connections, and connections are not made by </span><u><span>siloing</span></u><span> everything off into its own space. New ideas are formed by interesting </span><u><span>juxtapositions</span></u><span>, and interesting juxtapositions happen when things are out of place.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>torn: </span></p><ul><li><p><em><span>adj.</span></em><span>犹豫的</span></p></li><li><p><em><span>v.</span></em><span>撕碎，撕裂；撕破，划破；撕掉，扯掉（tear 的过去分词）</span></p></li></ul><blockquote><p><span>I&#39;ve </span><strong><span>torn</span></strong><span> a calf muscle.</span></p><p><span>我拉伤了小腿肌肉。</span></p></blockquote><p><span>siloing: </span><em><span>v</span></em><span>．孤立，隔离：在组织或团队中，将信息、资源或人员分隔开，导致沟通和协作困难。</span></p><blockquote><p><span>· The company is trying to break down the siloing that has been preventing effective communication.</span></p><p><span>公司正试图打破阻碍有效沟通的孤立现象。</span></p></blockquote><p><span>juxtapositions: </span><em><span>n.</span></em><span>并置，并列</span></p><blockquote><p><span>While cruising around Saturn, be on the lookout for picturesque </span><strong><span>juxtapositions</span></strong><span> of moons and rings.</span></p><p><span>游弋在土星周围时，留意观察土卫和土星环并列的如画风景。</span></p></blockquote></blockquote><p><span>You may think that if your studio is tidy, it will free you up to be more efficient, and therefore, you will produce more. Maybe that will help you in the execution stage of your work if you’re, say, a printmaker pulling prints, but it won’t help you come up with an interesting design for the next print. It’s always a mistake to equate productivity and creativity. They are not the same. In fact, they’re frequently at odds with each other: You’re often most creative when you’re the least productive.</span></p><p><span>There is, of course, such a thing as too much clutter. It’s hard to work if you can’t find the things you need when you need them. French chefs practice something called </span><u><span>mise</span></u><span> </span><u><span>en</span></u><span> </span><u><span>place</span></u><span>, which means “set in place.” It’s about planning and preparation: making sure all the ingredients and tools you need are ready before you set to work. “Mise en place is the religion of all good line cooks,” Anthony Bourdain wrote in Kitchen </span><u><span>Confidential</span></u><span>. “Your station, and its condition, its state of readiness, is an extension of your nervous system.”</span></p><p><span>That’s the key word we can steal from chefs: </span><u><span>readiness</span></u><span>. Most of us don’t have hungry diners or health inspectors to worry about. We don’t have to keep our spaces perfectly clean and tidy. We just have to keep them ready for when we want to work. Cartoonist Kevin Huizenga makes the point that having your studio organized does not mean it needs to look organized. “If papers everywhere on the floor makes working easier right now, because you need to constantly refer to them, then they should stay there.”</span></p><p><span>There’s a balance in a workspace between chaos and order. My friend John T. Unger has the perfect rule: Keep your tools organized and your materials messy. “Keep your tools very organized so you can find them,” he says. “Let the materials </span><u><span>cross-pollinate</span></u><span> in a mess. Some pieces of art I made were utter </span><u><span>happenstance</span></u><span>, where a couple items came together in a pile and the piece was mostly done. But if you can’t lay your hands right on the tool you need, you can blow a day (or your enthusiasm and inspiration) seeking it.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>mise: </span><em><span>n.</span></em><span>争论点；权利令状的争论点；协定</span></p><blockquote><p><span>In the </span><strong><span>Mise</span></strong><span>, Louis sided entirely with Henry.</span></p><p><span>在这个协定中路易完全倾向于亨利。</span></p></blockquote><p><span>en: </span><em><span>n.</span></em><span>（铅字的）对开，半身，半方（em全身的一半）；字母 N</span></p><blockquote><p><span>We stopped for a picnic </span><strong><span>en</span></strong><span> route.</span></p><p><span>我们在途中停下来野餐。</span></p></blockquote><p><span>mise en place: 准备工作：一种烹饪过程，指在烹饪前将食材准备和组织好（如在餐厅厨房中）。</span></p><blockquote><p><span>· Before starting to cook, the chef always does the mise en place to ensure a smooth cooking process.</span></p><p><span>在开始烹饪之前，厨师总是会进行准备工作，以确保烹饪过程顺利进行。</span></p></blockquote><p><span>confidential: </span><em><span>adj.</span></em><span>机密的，保密的；（言谈举止）神秘的，隐秘的；受信任的，委以机密的</span></p><blockquote><p><span>My letter is, of course, strictly private and </span><strong><span>confidential</span></strong><span>.</span></p><p><span>当然，我的信纯属私人信件，务须保密。</span></p></blockquote><p><span>readiness: </span><em><span>n.</span></em><span>准备就绪状态；愿意，乐意；快，迅捷</span></p><blockquote><p><span>Everyone has doubts about their </span><strong><span>readiness</span></strong><span> for parenthood.</span></p><p><span>自己是否作好了为人父母的准备，人人都会感到疑虑。</span></p></blockquote><p><span>cross-pollinate: </span><em><span>v.</span></em><span>（使）异花传粉（或受粉）</span></p><blockquote><p><span>When the crops flower, they will </span><strong><span>cross</span></strong><span>-</span><strong><span>pollinate</span></strong><span>, and the organic farmer may have a problem.</span></p><p><span>当作物开花，就会杂混传粉，种有机作物的农民就有麻烦了。</span></p></blockquote><p><span>happenstance: </span><em><span>n.</span></em><span>&lt;文&gt;偶然事件，巧合</span></p><blockquote><p><span>I came to live at the farm by </span><strong><span>happenstance</span></strong><span>.</span></p><p><span>我到这个农场来生活纯属偶然。</span></p></blockquote></blockquote><h3 id='tidying-is-exploring'><span>Tidying is exploring.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I can never find what I want, but the benefit is that I always find something else.” <br/>—Irvine Welsh </p><hr style="background:brown"/><p><span>I keep one of Brian Eno and Peter Schmidt’s “Oblique Strategies” on a big sign above my desk:</span></p><p><span>WHEN IN DOUBT, TIDY UP.</span></p><p><span>Note that it says “when in doubt,” not “always.” Tidying up is for when I’m </span><u><span>stalled out</span></u><span> or stuck. Tidying up a studio is—sorry, Ms. Kondo—not life-changing or magical. It’s just a form of productive procrastination. (Avoiding work by doing other work.)</span></p><p><span>The best thing about tidying is that it busies my hands and loosens up my mind so that I either a) get unstuck or solve a new problem in my head, or b) come across something in the mess that leads to new work. For example, I’ll start tidying and </span><u><span>unearth</span></u><span> an unfinished poem that’s been buried in a stack of papers, or an unfinished drawing that was blown across the garage by the air conditioner.</span></p><p><span>The best studio tidying is a kind of exploring. I rediscover things as I work my way through the clutter. The reason I tidy is not really to clean, but to come into contact with something I’ve forgotten which I can now use.</span></p><p><span>This is a slow, </span><u><span>dreamy</span></u><span>, </span><u><span>ruminative</span></u><span> form of tidying. When I come across a </span><u><span>long-lost</span></u><span> book, for example, I flip to random pages and see if they have anything to tell me. Sometimes scraps of paper fall out of the book like a secret message from the universe.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>stalled out: </span></p><ul><li><p><span>1．熄火；停止或退出</span></p></li><li><p><span>2．减速、停止并持续存在</span></p></li></ul><blockquote><p><span>· The storm is expected to stall out over the city, bringing heavy rain and strong winds.</span></p><p><span>预计风暴将在城市上空减速停止，带来大雨和强风。</span></p></blockquote><p><span>unearth: </span><em><span>v.</span></em><span>发掘，使出土；发现，揭露；从洞中赶出（动物，尤指狐狸）</span></p><blockquote><p><span>They will </span><strong><span>unearth</span></strong><span> the buried treasure here.</span></p><p><span>他们将在这儿挖掘地下宝藏。</span></p></blockquote><p><span>dreamy: </span><em><span>adj.</span></em><span>恍惚的，出神的；轻柔的，梦幻的；不切实际的，爱空想的；美妙的，极好的</span></p><blockquote><p><span>The music has a </span><strong><span>dreamy</span></strong><span>, elegiac quality.</span></p><p><span>那音乐听上去有一种梦幻般的哀伤感。</span></p></blockquote><p><span>ruminative: </span><em><span>adj.</span></em><span>默想的，沉思的；爱反复思考的</span></p><blockquote><p><span>And there are more pathological, or at least more chronic, sources of mental load, such as the </span><strong><span>ruminative</span></strong><span> thought patterns characteristic of stress, anxiety and depression.</span></p><p><span>另有一些更具病理性，或至少更难根除的思维负荷来源，比如压力、焦虑和抑郁状态下特有的冥思苦想模式。</span></p></blockquote><p><span>long-lost: </span><em><span>adj.</span></em><span>很久不见的，杳无音信的；早已逝去的；丢失很久的，失散很久的</span></p><blockquote><p><span>For me it was like meeting a </span><strong><span>long</span></strong><span>-</span><strong><span>lost</span></strong><span> sister. We talked, and talked, and talked.</span></p><p><span>对我来说就像见了久未谋面的姐妹一样。我们聊了又聊，聊个不停。</span></p></blockquote></blockquote><p><span>I often stop tidying because I get </span><u><span>swept</span></u><span> up in reading. This is the exact opposite of what Marie Kondo </span><u><span>prescribes</span></u><span>. When going through your books, she says, “Make sure you don’t start reading it. Reading clouds your judgment.” Heaven forbid!</span></p><p><span>Tidying in the hope of obtaining perfect order is stressful work. Tidying without worrying too much about the results can be a </span><u><span>soothing</span></u><span> form of play.</span></p><p><span>When in doubt, tidy up.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>swept: </span></p><ul><li><p><em><span>v.</span></em><span>扫除（sweep 的过去式和过去分词）</span></p></li><li><p><em><span>adj.</span></em><span>扫频的</span></p></li></ul><blockquote><p><span>His eyes </span><strong><span>swept</span></strong><span> around the room.</span></p><p><span>他的目光把房间扫视了一遍。</span></p></blockquote><p><span>prescribe: </span><em><span>v.</span></em><span>给……开（药），让……采用（疗法）；开处方；规定，命令；制定规定；推荐，推举</span></p><blockquote><p><span>The physician may </span><strong><span>prescribe</span></strong><span> but not administer the drug.</span></p><p><span>内科医师可以开处方但不可发药。</span></p></blockquote><p><span>soothing: </span></p><ul><li><p><em><span>adj.</span></em><span>安慰的，使人平静的；舒缓的，镇痛的</span></p></li><li><p><em><span>v.</span></em><span>安慰，使平静；减轻，缓和（疼痛）；使（身体部位）舒缓（soothe 的现在分词）</span></p></li></ul><blockquote><p><span>The </span><strong><span>soothing</span></strong><span> voice announced the arrival of an e-mail on the computer.</span></p><p><span>舒缓的声音通知我电脑收到一封邮件。</span></p></blockquote></blockquote><h3 id='sleep-tidies-up-the-brain'><span>Sleep tidies up the brain.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Naps are essential to my process. Not dreams, but that state adjacent to sleep, the mind on waking.”<br/>—William Gibson </p><hr style="background:brown"/><p><span>Scientists and philosophers have long wondered about sleep and what it’s for. They’re slowly catching up to what artists have known all along: Sleep is an excellent tool for tidying up your brain. When you sleep, your body literally flushes out the junk in your head. Neuroscientists have explained that </span><u><span>cerebrospinal</span></u><span> fluid in your brain starts flowing more rapidly when you sleep, clearing out the </span><u><span>toxins</span></u><span> and bad proteins that build up in your brain cells.</span></p><p><u><span>Naps</span></u><span> are the secret weapon of many artists. “It’s mostly napping,” says filmmaker Ethan Coen of his and his brother Joel’s creative process. I consider naps to be another form of magical tidying that seems unproductive but often leads to new ideas.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cerebrospinal: </span><em><span>adj.</span></em><span>[解剖] 脑脊髓的</span></p><blockquote><p><span>When he got back, he switched labs to study how </span><strong><span>cerebrospinal</span></strong><span> fluid nourishes the developing nervous system.</span></p><p><span>回来后，他将实验室里的研究课题转向了脑脊液如何滋养发发育中的神经系统。</span></p></blockquote><p><span>toxins: </span><em><span>n.</span></em><span>[毒物]毒素，毒质；毒素类（toxin 的复数）</span></p><blockquote><p><strong><span>Toxins</span></strong><span> can leak from the gut into the bloodstream.</span></p><p><span>毒素能够从肠道渗透到血液里。</span></p></blockquote><p><span>nap:  </span></p><ul><li><p><em><span>n.</span></em><span>（尤指在白天）小睡，打盹；（织物、地毯等表面的）绒毛；&lt;英&gt;赛马情报；&lt;澳，非正式&gt;睡袋（野外用）；纳普牌戏（类似惠斯特牌戏，玩家自报可赢之墩数，全胜五墩）；&lt;英&gt;孤注一掷</span></p></li><li><p><em><span>v.</span></em><span>（尤指在白天）小睡，打盹；不留神，无准备；（马）（尤指习惯性地）不听从指令，徘徊不前；&lt;英&gt;预测（赛马，赛狗）获胜；使起绒，使拉毛</span></p></li></ul><blockquote><p><span>Though doctors may advise taking </span><strong><span>naps</span></strong><span>, employers do not allow it!</span></p><p><span>尽管医生可能会建议员工午睡，但雇主是不会允许的！</span></p></blockquote></blockquote><p><span>Not all naps are created equal. There are lots of ways to take a nap. Salvador Dalí liked to nap while holding a </span><u><span>spoon</span></u><span>. As he </span><u><span>dozed off</span></u><span>, he’d drop the spoon and wake up, but still be in the dreamlike state he needed for his </span><u><span>surreal</span></u><span> paintings. Writer Philip Roth said he learned his nap technique from his father: Take your clothes off and pull a blanket over you, and you sleep better. “The best part of it is that when you wake up, for the first fifteen seconds, you have no idea where you are,” Roth said. “You’re just alive. That’s all you know. And it’s bliss, it’s absolute bliss.”</span></p><p><span>Me, I like the “</span><u><span>caffeine</span></u><span> nap”: Drink a cup of coffee or tea, lie down for fifteen minutes, and get back to work when the caffeine has kicked in.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spoon: </span></p><ul><li><p><em><span>n.</span></em><span>匙，勺子；（作打击乐器用的）调羹对；一匙的量；调羹状物品</span></p></li><li><p><em><span>vt.</span></em><span>用匙舀，使成匙状；高挑球</span></p></li></ul><blockquote><p><span>She licked the </span><strong><span>spoon</span></strong><span> clean.</span></p><p><span>她把调羹舔得干干净净。</span></p></blockquote><p><span>dozed off: 打瞌睡：短时间入睡，尤其是指在电影期间入睡。</span></p><blockquote><p><span>· I couldn&#39;t help but doze off during the boring lecture.</span></p><p><span>在无聊的讲座期间，我情不自禁地打起了瞌睡。</span></p></blockquote><p><span>surreal: </span><em><span>adj.</span></em><span>超现实主义的；离奇的；不真实的</span></p><blockquote><p><span>They are just too </span><strong><span>surreal</span></strong><span>.</span></p><p><span>它们只不过太超现实了。</span></p></blockquote><p><span>caffeine: </span><em><span>n.</span></em><span>[有化] [药] 咖啡因；茶精（兴奋剂）</span></p><blockquote><p><strong><span>Caffeine</span></strong><span> can cause palpitations and headaches.</span></p><p><span>咖啡因能引起心悸和头痛。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“What a pity one cannot <u style="color:blue">sleepwrite</u> on the ceiling with one’s finger or lifted <u style="color:blue">toe</u>.”<br/>—Denton Welch </p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“This is an age of divorce. Things that belong together have been taken apart. And you can’t put it all back together again. What you can do is the only thing that you can do. You take two things that ought to be together and you put them together.”<br/>—Wendell Berry </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>toe: </span></p><ul><li><p><em><span>n.</span></em><span>（人的）脚趾，（兽、鸟的）趾；（袜、鞋等的）足尖部；端部，尖部；（高尔夫球的）球棒尖；坡脚，基脚，堤脚；（曲线的）趾区；肉质根部</span></p></li><li><p><em><span>v.</span></em><span>用脚尖推（或触碰、踢、踩）；足尖朝内（或外）行走；（一对车轮）前束（或反前束，后束）；（高尔夫）用球棒尖击（球）</span></p></li></ul><blockquote><p><span>Ouch! You trod on my </span><strong><span>toe</span></strong><span>!</span></p><p><span>哎哟！你踩着我的脚指头了！</span></p></blockquote></blockquote><h3 id='leave-things-better-than-you-found-them'><span>Leave things better than you found them.</span></h3><p><span>The greatest form of magical tidying that you can do is outside your studio or workspace: the tidying up of your wider world.</span></p><p><span>The writer David Sedaris is a born </span><u><span>tidier</span></u><span>. He tells childhood stories about vacuuming and cleaning up after his </span><u><span>siblings</span></u><span>. When he sold his first book, he was cleaning houses in Manhattan. Now he’s a rich bestselling author and lives in a village west of London. You know how he spends most of his day? Picking up trash on the side of the road.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>tidier: </span></p><ul><li><p><em><span>adj.</span></em><span>更整洁的，更井井有条的；更爱整洁的，更爱整齐的；更有条理的，更工整的；（非正式）更高额的，更可观的；更令人满意的</span></p></li><li><p><em><span>n.</span></em><span>收拾者，整理者</span></p></li></ul><blockquote><p><span>After we cleaned up the room, it looked </span><strong><span>tidier</span></strong><span> than before.</span></p><p><span>我们打扫房间后，它看起来比以前更整洁了。</span></p></blockquote><p><span>siblings: </span><em><span>n.</span></em><span>兄弟姐妹；同科</span></p><blockquote><p><span>His </span><strong><span>siblings</span></strong><span> are in their twenties.</span></p><p><span>他的兄弟姐妹都是20来岁。</span></p></blockquote></blockquote><p><span>That’s right: One of our most popular living authors estimates that he spends three to eight hours a day in the service of waste management. Sedaris has picked up so much trash that the locals literally named a garbage truck after him: “Pig Pen Sedaris.” He’s best known to his neighbors as a litter picker. When the West Sussex County Times wrote about him, they didn’t even mention he was a writer.</span></p><p><span>What’s funny is that Sedaris’s litter picking totally fits into his writing work. Sedaris, like many artists, is a scavenger.</span></p><p><span>He collects the discarded debris from the chaos of life—overheard bits of dialogue and overlooked experiences—and recycles them into essays. (His collection of diaries is appropriately titled Theft by Finding.) Some of his diaries, which he prints out and binds into books every season, contain pieces of the trash he comes across on his walks.</span></p><p><span>Art is not only made from things that “</span><u><span>spark</span></u><span> joy.” Art is also made out of what is ugly or repulsive to us. Part of the artist’s job is to help tidy up the place, to make order out of chaos, to turn trash into treasure, to show us beauty where we can’t see it.</span></p><p><span>I find it </span><u><span>instructive</span></u><span>, sometimes, to think about some of the </span><u><span>slogans</span></u><span> we use for creative work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spark: </span></p><ul><li><p><em><span>n.</span></em><span>导火线，诱因；火花，火星；电火花；一丝，略微；生气，活力，才华；愤怒的情感，激烈的情绪；&lt;非正式&gt;军队中对无线电报务员（或电工）的昵称（Sparks）；生龙活虎的小伙子；（内燃机里火花塞的）放电</span></p></li><li><p><em><span>v.</span></em><span>引发，触发；产生火花（电火花）；点燃；增加趣味（或活力、风味等）；求婚</span></p></li></ul><blockquote><p><span>A </span><strong><span>spark</span></strong><span> ignites the fuel in a car engine.</span></p><p><span>汽车发动机中的燃料由火花点燃。</span></p></blockquote><p><span>instructive: </span><em><span>adj.</span></em><span>有教益的，有启发性的</span></p><blockquote><p><span>The Hawaiian Islands provided a very </span><strong><span>instructive</span></strong><span> answer.</span></p><p><span>夏威夷群岛提供了一个非常有益的答案。</span></p></blockquote><p><span>slogans: </span><em><span>n.</span></em><span>口号（slogan 复数）</span></p><blockquote><p><span>They&#39;re just mouthing empty </span><strong><span>slogans</span></strong><span>.</span></p><p><span>他们只是在空喊口号。</span></p></blockquote></blockquote><p><span>MAKE YOUR MARK.</span></p><p><span>PUT A DENT IN THE UNIVERSE.</span></p><p><span>MOVE FAST AND BREAK THINGS.</span></p><p><span>These slogans </span><u><span>presuppose</span></u><span> that the world is in need of marking or </span><u><span>denting</span></u><span> or breaking and that the cosmic purpose of human beings is </span><u><span>vandalism</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>presuppose: </span><em><span>vt.</span></em><span>假定；预料；以……为先决条件</span></p><blockquote><p><span>All your arguments </span><strong><span>presuppose</span></strong><span> that he&#39;s a rational, intelligent man.</span></p><p><span>你的所有论点都预先假定他是个理性聪明的人。</span></p></blockquote><p><span>denting: </span></p><ul><li><p><em><span>n.</span></em><span>穿筘</span></p></li><li><p><em><span>v.</span></em><span>使……凹下（dent 的 ing 形式）</span></p></li></ul><blockquote><p><span>Sales of computer tablets, such as the iPad, are </span><strong><span>denting</span></strong><span> the market for PCs.</span></p><p><span>平板电脑的销售，例如iPad，正在削减个人电脑的市场份额。</span></p></blockquote><p><span>vandalism: </span><code>/ ˈvændəlɪzəm /</code><span> </span><em><span>n.</span></em><span>故意破坏（或损坏）财产的行为；（对好事物的）糟蹋</span></p><blockquote><p><span>It was wanton, moronic </span><strong><span>vandalism</span></strong><span>.</span></p><p><span>这是无端的、愚蠢的恶意破坏。</span></p></blockquote></blockquote><p><span>Things are already a mess out there. We’ve made enough of a mark on this planet. What we need are fewer </span><u><span>vandals</span></u><span> and more cleanup </span><u><span>crews</span></u><span>. We need art that tidies. Art that mends. Art that repairs.</span></p><p><span>Let’s find some better slogans. Maybe we could look to medicine:</span></p><p><span>FIRST, DO NO HARM.</span></p><p><span>Or maybe we could lift the language from signs you see in parks:</span></p><p><span>LEAVE THINGS BETTER THAN YOU FOUND THEM.</span></p><p><span>It’d be a start.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>vandals: </span><em><span>n.</span></em><span>破坏文化遗产的人（vandal 的复数）</span></p><blockquote><p><strong><span>Vandals</span></strong><span> had smashed the door in.</span></p><p><span>破坏分子把门撞破了。</span></p></blockquote><p><span>crews: </span><em><span>n.</span></em><span>一起工作的人，一群做同一工作的人</span></p><blockquote><p><span>The abuse was directed at the TV </span><strong><span>crews</span></strong><span>.</span></p><p><span>辱骂是针对电视台工作人员的。</span></p></blockquote></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

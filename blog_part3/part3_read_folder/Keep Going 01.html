@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 01</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">01</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#every-day-is-ground-hog-day">Every Day is <u>Ground</u> <u>Hog</u> Day</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n41"><a class="md-toc-inner" href="#take-one-day-at-a-time">Take one day at a time.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n320"><a class="md-toc-inner" href="#establish-a-daily-routine">Establish a daily routine.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n483"><a class="md-toc-inner" href="#make-lists">Make lists.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n590"><a class="md-toc-inner" href="#finish-each-day-and-be-done-with-it">Finish each day and be done with it.</a></span></p></div><hr /><h2 id='every-day-is-ground-hog-day'><span>Every Day is </span><u><span>Ground</span></u><span> </span><u><span>Hog</span></u><span> Day</span></h2><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>ground:</span></p><ul><li><p><em><span>n.</span></em><span>地，地面；土地，土壤；（某种用途的）场地；充分的理由，根据；话题，知识领域；观点，立场；优势，有利条件；地线；庭院，花园；渣滓；（绘画或印刷的）背景，底子</span></p></li><li><p><em><span>v.</span></em><span>以……为根据；（在某学科上）给……以扎实的基础教育；使停飞；禁足；（使）搁浅；落地，着陆；把……放在地上，以……触地；把（电器）接地；（击球员）击出内场地滚球被杀出局</span></p></li><li><p><em><span>adj.</span></em><span>切碎的，磨碎的；（航空用语）地面的，地勤的；打磨成的，磨光的；生活于地面、地下或水底的</span></p></li><li><p><em><span>v.</span></em><span>研磨（grind 的过去式和过去分词形式）</span></p></li></ul><blockquote><p><span>The </span><strong><span>ground</span></strong><span> was frozen solid.</span></p><p><span>地面冻得硬邦邦的。</span></p></blockquote><p><span>hog: </span></p><ul><li><p><em><span>n.</span></em><span>&lt;美&gt;（尤指喂肥供食用的）猪；&lt;英&gt;（供食用的）阉公猪；猪科野生动物；&lt;非正式&gt;自私的人，贪婪的人；过多消耗；&lt;非正式&gt;大号摩托车；（方）（第一次剪毛前的）小绵羊；莽撞的司机（road hog）</span></p></li><li><p><em><span>v.</span></em><span>（贪心地）攫取，独占；使船中拱</span></p></li></ul><blockquote><p><span>She had been </span><strong><span>hog</span></strong><span>-tied by the system but she had never lost her compassion.</span></p><p><span>她被制度束缚，但她从未失去她的热情。</span></p></blockquote><p><span>ground hog: 土拨鼠：一种生活在北美洲的哺乳动物，属于松鼠科，以挖洞为家。</span></p><blockquote><p><span>Have you ever heard of </span><strong><span>Ground</span></strong><span>-</span><strong><span>hog</span></strong><span> Day?</span></p><p><span>你听说过美洲旱獭节吗？</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><h3 id='take-one-day-at-a-time'><span>Take one day at a time.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"><mark style="background:#f8e272;">“None of us know what will happen. Don’t spend time worrying about it. Make the most beautiful thing you can. Try to do that every day. That’s it.”</mark><br/>—Laurie Anderson</p><hr style="background:brown"/><p><span>Whenever someone starts talking about “the creative journey,” I </span><u><span>roll</span></u><span> my eyes.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>roll: </span></p><ul><li><p><em><span>v.</span></em><span>（使）翻滚，滚动；（使）翻身，翻转；（使）滚动，开动；（机器）转动，运转；（液体）滚落，滑落；使……成球状（或管状）；使平坦，压平；把（衣服的边）卷起来；掷（骰子）；（船或飞机因为风或浪而）摇晃，摇摆；转动（眼睛），（眼珠）骨碌碌地转 ；摇（车窗），卷（窗帘等）；发出持续而低沉的声音，隆隆作响；摇晃着行进，蹒跚地走；（时间）流逝；（产品）从（流水线，机器）产出；用颤音发出（辅音，尤其是r）；（词语）轻松自如说出，流畅地吐出；&lt;非正式&gt; 盗窃（某人，尤指喝醉或睡着的人）；（波浪，烟，云，雾）翻滚，涌流；（土地）绵延起伏，伸展；（影视节目的摄制人员名单在屏幕上）滚动显示；掷出（骰子数）；（人，动物）在原地打滚；卷（烟）；连获成功；摇动（肩膀）；&lt;美，非正式&gt; 使（车）翻身，使翻车</span></p></li><li><p><em><span>n.</span></em><span>卷，卷轴；卷状食品，卷饼；（通常指颈部或腰部的）赘皮，赘肉；面包卷，小圆面包；名单，花名册；滚动，翻滚；左右摇晃，振荡；隆隆声，持续的轰隆声；掷骰子；（地形的）延绵起伏；压路机，辊轧机；（名单上的）总人数；公文，案卷；（乐）（鼓的）单击（或双击）快速滚奏；&lt;美&gt; 一卷钞票，钱；（飞机）翻滚</span></p></li></ul><p><span>roll eyes:</span></p><ul><li><p><span>翻白眼：表示不耐烦、不屑或不信任的一种肢体动作，通常是将眼球向上或向侧面转动。</span></p></li></ul><blockquote><p><span>Never once did this clerk get annoyed or </span><strong><span>roll</span></strong><span> his </span><strong><span>eyes</span></strong><span>.</span></p><p><span>这个店员从来没有生气过，也没有翻白眼过。</span></p></blockquote></blockquote><p><span>It sounds too </span><u><span>lofty</span></u><span> to me. Too </span><u><span>heroic</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>lofty: </span><em><span>adj.</span></em><span>巍峨的，高耸的；崇高的，高尚的；傲慢的，高傲的；（毛和其他纺织品）厚实而有弹性的</span></p><blockquote><p><span>It was a bank that started out with grand ideas and </span><strong><span>lofty</span></strong><span> ideals.</span></p><p><span>那是一家创办时带着宏大理念、崇高理想的银行。</span></p></blockquote><p><span>loft: </span></p><ul><li><p><em><span>n.</span></em><span>阁楼，顶楼；（教堂的）楼厢，（农场的）廐楼；（仓库或商业大楼的）上层楼面；（由工厂等改建的）套房，公寓；（高于房间地面的）平台，阳台；鸽房，鸽舍；（高尔夫）高击；（高尔夫球球棒头的）倾斜角度；（睡袋或填料外套等物品中隔热层的）厚度</span></p></li><li><p><em><span>v.</span></em><span>向高处击（或踢、掷）；使（高尔夫球棒击球端）向后倾斜</span></p></li></ul><blockquote><p><span>There&#39;s a lot of storage space in the </span><strong><span>loft</span></strong><span>.</span></p><p><span>阁楼上有很大的存贮空间。</span></p></blockquote><p><span>heroic:</span></p><ul><li><p><em><span>adj.</span></em><span>英雄的，英勇的；矢志不渝的，艰苦卓绝的；巨大的；男主角的；（雕像）大于真人（或实物）但不及其两倍大的</span></p></li><li><p><em><span>n.</span></em><span>勇敢果断的行为；哗众取宠的愚蠢行为；英雄诗体</span></p></li></ul><blockquote><p><span>His </span><strong><span>heroic</span></strong><span> deeds were celebrated in every corner of India.</span></p><p><span>他的英勇事迹在印度的每个角落被传颂。</span></p></blockquote></blockquote><p><span>The only creative journey I seem to go on is the ten-foot </span><u><span>commute</span></u><span> from the back door of my house to the studio in my </span><u><span>garage</span></u><span>. I sit down at my desk and stare at a blank piece of paper and I think, “Didn’t I just do this yesterday?”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>commute: </span></p><ul><li><p><em><span>v.</span></em><span>通勤，上下班往返；减轻（刑罚）；代偿；（两个运算，两个量）可交换</span></p></li><li><p><em><span>n.</span></em><span>通勤，上下班交通路程</span></p></li></ul><blockquote><p><span>So how long is your </span><strong><span>commute</span></strong><span>?</span></p><p><span>那么你上下班路程要花多长时间？</span></p></blockquote><p><span>garage: </span></p><ul><li><p><em><span>n.</span></em><span>车库；加油站，汽车修理厂；车库音乐</span></p></li><li><p><em><span>v.</span></em><span>把……送入车库（或修车厂）</span></p></li></ul><blockquote><p><span>The police found him asleep in a </span><strong><span>garage</span></strong><span>.</span></p><p><span>警察发现他在一处车库里睡着了。</span></p></blockquote></blockquote><p><span>When I’m working on my art, I don’t feel like </span><u><span>Odysseus</span></u><span>. I feel more like </span><u><span>Sisyphus</span></u><span> rolling his </span><u><span>boulder</span></u><span> up the hill. When I’m working, I don’t </span><u><span>feel like</span></u><span> Luke Skywalker. I feel more like Phil Connors in the movie </span><em><span>Groundhog Day</span></em><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>Odysseus: </span><em><span>n.</span></em><span>奥德修斯（荷马史诗《奥德赛》中的主人公；曾指挥特洛伊战争，献木马计，使希腊获胜）</span></p><p><span>Sisyphus: </span><em><span>n.</span></em><span>科林斯王（希腊暴君）</span></p><blockquote><p><span>For those of you who may not remember, Sisyphus, of Greek mythology, was </span><strong><span>the</span></strong><span> guy condemned to push a </span><strong><span>boulder</span></strong><span> </span><strong><span>up</span></strong><span> a hill, watch it </span><strong><span>roll</span></strong><span> back down, and repeat this for all eternity.</span></p><p><span>有些人可能不记得希腊神话里西西弗这个人了。他将一块巨石推上山顶，看着它从山顶滚下来，然后一生重复做这件事。</span></p></blockquote><p><span>boulder: </span><em><span>n.</span></em><span>（受水或天气侵蚀而成的）巨石，巨砾</span></p><blockquote><p><span>Given enough warning, it should be possible to push a threatening </span><strong><span>boulder</span></strong><span> out of the way.</span></p><p><span>如果予以足够的警示，就有可能把一块有威胁性的巨石推开。</span></p></blockquote><p><span>feel like: 感觉像：表示对某种情况或感觉的描述，通常用于描述自己的感受或心情。</span></p><blockquote><p><span>Do you </span><strong><span>feel</span></strong><span> </span><strong><span>like</span></strong><span> eating out tonight?</span></p><p><span>你今晚想下馆子吗？</span></p></blockquote></blockquote><p><span>For those of you who haven’t seen it or need your memory refreshed, </span><em><span>Groundhog Day</span></em><span> is a 1993 comedy </span><u><span>starring</span></u><span> Bill Murray as Phil Connors, a </span><u><span>weatherman</span></u><span> who gets stuck in a time loop and wakes up every morning on February 2nd—Groundhog Day—in Punxsutawney, Pennsylvania, home of Punxsutawney Phil, the famous groundhog who, depending on if he sees his shadow or not, predicts whether there will be six more weeks of winter. Phil, the weatherman, hates Punxsutawney, and the town becomes a kind of </span><u><span>purgatory</span></u><span> for him. He tries everything he can think of, but he can’t make it out of town, and he can’t get to February 3rd. Winter, for Phil, is endless. No matter what he does, he still wakes up in the same bed every morning to face the same day.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>starring: </span></p><ul><li><p><em><span>adj.</span></em><span>最重要的演员的</span></p></li><li><p><em><span>v.</span></em><span>扮演主角，领衔主演；用星状花纹装饰；给……加上星号（star的现在分词）</span></p></li><li><p><em><span>n.</span></em><span>（Starring）（美、委内瑞拉、瑞典）斯塔林（人名）</span></p></li></ul><p><span>star as: 主演：在电影、戏剧或其他表演中担任主要角色。</span></p><blockquote><p><span>Emma Watson is </span><strong><span>starring</span></strong><span> </span><strong><span>as</span></strong><span> Belle while Dan Stevens will play the Prince/Beast.</span></p><p><span>艾玛沃特森出演贝拉，丹史蒂文斯出演王子/野兽。</span></p></blockquote><p><span>weatherman: </span><em><span>n.</span></em><span>气象员；天气预报员</span></p><blockquote><p><span>My heater is not getting any power and </span><strong><span>weatherman</span></strong><span> says the temperature is to fall below zero tonight.</span></p><p><span>我的加热器没有电了，而天气预报员说今晚气温将降到零度以下。</span></p></blockquote><p><span>purgatory: </span></p><ul><li><p><em><span>n.</span></em><span>炼狱；涤罪；暂时的苦难</span></p></li><li><p><em><span>adj.</span></em><span>涤罪的（等于 purgative）</span></p></li></ul><blockquote><p><span>Every step of the last three miles was </span><strong><span>purgatory</span></strong><span>.</span></p><p><span>最后三英里中的每一步都是炼狱般的折磨。</span></p></blockquote></blockquote><p><span>In a moment of </span><u><span>despair</span></u><span>, Phil turns to a couple </span><u><span>drunks</span></u><span> at a bowling </span><u><span>alley</span></u><span> bar and asks them, “What would you do if you were stuck in one place, and every day was exactly the same, and nothing that you did mattered?”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>despair:</span></p><ul><li><p><em><span>n.</span></em><span>绝望；令人绝望的人或事</span></p></li><li><p><em><span>v.</span></em><span>绝望，丧失信心</span></p></li></ul><blockquote><p><span>I looked at my wife in </span><strong><span>despair</span></strong><span>.</span></p><p><span>我绝望地看着妻子。</span></p></blockquote><p><span>drunks: </span><em><span>n.</span></em><span>醉汉；狂饮（drunk 的复数）</span></p><blockquote><p><span>He had to throw out a few </span><strong><span>drunks</span></strong><span> who were causing trouble in the bar.</span></p><p><span>他不得不轰走几个在酒吧里闹事的醉鬼。</span></p></blockquote><p><span>alley: </span><em><span>n.</span></em><span>小巷，胡同；（两旁有树木、灌木或石头的）小径；（九柱戏和保龄球等游戏的）球道；&lt;美&gt;双打网球场两边的狭长地带</span></p><blockquote><p><span>She parked her bike in the </span><strong><span>alley</span></strong><span>.</span></p><p><span>她把摩托车停在巷子里。</span></p></blockquote><blockquote><p><strong><span>A</span></strong><span> game room features </span><strong><span>a</span></strong><span> wraparound </span><strong><span>bar</span></strong><span> for refreshments, </span><strong><span>a</span></strong><span> </span><strong><span>bowling</span></strong><span> </span><strong><span>alley</span></strong><span>, and an indoor basketball court that can transition into a personal indoor auditorium.</span></p><p><span>游戏间设有环绕式点心吧台、保龄球道以及室内篮球场，还可以作为私人室内礼堂。</span></p></blockquote></blockquote><p><span>It’s the question Phil has to answer to advance the plot of the movie, but it’s also the question we have to answer to advance the plot of our lives.</span></p><p><span>I think how you answer this question is your art.</span></p><p><span>Now, I’m not the first person to suggest that </span><em><span>Groundhog Day</span></em><span> is perhaps </span><em><span>the</span></em><span> great </span><u><span>parable</span></u><span> of our time. Harold Ramis, the movie’s director and cowriter, said he got endless letters from </span><u><span>priests</span></u><span>, </span><u><span>rabbis</span></u><span>, and </span><u><span>monks</span></u><span>, all praising the movie’s </span><u><span>spiritual</span></u><span> message and claiming it for their own religion. But I think the movie has particular </span><u><span>relevance</span></u><span> for people who want to do creative work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>parable: </span><em><span>n.</span></em><span>（尤指《圣经》中耶稣所讲的的）（道德或宗教）寓言</span></p><blockquote><p><span>The minister preached a sermon on the </span><strong><span>parable</span></strong><span> of the lost sheep.</span></p><p><span>牧师讲道时用了亡羊的比喻。</span></p></blockquote><p><span>priest: </span></p><ul><li><p><em><span>n.</span></em><span>牧师，神职人员；木渔槌（垂钓时用以打死已上钩的鱼）</span></p></li><li><p><em><span>v.</span></em><span>&lt;正式&gt;任命……为司铎（或祭司）</span></p></li></ul><blockquote><p><span>The </span><strong><span>priest</span></strong><span> sacrificed a chicken.</span></p><p><span>牧师献祭了一只鸡。</span></p></blockquote><p><span>rabbi: </span><em><span>n.</span></em><span>拉比（犹太人的学者）；法师；犹太教律法专家；先生</span></p><blockquote><p><span>Now he&#39;s thrilled with his sleek neck line, he said, and even told his </span><strong><span>rabbi</span></strong><span> about the surgery.</span></p><p><span>他说，现在他对自己光滑的颈部线条很满意，甚至还把手术的事告诉了他的拉比。</span></p></blockquote><p><span>monk: </span><em><span>n.</span></em><span>僧侣，修道士</span></p><blockquote><p><span>He disguised himself as a </span><strong><span>monk</span></strong><span>.</span></p><p><span>他将自己扮作一个僧人。</span></p></blockquote><p><span>spiritual: </span></p><ul><li><p><em><span>adj.</span></em><span>精神的，心灵的；宗教的；（人）高尚的，不为物欲所动的</span></p></li><li><p><em><span>n.</span></em><span>（原为美国黑人所唱的）圣歌，灵歌</span></p></li></ul><blockquote><p><span>He is the </span><strong><span>spiritual</span></strong><span> leader of the world&#39;s Catholics.</span></p><p><span>他是世界天主教的宗教领袖。</span></p></blockquote><p><span>relevance: </span><em><span>n.</span></em><span>相关性，实用性，意义</span></p><blockquote><p><span>Politicians&#39; private lives have no </span><strong><span>relevance</span></strong><span> to their public roles.</span></p><p><span>政治家的私生活与他们的公众角色没有相关性。</span></p></blockquote></blockquote><p><span>The reason is this: The creative life is </span><em><span>not</span></em><span> linear. It’s not a straight line from point A to point B. It’s more like a loop, or a </span><u><span>spiral</span></u><span>, in which you keep coming back to a new starting point after every project. No matter how successful you get, no matter what level of achievement you reach, you will never really “arrive.” Other than death, there is no finish line or retirement for the creative person. “Even after you have achieved </span><u><span>greatness</span></u><span>,” writes musician Ian Svenonius, “the </span><u><span>infinitesimal</span></u><span> </span><u><span>cadre</span></u><span> who even noticed will ask, ‘What next?’”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spiral: </span><code>/ ˈspaɪrəl /</code></p><ul><li><p><em><span>n.</span></em><span>螺旋形，螺旋形之物；持续加剧的上升（或下降、恶化）；旋球</span></p></li><li><p><em><span>v.</span></em><span>螺旋式上升（或下降），盘旋上升（或下降）；持续下降，持续恶化；急剧上升</span></p></li><li><p><em><span>adj.</span></em><span>螺旋形的；（医）扭折（骨折的一种）；spiral-bound的简称</span></p></li></ul><blockquote><p><span>She was trapped in a downward </span><strong><span>spiral</span></strong><span> of personal unhappiness.</span></p><p><span>她陷入了个人不幸的旋涡难以自拔。</span></p></blockquote><p><span>greatness: </span><em><span>n.</span></em><span>伟大；巨大</span></p><blockquote><p><span>A nation must take certain risks to achieve </span><strong><span>greatness</span></strong><span>.</span></p><p><span>一个国家必须冒一定风险来成就伟大的事业。</span></p></blockquote><p><span>infinitesimal: </span></p><ul><li><p><em><span>adj.</span></em><span>无穷小的；无限小的；极小的</span></p></li><li><p><em><span>n.</span></em><span>无限小；极微量；极小量</span></p></li></ul><blockquote><p><span>You are </span><strong><span>infinitesimal</span></strong><span> in the crowd, great in the pigsty!</span></p><p><span>你在人群中渺小，在猪圈伟大！</span></p></blockquote><p><span>cadre: </span><em><span>n.</span></em><span>干部；基础结构；骨骼</span></p><blockquote><p><span>This veteran </span><strong><span>cadre</span></strong><span> still remains his philosophy of hard work and plain-living.</span></p><p><span>这位老干部仍然保持着艰苦朴素的作风。</span></p></blockquote></blockquote><p><span>The truly </span><u><span>prolific</span></u><span> artists I know always have that question answered, because they have figured out a </span><em><span>daily practice</span></em><span>—a repeatable way of working that </span><u><span>insulates</span></u><span> them from success, failure, and the chaos of the outside world. They have all identified what they want to spend their time on, and they work at it every day, no matter what. Whether their latest thing is universally rejected, ignored, or acclaimed, they know they’ll still get up tomorrow and do their work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>prolific: </span><em><span>adj.</span></em><span>（植物，动物，人）多产的，多育的；（艺术家，作家，作曲家）作品丰富的，多产的；（运动员）得分高的；众多的，大批的；富庶的，肥沃的</span></p><blockquote><p><span>She is an accomplished painter and a </span><strong><span>prolific</span></strong><span> author of stories for children.</span></p><p><span>她是位技艺精湛的画家和多产的儿童文学作家。</span></p></blockquote><p><span>insulate: </span><em><span>v.</span></em><span>使隔热，使隔音，使绝缘；使隔离，使免受（不良影响等）；&lt;古&gt;使（陆地）成岛屿</span></p><blockquote><p><span>People should </span><strong><span>insulate</span></strong><span> their homes to conserve energy.</span></p><p><span>人们应该使住房隔冷以保存能量。</span></p></blockquote></blockquote><p><span>We have so little control over our lives. The only thing we can really control is what we spend our days on. What we work on and how hard we work on it. It might seem like a </span><u><span>stretch</span></u><span>, but I really think the best thing you can do if you want to make art is to pretend you’re starring in your own remake of </span><em><span>Groundhog Day</span></em><span>: Yesterday’s over, tomorrow may never come, there’s just today and what you can do with it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stretch: </span></p><ul><li><p><em><span>v.</span></em><span>（使）变大，拉长；（布料）可伸缩，有弹性；伸展肢体；伸出，伸长（胳膊或腿）；拉紧，拽紧；（时间上）延续；（空间上）延伸，绵延；使竭尽所能，使施展本领；耗尽，竭尽（财力或物力）；（使）延长使用，节俭地使用；（资金，资源）足够，够用；放宽，放松；夸大，夸张；涉及，囊括</span></p></li><li><p><em><span>n.</span></em><span>（土地或水域的）一片，一段；（时间）连续的一段，持续；（肢体）伸展，伸开；弹性，伸缩性；服刑期；（终点前的）直线跑道；言过其实的话；困难的任务，苛求的任务；&lt;非正式&gt;加长轿车；抢风航行的距离</span></p></li><li><p><em><span>adj.</span></em><span>（织物）有弹性的，有弹力的</span></p></li></ul></blockquote><p><span>“Any man can fight the battles of just one day,” begins a passage collected in Richmond Walker’s book of </span><u><span>meditations</span></u><span> for recovering </span><u><span>alcoholics</span></u><span>, </span><em><span>Twenty-Four Hours a Day</span></em><span>. “It is only when you and I add the burden of those two awful </span><u><span>eternities</span></u><span>, yesterday and tomorrow, that we break down. It is not the experience of today that drives men mad. It is </span><u><span>remorse</span></u><span> or </span><u><span>bitterness</span></u><span> for something which happened yesterday or the </span><u><span>dread</span></u><span> of what tomorrow may bring. Let us therefore do our best to live but one day at a time.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>meditation: </span><em><span>n.</span></em><span>冥想，打坐；沉思，深思；（关于某主题的）感想，沉思录</span></p><blockquote><p><span>She found peace through yoga and </span><strong><span>meditation</span></strong><span>.</span></p><p><span>她通过瑜伽和冥想找到了宁静。</span></p></blockquote><p><span>alcoholic: </span></p><ul><li><p><em><span>adj.</span></em><span>酒精的，含酒精的；酒精中毒的，酗酒的；喝酒引起的，由酒精引起的</span></p></li><li><p><em><span>n.</span></em><span>酗酒者，酒鬼</span></p></li></ul><blockquote><p><strong><span>Alcoholic</span></strong><span> beverages are served in the hotel lounge.</span></p><p><span>宾馆的休息室供应酒类饮料。</span></p></blockquote><p><span>eternity: </span><code>/ ɪˈtɜːrnəti /</code><em><span>n.</span></em><span>无穷无尽的时间；永恒，永久；永生；未来，来世；死</span></p><blockquote><p><span>It keeps things alive from itself, so the problem with art is its </span><strong><span>eternity</span></strong><span>.</span></p><p><span>它让事物脱离它本身而永存，所以艺术的问题在于它的永恒。</span></p></blockquote><p><span>remorse: </span><em><span>n.</span></em><span>懊悔，自责</span></p><blockquote><p><span>I felt guilty and full of </span><strong><span>remorse</span></strong><span>.</span></p><p><span>我感到内疚，并且非常懊悔。</span></p></blockquote><p><span>bitterness: </span><em><span>n.</span></em><span>苦味；苦难；怨恨</span></p><blockquote><p><span>The </span><strong><span>bitterness</span></strong><span> and tears had congealed into hatred.</span></p><p><span>苦难与眼泪凝结成了仇恨。</span></p></blockquote><p><span>dread: </span></p><ul><li><p><em><span>v.</span></em><span>畏惧，担心；&lt;古&gt;敬畏</span></p></li><li><p><em><span>n.</span></em><span>害怕，畏惧；令人生畏的人，可怕的事物；（鸥鸟等鸟群的）惊飞，惊起；将头发编成“骇人”发型的人</span></p></li><li><p><em><span>adj.</span></em><span>令人生畏的，可怕的；恼火的，生气的</span></p></li></ul><blockquote><p><span>The prospect of growing old fills me with </span><strong><span>dread</span></strong><span>.</span></p><p><span>想到人会一天天老下去便使我充满恐惧。</span></p></blockquote></blockquote><p><span>The creative journey is not one in which you’re </span><u><span>crowned</span></u><span> the </span><u><span>triumphant</span></u><span> hero and live happily ever after. The real creative journey is one in which you wake up every day, like Phil, with more work to do.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>crown: </span></p><ul><li><p><em><span>n.</span></em><span>王冠，冕；王位，王权（the crown）；王国政府，王国（the Crown）；冠军宝座，桂冠；头顶，帽顶；顶部；5先令的英国旧币；（受损牙齿的）人造冠</span></p></li><li><p><em><span>v.</span></em><span>为……加冕，立……为王；形成……顶部，给……加顶；使圆满，使完美；（在牙齿上）镶人造冠；&lt;非正式&gt;打……的头部；（分娩时胎儿的头）露顶</span></p></li></ul><blockquote><p><span>Hale him forth, and </span><strong><span>crown</span></strong><span> him!</span></p><p><span>把他拥过来，给他加冕！</span></p></blockquote><p><span>triumphant: </span><code>/ traɪˈʌmfənt /</code><em><span>adj.</span></em><span>（因胜利或成功而）洋洋得意的，耀武扬威的；胜利的，成功的</span></p><blockquote><p><span>When he returned to the canopy tree his cheeks were flushed and he looked </span><strong><span>triumphant</span></strong><span>.</span></p><p><span>当他回到那棵有着树荫的树时，他的脸颊泛着红晕，有着凯旋的表情。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“How we spend our days is, of course, how we spend our lives.”<br/>—Annie Dillard</p><hr style="background:brown"/><h3 id='establish-a-daily-routine'><span>Establish a daily routine.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Relying on craft and routine is a lot less sexy than being an artistic genius. But it is an excellent strategy for not going insane.”<br/>—Christoph Niemann</p><hr style="background:brown"/><p><span>There will be good days and bad days. Days when you feel inspired and days when you want to walk off a bridge. (And some days when you can’t tell the difference.)</span></p><p><span>A daily routine will get you through the day and help you make the most of it. “A schedule defends from chaos and </span><u><span>whim</span></u><span>,” writes Annie Dillard. “It is a net for catching days.” When you don’t know what to do next, your routine tells you.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>whim: </span><em><span>n.</span></em><span>一时的兴致，突发的奇想</span></p><blockquote><p><span>We decided, more or less on a </span><strong><span>whim</span></strong><span>, to sail to Morocco.</span></p><p><span>我们多少有些心血来潮地决定乘船去摩洛哥。</span></p></blockquote></blockquote><p><span>When you don’t have much time, a routine helps you make the little time you have count. When you have all the time in the world, a routine helps you make sure you don’t waste it. I’ve written while holding down a day job, written full-time from home, and written while caring for small children. The secret to writing under all those conditions was having a schedule and sticking to it.</span></p><p><span>In his book </span><em><span>Daily Rituals</span></em><span>, Mason Currey catalogs the daily routines of 161 creative individuals: when they woke up, when they worked, what they ate, what they drank, how they procrastinated, and more. It’s a wild </span><u><span>collage</span></u><span> of human behavior. Reading about the habits of writers alone is like visiting a human zoo. Kafka scribbled into the night while his family slept. Plath wrote in the morning before her children woke up. Balzac </span><u><span>slugged</span></u><span> fifty cups of coffee a day. Goethe </span><u><span>sniffed</span></u><span> </span><u><span>rotten</span></u><span> apples. Steinbeck had to sharpen twelve pencils before starting his work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>collage: </span></p><ul><li><p><em><span>n.</span></em><span>抽象拼贴画（用报纸、布、压平的花等碎片拼合而成的）</span></p></li><li><p><em><span>vt.</span></em><span>把…创作成拼贴画，拼贴</span></p></li></ul><blockquote><p><span>The illustrations make use of </span><strong><span>collage</span></strong><span>, watercolour, and other media.</span></p><p><span>这些插图用上了拼贴法、水彩以及其他的手法。</span></p></blockquote><p><span>slugged: </span></p><ul><li><p><em><span>n.</span></em><span>蛞蝓，鼻涕虫；&lt;非正式&gt;子弹，气枪弹；满满一口（尤指烈酒）；&lt;美&gt;（投入机器中的）假硬币，代币；懒汉，懒虫；重击；（整行铸排机印刷时的）一行铅字；（计算机）处理后的标题（用于构建固定链接）</span></p></li><li><p><em><span>v.</span></em><span>&lt;非正式&gt;重击（某人）；猛击（球）；痛饮（某物，尤指酒），大喝；决一雌雄（slug it out）</span></p></li></ul><blockquote><p><span>He took another </span><strong><span>slug</span></strong><span> of whisky.</span></p><p><span>他又喝了一点威士忌。</span></p></blockquote><p><span>sniff: </span></p><ul><li><p><em><span>v.</span></em><span>（出声地）以鼻吸气，抽鼻子（如因哭泣或感冒）；嗅，闻；嗤之以鼻地说，轻蔑地说；吸入（气体或毒品）；嗅到，察觉出</span></p></li><li><p><em><span>n.</span></em><span>抽鼻子，哼；吸入的空气（或其他物质）；气味；线索，迹象；轻蔑，厌恶</span></p></li></ul><blockquote><p><span>They train dogs to </span><strong><span>sniff</span></strong><span> out drugs.</span></p><p><span>他们训练狗嗅出毒品。</span></p></blockquote><p><span>rotten: </span></p><ul><li><p><em><span>adj.</span></em><span>腐烂的，发臭的；（道德、社会或政治）腐败的，堕落的；&lt;非正式&gt;令人不快的，讨厌的；&lt;非正式&gt;质量差的，水平低的；&lt;非正式&gt;（人）不友善的，不诚实的；&lt;非正式&gt;身体不适的，有病的；&lt;非正式&gt;感到内疚（或惭愧）的； &lt;非正式&gt; （强调非常生气或沮丧）倒霉的，破烂的</span></p></li><li><p><em><span>adv.</span></em><span>&lt;非正式&gt;非常；&lt;非正式&gt;恶劣地，糟糕地</span></p></li></ul><blockquote><p><span>The pond was choked with </span><strong><span>rotten</span></strong><span> leaves.</span></p><p><span>池塘被腐烂的叶子塞满了。</span></p></blockquote></blockquote><p><span>It’s </span><u><span>undeniably</span></u><span> fun to read about the routines and rituals of creative people, but what becomes clear after a while is that there is no perfect, universal routine for creative work. “One’s daily routine is a highly </span><u><span>idiosyncratic</span></u><span> collection of </span><u><span>compromises</span></u><span>, </span><u><span>neuroses</span></u><span>, and </span><u><span>superstitions</span></u><span>,” Currey writes, “built up through trial and error and subject to a variety of </span><u><span>external</span></u><span> conditions.” You can’t just borrow your favorite artist’s daily routine and expect it to work for you. Everyone’s day is full of different obligations—jobs, families, social lives—and every creative person has a different </span><u><span>temperament</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>undeniably: </span><em><span>adv.</span></em><span>不可否认地；确凿无疑地</span></p><blockquote><p><span>There was </span><strong><span>undeniably</span></strong><span> a strong theoretical dimension to his thinking.</span></p><p><span>不可否认，他的想法很有理论深度。</span></p></blockquote><p><span>idiosyncratic: </span><code>/ ˌɪdiəsɪŋˈkrætɪk /</code><em><span>adj.</span></em><span>独特的，怪癖的</span></p><blockquote><p><span>His teaching methods are </span><strong><span>idiosyncratic</span></strong><span> but successful.</span></p><p><span>他的教学方法很奇特，但很成功。</span></p></blockquote><p><span>compromise: </span></p><ul><li><p><em><span>n.</span></em><span>折中，妥协；妥协方案，折中办法</span></p></li><li><p><em><span>v.</span></em><span>妥协，让步；危及，损害</span></p></li></ul><blockquote><p><span>I refuse to </span><strong><span>compromise</span></strong><span> my principles.</span></p><p><span>我拒绝在原则问题上妥协。</span></p></blockquote><p><span>superstition: </span><em><span>n.</span></em><span>迷信</span></p><blockquote><p><span>It&#39;s all </span><strong><span>superstition</span></strong><span>, and there&#39;s nothing to it.</span></p><p><span>这全是迷信，不是真的。</span></p></blockquote><p><span>temperament: </span><em><span>n.</span></em><span>气质，性格；（性情）暴躁，喜怒无常；调（音）律（在平均律中，8度音阶包含有12个均等的半音程）</span></p><blockquote><p><span>His only weakness is his </span><strong><span>temperament</span></strong><span>.</span></p><p><span>他惟一的弱点是他的脾气。</span></p></blockquote></blockquote><p><span>To establish your own routine, you have to spend some time observing your days and your moods. Where are the free spaces in your schedule? What could you cut out of your day to make time? Are you an early riser or a night </span><u><span>owl</span></u><span>? (I’ve met very few people who love working in the afternoon. “I detest this </span><u><span>mongrel</span></u><span> time, neither day nor night,” wrote Charles Dickens.) Are there silly rituals or </span><u><span>superstitions</span></u><span> that get you in a creative mood? (I’m writing these words with a pencil, painted to look like a cigarette, </span><u><span>dangling</span></u><span> from my </span><u><span>lips</span></u><span>.)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>owl: </span><em><span>n.</span></em><span>鸮，猫头鹰；&lt;非正式&gt;夜猫子（喜欢熬夜的人）（=night owl）</span></p><blockquote><p><span>As a group, &quot;night </span><strong><span>owl</span></strong><span>&quot; types tend to eat less healthy food and take in more calories overall than early risers.</span></p><p><span>作为一个群体，总体来说，“夜猫子”型的人往往比早起的人吃的健康食品更少，摄入的卡路里更多。</span></p></blockquote><p><span>mongrel: </span></p><ul><li><p><em><span>n.</span></em><span>杂种；混血儿；杂种动物</span></p></li><li><p><em><span>adj.</span></em><span>杂种的；混血儿的</span></p></li></ul><blockquote><p><span>The </span><strong><span>mongrel</span></strong><span> presented his muzzle for scratching.</span></p><p><span>这只杂种狗探出口鼻挠痒。</span></p></blockquote><p><span>dangling: </span><em><span>v.</span></em><span>（使）悬垂，（使）悬荡；用（诱惑物）来诱惑（或激励）某人</span></p><p><span>dangle from: 悬挂在：表示从某个位置或物体上垂下，通常用于描述物体悬挂的状态。</span></p><blockquote><p><span>I don&#39;t want to </span><strong><span>dangle</span></strong><span> </span><strong><span>from</span></strong><span> a chandelier.</span></p><p><span>我不想吊在一棵枝形吊灯上。</span></p></blockquote><p><span>lip: </span></p><ul><li><p><em><span>n.</span></em><span>嘴唇；（伤口或洞口）边缘；容器边缘，开口；&lt;非正式&gt; 粗鲁无礼的话</span></p></li><li><p><em><span>v.</span></em><span>（水）拍打；（高尔夫）击球至（洞穴）的边缘（而未落入）；用嘴唇触及，吻；（在吹奏管乐器时）运唇</span></p></li><li><p><em><span>adj.</span></em><span>口头上的</span></p></li></ul><blockquote><p><span>She bit her </span><strong><span>lip</span></strong><span> nervously.</span></p><p><span>她紧张地咬嘴唇。</span></p></blockquote></blockquote><p><span>I suppose for some people a strict routine sounds like prison. But aren’t we all, in a sense, “doing time?” When </span><u><span>rapper</span></u><span> Lil Wayne was in prison, I found myself envying his daily routine, which consisted of waking up at 11 a.m., drinking coffee, making phone calls, showering, reading fan mail, having lunch, making phone calls, reading, writing, having dinner, doing push-ups, listening to the radio, reading, and sleeping. “Man, I’ll bet I could get a lot of writing done if I went to prison,” I joked to my wife. (When I visited Alcatraz, I thought it would make the perfect writer’s </span><u><span>colony</span></u><span>. </span><mark style="background:#f8e272;"><em><span>What a view!</span></em></mark><span>)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>rapper: </span><em><span>n.</span></em><span>说唱歌手；敲门者；叩击物</span></p><blockquote><p><span>Some </span><strong><span>rapper</span></strong><span> boys from South London came up and hugged him once.</span></p><p><span>曾有一次几个伦敦南部来的饶舌歌手和他拥抱。</span></p></blockquote><p><span>colony: </span><em><span>n.</span></em><span>殖民地；殖民团，移民队；聚集人群，聚居地（区）；群体，群落；（统称）英属殖民地；（美国独立前的）北美十三州</span></p><blockquote><p><span>Different animals in the </span><strong><span>colony</span></strong><span> had different manifestations of the disease.</span></p><p><span>同一群体的不同动物对同一疾病有不同的表现形式。</span></p></blockquote></blockquote><p><span>A little </span><u><span>imprisonment</span></u><span>—if it’s of your own making—can set you free. Rather than restricting your freedom, a routine gives you freedom by protecting you from the ups and downs of life and helping you take advantage of your limited time, energy, and talent. A routine establishes good habits that can lead to your best work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>imprisonment: </span><em><span>n.</span></em><span>监禁，关押</span></p><blockquote><p><span>He faced </span><strong><span>imprisonment</span></strong><span> for contempt of court.</span></p><p><span>他因藐视法庭罪而面临监禁。</span></p></blockquote></blockquote><p><span>Best of all, I think, is that when your days pretty much have the same shape, the days that don’t have that shape become even more interesting. There’s nothing like a good prison break, and playing </span><u><span>hooky</span></u><span> isn’t as fun if you never go to school.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hooky: </span></p><ul><li><p><em><span>n.</span></em><span>逃学；逃学者（同 hookey）</span></p></li><li><p><em><span>adj.</span></em><span>多钩的；钩状的；（音乐）简单动听的</span></p></li></ul><blockquote><p><span>Lets play </span><strong><span>hooky</span></strong><span> today!</span></p><p><span>今天我们逃学吧。</span></p></blockquote><p><span>play hooky: 逃学：指学生未经允许在上课时间不去上课，通常是为了玩耍或做其他事情。</span></p><blockquote><p><span>I could never </span><strong><span>play</span></strong><span> </span><strong><span>hooky</span></strong><span> from work.</span></p><p><span>我可以从不旷工的。</span></p></blockquote></blockquote><p><span>What your daily routine consists of is not that important. What’s important is that the routine exists. </span><u><span>Cobble</span></u><span> together your own routine, stick to it most days, break from it once in a while for fun, and modify it as necessary.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cobble: </span></p><ul><li><p><em><span>v.</span></em><span>修，拙劣地修补；草率地拼凑，粗制滥造；铺鹅卵石，用圆石铺面</span></p></li><li><p><em><span>n.</span></em><span>鹅卵石，圆石；（英）小圆煤块</span></p></li></ul><blockquote><p><span>Still I managed to </span><strong><span>cobble</span></strong><span> a list together.</span></p><p><span>我还是想要凑出一张排名来。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“My <u style="color:blue">hangovers</u> are scheduled a year in advance.”<br/>—John Waters</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hangovers: </span><em><span>n.</span></em><span>[内科]宿醉；遗物；残留物（hangover 的复数）</span></p><blockquote><p><span>Since the dawn of alcohol, man has been plagued by </span><strong><span>hangovers</span></strong><span>.</span></p><p><span>自酒问世以来，人类便深受宿醉之苦。</span></p></blockquote></blockquote><h3 id='make-lists'><span>Make lists.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I make lists to keep my anxiety level down. If I write down fifteen things to be done, I lose that <u style="color:blue">vague</u>, <u style="color:blue">nagging</u> sense that there are an <u style="color:blue">overwhelming</u> number of things to be done, all of which are on the brink of being forgotten.”<br/>—Mary Roach </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>overwhelming: </span></p><ul><li><p><em><span>adj.</span></em><span>难以抗拒的，令人不知所措的；巨大的，压倒性的</span></p></li><li><p><em><span>v.</span></em><span>（感情上）使受不了，使不知所措；压垮，使应接不暇；打败，击垮（overwhelm 的现在分词形式）</span></p></li></ul><blockquote><p><span>He felt an </span><strong><span>overwhelming</span></strong><span> sense of loss.</span></p><p><span>他感到非常失落。</span></p></blockquote></blockquote><p><span>Lists bring order to the </span><u><span>chaotic</span></u><span> universe. I </span><em><span>love</span></em><span> making lists. Whenever I need to figure out my life, I make a list. A list gets all your ideas out of your head and clears the mental space so you’re actually able to do something about them.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>chaotic: </span><em><span>adj.</span></em><span>混乱的，无秩序的；（与）……混沌（有关）的</span></p><blockquote><p><span>The traffic in the city is </span><strong><span>chaotic</span></strong><span> in the rush hour.</span></p><p><span>在上下班高峰时间，城市的交通混乱不堪。</span></p></blockquote></blockquote><p><span>When I’m overwhelmed, I fall back on the old-fashioned to-do list. I make a big list of everything that needs to get done, I pick the most </span><u><span>pressing</span></u><span> thing to do, and I do it. Then I cross it off the list and pick another thing to do. Repeat.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pressing: </span></p><ul><li><p><em><span>adj.</span></em><span>（问题，需求，情况）紧迫的，迫切的；难以推却的，不容忽视的</span></p></li><li><p><em><span>n.</span></em><span>压制品，一批压制品（尤指唱片）；按，压，挤，推</span></p></li><li><p><em><span>v.</span></em><span>按，压；熨平（衣服）；挤着走（pressing 的现在分词形式）</span></p></li></ul><blockquote><p><span>I have more </span><strong><span>pressing</span></strong><span> things to attend to.</span></p><p><span>我有更紧迫的事情要做。</span></p></blockquote></blockquote><p><span>Some of my favorite artists make “to-draw” lists. David Shrigley will make a huge list of fifty things to draw a week in advance. Having the list means he doesn’t have to waste studio time worrying about what to make. “The simple thing I’ve learned over the years is just to have a starting point and once you have a starting point the work seems to make itself,” he says.</span></p><p><span>Leonardo da Vinci made “to-learn” lists. He’d get up in the morning and write down everything he wanted to learn that day.</span></p><p><span>When there’s something I want to do in the future but don’t have time for right now, I add it to what productivity expert David Allen calls a “Someday/Maybe” list. Writer Steven Johnson does this in a single document he calls a “spark file”—every time he has an idea, he adds it to the file, and then he revisits the list every couple of months.</span></p><p><span>Sometimes it’s important to make a list of what you </span><em><span>won’t</span></em><span> do. The </span><u><span>punk</span></u><span> band Wire could never agree on what they all liked, but they could agree on what they </span><em><span>didn’t</span></em><span> like. So, in 1977, they sat down and made a list of rules: “No solos; no decoration; when the words run out, it stops; we don’t </span><u><span>chorus</span></u><span> out; no rocking out; keep it to the point; no Americanisms.” The list defined their sound.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>punk: </span></p><ul><li><p><em><span>n.</span></em><span>废物；小阿飞；年轻无知的人</span></p></li><li><p><em><span>adj.</span></em><span>朋客，崩客；无用的，低劣的</span></p></li></ul><blockquote><p><span>I was never really into </span><strong><span>punk</span></strong><span>.</span></p><p><span>我从未真正喜欢过朋客摇滚乐。</span></p></blockquote><p><span>chorus: </span></p><ul><li><p><em><span>n.</span></em><span>副歌，叠句；合唱团，歌咏队；齐声，异口同声；合唱歌曲；（古希腊戏剧）合唱队，解说演员；(伊丽莎白时期戏剧）旁白；乐器扩音器；（演出中伴舞的）歌舞队</span></p></li><li><p><em><span>v.</span></em><span>齐声说，齐唱</span></p></li></ul><blockquote><p><span>Students played the lesser parts and sang in the </span><strong><span>chorus</span></strong><span>.</span></p><p><span>学生们扮演了一些次要角色，并参加了合唱团的演唱。</span></p></blockquote></blockquote><p><span>When I need to make a decision, there’s the pros-and-cons list. In 1772, Benjamin Franklin explained it to his pal Joseph Priestly: “Divide a half a sheet of paper by a line into two columns, writing over the one Pro, and over the other Con.” When Charles Darwin was trying to figure out whether to get married? He made a </span><u><span>pros-and-cons</span></u><span> list.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pros-and-cons: 利弊得失：对某事物或决策的优点和缺点进行权衡和分析。</span></p><blockquote><p><span>Before making a decision, it&#39;s important to consider the pros and cons.</span></p><p><span>在做决定之前，考虑利弊得失是很重要的。</span></p></blockquote></blockquote><p><span>When I’m stuck in the morning and I don’t know what to write about in my diary, I’ll modify the pros-and-cons list. I’ll draw a line down the middle of the page, and in one column I’ll list what I’m thankful for, and in the other column, I’ll write down what I need help with. It’s a paper prayer.</span></p><p><span>“A list is a collection with purpose,” writes designer Adam Savage. I like to look back at the end of each year and see where I’ve been, so I’ll make a “Top 100” list of favorite trips, life events, books, records, movies, etc. I stole this practice from cartoonist John Porcellino, who publishes a “Top 40”–style list in his </span><u><span>zine</span></u><span>, </span><em><span>King-Cat</span></em><span>. (He, too, is a big list-maker; he’ll keep long lists of stories and drawing ideas for the zine before he actually sits down to draw them.) Each list is like an organized diary of the year. It comforts me to look over previous years, to see what’s changed and what hasn’t.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>zine: </span><em><span>n.</span></em><span>电子杂志；科幻小说杂志（等于 Fanzine）</span></p></blockquote><p><span>When I need to keep myself spiritually on track, I’ll make a version of my own Ten Commandments. A list of “Thou shalts” and “Thou shalt nots.” Come to think of it, this book is one of them.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Your list is your past and your future. Carry at all times. Prioritize: today, this week, and eventually. You will someday die with items still on your list, but for now, while you live, your list helps prioritize what can be done in your limited time.”<br/>—Tom Sachs</p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Finish every day and be done with it. You have done what you could; some <u style="color:blue">blunders</u> and <u style="color:blue">absurdities</u> no doubt <u style="color:blue">crept</u> in; forget them as soon as you can. Tomorrow is a new day; you shall begin it well and <u style="color:blue">serenely</u>, and with too high a spirit to be <u style="color:blue">cumbered</u> with your old nonsense.”<br/>—Ralph Waldo Emerson</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>blunder: </span></p><ul><li><p><em><span>v.</span></em><span>跌跌撞撞地走，摸索；犯愚蠢的错误，出漏子；误入，不小心陷入（困境）</span></p></li><li><p><em><span>n.</span></em><span>愚蠢的错误，疏忽</span></p></li></ul><blockquote><p><span>I think he made a tactical </span><strong><span>blunder</span></strong><span> by announcing it so far ahead of time.</span></p><p><span>我认为他如此提早宣布消息是犯了战术上的错误。</span></p></blockquote><p><span>absurdity: </span><em><span>n.</span></em><span>荒谬，荒唐；荒谬的言行</span></p><blockquote><p><span>It was only later that she could see the </span><strong><span>absurdity</span></strong><span> of the situation.</span></p><p><span>直到后来她才看出了那种局面的荒唐。</span></p></blockquote><p><span>crept: </span><em><span>v.</span></em><span>匍匐爬行（creep 的过去式）</span></p><blockquote><p><span>She and her husband started out limiting TV time when their kids were little, but then technology </span><strong><span>crept</span></strong><span> in.</span></p><p><span>她和丈夫在孩子很小的时候就开始限制他们看电视的时间，但是突然间，科技产品悄悄来临。</span></p></blockquote><p><span>creep in: 悄悄混进；渐渐产生</span></p><p><span>serenely: </span><em><span>adv.</span></em><span>安详地；沉着地；宁静地</span></p><blockquote><p><span>It was a </span><strong><span>serenely</span></strong><span> beautiful night.</span></p><p><span>那是一个宁静美丽的夜晚。</span></p></blockquote><p><span>cumbered: </span></p><ul><li><p><em><span>vt.</span></em><span>阻碍，妨害；使受苦</span></p></li><li><p><em><span>n.</span></em><span>拖累，累赘；妨害</span></p></li></ul><blockquote><p><span>be cumbered with care: 心事重重</span></p><p><span>Perhaps that is why I hated him, for truly he had become an offense to my eyes, and I believed the earth to </span><strong><span>be</span></strong><span> </span><strong><span>cumbered</span></strong><span> </span><strong><span>with</span></strong><span> his presence.</span></p><p><span>可能这就是我为什么讨厌他的原因，说真的，他的长相是对我眼睛的一种冒犯，而且我相信他的存在也成为了地球的累赘。</span></p></blockquote></blockquote><h3 id='finish-each-day-and-be-done-with-it'><span>Finish each day and be done with it.</span></h3><p><span>Not every day is going to turn out the way we want it to. All routines and to-do lists are </span><u><span>aspirational</span></u><span>. “You go diving for </span><u><span>pearls</span></u><span>,” said Jerry Garcia, “but sometimes you end up with </span><u><span>clams</span></u><span>.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>aspirational: </span></p><ul><li><p><em><span>adj.</span></em><span>有雄心壮志的；（生活形态等）梦寐以求的</span></p></li><li><p><em><span>n.</span></em><span>成功指南；处世自助手册</span></p></li></ul><blockquote><p><span>Fine music, particularly opera, has become </span><strong><span>aspirational</span></strong><span>, like fine wine or foreign travel.</span></p><p><span>优雅的音乐，尤其是歌剧，已像美酒或海外旅游一样被人追求。</span></p></blockquote><p><span>pearl: </span></p><ul><li><p><em><span>n.</span></em><span>珍珠；珍珠母；珠状物；极其优秀的人，珍贵的东西；人造珍珠；珠灰色；珍珠项链，珍珠首饰（pearls）</span></p></li><li><p><em><span>v.</span></em><span>&lt;文&gt;成珠状滴；使呈珠灰色，使呈蓝灰色；（潜水）采珍珠；用珍珠装饰</span></p></li><li><p><em><span>adj.</span></em><span>珍珠般的；镶珍珠的</span></p></li></ul><blockquote><p><span>A local jeweler says the </span><strong><span>pearl</span></strong><span> is worth at least $500.</span></p><p><span>一位本地珠宝商说这颗珍珠至少值$500。</span></p></blockquote><p><span>clams: </span></p><ul><li><p><em><span>n.</span></em><span>蛤，蛤蜊；&lt;非正式&gt;可食用的双壳软体动物（如扇贝）；&lt;美，非正式&gt;美元；&lt;非正式&gt;嘴紧的人，沉默寡言的人</span></p></li><li><p><em><span>v.</span></em><span>&lt;美&gt;挖蛤，拾蛤</span></p></li></ul></blockquote><p><span>The important thing is to make it to the end of the day, no matter what. No matter how bad it gets, see it through to the end so you can get to tomorrow. After spending the day with his five-year-old son, Nathaniel Hawthorne wrote in his diary, “We got rid of the day as well as we could.” Some days you just have to get rid of as best as you can.</span></p><p><span>When the sun goes down and you look back on the day, go easy on yourself. A little self-forgiveness goes a long way. Before you go to bed, make a list of anything you </span><em><span>did</span></em><span> accomplish, and write down a list of what you want to get done tomorrow. Then forget about it. </span><mark style="background:#f8e272;"><span>Hit the </span><u><span>pillow</span></u><span> with a clear mind</span></mark><span>. Let your </span><u><span>subconscious</span></u><span> work on stuff while you’re sleeping.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pillow: </span></p><ul><li><p><em><span>n.</span></em><span>枕头；蕾丝枕头（lace pillow的简称）；&lt;美&gt;坐垫，靠垫</span></p></li><li><p><em><span>v.</span></em><span>将（头）枕在……上，枕着（某物）；&lt;文&gt;为……当枕头</span></p></li></ul><blockquote><p><span>He tried to smother me with a </span><strong><span>pillow</span></strong><span>.</span></p><p><span>他企图用枕头闷死我。</span></p></blockquote><p><span>subconscious: </span></p><ul><li><p><em><span>adj.</span></em><span>下意识的，潜意识的</span></p></li><li><p><em><span>n.</span></em><span>下意识，潜意识</span></p></li></ul><blockquote><p><span>He caught her arm in a </span><strong><span>subconscious</span></strong><span> attempt to detain her.</span></p><p><span>他下意识地抓住了她的胳膊，试图留住她。</span></p></blockquote></blockquote><p><span>A day that seems like waste now might turn out to have a purpose or use or beauty to it later on. When the video-game artist Peter Chan was young, he loved to draw, but he would crumple up his “bad” drawings in fits of frustration. His father convinced him that if he laid the “bad” drawings flat instead of </span><u><span>crumpling</span></u><span> them </span><u><span>up</span></u><span>, he could fit more of them in the </span><u><span>wastebasket</span></u><span>. After his father died, Chan found a folder labeled “Peter” in his father’s possessions. When he looked inside, it was full of his old, discarded drawings. His father had </span><u><span>snuck</span></u><span> into his room and </span><u><span>plucked</span></u><span> the drawings he thought were worth saving from the wastebasket.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>crumple: </span></p><ul><li><p><em><span>vt.</span></em><span>弄皱；使一蹶不振</span></p></li><li><p><em><span>vi.</span></em><span>起皱；倒坍；一蹶不振</span></p></li><li><p><em><span>n.</span></em><span>皱纹；褶皱</span></p></li></ul><blockquote><p><span>Take care not to </span><strong><span>crumple</span></strong><span> your dress by packing it carelessly.</span></p><p><span>当心不要因收放粗心压纵你的衣服。</span></p></blockquote><p><span>crumple up: 揉皱：把纸、布等揉成皱的动作，通常表示不再需要或不满意。</span></p><blockquote><p><span>It doesn&#39;t matter what that letter says — I can </span><strong><span>crumple</span></strong><span> it </span><strong><span>up</span></strong><span> and throw it in the wastebasket.</span></p><p><span>不管信上怎么说，我都可以揉成团扔进垃圾箱了？</span></p></blockquote><p><span>wastebasket: </span></p><ul><li><p><em><span>n.</span></em><span>废纸篓</span></p></li><li><p><em><span>vt.</span></em><span>把……放入废纸篓</span></p></li></ul><p><span>snuck: 潜行（ sneak 的过去式和过去分词）</span></p><blockquote><p><span>He&#39;d </span><strong><span>snuck</span></strong><span> out of the U.S. hotly pursued by the CIA.</span></p><p><span>他偷偷地溜出了美国，但已被美国中央情报局紧紧盯上。</span></p></blockquote><p><span>pluck: </span></p><ul><li><p><em><span>v.</span></em><span>摘，掐；拉，扯；（用指甲或镊子）夹，拔（毛发）；拔去（鸡或鸟的毛）；弹拨（弦乐器）；解救，搭救；挖掘，使一跃成名；鼓起勇气（pluck up the courage）；挑选；（用手指）迅速拣起；（地质）（冰川冰）拔削，拔蚀</span></p></li><li><p><em><span>n.</span></em><span>胆识，勇气；（供食用的）动物内脏；猛拉</span></p></li></ul><blockquote><p><span>When you get hungry, just </span><strong><span>pluck</span></strong><span> a pear off the tree and eat it.</span></p><p><span>肚子饿了你就从树上采摘一个梨吃吧。</span></p></blockquote></blockquote><p><span>Every day is like a blank page: When you’re finished filling it, you can save it, you can crumple it up, or you can slide it into the recycling bin and let it be. Only time will tell you what it was worth.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Every day is a new deal. Keep workin’ and maybe sump’n’ll turn up.”<br/>—Harvey Pekar</p><hr style="background:brown"/><p>&nbsp;</p><blockquote><h3 id='知识拓展'><span>知识拓展</span></h3><p><u><span>Ground Hog Day</span></u></p><p><strong><span>Groundhog Day</span></strong><span> (Canadian French: Jour de la Marmotte; Pennsylvania German: Grundsaudaag, Murmeltiertag) is a day celebrated on February 2. According to folklore, if it is cloudy when a groundhog emerges from its burrow on this day, then spring will come early; if it is sunny, the groundhog will supposedly see its shadow and retreat back into its burrow, and the winter weather will persist for six more weeks.Modern customs of the holiday involve celebrations where early morning festivals are held to watch the groundhog emerging from its burrow.In southeastern Pennsylvania, Groundhog Lodges (Grundsow Lodges) celebrate the holiday with fersommlinge, social events in which food is served, speeches are made, and one or more g&#39;spiel (plays or skits) are performed for entertainment. The Pennsylvania German dialect is the only language spoken at the event, and those who speak English pay a penalty, usually in the form of a nickel, dime, or quarter per word spoken, with the money put into a bowl in the center of the table.The largest Groundhog Day celebration is held in Punxsutawney, Pennsylvania, with Punxsutawney Phil. Groundhog Day, already a widely recognized and popular tradition, received widespread attention as a result of the 1993 film Groundhog Day.</span></p></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

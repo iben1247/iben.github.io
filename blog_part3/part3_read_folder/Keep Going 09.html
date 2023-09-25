@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 09</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">09</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#demons-hate-fresh-air">Demons Hate Fresh Air</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#to-exercise-is-to-exorcise">To exercise is to exorcise.</a></span></p></div><hr /><h2 id='demons-hate-fresh-air'><span>Demons Hate Fresh Air</span></h2><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I walked myself into my best thoughts.”<br/>—Søren Kierkegaard </p><hr style="background:brown"/><h3 id='to-exercise-is-to-exorcise'><span>To exercise is to exorcise.</span></h3><p><span>Almost every morning, rain or shine, my wife and I load our two sons into a red double </span><u><span>stroller</span></u><span> and we take a three-mile walk around our neighborhood. It’s often painful, sometimes </span><u><span>sublime</span></u><span>, but it’s absolutely essential to our day. We talk. We make plans. We rant about politics. We stop to chat with neighbors or admire the </span><u><span>suburban</span></u><span> </span><u><span>wildlife</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stroller: </span><em><span>n.</span></em><span>散步者；流浪者；（美）折叠式婴儿车；巡回演出的演员</span></p><blockquote><p><span>I can put the baby in his </span><strong><span>stroller</span></strong><span>, and Terra makes sure we are both okay.</span></p><p><span>我可以把孩子放进婴儿车里，特拉会确保我们俩都安全。</span></p></blockquote><p><span>sublime: </span></p><ul><li><p><em><span>adj.</span></em><span>崇高的，壮丽的，令人赞叹的；极端的，十足的</span></p></li><li><p><em><span>v.</span></em><span>（化）升华；使升华；&lt;古&gt;使变得崇高（或高尚），使变得出众</span></p></li><li><p><em><span>n.</span></em><span>崇高的事物，壮丽的景象，绝妙的东西（the sublime）；顶点（the sublime）</span></p></li></ul><blockquote><p><span>Now we are rewarded for our </span><strong><span>sublime</span></strong><span> faith in a mother&#39;s love.</span></p><p><span>因为我们对母爱的崇高信念，我们现在得到了回报。</span></p></blockquote><p><span>suburban: </span></p><ul><li><p><em><span>adj.</span></em><span>郊区的，城郊的；平淡乏味的，乡气的，平庸的</span></p></li><li><p><em><span>n.</span></em><span>郊区居民</span></p></li></ul><blockquote><p><span>At first sight it looked like a typical </span><strong><span>suburban</span></strong><span> road accident.</span></p><p><span>乍一看，这像是一起典型的郊区交通事故。</span></p></blockquote><p><span>wildlife: </span></p><ul><li><p><em><span>n.</span></em><span>野生动植物</span></p></li><li><p><em><span>adj.</span></em><span>野生动植物的</span></p></li></ul><blockquote><p><span>Development of the area would endanger </span><strong><span>wildlife</span></strong><span>.</span></p><p><span>开发这一地区将会危及野生生物。</span></p></blockquote></blockquote><p><span>Our morning walk is where ideas are born and books are edited. It’s so crucial that we go for our walk that we’ve adopted the unofficial United States Postal Service </span><u><span>motto</span></u><span> as our own: “Neither snow nor rain nor heat nor </span><u><span>gloom</span></u><span>. . . stays these couriers from the </span><u><span>swift</span></u><span> completion of their appointed rounds.” We won’t set morning appointments or meetings before we take a walk. Whenever we meet a neighbor, the conversation often starts with, “Are you the couple with the big red stroller?”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>motto: </span><em><span>n.</span></em><span>座右铭，格言，警句；格言主题</span></p><blockquote><p><span>The school&#39;s </span><strong><span>motto</span></strong><span> is: &#39;Duty, Honour, Country&#39;.</span></p><p><span>这所学校的校训是：“责任、荣誉、国家”。</span></p></blockquote><p><span>gloom:</span></p><ul><li><p><em><span>n.</span></em><span>忧郁，绝望；昏暗，幽暗</span></p></li><li><p><em><span>v.</span></em><span>外观昏暗；显得萧条（或消沉）</span></p></li></ul><blockquote><p><span>The flashlights barely penetrated the </span><strong><span>gloom</span></strong><span>.</span></p><p><span>手电筒勉强照见那幽暗处。</span></p></blockquote><p><span>swift: </span></p><ul><li><p><em><span>adj.</span></em><span>迅速的，立刻的；快速移动的，速度非常快的；&lt;美，非正式&gt;机灵的，聪明的</span></p></li><li><p><em><span>n.</span></em><span>雨燕；蝙蝠蛾；绷架</span></p></li><li><p><em><span>adv.</span></em><span>&lt;文&gt; （在组合形式以外为诗歌或文学用于）迅速</span></p></li></ul><blockquote><p><span>After the election there was a </span><strong><span>swift</span></strong><span> transfer of power.</span></p><p><span>大选之后权力迅速交接。</span></p></blockquote></blockquote><p><span>Walking really is a magic cure for people who want to think straight. “Solvitur ambulando,” said Diogenes the Cynic two millennia ago. “It is solved by walking.”</span></p><p><span>The list of famous artists, poets, and scientists who took strolls, hikes, and rambles around the city and countryside is practically endless. Wallace Stevens composed poems on his walk back and forth from the </span><u><span>insurance</span></u><span> agency where he worked. Friedrich Nietzsche wrote many of his books while hiking around lakes. “If I couldn’t walk far and fast,” Charles Dickens wrote of his twenty-mile </span><u><span>marathons</span></u><span> around London, “I should just explode and </span><u><span>perish</span></u><span>.” Both Ludwig van Beethoven and Bob Dylan got picked up by the police while wandering the suburbs—Beethoven in nineteenth-century Vienna, Dylan in twenty-first-century New Jersey. Henry David Thoreau, who used to spend four hours a day walking around the woods outside Concord, wrote, “</span><u><span>Methinks</span></u><span> that the moment my legs begin to move, my thoughts begin to flow.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>insurance: </span><em><span>n.</span></em><span>保险；保险费；保险业；保险赔偿金，保险金；保险单；预防措施，安全保障</span></p><blockquote><p><span>Medical </span><strong><span>insurance</span></strong><span> is very pricey.</span></p><p><span>医疗保险很昂贵。</span></p></blockquote><p><span>marathons:</span></p><ul><li><p><em><span>n.</span></em><span>马拉松赛跑；马拉松式的活动（或工作）</span></p></li><li><p><em><span>adj.</span></em><span>马拉松式的，漫长而累人的</span></p></li><li><p><em><span>v.</span></em><span>参加马拉松赛跑（或马拉松式的比赛、活动）</span></p></li></ul><blockquote><p><span>Avoid learning </span><strong><span>marathons</span></strong><span>—they do not make the best use of your mind.</span></p><p><span>避免学习马拉松——它们不能充分利用你的头脑。</span></p></blockquote><p><span>perish: </span><em><span>v.</span></em><span>（人或动物）惨死，猝死；湮灭，毁灭；（木头、橡胶、食物等）腐烂，腐败；&lt;英，非正式&gt; 经受酷寒</span></p><blockquote><p><span>Most of the butterflies </span><strong><span>perish</span></strong><span> in the first frosts of autumn.</span></p><p><span>大多数蝴蝶在秋季初霜来临时死亡。</span></p></blockquote><p><span>methinks: </span><em><span>v.</span></em><span>据我看来</span></p><blockquote><p><span>It was, </span><strong><span>methinks</span></strong><span> about this season that we had our wedding.</span></p><p><span>我想，我们正是在这个季节举行婚礼的。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I set out to dispel daily depression. Every afternoon I get low-spirited, and one day I discovered the walk . . . I set myself a destination, and then things happen in the street.”<br/>—Vivian Gornick </p><hr style="background:brown"/><p><span>Walking is good for physical, spiritual, and mental health. “No matter what time you get out of bed, go for a walk,” said director Ingmar Berman to his daughter, Linn Ullmann. “The demons hate it when you get out of bed. Demons hate fresh air.”</span></p><p><span>What I’ve learned on our morning walks is that, yes, walking is great for releasing inner demons, but maybe even more important, walking is great for battling our outer demons.</span></p><p><span>The people who want to control us through fear and </span><u><span>misinformation</span></u><span>—the </span><u><span>corporations</span></u><span>, marketers, politicians—want us to be </span><u><span>plugged</span></u><span> into our phones or watching TV, because then they can sell us their vision of the world. If we do not get outside, if we do not take a walk out in the fresh air, we do not see our everyday world for what it really is, and we have no vision of our own with which to combat disinformation.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>misinformation: </span><em><span>n.</span></em><span>误报；错误的消息</span></p><blockquote><p><span>This was a deliberate piece of </span><strong><span>misinformation</span></strong><span>.</span></p><p><span>这是一条故意提供的虚假消息。</span></p></blockquote><p><span>corporations: </span><em><span>n.</span></em><span>公司，企业（corporation 的复数）</span></p><blockquote><p><span>Many voters resented the power of big </span><strong><span>corporations</span></strong><span>.</span></p><p><span>许多投票人憎恨大公司的权力。</span></p></blockquote><p><span>plugged: </span></p><ul><li><p><em><span>adj.</span></em><span>堵塞的；塞紧的</span></p></li><li><p><em><span>v.</span></em><span>堵塞；接通电源（plug 的过去分词）</span></p></li></ul><blockquote><p><span>He </span><strong><span>plugged</span></strong><span> his razor in to recharge it.</span></p><p><span>他把剃刀插在插座上，给它充电。</span></p></blockquote></blockquote><p><span>Art requires the full use of our senses. Its job is to awaken us to our senses. Our screens, on the other hand, have made us lose our senses and our sense. Their overall effect has been a kind of spiritual numbing. “To be </span><u><span>sensual</span></u><span>, I think, is to respect and </span><u><span>rejoice</span></u><span> in the force of life, of life itself, and to be present in all that one does,” wrote James Baldwin in his essay “The Fire Next Time.” He continued, “Something very </span><u><span>sinister</span></u><span> happens to the people of a country when they begin to distrust their own reactions as deeply as they do here, and become as joyless as they have become.” Baldwin worried that we no longer relied on our </span><u><span>sensory</span></u><span> experiences: “The person who distrusts himself has no </span><u><span>touchstone</span></u><span> for reality.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>sensual: </span><em><span>adj.</span></em><span>感官的，愉悦感官的；肉欲的，性感的；喜爱感官享受（尤指情欲）的</span></p><blockquote><p><span>He was a very </span><strong><span>sensual</span></strong><span> person.</span></p><p><span>他是个非常喜爱感官享受的人。</span></p></blockquote><p><span>rejoice: </span><em><span>v.</span></em><span>非常高兴，深感欣喜；&lt;英&gt;享有（用于吸引人注意奇特之处，尤指名字）（rejoice in）；&lt;古&gt;使感到高兴，使喜悦</span></p><blockquote><p><span>When the war ended, people finally had cause to </span><strong><span>rejoice</span></strong><span>.</span></p><p><span>战争结束，人们终于可以欢欣鼓舞了。</span></p></blockquote><p><span>sinister: </span><em><span>adj.</span></em><span>邪恶的，不祥的；&lt;古&gt;（纹章）（在）盾形纹章左侧的</span></p><blockquote><p><span>The more </span><strong><span>sinister</span></strong><span> explanation is that he is about to make mischief in the Middle East again.</span></p><p><span>更为险恶的解释是他又要在中东制造事端。</span></p></blockquote><p><span>sensory: </span><em><span>adj.</span></em><span>感觉的，感官的</span></p><blockquote><p><span>Both motor and </span><strong><span>sensory</span></strong><span> functions are affected.</span></p><p><span>运动功能和感觉功能都受到影响。</span></p></blockquote><p><span>touchstone: </span><em><span>n.</span></em><span>试金石；（检验）标准</span></p><blockquote><p><span>Job security has become the </span><strong><span>touchstone</span></strong><span> of a good job for many employees.</span></p><p><span>对许多雇员来说，工作的稳定性已经成了一份好工作的标准。</span></p></blockquote></blockquote><p><span>When we’re glued to our screens, the world looks unreal. Terrible. Not worth saving or even spending time with. Everyone on earth seems like a </span><u><span>troll</span></u><span> or a </span><u><span>maniac</span></u><span> or worse. But you get outside and you start walking and you come to your senses. Yeah, there are a few maniacs and some </span><u><span>ugliness</span></u><span>, but there are also people smiling, birds </span><u><span>chirping</span></u><span>, clouds flying overhead . . . all that stuff. There’s possibility. Walking is a way to find possibility in your life when there doesn’t seem to be any left.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>troll: </span></p><ul><li><p><em><span>n.</span></em><span>巨怪，侏儒怪物；恶意挑衅的帖子，发挑衅帖子的人；曳绳钓鱼法中用的曳绳或鱼饵；用曳绳法钓鱼；轮唱</span></p></li><li><p><em><span>v.</span></em><span>拖捞，拖钓；搜寻，寻找；随便浏览，随便翻翻；&lt;英&gt;闲逛，游荡；（无缘由地在网际网路上某处）留下侮辱性的讯息；快乐地唱</span></p></li></ul><blockquote><p><span>A quant will </span><strong><span>troll</span></strong><span> through tons and tons of data, looking for patterns.</span></p><p><span>金融工程师会在大量数据中寻找模式。</span></p></blockquote><p><span>maniac:</span></p><ul><li><p><em><span>n.</span></em><span>疯子，躁狂者</span></p></li><li><p><em><span>adj.</span></em><span>发狂的；狂热的；癫狂的</span></p></li></ul><blockquote><p><span>My mom is turning into a religious </span><strong><span>maniac</span></strong><span>.</span></p><p><span>我妈妈正在变成一个宗教狂热分子。</span></p></blockquote><p><span>ugliness: </span><em><span>n.</span></em><span>丑陋，丑陋之物</span></p><blockquote><p><span>No doubt we will remember a 20th century way of life beyond comprehension for its </span><strong><span>ugliness</span></strong><span>.</span></p><p><span>毫无疑问，我们会记得20世纪的生活方式，其丑陋令人难以理解。</span></p></blockquote><p><span>chirping: </span></p><ul><li><p><em><span>n.</span></em><span>[昆]鸣叫；啁啾声；鸟叫声</span></p></li><li><p><em><span>v.</span></em><span>叽叽喳喳地讲话；唧唧地叫（chirp 的 ing 形式）</span></p></li></ul><blockquote><p><span>Now the tiresome </span><strong><span>chirping</span></strong><span> of a cricket that no human ingenuity could locate, began.</span></p><p><span>这时，一只蟋蟀开始发出烦人的唧唧声，而人们根本找不到它在哪。</span></p></blockquote></blockquote><p><span>So get outside every day. Take long walks by yourself. Take walks with a friend or a loved one or a dog. Walk with a coworker on your lunch break. Grab a plastic bag and a stick and take a </span><u><span>litter-picking</span></u><span> walk like David Sedaris. Always keep a notebook or camera in your pocket for when you want to stop to capture a thought or an image.</span></p><p><span>Explore the world on foot. See your neighborhood. Meet your neighbors. Talk to strangers.</span></p><p><span>The </span><u><span>demons</span></u><span> hate fresh air.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>litter-picking: </span><em><span>n</span></em><span>．捡拾垃圾：一种环保活动，志愿者或工作人员在公共场所、街道、公园等地捡拾丢弃的垃圾，以保持环境整洁。</span></p><blockquote><p><span>· The volunteers organized a litter-picking event in the park.</span></p><p><span>志愿者们在公园组织了一次捡拾垃圾的活动。</span></p></blockquote><p><span>demons: </span><em><span>n.</span></em><span>魔族，恶魔；[计]守护程序</span></p><blockquote><p><span>He claimed to have the power to cast out </span><strong><span>demons</span></strong><span>.</span></p><p><span>他宣称有驱魔的神力。</span></p></blockquote><p><span>demon: </span><em><span>n.</span></em><span>魔鬼，恶魔；技艺出众的人，高手； 精力充沛的人，热情饱满的人；心魔，邪恶的事物；恶人；坏蛋，淘气鬼</span></p><blockquote><p><span>What </span><strong><span>demon</span></strong><span> possessed me that I behaved so well?</span></p><p><span>是什么恶魔控制了我，让我如此墨守成规？</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Go out and walk. That is the glory of life.”<br/>—Maira Kalman </p><hr style="background:brown"/><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

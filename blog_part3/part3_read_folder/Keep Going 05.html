@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 05</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">05</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#the-ordinary--extra-attention--the-extraordinary">The Ordinary + Extra Attention = the Extraordinary</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#you-have-everything-you-need">You have everything you need.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n152"><a class="md-toc-inner" href="#slow-down-and-draw-things-out">Slow down and draw things out.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n211"><a class="md-toc-inner" href="#pay-attention-to-what-you-pay-attention-to">Pay attention to what you pay attention to.</a></span></p></div><hr /><h2 id='the-ordinary--extra-attention--the-extraordinary'><span>The Ordinary + Extra Attention = the Extraordinary</span></h2><h3 id='you-have-everything-you-need'><span>You have everything you need.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“It’s as true today as it ever was: He who seeks beauty will find it.”<br/>—Bill Cunningham </p><hr style="background:brown"/><p><span>One of my art heroes was a </span><u><span>nun</span></u><span>.</span></p><p><span>In the 1960s, Sister Mary Corita Kent was an art teacher at Immaculate Heart College in Los Angeles. Inspired by a show of Andy Warhol’s work, she started screen printing. She would take pictures of advertisements and signs all over the city—the stuff we usually think of as </span><u><span>junk</span></u><span>, </span><u><span>clutter</span></u><span>, and eye pollution—and she would transform those things by taking them out of their context, adding them to </span><u><span>handwritten</span></u><span> lyrics from pop songs and Bible verses, and printing them as if they were religious messages. She turned a bag of Wonder Bread into a message about taking communion. She </span><u><span>stole</span></u><span> the General Mills slogan, “The Big G Stands For Goodness,” and made the “G” from the logo seem like it was referring to God. She cut the Safeway logo into two separate words and it became a sign showing the path of salvation. Finding God in all things is one of the tasks of the believer, and Kent found God in advertising, of all things. Kent took the </span><u><span>manmade</span></u><span> landscape of Los Angeles—not necessarily the first place you’d look for beauty—and she found the beauty in it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>nun: </span><em><span>n.</span></em><span>修女，尼姑</span></p><blockquote><p><span>She shaved her head and became a </span><strong><span>nun</span></strong><span>.</span></p><p><span>她削发为尼。</span></p></blockquote><p><span>junk: </span></p><ul><li><p><em><span>n.</span></em><span>废旧杂物；垃圾，破烂；毫无价值的事物；&lt;非正式&gt;毒品，（尤指）海洛因；中国式帆船；（含有鲸脑油的）抹香鲸头部纤维组织</span></p></li><li><p><em><span>v.</span></em><span>；&lt;非正式&gt;抛弃，丢掉（废旧物品）</span></p></li></ul><blockquote><p><span>He lived on a diet of </span><strong><span>junk</span></strong><span> food.</span></p><p><span>他把垃圾食品当饭吃。</span></p></blockquote><p><span>clutter:</span></p><ul><li><p><em><span>n.</span></em><span>杂乱的东西；杂乱</span></p></li><li><p><em><span>v.</span></em><span>乱堆，塞满；使（脑子里）塞满（乱七八糟的事）</span></p></li></ul><blockquote><p><span>There was a </span><strong><span>clutter</span></strong><span> of bottles and tubes on the shelf.</span></p><p><span>架子上胡乱堆满了瓶子和管子。</span></p></blockquote><p><span>handwritten:</span></p><ul><li><p><em><span>adj.</span></em><span>手写的</span></p></li><li><p><em><span>v.</span></em><span>handwrite 的过去分词</span></p></li></ul><blockquote><p><span>A brief, </span><strong><span>handwritten</span></strong><span> postscript lay beneath his signature.</span></p><p><span>一段简短的手写体附言位于他的签名下方。</span></p></blockquote><p><span>stole:</span></p><ul><li><p><em><span>n.</span></em><span>女用披肩，女用长围巾；丝绸圣带，长绸带；长袍</span></p></li><li><p><em><span>v.</span></em><span>偷窃，盗窃；剽窃，窃取（观点）；悄悄地移动（steal 的过去式）</span></p></li></ul><blockquote><p><span>She </span><strong><span>stole</span></strong><span> a glance at her watch.</span></p><p><span>她偷偷看了看表。</span></p></blockquote><p><span>manmade: </span></p><ul><li><p><em><span>n.</span></em><span>人工制品；合成品</span></p></li><li><p><em><span>adj.</span></em><span>人造的（等于 man-made）</span></p></li></ul><blockquote><p><span>Now, China has turned the area into the country&#39;s largest </span><strong><span>manmade</span></strong><span> forest.</span></p><p><span>现在，中国已经把这个地区变成了中国最大的人造森林。</span></p></blockquote></blockquote><p><span>Kent said she made common things “uncommon.” (She thought “uncommon” was a better term than “art.”) “I don’t think of it as art,” she said, “I just make things I like bigger.” She had a particular way of looking at the ordinary world, and she taught this way of looking to her students. In one of her assignments, she had students create what she called a “finder”—a piece of paper with a rectangle cut out of it to simulate a camera </span><u><span>viewfinder</span></u><span>. She would lead her students on field trips, teaching them to crop the world, to “see for the sake of seeing,” and discover all the things that they’d never bothered to notice.</span></p><p><span>Really great artists are able to find magic in the </span><u><span>mundane</span></u><span>. Most of my favorite artists made extraordinary art out of ordinary circumstances and materials. Harvey Pekar spent the majority of his working life as a file </span><u><span>clerk</span></u><span> at the VA hospital in Cleveland, collecting stories and </span><u><span>scribbling</span></u><span> them into stick-figure scripts that would eventually become the comics in his masterpiece, American Splendor. Emily Dickinson stayed in her room and wrote her enduring poems on the backs of </span><u><span>leftover</span></u><span> envelope scraps. The Dada artist Hannah Höch used the </span><u><span>sewing</span></u><span> patterns from her day job in her collages. Sally Mann took </span><u><span>gorgeous</span></u><span> photos of her three children playing on their farm in Virginia. (Her friend, the painter Cy Twombly, used to sit outside the Walmart in Lexington and people watch for inspiration.)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>viewfinder: </span><em><span>n.</span></em><span>取景器；反光镜；检像器</span></p><blockquote><p><span>You are your cameras best </span><strong><span>viewfinder</span></strong><span>!</span></p><p><span>你是你相机最好的取景器。</span></p></blockquote><p><span>mundane: </span></p><ul><li><p><em><span>adj.</span></em><span>单调的，平凡的，平淡的；世俗的，尘世的</span></p></li><li><p><em><span>n.</span></em><span>平凡的事物（the mundane）</span></p></li></ul><blockquote><p><span>I lead a pretty </span><strong><span>mundane</span></strong><span> existence.</span></p><p><span>我过着相当平淡的生活。</span></p></blockquote><p><span>clerk: </span></p><ul><li><p><em><span>n.</span></em><span>办事员，职员；售货员，店员；（宾馆）接待员；（法庭、市政会等负责管理文书的）文书，书记员；&lt;旧&gt;（英国国教会的）牧师；&lt;古&gt;读书识字的人，学者</span></p></li><li><p><em><span>v.</span></em><span>当职员（或文书、书记员）</span></p></li></ul><blockquote><p><span>It was strange, how invisible a </span><strong><span>clerk</span></strong><span> could feel.</span></p><p><span>很奇怪一名职员会感到如此地受人忽视。</span></p></blockquote><p><span>scribbling: </span></p><ul><li><p><em><span>n.</span></em><span>潦草的字迹，胡乱的涂画</span></p></li><li><p><em><span>v.</span></em><span>草草地写；乱涂乱画；涂鸦（scribble 的现在分词）</span></p></li></ul><blockquote><p><span>Early </span><strong><span>scribbling</span></strong><span> is one precursor to early writing which can lead to reading.</span></p><p><span>幼儿的涂鸦是一种书写，也是阅读的前兆。</span></p></blockquote><p><span>leftover: </span></p><ul><li><p><em><span>n.</span></em><span>剩饭，剩菜（leftovers）；残存物，遗留物</span></p></li><li><p><em><span>adj.</span></em><span>剩下的，多余的</span></p></li></ul><blockquote><p><span>Come over here and help me pack up the </span><strong><span>leftover</span></strong><span> food.</span></p><p><span>过来帮我把剩下的食物打包。</span></p></blockquote><p><span>sewing: </span></p><ul><li><p><em><span>n.</span></em><span>缝纫，缝纫业；缝制品，缝补物</span></p></li><li><p><em><span>v.</span></em><span>缝纫；缝合，缝上；缝制（衣服）（sew 的现在分词）</span></p></li></ul><blockquote><p><span>She sewed the dresses on the </span><strong><span>sewing</span></strong><span> machine.</span></p><p><span>她在缝纫机上缝制了这些衣服。</span></p></blockquote><p><span>gorgeous: </span><em><span>adj.</span></em><span>美丽动人的；令人愉快的；绚丽的，华丽的</span></p><blockquote><p><span>It&#39;s a </span><strong><span>gorgeous</span></strong><span> day.</span></p><p><span>今天天气真棒。</span></p></blockquote></blockquote><p><span>It is easy to assume that if only you could trade your ordinary life for a new one, all your creative problems would be solved. If only you could quit your day job, move to a hip city, rent the perfect studio, and fall in with the right </span><u><span>gang</span></u><span> of brilliant </span><u><span>misfits</span></u><span>! Then you’d really have it made.</span></p><p><span>All this is, of course, </span><u><span>wishful</span></u><span> thinking. You do not need to have an extraordinary life to make extraordinary work. Everything you need to make extraordinary art can be found in your everyday life.</span></p><p><span>René Magritte said his goal with his art was “to breathe new life into the way we look at the ordinary things around us.” This is exactly what an artist does: By paying extra attention to their world, they teach us to pay more attention to ours. The first step toward transforming your life into art is to start paying more attention to it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>gang: </span></p><ul><li><p><em><span>n.</span></em><span>（青少年的）帮派，团伙；犯罪团伙；一群（体力劳动者）；&lt;非正式&gt;一伙（常聚会的朋友）；（安装在一起的）一套开关，插座（或其他电气、机械装置）</span></p></li><li><p><em><span>v.</span></em><span>成群，结伙；将（电气设备或机器）连接，编组</span></p></li></ul><blockquote><p><span>A </span><strong><span>gang</span></strong><span> taunted a disabled man.</span></p><p><span>一帮混混儿羞辱了一个残疾人。</span></p></blockquote><p><span>misfit: </span></p><ul><li><p><em><span>n.</span></em><span>不适合；不适应环境的人</span></p></li><li><p><em><span>vt.</span></em><span>对……不适合</span></p></li></ul><blockquote><p><span>I have been made to feel a social and psychological </span><strong><span>misfit</span></strong><span> for not wanting children.</span></p><p><span>因为不想要孩子，使我觉得自己在社交和心理上与他人格格不入。</span></p></blockquote><p><span>wishful: </span><em><span>adj.</span></em><span>渴望的；一厢情愿的</span></p><blockquote><p><span>It is </span><strong><span>wishful</span></strong><span> thinking to expect deeper change under his leadership.</span></p><p><span>指望在他领导下有更深刻的变化是痴心妄想。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“It’s always been my philosophy to try to make art out of the everyday and ordinary . . . it never occurred to me to leave home to make art.”<br/>—Sally Mann </p><hr style="background:brown"/><h3 id='slow-down-and-draw-things-out'><span>Slow down and draw things out.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Let’s slow down, not in pace or wordage but in nerves.”<br/>—John Steinbeck </p><hr style="background:brown"/><p><span>It’s impossible to pay proper attention to your life if you are </span><u><span>hurtling</span></u><span> along at lightning speed. When your job is to see things other people don’t, you have to slow down enough that you can actually look.</span></p><p><span>In an age obsessed with speed, slowing down requires special training. After art critic Peter Clothier discovered meditation, he realized how little he was actually looking at art: “I would often catch myself spending more time with the wall label in a museum than with the painting I was supposed to be looking at!” Inspired by the slow food and slow cooking movements, he started leading “One Hour/One Painting” sessions in galleries and museums, in which he invited participants to </span><u><span>gaze at</span></u><span> a single artwork for one full hour. Slow looking caught on, and now several museums across the country hold slow looking events. The </span><u><span>ethos</span></u><span> is </span><u><span>summed up</span></u><span> on the Slow Art Day website: “When people look slowly . . . they make discoveries.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hurtling: </span></p><ul><li><p><em><span>adj.</span></em><span>飞奔的，疾驰的</span></p></li><li><p><em><span>v.</span></em><span>急飞，猛烈碰撞，猛掷（hurtle 的 ing 形式）</span></p></li></ul><blockquote><p><span>A runaway car came </span><strong><span>hurtling</span></strong><span> towards us.</span></p><p><span>一辆失控的汽车朝我们飞驰而来。</span></p></blockquote><p><span>gaze at: 盯住；凝视</span></p><blockquote><p><span>One remarkably simple method: </span><strong><span>Gaze</span></strong><span> </span><strong><span>at</span></strong><span> a photo of a loved one.</span></p><p><span>涂个非常简单有效的方法是：盯着你心爱的人的照片。</span></p></blockquote><p><span>ethos: </span><code>/ ˈiːθɑːs /</code><span> </span><em><span>n.</span></em><span>（某团体的）精神特质，道德意识</span></p><blockquote><p><span>The </span><strong><span>ethos</span></strong><span> welcomes anybody.</span></p><p><span>这种理念欢迎每个人（的参与）。</span></p></blockquote><p><span>summed up: 概括；总结</span></p><blockquote><p><span>She </span><strong><span>summed</span></strong><span> </span><strong><span>up</span></strong><span> the situation in a few choice phrases.</span></p><p><span>她字斟句酌地总结了情况。</span></p></blockquote></blockquote><p><span>Slow looking is great, but I always need to be doing something with my hands, so drawing is my favorite tool for forcing myself to slow down and really look at life. Humans have drawn for thousands of years—it’s an ancient practice that can be done with cheap tools available to everyone. You don’t have to be an artist to draw. You just need an eye or two.</span></p><p><span>“Drawing is simply another way of seeing, which we don’t really do as adults,” says cartoonist Chris Ware. We’re all going around in a “cloud of remembrance and anxiety,” he says, and the act of drawing helps us live in the moment and concentrate on what’s really in front of us.</span></p><p><span>Because drawing is really an exercise in seeing, you can suck at drawing and still get a ton out of it. In a blog post about picking up the habit of sketching later in his life, film critic Roger Ebert wrote, “By sitting somewhere and sketching something, I was forced to really look at it.” He said his drawings were “a means of experiencing a place or a moment more deeply.”</span></p><p><span>Drawing doesn’t just help you see better, it makes you feel better. “An artist using a sketchbook always looks like a happy person,” Ebert observed. “It’s sublime,” said author Maurice Sendak. “It’s magic time, where all your weaknesses of character, the </span><u><span>blemishes</span></u><span> of your personality, whatever else torments you, fades away, just doesn’t matter.”</span></p><p><span>The camera phone is a wonderful tool for capturing things when we’re out in the world, but drawing still offers us something unique. In the 1960s, photographer Henri Cartier-Bresson, legendary for capturing life on film in what he called “the Decisive Moment,” went back to his first love: drawing. He wrote about the differences between his two loves in his book The Mind’s Eye: “Photography is an immediate reaction, drawing is a meditation.” In 2018, the British Museum started offering pencils and paper to visitors after they noticed an uptick in people interested in sketching the art. One of the curators remarked, “I feel like you dwell on an object a lot more if you have a paper and pencil before you.”</span></p><p><span>To slow down and pay attention to your world, pick up a pencil and a piece of paper and start drawing what you see. (The pencil’s best feature is that it has no way of interrupting you with texts or notifications.) You might find that this helps you discover the beauty you’ve missed.</span></p><p><span>“If you draw,” said the cartoonist E. O. Plauen, “the world becomes more beautiful, far more beautiful.”</span></p><p><span>“Drawing is the discipline by which I constantly rediscover the world. I have learned that what I have not drawn, I have never really seen, and that when I start drawing an ordinary thing, I realize how extraordinary it is, </span><u><span>sheer</span></u><span> miracle.”—Frederick Franck</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>blemish: </span></p><ul><li><p><em><span>n.</span></em><span>瑕疵；污点；缺点</span></p></li><li><p><em><span>vt.</span></em><span>玷污；损害；弄脏</span></p></li></ul><blockquote><p><span>This is the one </span><strong><span>blemish</span></strong><span> on an otherwise resounding success.</span></p><p><span>这就是惟一那点小缺陷，否则将是圆满的成功。</span></p></blockquote><p><span>sheer: </span></p><ul><li><p><em><span>adj.</span></em><span>（用于强调）纯粹的，完全的；程度深的，数量大的；陡峭的，垂直的；（织物等）极薄的，透明的</span></p></li><li><p><em><span>adv.</span></em><span>垂直地，陡峭地；&lt;古&gt;彻底地，完全地</span></p></li><li><p><em><span>v.</span></em><span>急转弯，突然转向；避开（不愉快的话题）</span></p></li><li><p><em><span>n.</span></em><span>精纺（或透明）织物（或物品）；（尤指船）突然偏航，突然转向；（船首及船尾处的）舷弧</span></p></li></ul><blockquote><p><span>His music is </span><strong><span>sheer</span></strong><span> delight.</span></p><p><span>他的音乐是纯粹的快乐。</span></p></blockquote></blockquote><h3 id='pay-attention-to-what-you-pay-attention-to'><span>Pay attention to what you pay attention to.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“For anyone trying to discern what to do with their life: PAY ATTENTION TO WHAT YOU PAY ATTENTION TO. That’s pretty much all the info you need.”<br/>—Amy Krouse Rosenthal </p><hr style="background:brown"/><p><span>Your attention is one of the most valuable things you possess, which is why everyone wants to steal it from you. First you must protect it, and then you must point it in the right direction.</span></p><p><span>As they say in the movies, “Careful where you point that thing!”</span></p><p><span>What you choose to pay attention to is the stuff your life and work will be made of. “My experience is what I agree to attend to,” </span><u><span>psychologist</span></u><span> William James wrote in 1890. “Only those items which I notice shape my mind.”</span></p><p><span>We pay attention to the things we really care about, but sometimes what we really care about is hidden from us. I keep a daily diary for many reasons, but the main one is that it helps me pay attention to my life. By sitting down every morning and writing about my life, I pay attention to it, and over time, I have a record of what I’ve paid attention to. Many </span><u><span>diarists</span></u><span> don’t bother rereading their diaries, but I’ve found that </span><u><span>rereading</span></u><span> doubles the power of a diary because I’m then able to discover my own patterns, identify what I really care about, and know myself better.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>psychologist: </span><em><span>n.</span></em><span>心理学家</span></p><blockquote><p><span>He passed himself off as a senior </span><strong><span>psychologist</span></strong><span>.</span></p><p><span>他自己冒充是一名资深心理学家。</span></p></blockquote><p><span>diarists: </span><em><span>n.</span></em><span>日记作者；记日记者</span></p><blockquote><p><span>The dad </span><strong><span>diarists</span></strong><span> approach their subject like anthropologists, engaged in rational inquiry into an alien culture and the nature of nurture.</span></p><p><span>父亲级的日记作家研究的主题类似于人类学家，皆致力于理性探究异域文化和教育的性质。</span></p></blockquote><p><span>rereading: </span></p><ul><li><p><em><span>n.</span></em><span>重读</span></p></li><li><p><em><span>v.</span></em><span>重读（reread 的 ing 形式）</span></p></li></ul><blockquote><p><span>Why does the author like </span><strong><span>rereading</span></strong><span>?</span></p><p><span>为什么作者喜欢重读？</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“To pay attention, this is our endless and proper work.”<br/>—Mary Oliver</p><hr style="background:brown"/><p><span>If art begins with where we point our attention, a life is made out of paying attention to what we pay attention to. Set up a regular time to pay attention to what you’ve paid attention to. Reread your diary. </span><u><span>Flip</span></u><span> back through your </span><u><span>sketchbook</span></u><span>. (The cartoonist Kate Beaton once said if she wrote a book about drawing she’d call it Pay Attention to Your Drawings.) </span><u><span>Scroll</span></u><span> through your camera roll. </span><u><span>Rewatch</span></u><span> </span><u><span>footage</span></u><span> you’ve filmed. Listen to music you’ve recorded. (The musician Arthur Russell used to take long walks around Manhattan, listening to his own tapes on his Walkman.) When you have a system for going back through your work, you can better see the bigger picture of what you’ve been up to, and what you should do next.</span></p><p><span>If you want to change your life, change what you pay attention to. “We give things meaning by paying attention to them,” Jessa Crispin writes, “and so moving your attention from one thing to another can absolutely change your future.”</span></p><p><span>“Attention is the most basic form of love,” wrote John Tarrant. When you pay attention to your life, it not only provides you with the material for your art, it also helps you fall in love with your life.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>flip:</span></p><ul><li><p><em><span>v.</span></em><span>（使）快速翻转，迅速翻动；快速翻阅，浏览；&lt;非正式&gt;勃然大怒，心烦意乱；（快速地）调频道，换台；轻抛，轻掷；按（开关）；（话题、活动或意见）突然改变，突然转换；改变，交换（位置）；突然变得热情，突然极感兴趣；为盈利而从速转卖（股份，财产）</span></p></li><li><p><em><span>adj.</span></em><span>轻率的，无礼的</span></p></li><li><p><em><span>n.</span></em><span>轻抛，轻掷，轻击；空翻；浏览，草草翻阅；&lt;英，非正式&gt;短暂旅行（或游览）；蛋奶酒</span></p></li><li><p><em><span>int.</span></em><span>&lt;非正式&gt;讨厌（表示轻微厌恶）</span></p></li></ul><blockquote><p><span>&quot;What&#39;s on the </span><strong><span>flip</span></strong><span> side?&quot;</span></p><p><span>“背面是什么？”</span></p></blockquote><p><span>sketchbook: </span><em><span>n.</span></em><span>小品集；写生簿；随笔集</span></p><blockquote><p><span>We&#39;re going to draw an apple in your </span><strong><span>sketchbook</span></strong><span>.</span></p><p><span>我们要在速写本上画一个苹果。</span></p></blockquote><p><span>scroll: </span></p><ul><li><p><em><span>n.</span></em><span>（供书写的）长卷纸，卷轴；一卷古书（或公文、文件）；（绘制或雕刻的）涡卷形装饰；印上格言（或题字）的丝带的描绘；（视频显示器屏幕上为查看新资料而设的）显示滚动装置</span></p></li><li><p><em><span>v.</span></em><span>滚屏，滚动；使像纸卷合（或打开）那样移动</span></p></li></ul><blockquote><p><span>Now, we can </span><strong><span>scroll</span></strong><span> through our data offline.</span></p><p><span>现在，我们可以在我们的离线数据中滚动了。</span></p></blockquote><p><span>rewatch: </span></p><ul><li><p><em><span>vt.</span></em><span>重新看（某事，如电影或电视节目）</span></p></li><li><p><em><span>n.</span></em><span>重新看</span></p></li></ul><blockquote><p><span>I </span><strong><span>rewatch</span></strong><span> Wall Street on the plane over and enjoy it as much as I did when I first saw it years ago.</span></p><p><span>我在飞机上重温了这部电影，同几年前初看时一样，我感到很享受。</span></p></blockquote><p><span>footage: </span><em><span>n.</span></em><span>一组（电影，电视）镜头；（以英尺表示的）尺码，长度</span></p><blockquote><p><span>The police replayed </span><strong><span>footage</span></strong><span> of the accident over and over again.</span></p><p><span>警察一遍又一遍地重放事故的片段。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “Tell me to what you pay attention and I will tell you who you are.”<br/>—José Ortega y Gassett</p><hr style="background:brown"/><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

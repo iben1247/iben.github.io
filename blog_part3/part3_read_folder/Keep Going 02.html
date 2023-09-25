@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 02</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">02</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#build-a-bliss-station">Build a <u>Bliss</u> Station</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n23"><a class="md-toc-inner" href="#disconnect-from-the-world-to-connect-with-yourself">Disconnect from the world to connect with yourself.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n108"><a class="md-toc-inner" href="#you-can-be-work-without-waking-to-the-news">You can be work without waking to the news.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n209"><a class="md-toc-inner" href="#airplane-mode-can-be-a-way-of-life">Airplane mode can be a way of life.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n339"><a class="md-toc-inner" href="#learn-how-to-say-no">Learn how to say no.</a></span></p></div><hr /><h2 id='build-a-bliss-station'><span>Build a </span><u><span>Bliss</span></u><span> Station</span></h2><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bliss: </span></p><ul><li><p><em><span>n.</span></em><span>极乐，天赐之福；天堂，乐园</span></p></li><li><p><em><span>v.</span></em><span>&lt;非正式&gt;乐不可支，欣喜若狂</span></p></li></ul><blockquote><p><span>My idea of </span><strong><span>bliss</span></strong><span> is a month in the Bahamas.</span></p><p><span>我理想中的极乐是在巴哈马群岛度假一个月。</span></p></blockquote><p><span>bliss station: 幸福站</span></p></blockquote><h3 id='disconnect-from-the-world-to-connect-with-yourself'><span>Disconnect from the world to connect with yourself.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“It’s hard to find anything to say about life without <u style="color:blue">immersing</u> yourself in the world, but it’s also just about impossible to figure out what it might be, or how to best say it, without getting the hell out of it again.”<br/>—Tim Kreider</p><hr style="background:brown"/><p><span>Creativity is about connection—you must be connected to others in order to be inspired and share your own work—but it is also about disconnection. You must </span><u><span>retreat</span></u><span> from the world long enough to think, practice your art, and bring forth something worth sharing with others. You must play a little hide-and-seek in order to produce something worth being found.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>immersing: </span></p><ul><li><p><em><span>v.</span></em><span>浸泡（immerse 的 ing 形式）</span></p></li><li><p><em><span>adj.</span></em><span>沉浸的</span></p></li></ul><blockquote><p><span>I really believe in </span><strong><span>immersing</span></strong><span> yourself in the environment of the animal.</span></p><p><span>我真的相信你可以将自己融入于动物的环境中。</span></p></blockquote><p><span>retreat: </span></p><ul><li><p><em><span>v.</span></em><span>（军队）撤退；后退，离开；（水、雪或土地）范围缩小；隐退，躲避；悔棋；改变意见，改变看法；（股价）下挫，下跌；向后倾</span></p></li><li><p><em><span>n.</span></em><span>撤军，撤兵；后退，离开；退隐处，静居处；（主意、观点、决定的）改变；（股票）贬值；静修期间（或活动）</span></p></li></ul><blockquote><p><span>He commanded his men to </span><strong><span>retreat</span></strong><span>.</span></p><p><span>他命令手下撤退。</span></p></blockquote></blockquote><p><span>Silence and solitude are crucial. Our modern world of push notifications, 24/7 news cycles, and constant contact is almost completely inhospitable to the kind of retreat artists must make in order to focus deeply on their work.</span></p><p><span>In The Power of Myth, Joseph Campbell said everyone should build a “bliss station”:</span></p><p><span>You must have a room, or a certain hour or so a day, where you don’t know what was in the newspapers that morning, you don’t know who your friends are, you don’t know what you owe anybody, you don’t know what anybody </span><u><span>owes</span></u><span> to you. This is a place where you can simply experience and bring forth what you are and what you might be. This is the place of creative incubation. At first you may find that nothing happens there. But if you have a sacred place and use it, something eventually will happen.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>owes: </span><em><span>v.</span></em><span>亏欠；负债（owe 的单三形式）；感恩</span></p><blockquote><p><span>She </span><strong><span>owes</span></strong><span> money right and left.</span></p><p><span>她到处欠债。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><p><span>Note that Campbell says you must have a room or a certain hour. A bliss station can be not just a where, but also a when. Not just a sacred space, but also a sacred time.</span></p><p><span>The </span><u><span>deluxe</span></u><span> package would include both a special room and a special hour that you enter it. But I think one can make up for a lack of the other. For example, say you have a tiny apartment you share with small children. There’s no room for your bliss station, there’s only time. When the kids are </span><u><span>asleep</span></u><span> or at school or day care, even a kitchen table can become a bliss station. Or, say your schedule is totally unpredictable and a certain time of day can’t be relied upon—that’s when a dedicated space that’s ready for you at any time will come in handy.</span></p><p><span>What’s clear is that it’s healthiest if we make a daily appointment to disconnect from the world so that we can connect with ourselves. Kids, jobs, sleep, and a thousand other things will get in the way, but we have to find our own sacred space, our own sacred time.</span></p><p><span>“Where is your bliss station?” Campbell asked. “You have to try to find it.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>deluxe: </span><code>/ dɪˈlʌks; dɪˈlʊks /</code><span> </span><em><span>adj.</span></em><span>豪华的，高档的</span></p><blockquote><p><span>B: I prefer the </span><strong><span>deluxe</span></strong><span> room, thank you.</span></p><p><span>乙：我想要间豪华房，麻烦你。</span></p></blockquote><p><span>asleep: </span></p><ul><li><p><em><span>adj.</span></em><span>睡着的；麻木的，发麻的；&lt;美，非正式&gt;不专心的，不活跃的；长眠的，已死的</span></p></li><li><p><em><span>adv.</span></em><span>处于睡眠状态地，进入睡眠状态地</span></p></li></ul><blockquote><p><span>He&#39;s half </span><strong><span>asleep</span></strong><span> and a bit boozed.</span></p><p><span>他半醒半睡，还有点微醉。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “The greatest need of our time is to clean out the <u style="color:blue">enormous</u> mass of mental and emotional <u style="color:blue">rubbish</u> that <u style="color:blue">clutters</u> our minds and makes of all political and social life a mass illness. Without this <u style="color:blue">housecleaning</u>, we cannot begin to see. Unless we see, we cannot think.”<br/>—Thomas Merton</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>enormous: </span><em><span>adj.</span></em><span>巨大的，极大的；&lt;古&gt;凶暴的，极恶的</span></p><blockquote><p><span>They have suffered an </span><strong><span>enormous</span></strong><span> personal tragedy.</span></p><p><span>他们遭受了一场巨大的个人灾难。</span></p></blockquote><p><span>rubbish: </span></p><ul><li><p><em><span>n.</span></em><span>垃圾，废弃物；毫无价值的东西，劣质产品；废话，瞎说</span></p></li><li><p><em><span>v.</span></em><span>&lt;英，非正式&gt;严厉批评，把……说得一无是处</span></p></li><li><p><em><span>adj.</span></em><span>&lt;英，非正式&gt;很差劲的，无用的</span></p></li></ul><blockquote><p><strong><span>Rubbish</span></strong><span>! You&#39;re not fat.</span></p><p><span>瞎说！你并不胖。</span></p></blockquote><p><span>clutters: </span></p><p><span>n．杂乱，混乱：杂乱无章的物品堆积或混乱的状态。</span></p><p><span>v．使杂乱，弄乱：使空间或地方变得杂乱无章。</span></p><blockquote><p><span>There are too many clutters in this room.</span></p><p><span>这个房间里杂乱的东西太多了。</span></p></blockquote><p><span>housecleaning: </span><em><span>n.</span></em><span>清扫房屋；肃清</span></p><blockquote><p><span>I feel we ought to have a </span><strong><span>housecleaning</span></strong><span>.</span></p><p><span>我觉得我们应该进行一次大扫除。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><h3 id='you-can-be-work-without-waking-to-the-news'><span>You can be work without waking to the news.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “Everybody gets so much information all day long that they lose their common sense.”<br/>—Gertrude Stein</p><hr style="background:brown"/><p><span>A friend of mine said he didn’t know how long he could wake up to such horrible news every day. I suggested he shouldn’t wake up to the news at all, and neither should anyone else.</span></p><p><span>There’s almost nothing in the news that any of us need to read in the first hour of the day. When you reach for your phone or your laptop upon waking, you’re immediately inviting anxiety and chaos into your life. You’re also </span><u><span>bidding</span></u><span> </span><u><span>adieu</span></u><span> to some of the most potentially </span><u><span>fertile</span></u><span> moments in the life of a creative person.</span></p><p><span>Many artists have discovered that they work best upon waking, when their mind is fresh, and they’re still in a </span><u><span>quasi-dream</span></u><span> state. The director Francis Ford Coppola says he likes to work in the early morning because “no one’s gotten up yet or called me or hurt my feelings.” The easiest way I get my feelings hurt is by turning on my phone first thing in the morning. Even on the rare occasion I don’t get my feelings hurt, my time is gone and my brains are scattered.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>bidding: </span></p><ul><li><p><em><span>n.</span></em><span>（尤指拍卖中的）出价；（拍卖时买方）报出的价钱；投标；吩咐，要求；叫牌</span></p></li><li><p><em><span>v.</span></em><span>出价；投标，竞标；努力争取（bid 的现在分词）</span></p></li></ul><p><span>adieu: </span></p><ul><li><p><em><span>n.</span></em><span>告别；辞行</span></p></li><li><p><em><span>int.</span></em><span>再见；再会</span></p></li></ul><blockquote><p><span>I bid you </span><strong><span>adieu</span></strong><span>.</span></p><p><span>跟你说再见。</span></p></blockquote><p><span>fertile: </span><em><span>adj.</span></em><span>肥沃的，富饶的；可繁殖的，能结果的；能产生好结果的，促进的；点子多的，想象力丰富的；（核材料）能产生裂变物质的，增殖性的</span></p><blockquote><p><span>We have the most </span><strong><span>fertile</span></strong><span> soil in the Midwest.</span></p><p><span>我们在中西部有最肥沃的土壤。</span></p></blockquote><p><strong><span>quasi-</span></strong><span>dream: </span><code>/ kweɪzaɪ; kweɪsaɪ; kwɑːzi /</code><span> </span><em><span>pref.</span></em><span>准；类似（用以构成复合词）</span></p><blockquote><p><span>At the time, medicine was still a primitive </span><strong><span>quasi</span></strong><span>-science.</span></p><p><span>当时，医学仍是原始的准科学。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><p><span>Of course, the news has a way of scattering your brain regardless of when you catch up on it. In 1852, Henry David Thoreau complained in his diary that he had started reading a weekly newspaper and he felt that now he wasn’t paying enough attention to his own life and work. “It takes more than a day’s </span><u><span>devotion</span></u><span> to know and to possess the wealth of a day,” he wrote. “To read of things distant and sounding betrays us into </span><u><span>slighting</span></u><span> these which are then apparently near and small.” He decided his attention was too valuable, and gave up reading the weekly Tribune. Some 166 years after Thoreau complained about the weekly newspaper, I find that reading the Sunday paper is a healthy compromise: pretty much all the news I need to be an </span><u><span>informed</span></u><span> citizen.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>devotion: </span><em><span>n.</span></em><span>挚爱，忠诚；奉献；（宗教的）虔诚；祈祷，礼拜</span></p><blockquote><p><span>Their </span><strong><span>devotion</span></strong><span> was apparent.</span></p><p><span>他们的忠诚显而易见。</span></p></blockquote><p><span>slighting: </span></p><ul><li><p><em><span>v.</span></em><span>对（某人）冷落；摧毁（防御工事）；粗心对待（slight 的现在分词）</span></p></li><li><p><em><span>adj.</span></em><span>轻蔑的</span></p></li></ul><blockquote><p><span>However, there are several factors influenced implementing inquiry teaching effectively, classroom environment is a no </span><strong><span>slighting</span></strong><span> one.</span></p><p><span>然而有效的实施探究教学要受到很多因素的影响，课堂环境就是一个不容忽视的因素。</span></p></blockquote><p><span>informed: </span></p><ul><li><p><em><span>adj.</span></em><span>有知识的，了解情况的；有根据的，可靠的；明智的，有见识的</span></p></li><li><p><em><span>v.</span></em><span>通知，告知；告发，检举（inform on）；了解，熟悉（inform 的过去式和过去分词形式）</span></p></li></ul><blockquote><p><span>He </span><strong><span>informed</span></strong><span> on his own brother.</span></p><p><span>他告发了他的亲弟弟。</span></p></blockquote></blockquote><p><span>If you’re using your phone to wake up and it’s ruining your mornings, try this: Before you go to bed, </span><u><span>plug</span></u><span> your phone into an </span><u><span>outlet</span></u><span> across the room, or somewhere out of arm’s reach. When you wake up, try your best not to look at it. There are so many better ways to wake up: Head to your bliss station, eat breakfast, stretch, do some exercises, take a walk, run, listen to Mozart, shower, read a book, play with your kids, or just be silent for a bit. Even if it’s for fifteen minutes, give yourself some time in the morning to not be completely </span><u><span>horrified</span></u><span> by the news.</span></p><p><span>It’s not sticking your head in the sand. It’s </span><u><span>retaining</span></u><span> some of your inner balance and </span><u><span>sanity</span></u><span> so you can be strong and do your work.</span></p><p><span>You can be woke without waking up to the news.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>plug: </span></p><ul><li><p><em><span>n.</span></em><span>（电）插头；（电）插座；（洗涤槽或浴缸的）塞子；堵塞物；棉球，药棉；（塑料制的）螺钉楔子；（车辆引擎的）火花塞；宣传，推荐；（压实的）块，口嚼烟；&lt;美，非正式&gt;（婴儿的）橡皮奶头；岩颈；（供移植的）幼苗，草皮；（渔）鱼饵；&lt;美&gt;消防栓；&lt;美，非正式&gt;疲惫的马</span></p></li><li><p><em><span>v.</span></em><span>堵，塞；补足；插入；用插头接通电源；推广，宣传；&lt;美，非正式&gt;射击，射杀；&lt;非正式&gt;艰难地走，埋头于</span></p></li></ul><blockquote><p><span>Check that the </span><strong><span>plug</span></strong><span> has not come loose.</span></p><p><span>检查一下别让插头松脱了。</span></p></blockquote><p><span>outlet: </span><em><span>n.</span></em><span>（情绪或精力的）发泄方式，发泄途径；排出口；商店，分销点；廉价经销店；从事大众媒体行业的公司；&lt;美&gt;电源插座</span></p><blockquote><p><span>Sport became the perfect </span><strong><span>outlet</span></strong><span> for his aggression.</span></p><p><span>运动成为他攻击性心理的最佳出路。</span></p></blockquote><p><span>horrified: </span></p><ul><li><p><em><span>adj.</span></em><span>惊骇的；带有恐怖感的</span></p></li><li><p><em><span>v.</span></em><span>惊骇（horrify 的过去式和过去分词）；使……战悚</span></p></li></ul><blockquote><p><span>His family was </span><strong><span>horrified</span></strong><span> by the change.</span></p><p><span>他的家人对这一变化感到震惊。</span></p></blockquote><p><span>retaining: </span></p><ul><li><p><em><span>adj.</span></em><span>留住的；定位的；使固定的</span></p></li><li><p><em><span>v.</span></em><span>保留（retain 的 ing 形式）</span></p></li></ul><blockquote><p><span>Speakers of these cultures often read oral presentations from carefully </span><strong><span>retaining</span></strong><span> manual scripts.</span></p><p><span>来自这些文化背景的演讲者，在做口头报告时通常在念他们事先精心准备好的手写稿。</span></p></blockquote><p><span>sanity: </span><em><span>n.</span></em><span>精神健全，精神正常；明智，通情达理</span></p><blockquote><p><span>His behaviour was so strange that I began to doubt his </span><strong><span>sanity</span></strong><span>.</span></p><p><span>他行为怪异，我有点怀疑他是否神智正常。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Keep your eye on your inner world and keep away from ads and idiots and movie stars.”<br/>—Dorothea Tanning </p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The phone gives us a lot but it takes away three key elements of discovery: loneliness, uncertainty, and boredom. Those have always been where creative ideas come from.”<br/>—Lynda Barry </p><hr style="background:brown"/><h3 id='airplane-mode-can-be-a-way-of-life'><span>Airplane mode can be a way of life.</span></h3><p><span>In her ongoing project Seat Assignment, artist Nina Katchadourian uses long, disconnected plane rides to make art using only her camera phone, things she’</span><u><span>s packed for</span></u><span> her trip, and materials she discovers on the airplane. She’ll add a little </span><u><span>sprinkled</span></u><span> salt to </span><u><span>in-flight</span></u><span> magazine photos to create </span><u><span>spooky</span></u><span> images of spirits and ghosts. She’ll fold up her sweater into </span><u><span>gorilla</span></u><span> faces. She’ll dress herself in </span><u><span>toilet</span></u><span> paper and seat covers in the airplane bathroom and take selfies that </span><u><span>recreate</span></u><span> old Flemish-style </span><u><span>portraits</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>pack for: 为……打包：准备行李以便旅行或其他活动。</span></p><blockquote><p><span>· I need to pack for my trip tomorrow.</span></p><p><span>我需要为明天的旅行打包行李。</span></p></blockquote><p><span>sprinkle: </span></p><ul><li><p><em><span>v.</span></em><span>撒，洒；用……点缀，在……中随意穿插；零星分布；下小雨</span></p></li><li><p><em><span>n.</span></em><span>少量，一点；稀疏小雨；（撒在糕饼上作装饰用的）彩糖，糖屑（sprinkles）</span></p></li></ul><blockquote><p><span>She </span><strong><span>sprinkled</span></strong><span> the strawberries with sugar.</span></p><p><span>她在草莓上撒了点糖。</span></p></blockquote><p><span>in-flight: </span><em><span>adj.</span></em><span>在飞行中的</span></p><blockquote><p><span>Things are getting better on the </span><strong><span>in</span></strong><span>-</span><strong><span>flight</span></strong><span>-emergency front.</span></p><p><span>飞行中的紧急状态方面的情况正在好转。</span></p></blockquote><p><span>spooky: </span><em><span>adj.</span></em><span>幽灵般的；有鬼般的；令人毛骨悚然的</span></p><blockquote><p><span>The whole place has a slightly </span><strong><span>spooky</span></strong><span> atmosphere.</span></p><p><span>整个地方有点令人毛骨悚然的气氛。</span></p></blockquote><p><span>gorilla: </span><em><span>n.</span></em><span>大猩猩</span></p><blockquote><p><span>The mountain </span><strong><span>gorilla</span></strong><span> is on the verge of extinction.</span></p><p><span>居住在山区的大猩猩已濒临灭绝。</span></p></blockquote><p><span>recreate: </span></p><ul><li><p><em><span>vi.</span></em><span>娱乐；消遣</span></p></li><li><p><em><span>vt.</span></em><span>再创造；使得到娱乐/消遣</span></p></li></ul><blockquote><p><span>The museum attempts to </span><strong><span>recreate</span></strong><span> the sights and sounds of wartime Britain.</span></p><p><span>博物馆试图再现战时英国的情景。</span></p></blockquote><p><span>portraits: </span><em><span>n.</span></em><span>肖像（portrait 的复数）；画像</span></p><blockquote><p><span>Velzquez&#39;s work from that time forward was confined largely to </span><strong><span>portraits</span></strong><span> of the royal family.</span></p><p><span>从那以后，委拉斯开兹的作品就很大程度上仅限于王室的肖像画了。</span></p></blockquote></blockquote><p><span>While so many of us </span><u><span>struggle</span></u><span> with smartphone </span><u><span>addictions</span></u><span>, Katchadourian has figured out how to turn the smartphone into a machine for making art. Best of all, nobody suspects what she’s up to. “Once you pull out a real camera,” she says, “it </span><u><span>screams</span></u><span>, ‘I’m making art!’” Instead, people just assume she’s another bored traveler killing time. Seat Assignment has taken place on more than two hundred flights since 2010, and as of the time of this writing, Katchadourian says that only three fellow passengers over the years have asked her what she’s up to.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>struggle: </span></p><ul><li><p><em><span>v.</span></em><span>奋斗，努力；搏斗，扭打，挣扎脱身；争夺，争抢；奋力前进，艰难行进</span></p></li><li><p><em><span>n.</span></em><span>奋斗，斗争；难事；搏斗，扭打</span></p></li></ul><blockquote><p><span>He gave up the </span><strong><span>struggle</span></strong><span> in despair.</span></p><p><span>他绝望地放弃了斗争。</span></p></blockquote><p><span>addiction: </span><em><span>n.</span></em><span>瘾；入迷，嗜好</span></p><blockquote><p><span>She helped him fight his drug </span><strong><span>addiction</span></strong><span>.</span></p><p><span>她帮助了他对抗自己的毒瘾。 </span></p></blockquote><p><span>scream:  </span></p><ul><li><p><em><span>v.</span></em><span>（因伤痛、害怕、激动等）尖叫；（向某人或为某事）高声喊，大声叫；发出尖锐的响声；呼啸而过；（使）醒目，（使）触目惊心（=scream out）；呼吁，抗议；清晰地表明；颜色不相配</span></p></li><li><p><em><span>n.</span></em><span>（因疼痛、惊恐、兴奋等发出的）尖叫声；（动物的）高声尖叫；尖锐刺耳的声音；&lt;非正式，旧&gt;极其滑稽可笑的人（或事物、场面）</span></p></li></ul><blockquote><p><span>I thought I heard a </span><strong><span>scream</span></strong><span>.</span></p><p><span>我好像听到了一声尖叫。</span></p></blockquote></blockquote><p><span>Every time I’m on an airplane now, I think about all the art I could be making. My writing teacher used to joke that the first rule of writing is to “apply ass to chair.” Because you’re forced to switch your electronic devices into airplane mode and you’re literally </span><u><span>buckled into</span></u><span> a chair, I find planes to be a terrific place to get work done.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>buckled into: 系好：将安全带或扣子系好以确保安全。</span></p><blockquote><p><span>Make sure to buckle into your seat before takeoff.</span></p><p><span>起飞前确保系好座椅安全带。</span></p></blockquote></blockquote><p><span>But why not </span><u><span>replicate</span></u><span> the experience on the ground? You don’t need to be on a plane to practice airplane mode: Pop in some cheap </span><u><span>earplugs</span></u><span> and switch your phone or tablet to airplane mode, and you can transform any </span><u><span>mundane</span></u><span> commute or </span><u><span>stretch of captive time</span></u><span> into an opportunity to reconnect with yourself and your work.</span></p><p><span>Airplane mode is not just a setting on your phone: It can be a whole way of life.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>replicate: </span></p><ul><li><p><em><span>v.</span></em><span>重复，复制；（遗传物质或生物）自我繁殖，自我复制；复证（实验或试验以得出一致的结果）</span></p></li><li><p><em><span>adj.</span></em><span>复制的；（实验或试验）复现的</span></p></li><li><p><em><span>n.</span></em><span>复制品；（乐）高（或低）八度反复音</span></p></li></ul><blockquote><p><span>It could never </span><strong><span>replicate</span></strong><span> the immediacy, the kind of drama that live performance offers.</span></p><p><span>它永远无法复制现场表演的即时性和戏剧性。</span></p></blockquote><p><span>earplug: </span><em><span>n.</span></em><span>（防噪音或防水的）耳塞；（戴在耳垂上的）耳饰</span></p><blockquote><p><span>Do you have any noise abatement </span><strong><span>earplug</span></strong><span>, that is, the kind of sleep wear.</span></p><p><span>请问你有没有防噪音的耳塞，就是睡觉戴着的那种。 </span></p></blockquote><p><span>mundane: </span></p><ul><li><p><em><span>adj.</span></em><span>单调的，平凡的，平淡的；世俗的，尘世的</span></p></li><li><p><em><span>n.</span></em><span>平凡的事物（the mundane）</span></p></li></ul><blockquote><p><span>I lead a pretty </span><strong><span>mundane</span></strong><span> existence.</span></p><p><span>我过着相当平淡的生活。</span></p></blockquote><p><span>stretch of: 延伸的一段：与某物相同长度的一段，通常指非常长的东西。</span></p><blockquote><p><span>· The road is lined with a stretch of tall trees.</span></p><p><span>这条路两旁是一片高大的树木。</span></p></blockquote><p><span>captive: </span></p><ul><li><p><em><span>adj.</span></em><span>被俘虏的，被圈养的；受限制的，受控制的；（设备，服务）受垄断的；被迷住的，被吸引的</span></p></li><li><p><em><span>n.</span></em><span>俘虏，猎获物；被迷住的人，被吸引的人</span></p></li></ul><blockquote><p><span>They were taken </span><strong><span>captive</span></strong><span> by masked gunmen.</span></p><p><span>他们被蒙面的持枪歹徒劫持了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Almost everything will work again if you unplug it for a few minutes—including you.”<br/>—Anne Lamott </p><hr style="background:brown"/><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “I must <u style="color:blue">decline</u>, for secret reasons.”<br/>—E. B. White</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>decline: </span></p><ul><li><p><em><span>v.</span></em><span>下降，衰退；拒绝，谢绝；变格，词形变化</span></p></li><li><p><em><span>n.</span></em><span>减少，衰退</span></p></li></ul><blockquote><p><span>Support for the party continues to </span><strong><span>decline</span></strong><span>.</span></p><p><span>对该党的支持继续下降。</span></p></blockquote></blockquote><h3 id='learn-how-to-say-no'><span>Learn how to say no.</span></h3><p><span>In order to protect your sacred space and time, you have to learn how to decline all sorts of invitations from the world. You must learn how to say “no.”</span></p><p><span>Writer Oliver Sacks went so far as to </span><u><span>tack</span></u><span> up a huge “NO!” sign in his house next to the phone to remind him to preserve his writing time. The architect Le Corbusier spent mornings in his apartment painting and afternoons in his office practicing architecture. “Painting every morning is what allows me to be </span><u><span>lucid</span></u><span> every afternoon,” he said. He did everything he could to keep his two identities separate, even signing his paintings with his birth name, Charles-Édouard Jeanneret. A journalist once knocked on his apartment door during painting hours and asked to speak to Le Corbusier. Le Corbusier looked him right in the eye and said, “I’m sorry, he’s not in.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>tack: </span></p><ul><li><p><em><span>n.</span></em><span>大头钉，图钉；（为定样临时缝上的）粗缝针脚；马具，鞍辔；（航海）抢风调向，抢风航行路线，抢风航程；（系住帆角的）系帆索；（用系帆索）系住的帆角；行动方针，策略；廉价且难看的物品；黏着性，黏着力；（航海）（系住帆角的）系帆索</span></p></li><li><p><em><span>v.</span></em><span>（用平头钉）钉上，固定住；（为定样而）用粗缝针脚缝；戗风行驶，蜿蜒航行；（尤指画蛇添足地）增补，附加</span></p></li></ul><blockquote><p><span>In a market where there appears to be a surplus, the common mistake is to </span><strong><span>tack</span></strong><span> on too many unnecessary requirements.</span></p><p><span>在一个似乎存在过剩的市场，附加太多不必要的要求是常见的错误。</span></p></blockquote><p><span>lucid: </span><em><span>adj.</span></em><span>明晰的，易懂的；头脑清楚的，思路清晰的；（心理）（梦）神志清醒的；&lt;文&gt;光辉的，明亮的；透明的</span></p><blockquote><p><span>She&#39;s delirious, but has </span><strong><span>lucid</span></strong><span> intervals.</span></p><p><span>她神志昏乱，但有时清醒。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><p><span>Saying no is its own art form. Artist Jasper Johns answered invitations with a big custom-made “Regrets” </span><u><span>stamp</span></u><span>. Writer Robert Heinlein, critic Edmund Wilson, and the editors at Raw magazine all used form responses with </span><u><span>checkboxes</span></u><span>. These days, most of us receive invitations in the form of email, so it helps if you can have a “no thanks” </span><u><span>template</span></u><span> </span><u><span>handy</span></u><span>. In her piece “How to </span><u><span>Graciously</span></u><span> Say No to Anyone,” Alexandra Franzen suggests the following: Thank the </span><u><span>sender</span></u><span> for thinking of you, decline, and, if you can, offer another form of support.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stamp: </span></p><ul><li><p><em><span>n.</span></em><span>邮票；印记，戳记；印，章，戳；跺脚（声），跺蹄（声）；特征，痕迹，烙印；类型，种类，类别；表明，表示；重要影响，持久影响；（捣矿机中用于捣碎矿石的）铁砧；购物券，购买券</span></p></li><li><p><em><span>vt.</span></em><span>跺（脚），重踩，重踏；迈着重步走，跺着脚走；在……上面印盖（图案、记号、字母等）；显示出（感情）；表明（某人）是……；（用印模）冲压；对…有重要（永久性）的影响；在……上贴邮票；捣碎（矿石），压碎（矿石）</span></p></li></ul><blockquote><p><span>He stuck a </span><strong><span>stamp</span></strong><span> on the envelope.</span></p><p><span>他把一张邮票贴到信封上。</span></p></blockquote><p><span>checkbox: </span><em><span>n.</span></em><span>检查框，检验盒；复选框</span></p><blockquote><p><span>Data can be represented as a standard text, a combo box, or a </span><strong><span>checkbox</span></strong><span>.</span></p><p><span>数据可以表示为标准文本、组合框或复选框。</span></p></blockquote><p><span>template: </span><em><span>n.</span></em><span>（用于切割木材、纸、金属等的）模板；（计算机文档的）模板；样板，榜样；（生化）模板；承梁短板，垫木，垫板</span></p><blockquote><p><span>If you need to write a lot of similar letters, set up a </span><strong><span>template</span></strong><span> on your computer.</span></p><p><span>如果你需要写许多类似的信件，就在计算机上设一个模板。</span></p></blockquote><p><span>graciously: </span><em><span>adv.</span></em><span>和蔼地；仁慈地；雅致地</span></p><blockquote><p><span>She </span><strong><span>graciously</span></strong><span> accepted our invitation.</span></p><p><span>她落落大方地接受了我们的邀请。</span></p></blockquote><p><span>sender: </span><em><span>n.</span></em><span>[邮]寄件人；发送人；发报机</span></p><blockquote><p><span>The </span><strong><span>sender</span></strong><span> of the first correct entry drawn will win a weekend for two in Venice.</span></p><p><span>第一个被摇出的寄出正确答案的竞赛答题者将获得两人在威尼斯度周末的机会。</span></p></blockquote></blockquote><p><span>Social media has created a human phenomenon called FOMO: the Fear Of </span><u><span>Missing Out</span></u><span>. It’s the sense, scrolling through your feeds, that everybody out there is having a much better time than you are. The only </span><u><span>antidote</span></u><span> is JOMO: the Joy Of Missing Out. As writer Anil Dash explains, “There can be, and should be, a </span><u><span>blissful</span></u><span>, </span><u><span>serene</span></u><span> </span><u><span>enjoyment</span></u><span> in knowing, and celebrating, that there are folks out there having the time of their life at something that you might have loved to, but are simply skipping.”</span></p><p><span>Saying “no” to the world can be really hard, but sometimes it’s the only way to say “yes” to your art and your sanity.</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “I paint with my back to the world.”<br/>—Agnes Martin</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>miss out: 错过或遗漏某事物或某个机会</span></p><blockquote><p><span>· I don&#39;t want to miss out on the chance to see the concert.</span></p><p><span>我不想错过看音乐会的机会。</span></p></blockquote><p><span>antidote: </span><em><span>n.</span></em><span>解毒药，解毒剂；矫正方法，对策</span></p><blockquote><p><span>There is no known </span><strong><span>antidote</span></strong><span> to the poison.</span></p><p><span>这种毒的解药尚未发现。</span></p></blockquote><p><span>blissful: </span><em><span>adj.</span></em><span>极乐的；使人幸福的；无忧无虑的；充满喜悦的</span></p><blockquote><p><span>We spent three </span><strong><span>blissful</span></strong><span> weeks away from work.</span></p><p><span>我们无忧无虑地度了三个星期的假。</span></p></blockquote><p><span>serene: </span><code>/ səˈriːn /</code><span> </span></p><ul><li><p><em><span>adj.</span></em><span>平静的，安详的；清澈的，晴朗的</span></p></li><li><p><em><span>n.</span></em><span>&lt;古&gt;晴空，平静的大海；平静</span></p></li></ul><blockquote><p><span>He didn&#39;t speak much, he just smiled with that </span><strong><span>serene</span></strong><span> smile of his.</span></p><p><span>他没有多说，仅是面含他特有的安详微笑。</span></p></blockquote><p><span>enjoyment: </span><em><span>n.</span></em><span>乐趣，乐事；享受，享有</span></p><blockquote><p><span>Children seem to have lost their </span><strong><span>enjoyment</span></strong><span> in reading.</span></p><p><span>孩子们似乎已失去阅读的乐趣。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p>&nbsp;</p></blockquote><p>&nbsp;</p><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

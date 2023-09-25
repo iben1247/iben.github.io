@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Keep Going 07</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Keep Going <i style="color:brown">07</i></h1>
+<p style="text-align:center; font-style:italic" > 10 Ways to Stay Creative in Good Times And Bad</p><blockquote><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#you-are-allowed-to-change-your-mind">You Are Allowed to Change Your Mind</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#to-change-is-to-be-alive">To change is to be alive.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n135"><a class="md-toc-inner" href="#like-minded-vs-like-hearted"><u>Like-minded</u> vs. <u>like-hearted</u></a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n180"><a class="md-toc-inner" href="#visit-the-past">Visit the past.</a></span></p></div><hr /><h2 id='you-are-allowed-to-change-your-mind'><span>You Are Allowed to Change Your Mind</span></h2><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The test of a <u style="color:blue">first-rate</u> intelligence is the ability to hold two opposed ideas in the mind at the same time, and still retain the ability to function. One should, for example, be able to see that things are hopeless and yet be determined to make them otherwise.”<br/>—F. Scott Fitzgerald </p><hr style="background:brown"/><h3 id='to-change-is-to-be-alive'><span>To change is to be alive.</span></h3><p><span>I was reading a newspaper article about climate change and a former </span><u><span>skeptic</span></u><span> said, “If you’ve never changed your mind about something, </span><u><span>pinch</span></u><span> yourself; you may be dead.”</span></p><p><span>When was the last time you changed your mind about something? We’re afraid of changing our minds because we’re afraid of the consequences of changing our minds. What will people think?</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>skeptic:</span></p><ul><li><p><em><span>n.</span></em><span>（对一切都）持怀疑态度的人；怀疑论者，不可知论者；无神论者</span></p></li><li><p><em><span>adj.</span></em><span>不相信的，持怀疑态度的；怀疑论的，不可知论的</span></p></li></ul><blockquote><p><span>I am much more of a </span><strong><span>skeptic</span></strong><span>.</span></p><p><span>我更是一个怀疑论者。</span></p></blockquote><p><span>pinch:</span></p><ul><li><p><em><span>v.</span></em><span>捏，拧，掐；揑住，夹紧；掐掉；（穿的鞋等）夹痛，挤痛；&lt;非正式&gt;偷窃；&lt;非正式&gt;逮捕，拘捕；节约，节省；使经济拮据；捏拉缩放；（由于担心或紧张）抿（嘴唇）；（航海）使（帆船）紧抢风</span></p></li><li><p><em><span>n.</span></em><span>捏，掐，拧；一撮；偷窃；（棒球）紧要时刻，紧要关头</span></p></li><li><p><em><span>adj.</span></em><span>替代的，替补的；由替补击球手完成的</span></p></li></ul><blockquote><p><span>She gave him a little </span><strong><span>pinch</span></strong><span>.</span></p><p><span>她轻轻地拧了他一下。</span></p></blockquote></blockquote><p><span>In this country, you’re supposed to have your ideas and stick with them and </span><u><span>defend</span></u><span> them with your life. Take our politics, for example. If a politician changes their mind </span><u><span>publicly</span></u><span>, it’s a sign of weakness. A sign of </span><u><span>defeat</span></u><span>. And you don’t want to change your mind too much, </span><u><span>heaven</span></u><span> forbid, because then you’re </span><u><span>wishy-washy</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>defend: </span><em><span>v.</span></em><span>保卫，防御；捍卫，维护；（在比赛中）防守，防卫；参加卫冕赛，蝉联；做……的辩护律师，为……辩解</span></p><blockquote><p><span>He has hired a lawyer to </span><strong><span>defend</span></strong><span> him against the allegation.</span></p><p><span>他已聘请一位律师为他所受的指控辩护。</span></p></blockquote><p><span>publicly: </span><em><span>adv.</span></em><span>公开地，公然地；由政府；由公众；公众可以获取（或购买）地</span></p><blockquote><p><span>This information is not </span><strong><span>publicly</span></strong><span> available.</span></p><p><span>这个消息没有对外公开。</span></p></blockquote><p><span>defeat:</span></p><ul><li><p><em><span>v.</span></em><span>击败，战胜；困惑，难住；使失败，阻挠；反对（动议或提议）</span></p></li><li><p><em><span>n.</span></em><span>失败，战败；战胜，击败</span></p></li></ul><blockquote><p><span>They narrowly avoided </span><strong><span>defeat</span></strong><span>.</span></p><p><span>他们险些儿被打败。</span></p></blockquote><p><span>heaven:</span></p><ul><li><p><em><span>n.</span></em><span>天堂，天国；&lt;非正式&gt;极乐之地，极乐；&lt;文&gt;天空；神，诸神；与上帝同享永福</span></p></li><li><p><em><span>int.</span></em><span>（表示惊讶或强调）天哪</span></p></li></ul><blockquote><p><strong><span>Heaven</span></strong><span> knows what they put in it.</span></p><p><span>天知道他们往里面放了些什么。</span></p></blockquote><p><span>wishy-washy: </span><em><span>adj.</span></em><span>空泛的；缺乏特点或决心的；淡而无味的；缺乏力量的</span></p><blockquote><p><span>If there&#39;s anything I can&#39;t stand it&#39;s an indecisive, </span><strong><span>wishy</span></strong><span>-</span><strong><span>washy</span></strong><span> customer.</span></p><p><span>如果说我有什么不能容忍，那就是优柔寡断、挑三拣四的顾客。</span></p></blockquote></blockquote><p><span>Social media has turned us all into politicians. And brands. Everyone’s supposed to be a brand now, and the worst thing in the world is to be off-brand.</span></p><p><span>But to be on brand is to be 100 percent certain of who you are and what you do, and certainty, in art and in life, is not only completely </span><u><span>overrated</span></u><span>, it is also a </span><u><span>roadblock</span></u><span> to discovery.</span></p><p><span>Uncertainty is the very thing that art thrives on. The writer Donald Barthelme said that the artist’s natural state is one of </span><u><span>not-knowing</span></u><span>. John Cage said that when he was not working he thought he knew something, but when he was working, it was clear that he didn’t know anything. “This has been my job in a way,” says </span><u><span>screenwriter</span></u><span> Charlie Kaufman. “I sit at my desk and I don’t know what to do.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>overrated:</span></p><ul><li><p><em><span>adj.</span></em><span>评价过高的</span></p></li><li><p><em><span>v.</span></em><span>对……估计过高（overrate 的过去分词）</span></p></li></ul><blockquote><p><span>Life in the wild is vastly </span><strong><span>overrated</span></strong><span>.</span></p><p><span>野外生活被大大地高估了。</span></p></blockquote><p><span>roadblock:</span></p><ul><li><p><em><span>n.</span></em><span>路障；障碍物</span></p></li><li><p><em><span>vi.</span></em><span>设置路障</span></p></li></ul><blockquote><p><span>Detaining and ticketing such drivers is not the purpose of the </span><strong><span>roadblock</span></strong><span> and would unduly slow down the stops of other cars.</span></p><p><span>拘留和对这类司机开罚单不是设置路障的目的，而且会使其他车辆过度减速。</span></p></blockquote><p><span>not-knowing</span></p><blockquote><p><span>I started pottering around outside, </span><strong><span>not</span></strong><span> </span><strong><span>knowing</span></strong><span> what I was doing.</span></p><p><span>我开始在外面混日子，不知道自己在做些什么</span></p></blockquote><p><span>screenwriter: </span><em><span>n.</span></em><span>编剧家；电影剧本作家</span></p><blockquote><p><span>He&#39;s a talented </span><strong><span>screenwriter</span></strong><span> who has sold out to TV soap operas.</span></p><p><span>他是个有才华的电影编剧，却改行写起电视肥皂剧来了。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I’m making explorations. I don’t know where they’re going to take me.”<br/>—Marshall McLuhan </p><hr style="background:brown"/><p><span>You start each work not knowing exactly where you’re going or where you’ll end up. “Art is the highest form of hope,” said painter Gerhard Richter. But hope is not about knowing how things will turn out—it is moving forward in the face of uncertainty. It’s a way of dealing with uncertainty. “Hope is an embrace of the unknown and the unknowable,” writes Rebecca Solnit. To have hope, you must acknowledge that you don’t know everything and you don’t know what’s going to happen. That’s the only way to keep going and the only way to keep making art: to be open to possibility and allow yourself to be changed.</span></p><p><span>Of course, to change your mind is to do some real thinking. Thinking requires an environment in which you can try out all sorts of ideas and not be </span><u><span>judged</span></u><span> for them. To change your mind, you need a good place to have some bad ideas.</span></p><p><span>The internet, unfortunately, is no longer a safe place to do any kind of experimental thinking, particularly for somebody with an audience or any kind of “brand.” (That awful word! As if we’re all cattle with our owner’s mark burned into our </span><u><span>flesh</span></u><span>.)</span></p><p><span>No, if you’re going to change your mind, you might have to go off-brand, and offline is the place to be off-brand. Your </span><u><span>bliss</span></u><span> station, your studio, a paper journal, a private chat room, a living room full of trusted loved ones: These are the places to really think.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>judged: </span></p><ul><li><p><em><span>v.</span></em><span>裁决；审理（judge 的过去分词）</span></p></li><li><p><em><span>adj.</span></em><span>判断的</span></p></li></ul><blockquote><p><span>Schools should not be </span><strong><span>judged</span></strong><span> only on exam results.</span></p><p><span>学校的好坏不能仅凭考试结果来评判。</span></p></blockquote><p><span>flesh: </span></p><ul><li><p><em><span>n.</span></em><span>（人或动物的）肉；（人体的）皮肤；果肉；肉体</span></p></li><li><p><em><span>v.</span></em><span>&lt;文&gt;激起……的杀性，使投入血战；刮掉（皮上的）肉</span></p></li></ul><blockquote><p><span>Tigers are </span><strong><span>flesh</span></strong><span>-eating animals.</span></p><p><span>虎是食肉动物。</span></p></blockquote><p><span>bliss: </span></p><ul><li><p><em><span>n.</span></em><span>极乐，天赐之福；天堂，乐园</span></p></li><li><p><em><span>v.</span></em><span>&lt;非正式&gt;乐不可支，欣喜若狂</span></p></li></ul><blockquote><p><span>Swimming on a hot day is sheer </span><strong><span>bliss</span></strong><span>.</span></p><p><span>热天游泳是天大的乐事。</span></p></blockquote></blockquote><h3 id='like-minded-vs-like-hearted'><u><span>Like-minded</span></u><span> vs. </span><u><span>like-hearted</span></u></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The world needs you at the party starting real conversations, saying, ‘I don’t know,’ and being kind.”<br/>—Charlie Kaufman </p><hr style="background:brown"/><p><span>“Think for yourself!” goes the </span><u><span>cliché</span></u><span>. But the truth is: We can’t. We need other people to help us think.</span></p><p><span>“To think independently of other human beings is impossible,” writes Alan Jacobs in his book How to Think. “Thinking is necessarily, thoroughly, and wonderfully social. Everything you think is a response to what someone else has thought and said.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cliché: </span><em><span>n.</span></em><span>陈词滥调，陈腐思想；平庸的人，平庸之物；&lt;英&gt;铅版印刷，电版印刷物</span></p><blockquote><p><span>That everyone&#39;s too busy these days is a </span><strong><span>cliché</span></strong><span>.</span></p><p><span>现在人人都太忙，这句话是陈词滥调。</span></p></blockquote></blockquote><p><span>The trouble is that we’re increasingly becoming a culture that is clustering into like-minded communities and networks. Offline, this plays out in where people live, whether by choice or </span><u><span>necessity</span></u><span>. Online, it plays out in what websites we visit, who we choose to follow, and how the algorithms of online networks are fine-tuned to show us what they think we want to see.</span></p><p><span>Interacting with people who don’t share our perspective forces us to rethink our ideas, strengthen our ideas, or trade our ideas for better ones. When you’re only interacting with like-minded people all the time, there’s less and less opportunity to be changed. Everybody knows that feeling you get when you’re hanging out with people who love the same art, listen to the same music, and watch the same movies: It’s comforting at first, but it can also become </span><u><span>incredibly</span></u><span> boring and ultimately </span><u><span>stifling</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>necessity: </span><em><span>n.</span></em><span>必需品，必需的事物；必要，需要；必然性，不可避免的情况</span></p><blockquote><p><span>Water is a basic </span><strong><span>necessity</span></strong><span> of life.</span></p><p><span>水是一种基本生活必需品。</span></p></blockquote><p><span>incredibly: </span><em><span>adv.</span></em><span>难以置信地；非常地</span></p><blockquote><p><span>It was </span><strong><span>incredibly</span></strong><span> hard work.</span></p><p><span>那是个非常艰辛的工作。</span></p></blockquote><p><span>stifling: </span></p><ul><li><p><em><span>adj.</span></em><span>令人窒息的；沉闷的</span></p></li><li><p><em><span>v.</span></em><span>使窒息；粉碎（stifle 的现在分词）</span></p></li></ul><blockquote><p><span>There was a </span><strong><span>stifling</span></strong><span> smell of hot oil everywhere.</span></p><p><span>到处都有令人窒息的热油气味。</span></p></blockquote></blockquote><p><span>Jacobs recommends that if you really want to explore ideas, you should consider hanging out with people who aren’t so much like-minded as like-hearted. These are people who are “temperamentally disposed to openness and have habits of listening.” People who are generous, kind, caring, and thoughtful. People who, when you say something, “think about it, rather than just simply react.” People you feel good around.</span></p><p><span>A reader once sent me a note </span><u><span>remarking</span></u><span> that while he didn’t share my politics, he felt he was able to really listen to what I had to say, rather than tuning out what he didn’t want to hear. He suspected it had to do with the creative spirit, that connection you feel with another person you know is trying their best to bring new, beautiful things into the world.</span></p><p><span>Try your best to seek out the like-hearted people with whom you feel this connection.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>remarking:</span></p><ul><li><p><em><span>n.</span></em><span>评论</span></p></li><li><p><em><span>v.</span></em><span>评论，注意（remark 的现在分词形式）</span></p></li></ul><blockquote><p><span>He rose from his seat, and, </span><strong><span>remarking</span></strong><span> carelessly, &quot;Well, now we&#39;d really better be getting on, old chap!&quot;</span></p><p><span>他从座位上站起来，漫不经心地说：“好啦，老伙计，现在我们该走了！”</span></p></blockquote></blockquote><h3 id='visit-the-past'><span>Visit the past.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Every age has its own outlook. It is specially good at seeing certain truths and specially liable to make certain mistakes. We all, therefore, need the books that will correct the characteristic mistakes of our own period. And that means the old books . . . To be sure, the books of the future would be just as good a <u style="color:blue">corrective</u> as the books of the past, but unfortunately we cannot get at them.”<br/>—C. S. Lewis </p><hr style="background:brown"/><p><span>Most everybody alive is so obsessed with what’s new that they all think about the same things. If you’re having trouble finding people to think with, seek out the dead. They have a lot to say and they are excellent listeners.</span></p><p><span>Read old books. Human beings have been around for a long time, and almost every problem you have has probably been written about by some other human living hundreds if not thousands of years before you. The Roman </span><u><span>statesman</span></u><span> and </span><u><span>philosopher</span></u><span> Seneca said that if you read old books, you get to add all the years the author lived onto your own life. “We are excluded from no age, but we have access to them all,” he said. “Why not turn from this brief and </span><u><span>transient</span></u><span> spell of time and give ourselves </span><u><span>wholeheartedly</span></u><span> to the past, which is limitless and eternal and can be shared with better men than we?” (He wrote that almost two thousand years ago!)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>corrective: </span></p><ul><li><p><em><span>adj.</span></em><span>纠正的，矫正的</span></p></li><li><p><em><span>n.</span></em><span>起纠正作用的东西，修正</span></p></li></ul><blockquote><p><span>Scientific institutions have been reluctant to take </span><strong><span>corrective</span></strong><span> action.</span></p><p><span>科学机构一直都不愿采取纠正的行动。</span></p></blockquote><p><span>statesman: </span><em><span>n.</span></em><span>政治家，国务活动家，治国之才</span></p><blockquote><p><span>Hamilton is a great </span><strong><span>statesman</span></strong><span> and political thinker.</span></p><p><span>汉密尔顿是个伟大的政治家和政治思想家。</span></p></blockquote><p><span>philosopher: </span><em><span>n.</span></em><span>哲学家，哲人；思想深刻的人</span></p><blockquote><p><span>Carlos was something of a </span><strong><span>philosopher</span></strong><span>.</span></p><p><span>卡洛斯有几分哲人气质。</span></p></blockquote><p><span>transient: </span></p><ul><li><p><em><span>adj.</span></em><span>转瞬即逝的，短暂的；暂住的，（工作）临时的</span></p></li><li><p><em><span>n.</span></em><span>暂住者，流动人口；（电流、电压、频率的）瞬变</span></p></li></ul><blockquote><p><span>It is argued that the influence of </span><strong><span>transient</span></strong><span> investment on public companies can be adverse.</span></p><p><span>有人认为，短期投资会对上市公司产生不利的影响。</span></p></blockquote><p><span>wholeheartedly: </span><em><span>adv.</span></em><span>全心全意地，全神贯注地</span></p><blockquote><p><span>I can endorse their opinion </span><strong><span>wholeheartedly</span></strong><span>.</span></p><p><span>我可以全心全意地支持他们的观点。</span></p></blockquote></blockquote><p><span>It’s amazing how little human life changes. When I read Lao Tzu’s Tao Te Ching, I </span><u><span>marvel</span></u><span> at how every ancient poem is basically a withering commentary on our contemporary politicians. A dip into Henry David Thoreau’s journals paints a portrait of a plant-loving man who is </span><u><span>overeducated</span></u><span>, </span><u><span>underemployed</span></u><span>, upset about politics, and living with his parents—he sounds exactly like one of my fellow </span><u><span>millennials</span></u><span>!</span></p><p><span>We have such short memories. You don’t have to go that far back into the past to discover things we’ve already forgotten about. </span><u><span>Cracking</span></u><span> a book that’s only a quarter of a century old can be like opening a chest of buried treasure.</span></p><p><span>If you want a quick way to escape the noise of contemporary life, break out of your like-minded bubble, and do some good thinking, just visit the past for a bit. It’s </span><u><span>inexhaustible</span></u><span>: Every day, we’re making more and more of it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>marvel: </span></p><ul><li><p><em><span>n.</span></em><span>令人惊异的人（或事），奇迹</span></p></li><li><p><em><span>v.</span></em><span>感到惊奇，大为赞叹</span></p></li></ul><blockquote><p><span>The operation was a </span><strong><span>marvel</span></strong><span> of the medical skill.</span></p><p><span>这次手术是医术上的一个奇迹。</span></p></blockquote><p><span>overeducated: </span></p><ul><li><p><em><span>v.</span></em><span>使接受过多教育（overeducate 的过去式和过去分词）</span></p></li><li><p><em><span>adj.</span></em><span>接受过多教育的</span></p></li></ul><blockquote><p><span>At stores where employees didn&#39;t feel empowered, &quot;</span><strong><span>overeducated</span></strong><span>&quot; workers expressed greater dissatisfaction than their colleagues did and were more likely to state an intention to quit.</span></p><p><span>在一些员工感觉自己无权的商店里，受过更高教育的员工比他们的同事表现出更多的不满，也更容易流露出辞职倾向。</span></p></blockquote><p><span>underemployed: </span></p><ul><li><p><em><span>adj.</span></em><span>未充分就业的；学非所用的；只有部分时间被雇用的</span></p></li><li><p><em><span>n.</span></em><span>大材小用的人</span></p></li></ul><blockquote><p><span>They may also be described as </span><strong><span>underemployed</span></strong><span> or freelance workers.</span></p><p><span>他们有时也被称为失业人员或者自由职业者。</span></p></blockquote><p><span>millennials: </span><em><span>n.</span></em><span>千禧世代；千禧之子；千禧一代（millennial 的复数）</span></p><blockquote><p><strong><span>Millennials</span></strong><span> remember their father and mother both were laid off.</span></p><p><span>千禧一代记得他们的父母都被解雇了。</span></p></blockquote><p><span>cracking: </span></p><ul><li><p><em><span>n.</span></em><span>裂纹，裂缝；爆裂声，噼啪声；分馏</span></p></li><li><p><em><span>adj.</span></em><span>出色的，极好的；快而令人兴奋的</span></p></li><li><p><em><span>adv.</span></em><span>非常，极其</span></p></li><li><p><em><span>v.</span></em><span>破裂；发爆裂声；打开；重击；变声（crack 的现在分词）</span></p></li></ul><blockquote><p><span>She&#39;s always </span><strong><span>cracking</span></strong><span> jokes.</span></p><p><span>她总爱说笑话。</span></p></blockquote><p><span>inexhaustible: </span><em><span>adj.</span></em><span>用不完的；不知疲倦的</span></p><blockquote><p><span>She has an </span><strong><span>inexhaustible</span></strong><span> supply of enthusiasm.</span></p><p><span>她拥有无穷无尽的热情。</span></p></blockquote></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
