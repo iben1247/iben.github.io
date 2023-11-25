@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [210]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">02</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [210] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#think-process-not-product">Think Process, Not Product.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#take-people-behind-the-scenes">Take People Behind the Scenes.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n150"><a class="md-toc-inner" href="#become-a-documentarian-of-what-you-do">Become a <u>Documentarian</u> of What You Do.</a></span></p></div><h2 id='think-process-not-product'><span>Think Process, Not Product.</span></h2><h3 id='take-people-behind-the-scenes'><span>Take People Behind the Scenes.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“A lot of people are so used to just seeing the outcome of work. They never see the side of the work you go through to produce the outcome.”<br/>—Michael Jackson </p><hr style="background:brown"/><p><span>When a painter talks about her “work,” she could be talking about two different things: There’s the artwork, the finished piece, framed and hung on a gallery wall, and there’s the art work, all the day-to-day stuff that goes on behind the scenes in her studio: looking for inspiration, getting an idea, applying oil to a canvas, etc. There’s “painting,” the noun, and there’s “painting,” the verb. As in all kinds of work, there is a distinction between the painter’s process, and the products of her process.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>一个实例，画家做画。画完 v.s. 过程</span></p></blockquote><p><span>Traditionally, the artist has been trained to regard her creative process as something that should be kept to herself. This way of thinking is </span><u><span>articulated</span></u><span> by </span><em><span>David Bayles</span></em><span> and </span><em><span>Ted Orland</span></em><span> in their book, Art and Fear: </span><mark style="background:#f8e272;"><span>“To all viewers but yourself, what matters is the product: the finished artwork. To you, and you alone, what matters is the process: the experience of shaping the artwork.”</span></mark><span> An artist is supposed to </span><u><span>toil in secrecy</span></u><span>, keeping her ideas and her work under lock and key, waiting until she has a magnificent product to show for herself before she tries to connect with an audience. “The private details of artmaking are </span><u><span>utterly uninteresting</span></u><span> to audiences,” write </span><em><span>Bayles</span></em><span> and </span><em><span>Orland</span></em><span>, “because they’re almost never visible—or even knowable—from examining the finished work.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>articulate</span></p><ul><li><p><em><span>v.</span></em><u><span>明确表达，清楚说明</span></u><span>；口齿清楚地说，清晰地发音；用关节连接，连结</span></p></li><li><p><em><span>adj.</span></em><span>善于表达的；口齿清楚的，发音清晰的；有关节的</span></p></li></ul><blockquote><p><span>The labio-dental sounds are </span><strong><span>articulated</span></strong><span> by the lower lip against the upper teeth, eg. /f/.</span></p><p><span>唇齿音由下唇与上齿连接发出，例如 /f/。</span></p></blockquote><p><span>toil</span></p><ul><li><p><em><span>v.</span></em><u><span>（长时间地）苦干，辛勤劳作</span></u><span>；艰难缓慢地移动，跋涉</span></p></li><li><p><em><span>n.</span></em><span>（尤指体力上的）苦工，苦活；网，捕捉野兽的陷阱</span></p></li></ul><blockquote><p><span>They </span><strong><span>toil</span></strong><span> on farms.</span></p><p><span>他们在农场辛勤劳作。</span></p></blockquote><p><span>toil in vain: 劳而无功</span></p><p><span>utterly: </span><em><span>adv.</span></em><span>完全地，彻底地</span></p><blockquote><p><span>He was </span><strong><span>utterly</span></strong><span> infatuated with her.</span></p><p><span>他完全被她迷住了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>过程被认为是出名之前给自己看的东西。</span></p></blockquote><p><span>This all </span><u><span>made sense</span></u><span> in a </span><u><span>pre-digital</span></u><span> age, when the only way an artist could connect with an audience was through a gallery show or </span><u><span>write-up</span></u><span> in some fancy art magazine. </span><mark style="background:#f8e272;"><span>But today, by taking advantage of the Internet and social media, an artist can share whatever she wants, whenever she wants, at almost no cost.</span></mark><span> She can decide exactly how much or how little of her work and herself she will share, and she can be as open about her process as she wants to—she can share her sketches and works-in-progress, post pictures of her studio, or blog about her influences, inspiration, and tools. By sharing her day-to-day process—the thing she really cares about—she can form a unique </span><u><span>bond</span></u><span> with her audience.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>make sense: 有明确的意义，容易理解；合理的，明智的</span></p><blockquote><p><span>This sentence doesn&#39;t </span><strong><span>make</span></strong><span> </span><strong><span>sense</span></strong><span>.</span></p><p><span>这个句子不通。</span></p></blockquote><p><span>pre-digital: </span><em><span>adj.</span></em><span>数字技术出现之前的</span></p><blockquote><p><span>The </span><strong><span>pre</span></strong><span>-</span><strong><span>digital</span></strong><span> past doesn&#39;t exist, at least not unless I walk away from this computer, get all old school, and find an actual library.</span></p><p><span>数字时代之前的历史是不存在的，除非你离开计算机，到有历史的学校中，去图书馆中寻找。</span></p></blockquote><p><span>write-up </span><em><span>n.</span></em><span>捧场文章；帐面价值的提高</span></p><blockquote><p><span>There was a nice </span><strong><span>write</span></strong><span>-</span><strong><span>up</span></strong><span> in the paper, even a laudatory editorial.</span></p><p><span>报纸上刊登了一篇捧我的文章，甚至还加了一段赞扬性的社论。</span></p></blockquote><p><span>bond: </span></p><ul><li><p><em><span>n.</span></em><span>纽带，联系；公债，债券；结合，黏合；承诺，契约；枷锁，桎梏</span></p></li><li><p><em><span>v.</span></em><span>（使）建立亲密关系；与……黏合（或连接）</span></p></li></ul><blockquote><p><span>The </span><strong><span>bond</span></strong><span> market normally revives after the summer doldrums.</span></p><p><span>债券市场通常在夏天萧条期后开始复苏。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受：数字技术出现之前，“不分享过程”这个想法可能说得通，但是数字技术出现之后，分享过程是可以增强与观众之间的联系的。</span></p></blockquote><p><span>To many artists, particularly those who grew up in the pre-digital era, this kind of openness and the potential vulnerability that </span><u><span>goes along with</span></u><span> sharing one’s process is a terrifying idea. Here’s the author </span><em><span>Edgar Allan Poe</span></em><span>, writing in 1846: “</span><mark style="background:#f8e272;"><span>Most writers—poets in especial—prefer having it understood that they compose by a species of fine </span><u><span>frenzy</span></u><span>—an </span><u><span>ecstatic</span></u><span> </span><u><span>intuition</span></u><span>—and would positively </span><u><span>shudder at</span></u><span> letting the public </span><u><span>take a peep</span></u><span> behind the scenes.</span></mark><span>”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>go along with: </span></p><blockquote><p><span>1．同意做或接受（他人想要的事情）</span></p><p><span>She decided to go along with their plan and support them.</span></p><p><span>她决定支持他们的计划并与他们一同行动。</span></p><p><span>2．成为（某事物）的一部分</span></p><p><span>If you want to succeed in this job, you have to accept the challenges that go along with it.</span></p><p><span>如果你想在这份工作中取得成功，你必须接受与之相伴的挑战。</span></p><p><span>3．与某人一起去或旅行</span></p><p><span>They invited me to the party and asked if I wanted to go along with them.</span></p><p><span>他们邀请我参加派对，并问我是否愿意和他们一起去。</span></p></blockquote><p><span>frenzy: </span></p><ul><li><p><em><span>n.</span></em><span>疯狂，狂乱；一阵</span><u><span>狂热</span></u></p></li><li><p><em><span>v.</span></em><span>使发狂，使狂怒</span></p></li></ul><blockquote><p><span>The old man&#39;s </span><strong><span>frenzy</span></strong><span> departed, and he became all gentleness.</span></p><p><span>老人的狂怒消失了，他变得温柔起来。</span></p></blockquote><p><span>ecstatic: </span><code>/ ɪkˈstætɪk /</code></p><ul><li><p><em><span>adj.</span></em><u><span>狂喜的</span></u><span>；出神的，入迷的；（反应）热情的，兴奋的</span></p></li><li><p><em><span>n.</span></em><span>心醉神迷的人</span></p></li></ul><blockquote><p><span>Sally was </span><strong><span>ecstatic</span></strong><span> about her new job.</span></p><p><span>萨莉对她的新工作高兴得发狂。</span></p></blockquote><p><span>intuition: </span><em><span>n.</span></em><u><span>直觉力</span></u><span>；直觉感知，直觉知识</span></p><blockquote><p><span>Her tact and </span><strong><span>intuition</span></strong><span> never failed.</span></p><p><span>她的得体和直觉从不出错。</span></p></blockquote><p><span>shudder at: 不寒而栗；由于恐惧而发抖</span></p><blockquote><p><span>Some central bankers will </span><strong><span>shudder</span></strong><span> </span><strong><span>at</span></strong><span> the thought.</span></p><p><span>一些央行将对该想法感到惊恐。</span></p></blockquote><p><span>take a peep at: </span><u><span>偷看一眼</span></u><span>：指快速、秘密地查看某物，通常是为了满足好奇心。</span></p><blockquote><p><span>She couldn&#39;t resist </span><strong><span>taking a peep at</span></strong><span> the exam results before they were officially announced.</span></p><p><span>她忍不住在正式公布考试结果之前偷看了一眼。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受：那些数字技术出现之前的艺术家，会害怕分享。为什么呢？</span></p></blockquote><p><span>But human beings are interested in other human beings and what other human beings do. “People really do want to see how the </span><u><span>sausage</span></u><span> gets made.” That’s how designers </span><em><span>Dan Provost</span></em><span> and </span><em><span>Tom Gerhardt</span></em><span> put it in their book on </span><u><span>entrepreneurship</span></u><span>, </span><em><span>It Will Be </span><u><span>Exhilarating</span></u></em><span>. </span><mark style="background:#f8e272;"><span>“By putting things out there, consistently, you can form a relationship with your customers. It allows them to see the person behind the products.”</span></mark><span> Audiences not only want to </span><u><span>stumble across</span></u><span> great work, but they, too, </span><u><span>long to</span></u><span> be creative and part of the creative process. </span><mark style="background:#f8e272;"><span>By letting go of our </span><u><span>egos</span></u><span> and sharing our process, we allow for the possibility of people having an </span><u><span>ongoing</span></u><span> connection with us and our work, which helps us move more of our product</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>sausage: </span><em><span>n.</span></em><span>香肠，腊肠；香肠形状；&lt;英&gt;用作亲密称呼小家伙，小子</span></p><blockquote><p><span>That </span><strong><span>sausage</span></strong><span> doesn&#39;t smell right.</span></p><p><span>这香肠闻起来不对劲。</span></p></blockquote><p><span>entrepreneurship: </span><code>/ ˌɑːntrəprəˈnɜːrʃɪp /</code><em><span>n.</span></em><span>企业家精神</span></p><blockquote><p><span>Because without curiosity we will lose the spirit of innovation and </span><strong><span>entrepreneurship</span></strong><span>.</span></p><p><span>因为若是没有好奇心，我们就会失去创新和创业精神。</span></p></blockquote><p><span>exhilarating:</span><code>/ ɪɡˈzɪləreɪtɪŋ /</code><span> </span><em><span>adj.</span></em><span>使人兴奋的；令人高兴的</span></p><blockquote><p><span>He clearly found the physical exertion </span><strong><span>exhilarating</span></strong><span>.</span></p><p><span>他明显发现体力消耗令人愉悦。</span></p></blockquote><p><span>stumble across: </span><u><span>偶然发现</span></u><span>：意外地找到或了解到某事。</span></p><blockquote><p><span>I happened to stumble across this old photo while cleaning out the attic.</span></p><p><span>我在清理阁楼时碰巧发现了这张旧照片。</span></p></blockquote><p><span>long to do sth: 渴望做某事 ; 盼望做某事 ; 渴看做某事 ; 巴望做某事</span></p><blockquote><p><span>Remember the little watchman when you </span><strong><span>long</span></strong><span> </span><strong><span>to</span></strong><span> </span><strong><span>do</span></strong><span> a wicked deed again.</span></p><p><span>当你想再做一件坏事的时候，要记得那个小守望人。</span></p></blockquote><p><span>ego: </span><em><span>n.</span></em><span>自负，自尊，自我意识；</span><u><span>（心理学）自我</span></u></p><blockquote><p><span>He has the biggest </span><strong><span>ego</span></strong><span> of anyone I&#39;ve ever met.</span></p><p><span>他是我所见的最自负的人。</span></p></blockquote><p><span>ongoing: </span><em><span>adj.</span></em><span>持续存在的，仍在进行的，</span><u><span>不断发展的</span></u></p><blockquote><p><span>They were also more likely to have an </span><strong><span>ongoing</span></strong><span> medical condition and be overweight.</span></p><p><span>他们也更有可能出现持续的病症和超重问题。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受： 持续地输出，你可以得到与人连接的机会。这也是我的想法。</span></p></blockquote><h3 id='become-a-documentarian-of-what-you-do'><span>Become a </span><u><span>Documentarian</span></u><span> of What You Do.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“In order for connection to happen, we have to allow ourselves to be seen—really seen.”<br/>—Brené Brown </p><hr style="background:brown"/><p><span>In 2013, the Internet fell in love with astronaut </span><em><span>Chris Hadfield</span></em><span>, commander of the International Space Station. Three years earlier, </span><em><span>Hadfield</span></em><span> and his family were sitting around the dinner table, trying to figure out ways to generate interest for the Canadian Space Agency, which, like many space programs, faced major </span><u><span>budget cuts</span></u><span> and needed more public support. “Dad wanted a way to help people connect with the real side of what an astronaut’s life is,” said </span><em><span>Hadfield’s</span></em><span> son </span><em><span>Evan</span></em><span>. “Not just the </span><u><span>glamour</span></u><span> and science, but also the </span><u><span>day-to-day</span></u><span> activities.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>documentarian </span><code>/ ˌdɒkjʊmənˈteərɪən /</code><span> </span></p><ul><li><p><span>纪录片制片人</span></p></li><li><p><span>纪实小说作者</span></p></li></ul><blockquote><p><span>WebUrbanist: is your goal with &quot;Vanishing America&quot; to perform a commentary on the state of the country, or do you see your role more as a </span><strong><span>documentarian</span></strong><span>?</span></p><p><span>那您拍摄“正在消失的美国”的目的何在？是在展示您对这个国家的这种状态的看法，还是更多地只是把它记录下来？</span></p></blockquote><p><span>budget cut: 预算削减：在公司或组织中减少预算支出的行为。</span></p><blockquote><p><span>Due to financial difficulties, the company had to implement a </span><strong><span>budget cut</span></strong><span>.</span></p><p><span>由于财务困难，公司不得不实施预算削减。</span></p></blockquote><p><span>glamour: </span><em><span>n.</span></em><span>吸引力，诱惑力，魅力；迷人的美，奢华；&lt;古&gt;魔法，巫术</span></p><blockquote><p><span>Being a model invests her with a certain </span><strong><span>glamour</span></strong><span>. </span></p><p><span>当模特儿似乎给她增添了一定的魅力。</span></p></blockquote><p><span>day-to-day: </span><em><span>adj.</span></em><span>日常的；逐日的</span></p><blockquote><p><span>My </span><strong><span>day-to-day</span></strong><span> life is not very exciting.</span></p><p><span>我的日常生活很平淡。</span></p></blockquote></blockquote><p><span>Commander </span><em><span>Hadfield</span></em><span> wanted to show his work.</span></p><p><span>Things </span><u><span>fell into place</span></u><span> when his sons explained social media to him and </span><strong><span>got him set up</span></strong><span> on Twitter and other social networks. During his next five-month mission, while performing all his regular astronautical duties, he tweeted, answered questions from his followers, posted pictures he’d taken of Earth, recorded music, and filmed YouTube videos of himself </span><u><span>clipping his nails</span></u><span>, brushing his teeth, sleeping, and even performing </span><u><span>maintenance</span></u><span> on the space station. Millions of people </span><u><span>ate it all up</span></u><span>, including my agent, Ted, who tweeted, </span><mark style="background:#f8e272;"><span>“Wouldn’t normally watch live video of a couple of guys doing </span><u><span>plumbing</span></u><span> repair, but IT’S IN SPACE!”</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fall into place: </span><u><span>拼合在一起</span></u><span>；变得合理</span></p><blockquote><p><span>When you start traveling things seem to just </span><strong><span>fall</span></strong><span> </span><strong><span>into</span></strong><span> </span><strong><span>place</span></strong><span>.</span></p><p><span>当你踏上旅途，一切都会显得水到渠成，自然而然的。</span></p></blockquote><p><span>clip nail: 修剪指甲</span></p><p><span>maintenance: </span><em><span>n.</span></em><span>维护，保养；保持，维持；（依法应负担的）生活费，抚养费；包揽诉讼罪，非法资助诉讼罪</span></p><blockquote><p><span>Small gardens can be high </span><strong><span>maintenance</span></strong><span>.</span></p><p><span>小花园也会有很高的维护费。</span></p></blockquote><p><span>eat it up: </span><u><span>完全接受或相信</span></u><span>：毫不怀疑地完全接受或相信。</span></p><blockquote><p><span>It&#39;s not the friendliest of encounters, &quot; Gallagher tells Entertainment Weekly. &quot;I think the audience is really gonna </span><strong><span>eat</span></strong><span> </span><strong><span>it</span></strong><span> </span><strong><span>up</span></strong><span>. It really has to do with Klaus&#39; vision of the future.</span></p><p><span>克劳斯对雷蓄谋已久，所以我们的相遇一定会‘火花四射’，” 加拉赫告诉《娱乐周刊》，“我想观众们肯定会欲罢不能，因为我们可以从中看到克劳斯未来的计划。”</span></p></blockquote><p><span>eat it all up: 把它全吃了。</span></p><blockquote><p><span>And we&#39;ll </span><strong><span>eat</span></strong><span> </span><strong><span>it</span></strong><span> </span><strong><span>all</span></strong><span> </span><strong><span>up</span></strong><span>. Yum!</span></p><p><span>我们要把它都吃掉！真好吃！</span></p></blockquote><p><span>plumbing: </span><em><span>n.</span></em><span>（建筑物的）管路系统，管道设备；管道工程，管子工的工作；&lt;非正式&gt;体内“管道”，排泄系统</span></p><blockquote><p><span>Most of the houses in the capital don&#39;t have indoor </span><strong><span>plumbing</span></strong><span>.</span></p><p><span>首都大多数房屋没有室内管道装置。</span></p></blockquote></blockquote><p><span>Now, </span><u><span>let’s face it</span></u><span>: We’re not all artists or astronauts. A lot of us go about our work and feel like we have nothing to show for it at the end of the day. But whatever the nature of your work, there is an art to what you do, and there are people who would be interested in that art, </span><u><span>if only</span></u><span> you presented it to them in the right way. </span><mark style="background:#f8e272;"><span>In fact, sharing your process might actually be most valuable if the products of your work aren’t easily shared, if you’re still </span><u><span>in the apprentice stage of</span></u><span> your work, if you can’t just </span><u><span>slap up</span></u><span> a </span><u><span>portfolio</span></u><span> and call it a day, or if your process doesn’t necessarily lead to </span><u><span>tangible</span></u><span> finished products.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>let&#39;s face it: </span><u><span>让我们面对现实</span></u><span>：一个表示接受现实情况，尤其是不愉快的事实的短语。</span></p><blockquote><p><strong><span>Let&#39;s</span></strong><span> </span><strong><span>face</span></strong><span> </span><strong><span>it</span></strong><span> – drinking is a socially acceptable habit.</span></p><p><span>咱们来面对这个事实吧–饮酒是一种为社会所接受的习俗。</span></p></blockquote><p><span>if only: 如果……就好了：用于表达希望某事发生或成为真实的愿望。</span></p><blockquote><p><span>If only I had studied harder, I would have passed the exam.</span></p><p><span>如果我当时学习更努力，我就能通过考试了。</span></p></blockquote><p><span>in the age of: 在……时代：指某个特定的时代或时期。</span></p><blockquote><p><span>In the age of technology, everything is becoming more connected.</span></p><p><span>在科技时代，一切都变得更加互联。</span></p></blockquote><p><span>slap: （用手掌）打，拍；拍打，拍击；（尤指生气地）啪的一声放下，随意扔放；（快速地、随意地或用力地）涂抹（某物）；甩击；侮辱</span></p><blockquote><p><span>It was as if she were asking me to </span><strong><span>slap</span></strong><span> her.</span></p><p><span>这就好像她在要求我扇她的耳光一样。</span></p></blockquote><p><span>portfolio: </span><code>/ pɔːrtˈfoʊlioʊ /</code><em><span>n.</span></em><span>公文包，画夹；（成册展示的）作品集，照片集；（个人或机构的）投资组合；（部长或大臣的）职责，职务；（公司或机构提供的）系列产品，成套物品</span></p><blockquote><p><span>It is lumpy: you can offload parts of your share </span><strong><span>portfolio</span></strong><span>, but you cannot sell off the kitchen.</span>
+<span>这很麻烦：你可以抛售股票组合的一部分，但你却不能单卖一个厨房。</span></p><p><span>The term investment </span><strong><span>portfolio</span></strong><span> conjures up visions of the truly rich—the Rockefellers, the Wal Mart Waltons, Bill Gates.</span>
+<span>“投资组合”一词让人联想起真正的富人——洛克菲勒家族、沃尔顿家族、比尔·盖茨。</span></p></blockquote><p><span>tangible: </span><em><span>adj.</span></em><span>明确的，真实的；可触摸的，可感知的</span></p><blockquote><p><span>Unlike meditation, craft activities result in </span><strong><span>tangible</span></strong><span> and often useful products that can enhance self-esteem.</span></p><p><span>与冥想不同的是，手工活动会产生有形的、往往有用的产品，这些产品可以增强自尊。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受：事实上，如果你的工作成果不容易被分享，如果你还处于工作的学徒阶段，如果你不能草草完成一个作品集，或者如果你的过程不一定会产生有形的成品，那么分享你的过程可能是最有价值的。</span></p></blockquote><p><span>How can you show your work even when you have nothing to show? </span><mark style="background:#f8e272;"><span>The first step is to </span><u><span>scoop up</span></u><span> the </span><u><span>scraps</span></u><span> and the </span><u><span>residue</span></u><span> of your process and shape them into some interesting </span><u><span>bit</span></u><span> of media that you can share.</span></mark><span> You have to turn the invisible into something other people can see. “You have to </span><u><span>make stuff</span></u><span>,” said journalist </span><em><span>David Carr</span></em><span> when he was asked if he had any advice for students. “No one is going to </span><u><span>give a damn about</span></u><span> your résumé; they want to see what you have made with your own little fingers.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>scoop up: 以快速和热切的方式取或购买（某物）</span></p><blockquote><p><span>I </span><strong><span>scoop</span></strong><span> </span><strong><span>up</span></strong><span> rocks from the dirt and throw them at it.</span></p><p><span>我从泥土里挖出石块，掷向它。</span></p></blockquote><p><span>scraps: </span><em><span>n.</span></em><span>（纸、布等的）碎片，小块；丝毫，一丁点；废品，废弃材料（=scrap metal）；吃剩的东西，残羹剩饭（scraps）；&lt;非正式&gt;小摩擦，小口角；&lt;英，非正式&gt;极瘦小的人（常指小孩）</span></p><blockquote><p><span>Davina was sorting out </span><strong><span>scraps</span></strong><span> of material.</span></p><p><span>戴维娜正在整理零碎的材料。</span></p></blockquote><p><span>residue: </span><em><span>n.</span></em><span>剩余物，残留物；（扣除应付款项、债款、遗赠后的）剩余遗产，余产</span></p><blockquote><p><span>The </span><strong><span>residue</span></strong><span> of the estate was divided equally among his children.</span></p><p><span>剩余遗产被他的孩子平分了。</span></p></blockquote><p><span>bit: </span></p><ul><li><p><em><span>n.</span></em><span> 小片，小块；小部分，片段；（一组东西中的）一个；&lt;美&gt;喜剧小品，小笑话；比特；辅币，12.5美分；马嚼子；钻头；&lt;非正式&gt;（与某活动、过程有关的）所有事情；&lt;非正式&gt;女孩，姑娘；&lt;英，非正式&gt;（人的）生殖器</span></p></li><li><p><em><span>adj.</span></em><span>很小的</span></p></li><li><p><em><span>v.</span></em><span>制约，限制；给（马）上嚼子</span></p></li><li><p><em><span>v.</span></em><span>咬，咬伤；叮，蜇（bite 的过去式和过去分词形式）</span></p></li></ul><p><span>make stuff: 制作东西：指制作或创造各种物品或产品的过程。</span></p><blockquote><p><span>I love to make stuff with my hands, like pottery and woodworking.</span></p><p><span>我喜欢用手做各种东西，比如陶艺和木工。</span></p></blockquote><p><span>give a damn: 在乎，关心：表示对某事物或某人的关注和关心，通常用于否定句中，表示不关心或不在乎。</span></p><blockquote><p><span>I don&#39;t </span><strong><span>give</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>damn</span></strong><span> about the money, Nicole.</span></p><p><span>我根本不是在乎钱，尼科尔。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受：第一步，就是把那些草稿、、残留物拾掇拾掇，变成媒体的一部分，然后分享出来。重要的是把看不见变成看得见！</span></p></blockquote><p><span>Become a </span><u><span>documentarian</span></u><span> of what you do. Start a work journal: Write your thoughts down in a notebook, or speak them into an audio recorder. Keep a </span><u><span>scrapbook</span></u><span>. Take a lot of photographs of your work at different stages in your process. </span><u><span>Shoot video</span></u><span> of you working. </span><mark style="background:#f8e272;"><span>This isn’t about making art, it’s about simply </span><u><span>keeping track of</span></u><span> what’s going on around you.</span></mark><span> Take advantage of all the cheap, easy tools at your </span><u><span>disposal</span></u><span>—these days, most of us </span><mark style="background:#f8e272;"><span>carry a fully functional multimedia studio</span></mark><span> around in our smartphones.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>documentarian: 纪录片制片人，纪实小说作者</span></p><blockquote><p><span>WebUrbanist: is your goal with &quot;Vanishing America&quot; to perform a commentary on the state of the country, or do you see your role more as a </span><strong><span>documentarian</span></strong><span>?</span></p><p><span>那您拍摄“正在消失的美国”的目的何在？是在展示您对这个国家的这种状态的看法，还是更多地只是把它记录下来？</span></p></blockquote><p><span>scrapbook: </span><em><span>n.</span></em><span>剪贴簿</span></p><blockquote><p><span>When you get home, print them out or have them developed and make a </span><strong><span>scrapbook</span></strong><span>.</span></p><p><span>等你回家了，把它们打印出来或者冲洗出来，做成一本剪贴簿。</span></p></blockquote><p><span>shoot video: 拍摄视频：使用摄像机或手机等设备记录视频内容。</span></p><blockquote><p><span>He loves to shoot videos of his travels and share them on social media.</span></p><p><span>他喜欢拍摄旅行视频并在社交媒体上分享。</span></p></blockquote><p><span>keep track of: 跟踪，记录：监测、追踪或记录某事物，或者理解和跟踪某事物。</span></p><blockquote><p><span>I always keep track of my expenses by writing them down in a notebook.</span></p><p><span>我总是通过在笔记本上写下来来记录我的开支。</span></p></blockquote><p><span>disposal: </span><em><span>n.</span></em><span>处理，清除；（土地、财产等的）变卖，转让；&lt;文&gt;安排，安置；&lt;美&gt;污物碾碎器</span></p><blockquote><p><span>Do you have this information at your </span><strong><span>disposal</span></strong><span>?</span></p><p><span>这个资料你能随意使用吗？</span></p></blockquote><blockquote><p><span>at your disposal: </span><u><span>随时可用，使用者可以任意使用的</span></u></p><ul><li><p><span>The resources of the company are at your disposal.</span></p></li><li><p><span>公司的资源随时可供您使用。</span></p></li></ul><p><span>at one&#39;s disposal: 可支配；可使用；随时可用</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>感受：记录一切！用好身边的东西，记录身边的所有！</span></p></blockquote><p><span>Whether you share it or not, documenting and recording your process </span><u><span>as you go along</span></u><span> has its own rewards: </span><strong><span>You’ll start to see the work you’re doing more clearly and feel like you’re making progress.</span></strong><span> </span><mark style="background:#f8e272;"><span>And when you’re ready to share, you’ll have a </span><u><span>surplus</span></u><span> of material to choose from</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>as you go along 随着时间的推移</span></p><blockquote><p><span>Learning how to become a parent takes time. It&#39;s a skill you learn as you go along.</span>
+<span>学会为人父母需要时间，这是一种在实践中学习的技能。</span></p><p><span>Time-box and make decisions early as you go along.</span>
+<span>着手工作时要制定时间表并尽早做出决定。</span></p></blockquote><p><span>surplus: </span></p><ul><li><p><em><span>n.</span></em><span>过剩，剩余，过剩量；盈余，顺差；超净资产</span></p></li><li><p><em><span>adj.</span></em><span>过剩的，剩余的，多余的；（商店）出售剩余（或过时的）军用品的</span></p></li><li><p><em><span>v.</span></em><span>甩卖，变卖</span></p></li></ul><p><strong><span>Surplus</span></strong><span> grain is being sold for export.</span></p><p><span>过剩的谷物正销往国外。</span></p><p><span>a surplus of:</span></p><blockquote><p><span>1．过剩的；多余的</span></p><p><span>There is a surplus of food after the party.</span></p><p><span>派对结束后有很多食物剩余。</span></p><p><span>2．大量的；充足的</span></p><p><span>The company has a surplus of cash reserves.</span></p><p><span>公司有充足的现金储备。</span></p></blockquote></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

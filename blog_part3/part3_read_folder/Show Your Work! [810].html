@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [810]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">08</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [810] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#learn-to-take-a-punch">Learn to <u>Take a Punch</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#letem-take-their-best-shot"><u>Let'em</u> Take Their Best Shot. </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n178"><a class="md-toc-inner" href="#dont-feed-the-trolls">Don't <u>feed</u> the <u>trolls</u>.</a></span></p></div><h2 id='learn-to-take-a-punch'><span>Learn to </span><u><span>Take a Punch</span></u><span>.</span></h2><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>take a punch 承受打击：在面对困难或挑战时，能够承受并坚强地应对。</span></p><blockquote><p><span>He can take a punch and keep going.</span></p><p><span>他能够承受打击并继续前行。</span></p></blockquote><p><span>punch</span></p><ul><li><p><em><span>n.</span></em><span>一拳，一击；&lt;非正式&gt;（出拳打击时所需要的）力量；感染力，活力；打孔器，穿孔机；孔洞；压印器，冲压机；潘趣酒（由果汁和酒制成的甜味饮品）；庞奇（奇形怪状、钩鼻、驼背的小丑，木偶戏《庞奇和朱迪》中的男主角）（Punch）；（矮壮的）萨福克驮马（Suffolk punch） ；（矮壮的）萨福克驮马（Suffolk punch）</span></p></li><li><p><em><span>v.</span></em><span>用拳猛击（某人或某物）；按（按钮或键）；（用工具或机器）打孔，扎眼；&lt;美&gt;（用刺棒）赶（牲口） ；&lt;美&gt;（用刺棒）赶（牲口）</span></p></li></ul><blockquote><p><span>She landed a </span><strong><span>punch</span></strong><span> on his chin.</span></p><p><span>她对着他的下巴揍了一拳。</span></p></blockquote></blockquote><h3 id='letem-take-their-best-shot'><u><span>Let&#39;em</span></u><span> Take Their Best Shot. </span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “I <u style="color:blue">ain’t</u> going to give up. Every time you think I’m one place, I’m going to show up someplace else. I come <u style="color:blue">pre-hated</u>. <u style="color:blue">Take your best shot</u>.”<br/>—Cyndi Lauper</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong>
+<span>&#39;em: pron. 他们；她们；它们（them 的缩略形式）</span></p><blockquote><p><span>Let&#39;s give &#39;</span><strong><span>em</span></strong><span> a big hand.</span></p><p><span>让我们为他们热烈鼓掌。</span></p></blockquote><p><span>ain&#39;t: / eɪnt / </span><em><span>contr</span></em><span>. 不是；没有</span></p><blockquote><p><strong><span>Ain&#39;t</span></strong><span> it gay?</span></p><p><span>这不是很快乐吗？</span></p></blockquote><p><span>ain&#39;t no 非常口语化的否定表达，意为“没有”或“不是”。通常用于强调否定或表示强烈的拒绝或否认</span></p><blockquote><p><span>There ain&#39;t no way I&#39;m going to that party.</span></p><p><span>我绝对不会去参加那个派对。</span></p></blockquote><p><span>hated </span><em><span>adj</span></em><span>．令人讨厌的，被憎恨的：引起强烈反感或憎恨的。</span></p><blockquote><p><span>He is the most hated person in the office.</span></p><p><span>他是办公室里最让人讨厌的人。</span></p></blockquote><p><span>Take your best shot 尽力而为：尽力去做某事，尽最大努力去达成目标。</span></p><blockquote><p><span>Let&#39;s keep it clean, everyone -- tell us who you are, and then take your best shot.</span></p><p><span>大家别闹了，告诉我们你是谁，然后使出浑身解数。</span></p></blockquote></blockquote><p><span>Designer </span><em><span>Mike Monteiro</span></em><span> says that the most valuable skill he picked up in art school was learning how to take a punch. He and his </span><u><span>fellow classmates</span></u><span> were absolutely </span><u><span>brutal</span></u><span> during </span><u><span>critiques</span></u><span>. “We were basically trying to see if we could get each other to </span><u><span>drop out of</span></u><span> school.” </span><mark style="background:#f8e272;"><span>Those </span><u><span>vicious</span></u><span> critiques taught him not to </span><u><span>take criticism personally</span></u></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fellow classmate </span><u><span>同班同学</span></u><span>：指与自己在同一个班级的同学。</span></p><blockquote><p><span>I enjoy spending time with my </span><u><span>fellow classmates</span></u><span>.</span></p><p><span>我喜欢和我的同班同学一起度过时光。</span></p></blockquote><p><span>brutal </span><em><span>adj.</span></em><span>野蛮的，凶残的；</span><u><span>毫不掩饰的，直截了当的</span></u><span>；令人不快的，糟糕的</span></p><blockquote><p><span>They lived in happy insulation from </span><strong><span>brutal</span></strong><span> facts.</span></p><p><span>他们生活在幸福中，与残酷事实相隔绝。</span></p></blockquote><p><span>critique </span></p><ul><li><p><em><span>n.</span></em><span>评论文章，</span><u><span>评论</span></u><span>；批判</span></p></li><li><p><em><span>v.</span></em><span>对……发表评论，评判</span></p></li></ul><blockquote><p><span>Remind the person that this is your point of view, and then invite </span><strong><span>critique</span></strong><span>.</span></p><p><span>提醒对方这是你的观点，然后请对方发表评论。</span></p></blockquote><p><span>drop out of: 退出，退学，退出（某个组织或活动）</span></p><blockquote><p><span>He decided to drop out of college and pursue his dream of becoming a musician.</span></p><p><span>他决定退学，追求成为一名音乐家的梦想。</span></p></blockquote><p><span>vicious </span><code>/ ˈvɪʃəs /</code><span> </span><em><span>adj.</span></em><span>凶险的，会造成伤害的；严厉的，恶毒的，恶意的；剧烈的，恶劣的；&lt;文&gt;不道德的，罪恶的；&lt;古&gt;（语言，推理）不完善的，谬误的</span></p><blockquote><p><span>We need to break the </span><strong><span>vicious</span></strong><span> cycle of violence and counterviolence.</span></p><p><span>我们需要结束暴力和反暴力的恶性循环。</span></p></blockquote><p><span>take sth personally 认为别人冒犯了自己：当别人并没有冒犯你时，却认为别人冒犯了你。</span></p><p><span>should never take criticism personally </span><u><span>永远不要把批评放在心上</span></u></p><blockquote><p><span>I have heard people say that a writer </span><strong><span>should</span></strong><span> </span><strong><span>never</span></strong><span> </span><strong><span>take</span></strong><span> </span><strong><span>criticism</span></strong><span> </span><strong><span>personally</span></strong><span>.</span></p><p><span>我曾听人说过，一个作家不应该</span><u><span>把外界批评太放在心上</span></u><span>。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>坦然面对打击。Take a punch!  Do not take criticism personally.</span></p></blockquote><p><span>When you put your work out into the world, you have to be ready for the good, the bad, and the ugly. The more people </span><u><span>come across</span></u><span> your work, the more criticism you’ll face. Here’s how to take punches:</span></p><p><strong><span>Relax and breathe.</span></strong><span> The trouble with imaginative people is that we’re good at picturing the worst that could happen to us. Fear is often just the imagination taking a wrong turn. Bad criticism is not the end of the world. As far as I know, no one has ever died from a bad review. Take a deep breath and accept whatever comes. (Consider practicing meditation—it works for me.)</span></p><p><strong><span>Strengthen your neck.</span></strong><span> The way to be able to take a punch is to practice getting hit a lot. Put out a lot of work. Let people take their best shot at it. Then make even more work and keep putting it out there. The more criticism you take, the more you realize it can’t hurt you.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>come across </span></p><blockquote><p><span>1．提供或提供所需的东西，特别是支付钱款</span></p><p><span>2．给人留下印象，表现出某种特质或品质</span></p><p><span>3．成功地完成某事</span></p><p><span>I hope we can come across with a solution to this problem.</span></p><p><span>我希望我们能找到解决这个问题的办法。</span></p></blockquote></blockquote><p><strong><u><span>Roll with the punches</span></u><span>.</span></strong><span> Keep moving. Every piece of criticism is an opportunity for new work. </span><mark style="background:#f8e272;"><span>You can’t control what sort of criticism you receive, but you can control how you react to it. </span></mark><span>Sometimes when people hate something about your work, it’s fun to push that element even further. To make something they’d hate even more. Having your work hated by certain people is a </span><u><span>badge</span></u><span> of honor.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>roll with the punches 适应困境或挫折，接受并应对生活中的困难或不利情况</span></p><blockquote><p><span>Life is full of challenges, but if you learn to roll with the punches, you can overcome them.</span></p><p><span>生活充满了挑战，但如果你学会应对困难，你就能克服它们。</span></p></blockquote><p><span>roll with 随波逐流，顺应：指在面对困难或变化时，能够适应并继续前进。</span></p><blockquote><p><span>When life gets tough, you just have to roll with it.</span></p><p><span>当生活变得艰难时，你只需要顺其自然地面对。</span></p></blockquote><p><span>badge </span></p><ul><li><p><em><span>n.</span></em><span>徽章，奖章；标记，象征</span></p></li><li><p><em><span>v.</span></em><span>给予……徽章（或标记）</span></p></li></ul><blockquote><p><span>She pinned the </span><strong><span>badge</span></strong><span> onto her jacket.</span></p><p><span>她把徽章别到外衣上。</span></p></blockquote></blockquote><p><strong><span>Protect your vulnerable areas.</span></strong><span> If you have work that is too sensitive or too close to you to be exposed to criticism, keep it hidden. But remember what writer </span><em><span>Colin Marshall</span></em><span> says: </span><mark style="background:#f8e272;"><span>“</span><u><span>Compulsive</span></u><span> avoidance of embarrassment is a form of </span><u><span>suicide</span></u><span>.”</span></mark><span> </span><mark style="background:#a8e195;"><span>If you spend your life avoiding </span><u><span>vulnerability</span></u><span>, you and your work will never truly connect with other people</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>compulsive </span><em><span>adj.</span></em><span>难以抑制的，不能自拔的；引人入胜的</span></p><blockquote><p><span>Her new series is </span><strong><span>compulsive</span></strong><span> viewing.</span></p><p><span>她的新系列节目引人入胜。</span></p></blockquote><p><span>suicide </span></p><ul><li><p><em><span>n.</span></em><span>自杀；自杀者；自杀性的行为，自取灭亡的行为；&lt;美&gt;（篮球中的）自杀训练</span></p></li><li><p><em><span>adj.</span></em><span>自杀的，与自杀有关的</span></p></li><li><p><em><span>v.</span></em><span>自杀</span></p></li></ul><blockquote><p><span>What are the signs that foreshadow a </span><strong><span>suicide</span></strong><span>?</span></p><p><span>自杀有什么前兆？</span></p></blockquote><p><mark style="background:#f8e272;"><span>强迫性地避免尴尬是一种自杀</span></mark><span>。</span></p><p><span>vulnerability </span><em><span>n.</span></em><span>易损性，弱点；（桥牌）局况</span></p><blockquote><p><span>A baby is the embodiment of </span><strong><span>vulnerability</span></strong><span>.</span></p><p><span>婴儿是脆弱的化身。</span></p></blockquote></blockquote><p><strong><span>Keep your balance.</span></strong><span> You have to remember that your work is something you do, not who you are. This is especially hard for artists to accept, as so much of what they do is personal. </span><u><span>Keep close to</span></u><span> your family, friends, and the people who love you for you, not just the work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>keep close to 保持接近：保持你的意图行动秘密。</span></p><blockquote><p><span>The novel, we feel, should </span><strong><span>keep</span></strong><span> </span><strong><span>close</span></strong><span> </span><strong><span>to</span></strong><span> life.</span></p><p><span>我们觉得小说应当与生活紧密联系。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>只要你把作品发布在网上，你就要面对好的、坏的、丑陋的！你遇到的人越多，你面临这种概率就越大。下面是一些好的建议to take a punch:</span></p><ul><li><p><span>放松 &amp; 深呼吸：没人会因为恶意评论而到达世界末日。坦然面对一切；（试试冥想？对作者很有用！）</span></p></li><li><p><span>暴风雨来的越猛烈，我的take a punch的能力就会越强！我接受到的批评越多，我就越会感觉没什么能伤害到我。</span></p></li><li><p><span>顺应逆境！每一个批评都是一次新作品的新机会。我控制不了能接收到什么样的criticism，但是我可以控制自己如何面对。或许，别人越批评的元素你越可以走更远。有时候反而让某类人非常痛恨的东西，证明那个东西是一个荣誉勋章:P</span></p></li><li><p><span>如果有些内容真的距离自己太近，不能分享那就隐藏起来。但是也要记住：“强迫性地避免尴尬是一种自杀。”所以，如果没有面对血淋淋的批评，可能作品永远有和别人连接的机会！</span></p></li><li><p><span>保持平衡，你的工作只是你的工作，你的工作不是你本人。所以，和你的家人、朋友，爱你的和你爱的人，保持亲近！</span></p></li></ul></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “<u style="color:blue">The trick is</u> <mark style="background:#f8e272;">not</mark> caring what <mark style="background:#f8e272;">EVERYBODY</mark> <u style="color:blue">thinks of</u> you and just caring about what the <mark style="background:#f8e272;">RIGHT people</mark> think of you.”<br/>—Brian Michael Bendis</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>the trick is: 诀窍是</span></p><blockquote><p><strong><span>The</span></strong><span> </span><strong><span>trick</span></strong><span> </span><strong><span>is</span></strong><span> to pick </span><strong><span>the</span></strong><span> animal up by the back of its neck.</span></p><p><span>窍门在于抓住动物的后脖颈把它提起来。</span></p></blockquote><p><span>think of </span></p><blockquote><p><span>1．考虑到；想到</span></p><p><span>I always think of my family when I&#39;m away.</span></p><p><span>当我离开时，我总是想念我的家人。</span></p><p><span>2．想象；设想</span></p><p><span>Can you think of a better solution to this problem?</span></p><p><span>你能想出一个更好的解决办法吗？</span></p><p><span>3．惦念；思念</span></p><p><span>I often think of my childhood friends.</span></p><p><span>我经常想念我的童年朋友们。</span></p></blockquote></blockquote><h3 id='dont-feed-the-trolls'><span>Don&#39;t </span><u><span>feed</span></u><span> the </span><u><span>trolls</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>Don&#39;t Feed the Trolls: 别喂巨魔</span>
+<span>别喂巨魔（Don&#39;t Feed the Trolls）是一款益智小游戏，游戏和打地鼠类似，不过难度增加了很多。</span></p><p><span>troll </span><code>/ troʊl /</code></p><ul><li><p><em><span>n.</span></em><span>巨怪，侏儒怪物；恶意挑衅的帖子，发挑衅帖子的人；曳绳钓鱼法中用的曳绳或鱼饵；用曳绳法钓鱼；轮唱</span></p></li><li><p><em><span>v.</span></em><span>拖捞，拖钓；搜寻，寻找；随便浏览，随便翻翻；&lt;英&gt;闲逛，游荡；（无缘由地在网际网路上某处）留下侮辱性的讯息；快乐地唱</span></p></li></ul><blockquote><p><span>I lock my office door and put up a Post-It note that says, &quot;Writing </span><strong><span>Troll</span></strong><span> – Get Back!&quot; which has a picture of a </span><strong><span>troll</span></strong><span> on it.</span></p><p><span>我锁上办公室并在门上贴上便利贴，上面写着 “写作巨魔——请回！” ，上面还有巨魔的一幅画。</span></p></blockquote></blockquote><p><span>The first step in evaluating feedback is </span><u><span>sizing up</span></u><span> who it came from. You want feedback from people who care about you and what you do. Be extra </span><u><span>wary</span></u><span> of feedback from anybody who falls outside of that circle.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>size up </span><em><span>v.</span></em><span>打量；估计……的大小；判断；（使）符合要求或规格；评估</span></p><blockquote><p><span>Second, face-to-face contact allows us to </span><strong><span>size</span></strong><span> </span><strong><span>up</span></strong><span> others.</span></p><p><span>第二，面对面的接触让我们能够评估他人。</span></p></blockquote><p><span>wary </span><em><span>adj.</span></em><span>小心翼翼的，谨慎的，警戒的</span></p><blockquote><p><span>Be </span><strong><span>wary</span></strong><span> of strangers who offer you a ride.</span></p><p><span>提防那些主动让你搭车的陌生人。</span></p></blockquote><p><span>be wary of: 对......保持警惕：对某人或某事保持谨慎和警惕，以防受到伤害或损失。</span></p><blockquote><p><span>Be wary of strangers offering you a deal that seems too good to be true.</span></p><p><span>对于陌生人给你一个看起来太好以至于不可思议的交易要保持警惕。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>面对评论，我要做的是：看一看这个feedback是来自哪里。如果是来自那些关注我的人或者关注我内容的人，那这个评论是可以汲取的。要特别小心不是那群人的评论。</span></p></blockquote><p><span>A troll is a person who isn’t interested in improving your work, only </span><u><span>provoking</span></u><span> you with hateful, aggressive, or </span><u><span>upsetting</span></u><span> talk. You will gain nothing by </span><u><span>engaging with</span></u><span> these people. Don’t feed them, and they’ll usually go away.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>provoking: </span></p><ul><li><p><em><span>adj.</span></em><span>刺激的；令人生气的；激怒人的</span></p></li><li><p><em><span>v.</span></em><span>刺激；</span><u><span>激怒</span></u><span>；</span><u><span>挑拨</span></u><span>；诱发；鼓动（provoke 的现在分词）</span></p></li></ul><blockquote><p><span>This is an entertaining yet thought-</span><strong><span>provoking</span></strong><span> film.</span></p><p><span>这部电影令人捧腹，却又发人深省。</span></p></blockquote><p><span>upsetting </span></p><ul><li><p><em><span>adj.</span></em><span>令人心烦意乱的，令人苦恼的</span></p></li><li><p><em><span>n.</span></em><span>缩锻，镦锻；倾复，倒转</span></p></li></ul><blockquote><p><span>She was afraid of </span><strong><span>upsetting</span></strong><span> her parents.</span></p><p><span>她担心会使她父母不安。</span></p></blockquote><p><span>engage with </span><u><span>与......互动</span></u><span>：与某人或某事物建立联系或参与其中。在正式场合中，它表示与某人或某事物发生互动或交流。</span></p><blockquote><p><span>The company needs to engage with its customers to understand their needs.</span></p><p><span>公司需要与客户建立联系以了解他们的需求。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>troll是那种不想你好的人，别理他。他们自然就走了！</span></p></blockquote><p><span>Trolls can come out of nowhere and pop up in unexpected places. Right after my son was born, this woman (</span><u><span>presumably</span></u><span> a follower, if not a fan) got on Twitter and sent me half a </span><u><span>dozen</span></u><span> tweets about how she just knew my book </span><u><span>Steal Like an Artist</span></u><span> was written by somebody without kids, and </span><u><span>just you wait</span></u><span>, </span><u><span>mister</span></u><span>. She then proceeded to quote passages from the book, followed by little </span><u><span>ejaculations</span></u><span> like, “</span><u><span>Ha!</span></u><span> Try that when you’re up at three a.m. with a crying baby!”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>presumably </span><em><span>adv.</span></em><span>大概，可能</span></p><blockquote><p><span>I couldn&#39;t concentrate, </span><strong><span>presumably</span></strong><span> because I was so tired.</span></p><p><span>我的精神集中不起来，大概是太累了吧。</span></p></blockquote><p><span>dozen </span><em><span>n.</span></em><span>一打，十二个；大量，许多；十多个</span></p><blockquote><p><span>Packages arrived by the </span><strong><span>dozen</span></strong><span> from America.</span></p><p><span>成打的包裹从美国寄来。</span></p></blockquote><p><span>half a dozen 六个：表示数量为六的事物。</span></p><blockquote><p><span>She bought </span><u><span>half a dozen</span></u><span> apples from the market.</span></p><p><span>她从市场买了六个苹果。</span></p></blockquote><p><span>just you wait 你等着瞧：表示警告或承诺，暗示即将发生的事情会让对方改变看法或后悔。</span></p><blockquote><p><strong><span>Just you wait</span></strong><span>, I&#39;ll prove you wrong.</span></p><p><span>你等着瞧，我会证明你错了。</span></p></blockquote><p><span>mister </span></p><ul><li><p><em><span>n.</span></em><span>先生；平民</span></p></li><li><p><em><span>vt.</span></em><span>称……先生</span></p></li></ul><blockquote><p><span>Please, </span><strong><span>mister</span></strong><span>, can we have our ball back?</span></p><p><span>求求你，先生，能把球还给我们吗？</span></p></blockquote><p><span>ejaculations </span><em><span>n.</span></em><span>[生理] 射精；突然说出</span></p><p><span>Ha!: （表示惊异，愉快，怀疑，胜利等）哈；（笑声）哈；（认为某事并不可笑）哈</span></p><blockquote><p><strong><span>Ha</span></strong><span>! It serves you right!</span></p><p><span>哈！你活该！</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>trolls可能无处不在。作者举了个自己的例子！</span></p></blockquote><p><span>Now, I have been on the Internet a long time. I get a lot of emails from people who are, as far as I can tell, sad, awful, or completely insane. I have a pretty good mental firewall that filters what I let get to me.</span></p><p><span>This woman </span><u><span>got to</span></u><span> me.</span></p><p><span>Because, of course, the </span><strong><span>worst troll</span></strong><span> is the one that </span><strong><span>lives in your head</span></strong><span>. It’s the voice that tells you you’re not good enough, that </span><u><span>you suck</span></u><span>, and that </span><u><span>you’ll never amount to anything</span></u><span>. It’s the voice that told me I’d never write another good word after becoming a father. It is one thing to have the troll </span><strong><span>in your brain</span></strong><span>, it is another thing to have a stranger hold a </span><u><span>megaphone</span></u><span> up to it and let it shout.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>get to </span></p><blockquote><p><span>1．到达某个地方或达成某个目标</span></p><p><span>I finally managed to get to the party after a long day at work.</span></p><p><span>经过一天的工作，我终于设法参加了派对。</span></p><p><span>2．开始做某事</span></p><p><span>Let&#39;s get to work and finish this project.</span></p><p><span>让我们开始工作，完成这个项目。</span></p><p><span>3．</span><strong><u><span>影响某人或某事</span></u></strong></p><p><span>4．与某人建立联系或交流</span></p><p><span>I&#39;ve been trying to get to know my new colleague.</span></p><p><span>我一直在努力了解我的新同事。</span></p></blockquote><p><span>you suck: 你很糟糕，你很差劲：一种用来表示对某人或某事失望、不满或不喜欢的说法。</span></p><blockquote><p><span>I can&#39;t believe you lost the game again. You suck!</span></p><p><span>我简直不敢相信你又输了比赛。你真糟糕！</span></p></blockquote><p><span>You&#39;ll never amount to anything.  你从未完成任何事。</span></p><p><span>amount to </span></p><blockquote><p><span>1．等同于；总计为：将多个部分或数量加在一起得到一个总数，或指某种行为或情况与另一种行为或情况在意义或效果上相同。</span></p><p><span>His actions amount to a betrayal of trust.</span></p><p><span>他的行为等同于背叛信任。</span></p><p><span>2．</span><u><span>达到</span></u><span>；总计为：指某个数量或程度达到某个值或标准。</span></p></blockquote><p><span>megaphone </span><code>/ ˈmeɡəfoʊn /</code></p><ul><li><p><em><span>n.</span></em><span>扩音器，喇叭筒</span></p></li><li><p><em><span>vt.</span></em><span>用扩音器对……讲话</span></p></li><li><p><em><span>vi.</span></em><span>用扩音器传达</span></p></li></ul><blockquote><p><span>A </span><strong><span>megaphone</span></strong><span> boomed out, &quot;This is the police.&quot;</span></p><p><span>扩音器传出了低沉而响亮的声音：“我们是警察。”</span></p></blockquote></blockquote><p><span>Do you have a troll problem? Use the block button on social media sites. Delete </span><u><span>nasty</span></u><span> comments. My wife </span><u><span>is fond of</span></u><span> saying, “If someone </span><u><span>took a dump</span></u><span> in your living room, you wouldn’t let it sit there, would you?” Nasty comments are the same—they should be </span><u><span>scooped up</span></u><span> and thrown in the trash.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>nasty</span></p><ul><li><p><em><span>adj.</span></em><span>恶毒的，凶相的；令人不快的，令人厌恶的；（伤口、疾病等）严重的，恶性的；污秽的，下流的；（外表）丑陋的，（气味等）难闻的；造成很大伤害的；令人担忧的，难对付的；有威胁性的，吓人的</span></p></li><li><p><em><span>n.</span></em><span>&lt;非正式&gt;令人不快的人（或事），危害别人的人（或事）；&lt;非正式&gt;恐怖录像（或影片）</span></p></li></ul><blockquote><p><span>That was a </span><strong><span>nasty</span></strong><span> little trick.</span></p><p><span>这是个可恶的小骗局。</span></p></blockquote><p><span>be fond of 喜欢，钟爱</span></p><blockquote><p><span>Do you want him to </span><strong><span>be</span></strong><span> </span><strong><span>fond</span></strong><span> </span><strong><span>of</span></strong><span> you?</span></p><p><span>你想让他喜欢你吗？</span></p></blockquote><p><span>take a dump: 上厕所：指进行大便，俚语表达。</span></p><blockquote><p><span>排泄固体废物：非正式且不礼貌的说法，指排泄固体废物。</span></p><ul><li><p><span>I need to take a dump before we leave.</span></p></li><li><p><span>我们离开之前我需要排便。</span></p></li></ul></blockquote><p><span>scoop up: 捞起：用手或工具将物体从容器或表面上拿起。以快速和热切的方式取或购买（某物）</span></p><blockquote><p><span>He adds that he is keeping cash on hand to </span><strong><span>scoop</span></strong><span> </span><strong><span>up</span></strong><span> assets should markets correct further.</span></p><p><span>他说，为防止市场进一步调整，他留下一些现金来购买资产。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>别人在你卧室take a dump，你会容忍它在那里吗？清除它！</span></p></blockquote><p><u><span>At some point</span></u><span>, you might consider turning off comments completely. </span><mark style="background:#f8e272;"><span>Having a form for comments is the same as inviting comments</span></mark><span>. “There’s never a space under paintings in a </span><u><span>gallery</span></u><span> where someone writes their opinion,” says cartoonist </span><em><span>Natalie Dee</span></em><span>. “When you get to the end of a book, you don’t have to see what everyone else thought of it.” Let people contact you directly or let them copy your work over to their own spaces and talk about it all they want.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>at some point 在某个时间点；在一个不确定的时间点</span></p><blockquote><p><span>I will visit Paris at some point in the future.</span></p><p><span>将来的某个时间点我会去巴黎。</span></p></blockquote><p><span>gallery </span><em><span>n.</span></em><span>美术馆，画廊；（大厅的）楼座，楼上旁听席；（剧场中的）顶层楼座；阳台，露台；一群（相似的人或物）；长廊，走廊；（矿井下的）巷道；观众</span></p><blockquote><p><span>We zoomed through the </span><strong><span>gallery</span></strong><span>.</span></p><p><span>我们快速穿过了画廊。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>到了某个时候，或许你可以去关闭评论区！都ok，其实你也不用在意到底有没有人评论。吸收你自己认为有用的信息！其他的，随它去~</span></p></blockquote><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

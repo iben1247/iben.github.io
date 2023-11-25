@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [510]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">05</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [510] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#tell-good-stories">Tell Good Stories.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#work-doesnt-speak-for-itself">Work Doesn't Speak for Itself.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n210"><a class="md-toc-inner" href="#structure-is-everything">Structure Is Everything.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n359"><a class="md-toc-inner" href="#talk-about-yourself-at-parties">Talk About Yourself at Parties.</a></span></p></div><h2 id='tell-good-stories'><span>Tell Good Stories.</span></h2><h3 id='work-doesnt-speak-for-itself'><span>Work Doesn&#39;t Speak for Itself.</span></h3><p><span>Close your eyes and imagine you&#39;re a wealthy collector who&#39;s just entered a gallery in an art museum. On the wall facing you there are two </span><u><span>gigantic</span></u><span> canvases, each more than 10 feet tall. Both paintings depict a </span><u><span>harbor</span></u><span> at sunset. From across the room, they look identical: the same ships, the same reflections on the water, the same sun at the same stage of setting. You go in for a closer look. You can&#39;t find a label or a museum tag anywhere. You become obsessed with the paintings, which you </span><u><span>nickname</span></u><span> Painting A and Painting B. You spend an hour </span><em><span>going back and forth</span></em><span> from canvas to canvas, comparing </span><u><span>brushstrokes</span></u><span>. You can&#39;t detect a single difference.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>gigantic </span><em><span>adj.</span></em><span>巨大的，庞大的</span></p><blockquote><p><span>The </span><strong><span>gigantic</span></strong><span> natural harbour is a haven for boats.</span></p><p><span>这个巨大的天然港是船舶的避风港。</span></p></blockquote><p><span>harbor</span></p><ul><li><p><em><span>n.</span></em><span>港，</span><u><span>海港</span></u><span>；避难所</span></p></li><li><p><em><span>v.</span></em><span>庇护；窝藏；怀有；为……提供庇护；入港停泊；居住，生存</span></p></li></ul><blockquote><p><span>The Statue of Liberty towers stands above the </span><strong><span>harbor</span></strong><span> of New York.</span></p><p><span>自由女神像耸立在纽约港的上空。</span></p></blockquote><p><span>nickname </span></p><ul><li><p><em><span>n.</span></em><span>绰号，外号</span></p></li><li><p><em><span>v.</span></em><span>给……起绰号；</span><u><span>叫错名字</span></u></p></li></ul><blockquote><p><span>She professed to hate her </span><strong><span>nickname</span></strong><span>.</span></p><p><span>她声称讨厌她的绰号。</span></p></blockquote><p><span>brushstroke </span><em><span>n.</span></em><span>一笔；笔的一划；</span><u><span>绘画技巧</span></u></p><blockquote><p><span>He paints with harsh, slashing </span><strong><span>brushstrokes</span></strong><span>.</span></p><p><span>他画画笔锋粗犷凌厉。</span></p></blockquote></blockquote><p><span>Just as you go to </span><u><span>fetch</span></u><span> a museum </span><u><span>guard</span></u><span> or someone who can </span><u><span>shed light on</span></u><span> these mysterious twin masterpieces, the head curator of the museum walks in. You eagerly </span><u><span>inquire</span></u><span> as to the origins of your new </span><u><span>obsessions</span></u><span>. The curator tells you that Painting A was painted in the 17th century by a Dutch master. &quot;And what of Painting B?&quot; you ask. &quot;Ah yes, Painting B,&quot; the curator says. &quot;That&#39;s a </span><u><span>forgery</span></u><span>. It was copied last week by a graduate student at the local art college.&quot;</span></p><p><span>Look up at the paintings. Which canvas looks better now? Which one do you want to take home?</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fetch </span><em><span>v.</span></em><span>（去）拿来，</span><u><span>（去）找来</span></u><span>；售得，卖得；推导出，演绎出；吸引，迷住；抵达，到达；&lt;非正式&gt;给（某人）以（重重的一击或一巴掌）</span></p><blockquote><p><span>He went to </span><strong><span>fetch</span></strong><span> some books.</span></p><p><span>他去取来了一些书。</span></p></blockquote><p><span>guard </span></p><ul><li><p><em><span>n.</span></em><span>卫兵，警卫；看守，</span><u><span>保卫</span></u><span>，警戒；列车长；保护装置；（英国的）禁卫军；（篮球）后卫；（拳击运动员的）防御姿势</span></p></li><li><p><em><span>v.</span></em><span>守卫，保卫；看守，监视；警惕，防范；保护，维护</span></p></li></ul><blockquote><p><span>A </span><strong><span>guard</span></strong><span> was posted outside the building.</span></p><p><span>建筑物外设了一名警卫。</span></p></blockquote><p><span>shed light on </span><u><span>阐明，使......清楚</span></u><span>：揭示或解释某事物，使其更加清晰或易于理解。</span></p><blockquote><p><span>A new approach offers an answer, and may </span><strong><span>shed</span></strong><span> </span><strong><span>light</span></strong><span> </span><strong><span>on</span></strong><span> an even bigger question.</span></p><p><span>一种新方法提供一个答案，而且可能阐明更大的问题。</span></p></blockquote><p><span>inquire </span><em><span>v.</span></em><span>调查，查究；询问，打听</span></p><blockquote><p><span>He went to the desk to </span><strong><span>inquire</span></strong><span> and make a reservation.</span></p><p><span>他到前台去咨询并做了预订。</span></p></blockquote><p><span>obsessions </span><em><span>n.</span></em><span>癖好；</span><u><span>着迷</span></u><span>；使人痴迷的的人或物；强迫意念（obsession 的复数）</span></p><blockquote><p><span>But as I re-read Watson&#39;s advice, I think about my goals and </span><strong><span>obsessions</span></strong><span>.</span></p><p><span>但是，当我重读沃森的建议的时候，我一直在思考我的目标和执着的事情。</span></p></blockquote><p><span>forgery </span><code>/ ˈfɔːrdʒəri /</code><span> </span><em><span>n.</span></em><span>伪造，伪造罪；伪造品，</span><u><span>赝品</span></u></p><blockquote><p><span>He was found guilty of </span><strong><span>forgery</span></strong><span>.</span></p><p><span>他被判有伪造罪。</span></p></blockquote></blockquote><p><span>Art forgery is a strange phenomenon. &quot;You might think that the pleasure you get from a painting depends on its color and its shape and its pattern,&quot; says </span><u><span>psychology</span></u><span> professor </span><em><span>Paul Bloom</span></em><span>. &quot;And if that&#39;s right, it shouldn&#39;t matter whether it&#39;s an original or a </span><strong><span>forgery</span></strong><span>.&quot; But our brains don&#39;t work that way. &quot;When shown an object, or given a food, or shown a face, </span><u><span>people&#39;s assessment of it</span></u><span>—how much they like it, how valuable it is—</span><u><span>is deeply affected by what you tell them about it</span></u><span>.&quot;</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>psychology </span><code>/ saɪˈkɑːlədʒi /</code><span> </span><em><span>n.</span></em><span>心理学；心理特点，心理状态；心理影响；心计，善解人意</span></p><blockquote><p><span>Abraham Maslow described </span><strong><span>psychology</span></strong><span> as &quot;the science of being.&quot;</span></p><p><span>亚伯拉罕•马斯洛将心理学描述为“存在科学”。</span></p></blockquote><p><span>assessment </span><em><span>n.</span></em><span>评估，评价；估价，估计</span></p><blockquote><p><span>The college has a highly formalized system of </span><strong><span>assessment</span></strong><span>.</span></p><p><span>这所学院有一套十分固定的评估体系。</span></p></blockquote></blockquote><p><span>In their book, Significant Objects, </span><em><span>Joshua Glenn</span></em><span> and </span><em><span>Rob Walker</span></em><span> </span><u><span>recount</span></u><span> an experiment in which they </span><u><span>set out to</span></u><span> test this hypothesis: &quot;</span><mark style="background:#f8e272;"><strong><span>Stories</span></strong><span> are such a powerful driver of emotional value that their effect on any given object&#39;s subjective value can actually be measured objectively</span></mark><span>.&quot; First, they went out to </span><u><span>thrift stores</span></u><span>, </span><u><span>flea markets</span></u><span>, and yard sales and bought a bunch of &quot;insignificant&quot; objects for an average of </span><span>$</span><span>1.25 an object. Then, they hired a bunch of writers, both famous and not-so-famous, to invent a story &quot;that attributed significance&quot; to each object. Finally, they listed each object on eBay, using the invented stories as the object&#39;s description, and whatever they had originally paid for the object as the auction&#39;s starting price. By the end of the experiment, they had sold </span><span>$</span><span>128.74 worth of </span><u><span>trinkets</span></u><span> for </span><span>$</span><span>3,612.51.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>recount </span></p><ul><li><p><em><span>v.</span></em><u><span>叙述</span></u><span>，说明；重数，重新清点（选票）</span></p></li><li><p><em><span>n.</span></em><span>重新计算，重点选票；叙述，说明</span></p></li></ul><blockquote><p><span>It would take more energy to </span><strong><span>recount</span></strong><span> the votes.</span></p><p><span>重新计票需要耗费更多的精力。</span></p></blockquote><p><span>set out to 开始一段旅程</span></p><blockquote><p><span>They set out to explore the jungle.</span></p><p><span>他们开始探索丛林。</span></p></blockquote><p><span>thrift </span><em><span>n.</span></em><span>节约，节俭；海石竹；&lt;美&gt;储蓄机构</span></p><blockquote><p><span>You cannot bring about prosperity by discouraging </span><strong><span>thrift</span></strong><span>.</span></p><p><span>不提倡勤俭节约就不会有繁盛。</span></p></blockquote><p><span>thrift store 二手商店：出售二手物品的商店，通常是为了慈善目的而设立的。</span></p><blockquote><p><span>I found a vintage dress at the </span><strong><span>thrift store</span></strong><span>.</span></p><p><span>我在二手商店找到了一件复古连衣裙</span></p></blockquote><p><span>flea </span><em><span>n.</span></em><span>跳蚤</span></p><blockquote><p><span>I really enjoyed going to the </span><strong><span>flea</span></strong><span> market.</span></p><p><span>我真的很喜欢去跳蚤市场。</span></p></blockquote><p><span>flea market 跳蚤市场：一个通常是露天的市场，用于出售二手物品和古董。</span></p><blockquote><p><span>Every Sunday, there is a </span><strong><span>flea market</span></strong><span> in the city center where you can find all sorts of interesting items.</span></p><p><span>每个星期天，在市中心有一个跳蚤市场，你可以找到各种有趣的物品。</span></p></blockquote><p><span>trinket</span></p><ul><li><p><em><span>n.</span></em><span>小装饰品；不值钱的小玩意儿</span></p></li><li><p><em><span>vi.</span></em><span>密谋</span></p></li></ul><blockquote><p><span>Women immersed in buying </span><strong><span>trinkets</span></strong><span> and jewelries from street sellers.</span></p><p><span>街上，妇女们正在专心地购买小饰物和珠宝。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"><mark style="background:#f8e272;">"To fake a photograph, all you have to do is change the caption. To fake a painting, change the attribution."</mark><br/>—Errol Morris </p><hr style="background:brown"/><p><span>Words matter. Artists love to </span><u><span>trot out</span></u><span> the </span><u><span>tired line</span></u><span>, &quot;My work speaks for itself,&quot; but the truth is, our work doesn&#39;t speak for itself. </span><mark style="background:#f8e272;"><span>Human beings want to know where things came from, how they were made, and who made them</span></mark><span>. The stories you tell about the work you do have a huge effect on how people feel and what they understand about your work, and how people feel and what they understand about your work effects how they value it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>trot out </span><code>/ trɑːt /</code><span> 引领马匹走出并展示其步态；拿出某物以展示或使用，特别是用于引出新的借口或理由</span></p><blockquote><p><span>They </span><strong><span>trot</span></strong><span> </span><strong><span>out</span></strong><span> a plausible theory with computer models to go with it.</span></p><p><span>他们</span><u><span>提出了</span></u><span>一项看似合理的理论，还有计算机模式与之配合。</span></p></blockquote><ul><li><p><em><span>n.</span></em><span>（马等动物的）小跑，慢跑；骑马小跑；人的小步跑；&lt;非正式&gt;腹泻，拉稀（the trots）；&lt;澳，非正式&gt;走运时期，倒霉时期；&lt;澳，非正式&gt;快步马驾车赛（the trots）；（学生用来作弊的）笔记，答案；&lt;英，非正式&gt;（侮辱性用语）左倾分子，托派分子；刚学步的小孩；老太婆</span></p></li><li><p><em><span>v.</span></em><span>（马等四足动物）快步，疾走；步行，走；&lt;非正式&gt;小步快跑，疾行；骑马小跑；&lt;非正式&gt;连珠炮似地说，急匆匆地做</span></p></li></ul><blockquote><p><span>Her horse broke into a </span><strong><span>trot</span></strong><span>.</span></p><p><span>她的马突然开始加速小跑。</span></p></blockquote><p><span>tired line: 枯燥乏味的对白、陈词滥调</span></p></blockquote><p><span>&quot;Why should we describe the </span><u><span>frustrations</span></u><span> and </span><u><span>turning points</span></u><span> in the lab, or all the hours of </span><u><span>groundwork</span></u><span> and failed images that </span><u><span>precede</span></u><span> the final outcomes?&quot; asks artist </span><em><span>Rachel Sussman</span></em><span>. &quot;Because, </span><u><span>rarified exceptions aside</span></u><span>, our audience is a human one, and humans want to </span><strong><span>connect</span></strong><span>. Personal stories can make the complex more </span><u><span>tangible</span></u><span>, </span><u><span>spark</span></u><span> associations, and offer entry into things that might otherwise leave one cold.&quot;</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>frustrations </span><em><span>n.</span></em><span>令人懊恼（或沮丧）的事物（frustration 的复数）</span></p><blockquote><p><span>It might be worth taking a long hard look at your </span><strong><span>frustrations</span></strong><span> and resentments.</span></p><p><span>也许值得对你的挫折感与愤懑做仔细的分析。</span></p></blockquote><p><span>turning point 转折点：</span><u><span>一个重要的变化发生的时刻</span></u><span>。</span></p><blockquote><p><span>The discovery of penicillin was a turning point in the history of medicine.</span></p><p><span>青霉素的发现是医学史上的一个转折点。</span></p></blockquote><p><span>groundwork </span><em><span>n.</span></em><span>基础；地基，根基；</span><u><span>准备工作</span></u></p><blockquote><p><span>Yesterday&#39;s meeting was to lay the </span><strong><span>groundwork</span></strong><span> for the task ahead.</span></p><p><span>昨天的会议为后面的任务打下了基础。</span></p></blockquote><p><span>precede </span><em><span>v.</span></em><u><span>处在……之前，先于</span></u><span>；在……之前做（或说）；比……更重要，比……（级别）更高</span></p><blockquote><p><span>He gestured to Alice to </span><strong><span>precede</span></strong><span> them from the room.</span></p><p><span>他示意艾丽斯从房间里出来走在他们前面。</span></p></blockquote><p><strong><span>rarified exceptions aside 除了少数例外</span></strong><span>。</span></p><p><span>rarified </span></p><ul><li><p><em><span>adj.</span></em><span>纯净的；稀薄的</span></p></li><li><p><em><span>v.</span></em><u><span>使变稀薄（rarify 的过去式）</span></u></p></li></ul><blockquote><p><span>How this </span><strong><span>rarified</span></strong><span> group USES their cash differentiates them from the rest of us - and keeps them in the black.</span></p><p><span>这一小众群体处理现金的方式和我们有别，也让他们始终有盈余。</span></p></blockquote><p><span>tangible</span></p><ul><li><p><em><span>adj.</span></em><span>明确的，真实的；</span><u><span>可触摸的，可感知的</span></u></p></li><li><p><em><span>n.</span></em><span>可触知的东西</span></p></li></ul><blockquote><p><span>Unlike meditation, craft activities result in </span><strong><span>tangible</span></strong><span> and often useful products that can enhance self-esteem.</span></p><p><span>与冥想不同的是，手工活动会产生有形的、往往有用的产品，这些产品可以增强自尊。</span></p></blockquote><p><span>spark</span></p><ul><li><p><em><span>n.</span></em><span>导火线，诱因；火花，火星；电火花；一丝，略微；生气，活力，才华；愤怒的情感，激烈的情绪；&lt;非正式&gt;军队中对无线电报务员（或电工）的昵称（Sparks）；生龙活虎的小伙子；（内燃机里火花塞的）放电</span></p></li><li><p><em><span>v.</span></em><u><span>引发</span></u><span>，触发；产生火花（电火花）；点燃；增加趣味（或活力、风味等）；求婚</span></p></li></ul><blockquote><p><span>The proposal would </span><strong><span>spark</span></strong><span> a storm of protest around the country.</span></p><p><span>这一提案将引发全国性的抗议浪潮。</span></p></blockquote><p><span>spark associations: 引发联想</span></p></blockquote><p><span>Your work doesn&#39;t exist in a vacuum. Whether you realize it or not, you&#39;re already telling a story about your work. Every email you send, every text, every conversation, every blog comment, every tweet, every photo, every video—they&#39;re all bits and pieces of a multimedia </span><u><span>narrative</span></u><span> you&#39;re constantly constructing. </span><mark style="background:#f8e272;"><span>If you want to be more effective when sharing yourself and your work, you need to become a better storyteller. You need to know what a good story is and how to tell one</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>narrative </span></p><ul><li><p><em><span>n.</span></em><span>记叙文，</span><u><span>叙述</span></u><span>；叙事技巧</span></p></li><li><p><em><span>adj.</span></em><span>叙述的；叙事体的</span></p></li></ul><blockquote><p><span>The novel fails to achieve </span><strong><span>narrative</span></strong><span> continuity.</span></p><p><span>这部小说叙述不连贯。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">"‘The cat sat on a <u  style="color:blue">mat</u>' is not a story. ‘The cat sat on the dog's mat' is a story."<br/>—John le Carré </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>mat </span><em><span>n.</span></em><span>地垫，垫子；团，簇</span></p><blockquote><p><span>Wipe your feet on the </span><strong><span>mat</span></strong><span> before you come in, please.</span></p><p><span>请在垫子上擦擦脚再进来。</span></p></blockquote></blockquote><h3 id='structure-is-everything'><span>Structure Is Everything.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">"In the first act, you get your hero up a tree. The second act, you <u  style="color:blue">throw rocks at</u> him. For the third act, you let him down."<br/>—George Abbott</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>throw rocks at 扔石头：用力地向某人或某物投掷石头，通常是出于攻击或恶作剧的目的。</span></p><blockquote><p><span>The kids were throwing rocks at the stray dog, which made me very angry.</span></p><p><span>孩子们朝流浪狗扔石头，这让我非常生气。</span></p></blockquote></blockquote><p><strong><span>The most important part of a story is its structure</span></strong><span>. </span><mark style="background:#f8e272;"><span>A good story structure is tidy, </span><u><span>sturdy</span></u><span>, and logical. Unfortunately, most of life is messy, uncertain, and illogical</span></mark><span>. A lot of our raw experiences don&#39;t fit </span><u><span>neatly</span></u><span> into a traditional fairy tale or a Hollywood plot. Sometimes we have to do a lot of </span><u><span>cropping</span></u><span> and editing to </span><u><span>fit our lives into</span></u><span> something that </span><u><span>resembles</span></u><span> a story. </span><mark style="background:#a8e195;"><span>If you study the structure of stories, you start to see how they work, and once you know how they work, you can then start stealing story structures and filling them in with characters, situations, and settings from your own life</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>sturdy </span></p><ul><li><p><em><span>adj.</span></em><span>结实的，</span><u><span>坚固的</span></u><span>；（人或身体）强壮的，健壮的；坚决的，坚定的</span></p></li><li><p><em><span>n.</span></em><span>（绦虫幼虫在脑中形成包囊使绵羊产生的）晕倒病，蹒跚病</span></p></li></ul><blockquote><p><span>They would peel large sheets of bark from the tree to form lightweight yet </span><strong><span>sturdy</span></strong><span> canoes.</span></p><p><span>他们会从树上剥下大片的树皮，做成轻便而结实的独木舟。</span></p></blockquote><p><span>neatly </span><em><span>adv.</span></em><span>整齐地；简单而聪明地</span></p><blockquote><p><span>She summarized her plan very </span><strong><span>neatly</span></strong><span>.</span></p><p><span>她非常简明地总结了她的计划。</span></p></blockquote><p><span>cropping </span></p><ul><li><p><em><span>n.</span></em><span>（照片）裁剪</span></p></li><li><p><em><span>v.</span></em><u><span>修剪</span></u><span>；收割（crop 的现在分词）</span></p></li></ul><blockquote><p><span>Over five generations the land has been too wet for </span><strong><span>cropping</span></strong><span>.</span></p><p><span>经过五代人的耕耘，这片土地太湿了，不适合种植农作物。</span></p></blockquote><p><span>fit xx into 适合于某个位置的大小和形状；与一群人的文化或社会地位相似</span></p><blockquote><p><span>The couch won&#39;t fit into the small living room.</span></p><p><span>沙发无法适应小客厅。</span></p></blockquote><p><span>resemble </span><em><span>v.</span></em><span>像，与……相似</span></p><blockquote><p><span>Stunt people must </span><strong><span>resemble</span></strong><span> the stars they stand in for.</span></p><p><span>特技演员必须和他们所替身的明星长相相似。</span></p></blockquote></blockquote><p><span>Most story structures can be traced back to myths and fairy tales. </span><em><span>Emma Coats</span></em><span>, a former storyboard artist at Pixar, outlined the basic structure of a fairy tale as a kind of Mad Lib that you can fill in with your own elements: &quot;Once upon a time, there was </span><strong><span>_</span></strong><span>. Every day, </span><strong><span>_</span></strong><span>. One day, </span><strong><span>_</span></strong><span>. Because of that, </span><strong><span>_</span></strong><span>. Because of that, </span><strong><span>_</span></strong><span>. Until finally, </span><strong><span>_</span></strong><span>.&quot; Pick your favorite story and try to </span><u><span>fill in the blanks</span></u><span>. It&#39;s </span><u><span>striking</span></u><span> how often it works.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>fill in the blanks </span></p><blockquote><p><span>1．填写空白处：将信息填写到空白的位置上，提供缺失的信息。</span></p><p><span>Please fill in the blanks on the application form.</span></p><p><span>请在申请表上填写空白处。</span></p><p><span>2．自己推测：提供不完整的信息，让别人自己推测结论。</span></p><p><span>He didn&#39;t tell me everything, so I had to fill in the blanks myself.</span></p><p><span>他没有告诉我全部的信息，所以我只能自己推测结论。</span></p></blockquote><p><span>striking</span></p><ul><li><p><em><span>adj.</span></em><span>惊人的，异常的；妩媚动人的，标致的；罢工的；打击的</span></p></li><li><p><em><span>n.</span></em><span>撞击，碰撞</span></p></li><li><p><em><span>v.</span></em><span>打，撞；（用手或武器等）打；罢工（strike 的现在分词形式）</span></p></li></ul><blockquote><p><span>They shouldn&#39;t be </span><strong><span>striking</span></strong><span> for more money.</span></p><p><span>他们不该为更多的钱而罢工。</span></p></blockquote></blockquote><p><span>Philosopher </span><em><span>Aristotle</span></em><span> said a story had a beginning, a middle, and an end. Author </span><em><span>John Gardner</span></em><span> said the basic plot of nearly all stories is this: &quot;</span><mark style="background:#f8e272;"><span>A character wants something, </span><u><span>goes after it despite opposition</span></u><span> (perhaps including his own doubts), and </span><strong><span>so arrives at a win, lose, or </span><u><span>draw</span></u></strong><span>.&quot; I like </span><em><span>Gardner&#39;s</span></em><span> plot formula because it&#39;s also the shape of most creative work: You get a great idea, you go through the hard work of executing the idea, and then you release the idea out into the world, coming to a win, lose, or draw</span></mark><span>. Sometimes the idea succeeds, sometimes it fails, and </span><u><span>more often than not</span></u><span>, it does nothing at all. This simple formula can be applied to almost any type of work project: There&#39;s the initial problem, the work done to solve the problem, and the solution.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>goes after it despite opposition  不顾反对，勇往直前</span></p><p><span>go after 追求、追逐、追捕或攻击</span></p><blockquote><p><span>The detective decided to </span><strong><span>go after</span></strong><span> the criminal and bring him to justice.</span></p><p><span>侦探决定追捕罪犯并使其受到法律制裁。</span></p></blockquote><p><span>draw: </span></p><ul><li><p><em><span>v.</span></em><span> ...</span></p></li><li><p><em><span>n.</span></em><span>和局，不分胜负；抽彩，抽签；由抽签决定对手的比赛，由抽签决定对手的系列比赛；有吸引力的人(或事物)；吸烟；抽签，抓阄；〈非正式〉大麻制品；拔枪；抽彩，抽奖；有吸引力的人（或事物）</span></p></li></ul><blockquote><p><span>They managed an honourable 2–2 </span><strong><span>draw</span></strong><span>.</span></p><p><span>他们奋力打成了2:2平局，值得敬佩。</span></p></blockquote><p><span>more often than not 经常发生的；大多数情况下：发生的时间超过一半以上。</span></p><blockquote><p><strong><span>More often than not</span></strong><span>, I prefer to stay at home on weekends.</span></p><p><span>大多数情况下，我更喜欢在周末呆在家里。</span></p></blockquote></blockquote><p><span>Of course, when you&#39;re in the middle of a story, as most of us in life are, you don&#39;t know if it&#39;s a story at all, because you don&#39;t know how far into it you are, and you don&#39;t know how it&#39;s going to end. Fortunately, there&#39;s a way to tell </span><u><span>open-ended</span></u><span> stories, </span><mark style="background:#f8e272;"><span>where we acknowledge that we&#39;re </span><u><span>smack-dab</span></u><span> in the middle of a story, and we don&#39;t know </span><u><span>how it all ends</span></u></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>open-ended </span><em><span>adj.</span></em><span>开放式的；</span><u><span>无限制的</span></u><span>；自由回答的；两端未封闭的</span></p><blockquote><p><span>The essay is something you can still control, and it&#39;s </span><strong><span>open</span></strong><span>-</span><strong><span>ended</span></strong><span>.</span></p><p><span>论文是你仍然可以控制的东西，而且它是开放式的。</span></p></blockquote><p><span>smack-dab </span><code>/ smæk dæb /</code><span> </span><em><span>adv.</span></em><span>不偏不倚地，正好地</span></p><blockquote><p><span>The ball landed </span><strong><span>smack</span></strong><span>-</span><strong><span>dab</span></strong><span> at his feet.</span></p><p><span>球不偏不倚正好落在他的脚上。</span></p></blockquote><p><span>how it all ends: 这一切如何结束</span></p><blockquote><p><span>Don&#39;t tell me </span><strong><span>how</span></strong><span> </span><strong><span>it</span></strong><span> </span><strong><span>ends</span></strong><span> I haven&#39;t read </span><strong><span>all</span></strong><span> the way through yet.</span></p><p><span>先别告诉我书的结尾，我还没看完呢。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>Every client presentation, every personal essay, every </span><u><span>cover letter</span></u><span>, every </span><u><span>fund-raising</span></u><span> request—they&#39;re all </span><u><span>pitches</span></u></mark><span>. </span><mark style="background:#f8e272;"><span>They&#39;re stories with the endings </span><u><span>chopped off</span></u></mark><span>. </span><u><span>A good pitch</span></u><span> is set up in three acts: The first act is the past, the second act is the present, and the third act is the future. The first act is where you&#39;ve been—what you want, how you came to want it, and what you&#39;ve done so far to get it. The second act is where you are now in your work and how you&#39;ve worked hard and used up most of your resources. The third act is where you&#39;re going, and how exactly the person you&#39;re </span><u><span>pitching</span></u><span> can help you get there. </span><mark style="background:#a8e195;"><span>Like a Choose Your Own Adventure book, this story shape effectively turns your listener into the hero who gets to decide how it ends</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cover letter 求职信：附在简历上的一封信，用于解释求职原因或提供更多信息。</span></p><blockquote><p><span>Make sure to include a cover letter when submitting your job application.</span></p><p><span>提交工作申请时一定要附上求职信。</span></p></blockquote><p><span>fund-raising </span><em><span>n.</span></em><span>筹募基金活动</span></p><blockquote><p><span>My </span><strong><span>fund</span></strong><span>-</span><strong><span>raising</span></strong><span> focus also gave me new motivation to exercise regularly.</span></p><p><span>我的资金筹集的关注点也给了我定期锻炼的新动力。</span></p></blockquote><p><mark style="background:#f8e272;"><span>每一份客户报告、每一篇个人论文、每一封求职信、每一份筹款请求——它们都是推销。它们是被砍掉了结局的故事</span></mark><span>。</span></p><p><span>chopped </span><em><span>v.</span></em><span>砍；斩碎；大量削减（chop 的过去分词）</span></p><blockquote><p><span>He </span><strong><span>chopped</span></strong><span> a branch off the tree.</span></p><p><span>他从那棵树上砍下一根树枝。</span></p></blockquote><p><span>A good pitch 一个好的提案</span></p><p><span>pitching</span></p><ul><li><p><em><span>n.</span></em><span>俯仰；铺地石；投手投球</span></p></li><li><p><em><span>adj.</span></em><span>倾斜的；陡的</span></p></li><li><p><em><span>v.</span></em><span>使倾斜（pitch 的 ing 形式）；投掷；用沥青涂；为……定调</span></p></li></ul><blockquote><p><span>She started </span><strong><span>pitching</span></strong><span> into me as soon as I arrived.</span></p><p><span>我刚一到她就劈头盖脸地批评起我来。</span></p></blockquote><p><mark style="background:#a8e195;"><span>就像《选择你自己的冒险》一样，这种故事形式有效地把你的听众变成了决定故事结局的英雄</span></mark><span>。</span></p></blockquote><p><span>Whether you&#39;re telling a finished or unfinished story, always keep your audience in mind. </span><mark style="background:#f8e272;"><span>Speak to them directly in plain language. Value their time. Be brief. Learn to speak. Learn to write. Use </span><u><span>spell-check</span></u><span>. You&#39;re never &quot;keeping it real&quot; with your lack of </span><u><span>proofreading</span></u><span> and punctuation, you&#39;re keeping it </span><u><span>unintelligible</span></u></mark><span>.</span></p><p><span>Everybody loves a good story, but good storytelling doesn&#39;t come easy to everybody. It&#39;s a skill that takes a lifetime to master. </span><mark style="background:#f8e272;"><span>So study the great stories and then go find some of your own. Your stories will get better the more you tell them</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spell-check</span></p><ul><li><p><em><span>n.</span></em><span>拼写检查</span></p></li><li><p><em><span>vt.</span></em><span>检查拼写</span></p></li></ul><blockquote><p><span>This model allows you to </span><strong><span>spell</span></strong><span>-</span><strong><span>check</span></strong><span> over 100,000 different words.</span></p><p><span>这种型号允许你检查十万多个不同单词的拼写。</span></p></blockquote><p><span>proofreading </span><em><span>v.</span></em><span>校对（proofread 的现在分词）</span></p><blockquote><p><span>Attentive </span><strong><span>proofreading</span></strong><span> is the only insurance against the kind of omissions described in this section.</span></p><p><span>仔细校对是避免本节提到的那种遗漏问题的惟一预防措施。</span></p></blockquote><p><span>unintelligible </span><em><span>adj.</span></em><span>莫名其妙的；无法了解的</span></p><blockquote><p><span>He muttered something </span><strong><span>unintelligible</span></strong><span>.</span></p><p><span>他嘀咕些莫名其妙的话。</span></p></blockquote></blockquote><h3 id='talk-about-yourself-at-parties'><span>Talk About Yourself at Parties.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> "You <u style="color:blue">got to</u> <u style="color:blue">make your case</u>."<br/>—Kanye West</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>got to 不得不，必须；开始；已到达</span></p><blockquote><p><span>You </span><strong><span>got</span></strong><span> </span><strong><span>to</span></strong><span> come clean about things.</span></p><p><span>你必须将实情全盘交待。</span></p></blockquote><p><span>make your case </span><u><span>为自己的观点或立场辩护，提出有力的证据或理由</span></u><span>。</span></p><blockquote><p><span>You need to </span><strong><span>make your case</span></strong><span> if you want to convince the boss to give you a raise.</span></p><p><span>如果你想说服老板给你加薪，你需要为自己的观点辩护。</span></p></blockquote></blockquote><p><span>We&#39;ve all been there. You&#39;re standing at a party, enjoying your drink, when a stranger approaches, introduces herself, and asks the </span><u><span>dreaded</span></u><span> question, &quot;So, what do you do?&quot;</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>dreaded </span><code>/ ˈdredɪd /</code></p><ul><li><p><em><span>adj.</span></em><span>令人畏惧的，</span><u><span>可怕的</span></u></p></li><li><p><em><span>v.</span></em><span>惧怕（dread 的过去分词）</span></p></li></ul><blockquote><p><span>The </span><strong><span>dreaded</span></strong><span> moment had finally arrived.</span></p><p><span>可怕的时刻终于来到了。</span></p></blockquote></blockquote><p><span>If you happen to be a doctor or a teacher or a lawyer or a </span><u><span>plumber</span></u><span>, congratulations. You may </span><u><span>proceed</span></u><span> without </span><u><span>caution</span></u><span>. For the rest of us, we&#39;re going to need to practice our answers.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>plumber </span><em><span>n.</span></em><span>水管工人，水电工</span></p><blockquote><p><span>In my view, it is just as great an achievement to be a </span><strong><span>plumber</span></strong><span> or a bricklayer as it is to be a lawyer or a doctor.</span></p><p><span>在我看来，做一名水管工人或者砖匠，同做一名律师或者医生相比，所取得的成就是同样伟大的。</span></p></blockquote><p><span>proceed </span></p><ul><li><p><em><span>v.</span></em><span>开始行动，开展；&lt;正式&gt;继续做（或从事、进行）；</span><u><span>（完成其他事后）继续做某事</span></u><span>；&lt;正式&gt;行进，前往；起诉某人；来自，出自</span></p></li><li><p><em><span>n.</span></em><span>（某个事件或活动的）收入，收益</span></p></li></ul><blockquote><p><span>They had to take the finely balanced decision to let the visit </span><strong><span>proceed</span></strong><span>.</span></p><p><span>他们不得不做出仔细权衡后的决定，让访问继续下去。</span></p></blockquote><p><span>caution </span></p><ul><li><p><em><span>n.</span></em><span>小心，谨慎；提醒，告诫；（警察向犯轻罪的人发出的）警告</span></p></li><li><p><em><span>v.</span></em><span>警告，提醒</span></p></li></ul><blockquote><p><strong><span>Caution</span></strong><span>! This truck is reversing.</span></p><p><span>小心！卡车在倒车。</span></p></blockquote></blockquote><p><span>Artists have it the worst. If you answer, &quot;I&#39;m a writer,&quot; for example, there&#39;s a very good chance that the next question will be, &quot;Oh, have you published anything?&quot; which is actually a </span><u><span>veiled</span></u><span> way of asking, &quot;Do you make any money off that?&quot;</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>veiled </span><code>/ veɪld /</code></p><ul><li><p><em><span>adj.</span></em><span>蒙上面纱的，蒙面的；</span><u><span>含蓄的</span></u><span>，掩饰的；隐藏的，不清楚的</span></p></li><li><p><em><span>v.</span></em><span>戴面纱；掩饰，遮掩（veil 的过去式和过去分词）</span></p></li></ul><blockquote><p><span>A </span><strong><span>veiled</span></strong><span> woman gave me a kindly smile.</span></p><p><span>一位戴面纱的女子给了我一个友好的微笑。</span></p></blockquote></blockquote><p><span>The way to get over the </span><u><span>awkwardness</span></u><span> in these situations is to stop treating them as </span><u><span>interrogations</span></u><span>, and start treating them as opportunities to connect with somebody by honestly and </span><u><span>humbly</span></u><span> explaining what it is that you do. You should be able to explain your work to a </span><u><span>kindergartner</span></u><span>, a senior citizen, and everybody in between. Of course, you always need to keep your audience in mind: The way you explain your work to your </span><u><span>buddies</span></u><span> </span><u><span>at the bar</span></u><span> is not the way you explain your work to your mother.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>awkwardness </span><em><span>n.</span></em><span>尴尬；笨拙</span></p><blockquote><p><span>In this instance, the best solution is to send a quick apology to explain your </span><strong><span>awkwardness</span></strong><span>.</span></p><p><span>在这种情况下，最好的解决办法是尽快道歉，以解释你的尴尬。</span></p></blockquote><p><span>interrogations </span><code>/ ɪnˌterəˈɡeɪʃ(ə)n /</code><span> </span><em><span>n.</span></em><span>[法]</span><u><span>审问</span></u><span>（interrogation 的复数）；[计] [通信]询问</span></p><blockquote><p><span>She hated her parents&#39; endless </span><strong><span>interrogations</span></strong><span> about where she&#39;d been.</span></p><p><span>她讨厌她的父母没完没了地盘问她去哪里了。</span></p></blockquote><p><span>humbly </span><em><span>adv.</span></em><span>谦恭地，谦虚地</span></p><blockquote><p><span>&#39;Sorry,&#39; she said </span><strong><span>humbly</span></strong><span>.</span></p><p><span>“对不起。”她谦逊地说。</span></p></blockquote><p><span>kindergartner </span><em><span>n.</span></em><span>幼儿园教师；幼儿园里的小孩</span></p><blockquote><p><span>Michael took command of the group even as a chubby-cheeked </span><strong><span>kindergartner</span></strong><span>.</span></p><p><span>当还是一个圆脸的小家伙时，迈克尔就开始指挥这个团体。</span></p></blockquote><p><span>buddies </span></p><ul><li><p><em><span>n.</span></em><span>伙伴，好朋友（buddy 的复数形式）</span></p></li><li><p><em><span>v.</span></em><span>交朋友（buddy 的第三人称单数形式）</span></p></li></ul><blockquote><p><span>They were bosom </span><strong><span>buddies</span></strong><span>.</span></p><p><span>他们曾是知心的伙伴。</span></p></blockquote><p><span>at the bar 在酒吧：指在酒吧里喝酒或社交活动。</span></p><blockquote><p><span>I met him at the bar last night.</span></p><p><span>昨晚我在酒吧里遇见了他。</span></p></blockquote></blockquote><p><span>Just because you&#39;re trying to tell a good story about yourself doesn&#39;t mean you&#39;re inventing fiction. Stick to nonfiction. Tell the truth and tell it </span><u><span>with dignity</span></u><span> and </span><u><span>self-respect</span></u><span>. If you&#39;re a student, say you&#39;re a student. If you work a day job, say you work a day job. (For years, I said, &quot;By day I&#39;m a web designer, and by night I write poetry.&quot;) </span><mark style="background:#f8e272;"><span>If you have a weird hybrid job, say something like, &quot;I&#39;m a writer who draws.&quot; (I stole that </span><u><span>bio</span></u><span> from the cartoonist </span><em><span>Saul Steinberg</span></em><span>.)</span></mark><span> If you&#39;re unemployed, say so, and mention what kind of work you&#39;re looking for. If you&#39;re employed, but you don&#39;t feel good about your job title, ask yourself why that is. Maybe you&#39;re </span><u><span>in the wrong line of work</span></u><span>, or maybe you&#39;re not doing the work you&#39;re supposed to be doing. (There were many years where answering, &quot;I&#39;m a writer,&quot; felt wrong, because I wasn&#39;t actually writing.) Remember what the author </span><em><span>George Orwell</span></em><span> wrote: &quot;</span><mark style="background:#f8e272;"><u><span>Autobiography</span></u><span> is only to be trusted when it reveals something disgraceful</span></mark><span>.&quot;</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>with dignity 有尊严地，有尊严</span></p><blockquote><p><span>Lower it slowly and </span><strong><span>with</span></strong><span> </span><strong><span>dignity</span></strong><span>.</span></p><p><span>慢慢地、有尊严地放下它。</span></p></blockquote><p><span>self-respect </span><em><span>n.</span></em><span>自重，自尊</span></p><blockquote><p><span>There&#39;s a lot of talk these days about giving children </span><strong><span>self</span></strong><span>-</span><strong><span>respect</span></strong><span>.</span></p><p><span>现在有很多人说要给孩子们自尊心。</span></p></blockquote><p><span>bio </span><em><span>n.</span></em><span>个人简历，小传</span></p><p><strong><span>you&#39;re in the wrong line of work</span></strong><span> 你入错行了</span></p><p><span>autobiography </span><em><span>n.</span></em><span>自传；自传体写作</span></p><blockquote><p><span>His </span><strong><span>autobiography</span></strong><span> was written late in life.</span></p><p><span>他的自传是在晚年写的。</span></p></blockquote><p><mark style="background:#f8e272;"><span>自传只有在揭露一些不光彩的事情时才值得信任</span></mark><span>。</span></p></blockquote><p><u><span>Have empathy for</span></u><span> your audience. </span><u><span>Anticipate blank stares</span></u><span>. Be ready for more questions. Answer patiently and politely.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>have empathy for 对…感同身受</span></p><blockquote><p><strong><span>Have</span></strong><span> </span><strong><span>empathy</span></strong><span> </span><strong><span>for</span></strong><span> your boss and the pressures he may be under.</span></p><p><span>对你的上司可能受到的压力感同身受。</span></p></blockquote><p><span>anticipate blank stares 预料到会有茫然的目光</span></p><p><span>stares </span><em><span>v</span></em><span>．盯着看，凝视：长时间、持续地看着某物或某人，通常是因为惊讶、好奇或不安。</span></p><blockquote><p><span>He </span><strong><span>stares</span></strong><span> at the painting for a long time.</span></p><p><span>他盯着那幅画看了很长时间。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>All the same </span><u><span>principles apply</span></u><span> when you start writing your bio. Bios are not the place to practice your creativity. We all like to think we&#39;re more complex than a </span><u><span>two-sentence</span></u><span> explanation, but a two-sentence explanation is usually what the world wants from us. </span><u><span>Keep it short and sweet</span></u></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>principles apply 适用原则：指某个原则或规则适用于某种情况或某个人。</span></p><blockquote><p><span>The </span><u><span>same principles</span></u><span> apply to both situations.</span></p><p><span>同样的原则适用于这两种情况。</span></p></blockquote><p><span>two sentence 两句话的</span></p><p><span>keep it short and sweet 短而美妙；广告创作中有一条KISS原则,即短而美妙(keep it short and sweet),当今凡事都追求快捷高效,广告制作者创作时既要考虑这一因素,还要注重省时省力、经济实效。</span></p><p><span>keep it short and sweet 言简意赅：用最简单、最直接的方式表达自己的意思，不要过多地赘述或废话。</span></p><blockquote><p><span>When giving a speech, it&#39;s important to keep it short and sweet.</span></p><p><span>在演讲时，言简意赅非常重要。</span></p></blockquote></blockquote><p><u><span>Strike</span></u><span> all the adjectives from your bio. If you take photos, you&#39;re not an &quot;aspiring&quot; photographer, and you&#39;re not an &quot;amazing&quot; photographer, either. You&#39;re a photographer. Don&#39;t get cute. Don&#39;t </span><u><span>brag</span></u><span>. Just state the facts.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>strike:</span></p><ul><li><p><em><span>v.</span></em><span>打，撞；（用手或武器等）打；（使）碰撞；罢工；突然想到，突然意识到；突然袭击；（疾病、灾难等）侵袭；（闪电）击中；引起（强烈感情）；（时钟）敲响；达成（协议，妥协），达到（平衡）；发现（黄金，矿物，石油）；铸造（硬币、奖牌）；</span><u><span>删除</span></u><span>；踢球，击球；攻球得分；使处于特定状态；让（某人）觉得；摆出（姿态）；照在……上；把……迷住；弹奏，奏出；划（火柴）, 击出（火星）；直击（要害），与…...起（原则性）冲突；（在争斗、竞争等中）取得先机；触发（电弧）；（电影摄影术）复制；（金融用语）结算，算出；&lt;加&gt;组成（委员会）；拆除（帐篷，戏剧布景）；降（帆，旗）（以示敬意或投降）；把（枝）插进土里生根；（植物，扦插）生根；（小牡蛎）附着；（渔）急拉钓线把鱼钩住；行进；来到；闯出（或开辟）新的（或独立的）事业</span></p></li><li><p><em><span>n.</span></em><span>罢工，罢市，罢课；（军事）打击；击，踢；（石油等宝贵资源的）发现；（投出的）好球；（棒球中的）击空；（十柱保龄球）一投全倒；不利因素；拒绝，抗拒；（渔）（对已上钩的鱼）急拉钓线；（地层、断层等地质特征的）走向</span></p></li></ul><blockquote><p><span>The lion crouched ready to </span><strong><span>strike</span></strong><span>.</span></p><p><span>狮子蹲身准备袭击。</span></p></blockquote><p><span>brag</span></p><ul><li><p><em><span>v.</span></em><u><span>吹牛，自</span></u><span>夸</span></p></li><li><p><em><span>n.</span></em><span>大话，夸耀之词；勃莱格牌戏（简化的扑克牌戏）</span></p></li><li><p><em><span>adj.</span></em><span>&lt;美，非正式&gt;卓越的，一流的</span></p></li></ul><blockquote><p><span>One secret I learned very early on was not to </span><strong><span>brag</span></strong><span> about  success.</span></p><p><span>我很早就学到的一个秘诀是不要夸耀自己的成功。</span></p></blockquote></blockquote><p><span>One more thing: Unless you are actually a </span><u><span>ninja</span></u><span>, a </span><u><span>guru</span></u><span>, or a rock star, don&#39;t ever use any of those terms in your bio. Ever.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>ninja </span><code>/ ˈnɪndʒə /</code><span> </span><em><span>n.</span></em><u><span>忍者</span></u><span>；（受过偷窃技术专门训练被雇作间谍或刺客的）日本武士</span></p><blockquote><p><span>You code like a </span><strong><span>ninja</span></strong><span>.</span></p><p><span>你得像忍者那样写代码。</span></p></blockquote><p><span>guru </span><em><span>n.</span></em><span>古鲁（印度教或锡克教的宗教导师或领袖）；</span><u><span>专家</span></u><span>，权威</span></p><blockquote><p><span>The popular press tends to represent him as an environmental </span><strong><span>guru</span></strong><span>.</span></p><p><span>大众媒体倾向于把他描绘成环保领袖。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">"Whatever we say, we're always talking about ourselves."<br/>—Alison Bechdel </p><hr style="background:brown"/></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

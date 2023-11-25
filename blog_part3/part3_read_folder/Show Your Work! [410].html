@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [410]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">04</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [410] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#open-up-your-cabinet-of-curiosities">Open up Your <u>Cabinet</u> of Curiosities.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#dont-be-a-hoarder">Don't Be a <u>Hoarder</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n259"><a class="md-toc-inner" href="#no-guilty-pleasures">No Guilty Pleasures.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n389"><a class="md-toc-inner" href="#credit-is-always-due"><u>Credit</u> Is Always <u>due</u>.</a></span></p></div><h2 id='open-up-your-cabinet-of-curiosities'><span>Open up Your </span><u><span>Cabinet</span></u><span> of Curiosities.</span></h2><h3 id='dont-be-a-hoarder'><span>Don&#39;t Be a </span><u><span>Hoarder</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cabinet</span></p><ul><li><p><em><span>n.</span></em><span>内阁；储藏柜，陈列柜；&lt;古&gt;私人小房间，密室；机箱，机壳</span></p></li><li><p><em><span>adj.</span></em><span>内阁的</span></p></li></ul><blockquote><p><span>She secreted the gun in the kitchen </span><strong><span>cabinet</span></strong><span>.</span></p><p><span>她把枪藏在了厨房的橱柜里。</span></p></blockquote><p><span>hoarder </span><em><span>n.</span></em><span>贮藏者；囤积者</span></p><blockquote><p><span>About 1 of every 20 Germans is acompulsive </span><strong><span>hoarder</span></strong><span>, a new study has found.</span></p><p><span>一项最新的研究发现，大约每二十个德国人中就有一个是强迫囤积者。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The problem with <u style="color:blue">hoarding</u> is you end up <u style="color:blue">living off</u> your reserves. Eventually, you’ll become <u style="color:blue">stale</u>. If you give away everything you have, you are left with nothing. This forces you to look, to be aware, to <u style="color:blue">replenish</u>. . . . <mark style="background:#f8e272;">Somehow the more you give away, the more comes back to you.</mark>”<br/>—Paul Arden </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hoarding </span></p><ul><li><p><em><span>n.</span></em><span>[贸易]囤积；贮藏；临时围墙</span></p></li><li><p><em><span>v.</span></em><span>贮藏（hoard 的 ing 形式）</span></p></li></ul><blockquote><p><span>There is panic buying and </span><strong><span>hoarding</span></strong><span>.</span></p><p><span>到处可以体现恐慌性采购和囤积。</span></p></blockquote><p><span>live off 依靠某物或某人作为生存的主要来源，如金钱或食物</span></p><blockquote><p><span>He seems to </span><strong><span>live</span></strong><span> </span><strong><span>off</span></strong><span> junk food.</span></p><p><span>他好像靠吃垃圾食品为生。</span></p></blockquote><p><span>stale </span></p><ul><li><p><em><span>adj.</span></em><span>（食物）不新鲜的，变味的；气味不清新的，难闻的；</span><u><span>没有新意的，老掉牙的</span></u><span>；（因长期从事同一工作而）疲沓的，厌倦的；（支票，合法要求）（因过期而）失效的</span></p></li><li><p><em><span>v.</span></em><span>（使）不新鲜，（使）走味，（使）陈旧；（动物，尤指马）撒尿</span></p></li><li><p><em><span>n.</span></em><span>尿</span></p></li></ul><blockquote><p><span>Their marriage had gone </span><strong><span>stale</span></strong><span>.</span></p><p><span>他们的婚姻已了无热情。</span></p></blockquote><p><span>replenish </span><em><span>v.</span></em><span>补充，重新装满；补足（原有的量）</span></p><blockquote><p><span>The cavalry must immediately </span><strong><span>replenish</span></strong><span> the new horse.</span></p><p><span>骑兵部队必须立即补充新马。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>贮藏者以自己拥有的为生；但是这样就会慢慢地变得老掉牙而没有新意。如果你把知道的告知别人，就会迫使你去寻找、去感知、去补充自己。不知何故：你给的越多，你收的越多！</span></p></blockquote><p><span>If you happened to be wealthy and educated and alive in 16th- and 17th-century Europe, it was fashionable to have a Wunderkammern, a “</span><u><span>wonder</span></u><span> </span><u><span>chamber</span></u><span>,” or a “</span><u><span>cabinet</span></u><span> of </span><u><span>curiosities</span></u><span>” in your house—a room filled with rare and remarkable objects that served as a kind of external display of your </span><u><span>thirst for</span></u><span> knowledge of the world. Inside a cabinet of curiosities you might find books, </span><u><span>skeletons</span></u><span>, jewels, shells, art, plants, minerals, </span><u><span>taxidermy</span></u><span> </span><u><span>specimens</span></u><span>, stones, or any other </span><u><span>exotic</span></u><span> </span><u><span>artifact</span></u><span>. These collections often </span><u><span>juxtaposed</span></u><span> both natural and human-made marvels, revealing a kind of </span><u><span>mash-up</span></u><span> of </span><u><span>handiwork</span></u><span> by both God and human beings. They were the </span><u><span>precursors</span></u><span> to what we think of today as the modern museum—a place dedicated to the study of history, nature, and the arts.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>wonder </span></p><ul><li><p><em><span>v.</span></em><span>想知道，好奇，琢磨；不知是否（用于提问或礼貌地提出请求）；感到疑惑，（对…）感到不安；感到惊讶，觉得惊奇</span></p></li><li><p><em><span>n.</span></em><span>惊讶，惊叹；奇观，奇迹；令人惊讶的事物，令人难以置信的事物；能人，奇才，有特效的东西</span></p></li><li><p><em><span>adj.</span></em><span>极好的，灵验的</span></p></li></ul><blockquote><p><span>I </span><strong><span>wonder</span></strong><span> you don&#39;t feel it too.</span></p><p><span>我惊讶于你也感觉不到它。</span></p></blockquote><p><span>chamber </span></p><ul><li><p><em><span>n.</span></em><span>房间，室；会议厅，会所；议院；腔，膛；洞穴；&lt;旧&gt;卧室；法官办公室，律师事务所（chambers）</span></p></li><li><p><em><span>v.</span></em><span>把子弹送入弹膛；把……关在房间里</span></p></li><li><p><em><span>adj.</span></em><span>室内的；私人的，秘密的</span></p></li></ul><blockquote><p><span>For many, the dentist&#39;s office remains a torture </span><strong><span>chamber</span></strong><span>.</span></p><p><span>对许多人来说，牙科诊室仍是一间行刑室。</span></p></blockquote><p><span>cabinet</span></p><ul><li><p><em><span>n.</span></em><span>内阁；储藏柜，陈列柜；&lt;古&gt;私人小房间，密室；机箱，机壳</span></p></li><li><p><em><span>adj.</span></em><span>内阁的</span></p></li></ul><blockquote><p><span>The china was displayed in a glass </span><strong><span>cabinet</span></strong><span>.</span></p><p><span>瓷器陈列在玻璃柜里。</span></p></blockquote><p><span>curiosities </span><em><span>n.</span></em><span>好奇心，求知欲；珍品，奇事</span></p><blockquote><p><span>The museum is full of historical </span><strong><span>curiosities</span></strong><span>.</span></p><p><span>这座博物馆有许多珍奇历史文物。</span></p></blockquote><p><strong><span>Cabinet of curiosities</span></strong><span> 珍奇柜；美术品陈列室；百宝箱；珍物陈列室</span></p><blockquote><p><span>In winter, nature is a </span><strong><span>cabinet</span></strong><span> </span><strong><span>of</span></strong><span> </span><strong><span>curiosities</span></strong><span>, full of dried specimens, in their natural order and position. The meadows and forests are a hortus siccus.</span></p><p><span>冬日里，大自然就像一个天然的大橱柜，被塞满了各种干枯的标本，它们还保持着原来的样子和位置。</span></p></blockquote><p><span>thirst </span></p><ul><li><p><em><span>n.</span></em><span>渴，口渴；干渴，缺水；渴望，渴求</span></p></li><li><p><em><span>v.</span></em><span>&lt;文&gt;渴望，渴求；&lt;旧&gt;渴，口渴</span></p></li></ul><blockquote><p><span>Thousands are dying of </span><strong><span>thirst</span></strong><span>.</span></p><p><span>成千上万的人都干渴得奄奄一息。</span></p></blockquote><p><span>thirst for 渴望：非常强烈地感到想要和需要某样特定的东西。</span></p><blockquote><p><span>He had a thirst for knowledge and spent all his spare time reading books.</span></p><p><span>他渴望知识，把所有的空闲时间都用来读书。</span></p></blockquote><p><span>skeletons </span><em><span>n.</span></em><span>骷髅；[解剖]骨骼（skeleton 的复数）；流言（歌曲名）</span></p><blockquote><p><span>The town of Rudbar had ceased to exist, with only </span><strong><span>skeletons</span></strong><span> of buildings remaining.</span></p><p><span>鲁德巴尔城已不存在，只剩一些建筑骨架。</span></p></blockquote><p><span>taxidermy </span><em><span>n.</span></em><span>（动物标本）剥制术</span></p><blockquote><p><span>Taking an extracurricular class such as knitting, dance, or </span><strong><span>taxidermy</span></strong><span> forces you to be in a room full of strangers.</span></p><p><span>参加一个课外活动，比如编织、舞蹈、标本制作，这种课外活动就给你提供了一个机会去认识教室里所有的陌生人。</span></p></blockquote><p><span>specimens </span><em><span>n.</span></em><span>[试验]试样，[图情]样本（specimen 的复数）</span></p><blockquote><p><span>The </span><strong><span>specimens</span></strong><span> were mounted on slides.</span></p><p><span>标本安放在载片上。</span></p></blockquote><p><span>exotic </span></p><ul><li><p><em><span>adj.</span></em><u><span>奇异的</span></u><span>，异国风情的</span></p></li><li><p><em><span>n.</span></em><span>外来植物，外来动物</span></p></li></ul><blockquote><p><span>She has a partiality for </span><strong><span>exotic</span></strong><span> flowers.</span></p><p><span>她特别喜爱异国花卉。</span></p></blockquote><p><span>artifact </span><em><span>n.</span></em><span>（尤指有文化价值或历史价值的）</span><u><span>人工制品</span></u><span>，历史文物；非自然存在物体，假象（=artefact）</span></p><blockquote><p><span>Theoretically, you may be correct in claiming that every </span><strong><span>artifact</span></strong><span> has potential scientific value.</span></p><p><span>从理论上讲，您认为每件文物都具有潜在的科学价值可能是正确的。</span></p></blockquote><p><span>juxtaposed </span><em><span>v.</span></em><span>并列（juxtapose 的过去式）</span></p><blockquote><p><span>In the exhibition, abstract paintings are </span><strong><span>juxtaposed</span></strong><span> with shocking photographs.</span></p><p><span>展览会上抽象画与令人震惊的照片并列展出。</span></p></blockquote><p><span>mash-up 混聚</span></p><blockquote><p><span>A visual content </span><strong><span>mash</span></strong><span>-</span><strong><span>up</span></strong><span> system.</span></p><p><span>一个可视化内容聚合系统。</span></p></blockquote><p><span>handiwork </span><em><span>n.</span></em><u><span>手工艺</span></u><span>；[工经] 手工制品；行为后果</span></p><blockquote><p><span>We admired her exquisite </span><strong><span>handiwork</span></strong><span>.</span></p><p><span>我们欣赏她精致的手工艺品。</span></p></blockquote><p><span>precursors </span><em><span>n.</span></em><span>前体细胞（precursor 的复数）；先驱者（precursor 的复数）</span></p><blockquote><p><span>So what are today&#39;s </span><strong><span>precursors</span></strong><span>?</span></p><p><span>那么今天的预兆是什么呢？</span></p></blockquote></blockquote><p><span>We all have our own </span><u><span>treasured</span></u><span> collections. They can be physical cabinets of curiosities, say, living room </span><u><span>bookshelves</span></u><span> full of our favorite novels, records, and movies, or they can be more like </span><u><span>intangible</span></u><span> museums of the heart, our skulls </span><u><span>lined with</span></u><span> memories of places we’ve been, people we’ve met, experiences we’ve accumulated. We all </span><u><span>carry around</span></u><span> the </span><u><span>weird</span></u><span> and wonderful things we’ve come across while doing our work and living our lives. These mental </span><u><span>scrapbooks</span></u><span> form our tastes, and our tastes influence our work.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>treasured 珍藏的，重视的，心爱的</span></p><blockquote><p><span>The ring is one of her most </span><strong><span>treasured</span></strong><span> possessions.</span></p><p><span>这只戒指是她最珍贵的财产之一。</span></p></blockquote><p><span>bookshelves </span><em><span>n.</span></em><span>书架（bookshelf 的复数）</span></p><blockquote><p><span>She built </span><strong><span>bookshelves</span></strong><span> out of bricks and planks.</span></p><p><span>她用砖和厚木板制作了书架。</span></p></blockquote><p><span>intangible </span></p><ul><li><p><em><span>adj.</span></em><span>不可捉摸的，难以确定的；</span><u><span>（资产，利益）无形的</span></u></p></li><li><p><em><span>n.</span></em><span>无形的东西</span></p></li></ul><blockquote><p><span>The benefits are </span><strong><span>intangible</span></strong><span>.</span></p><p><span>好处是难以计算的。</span></p></blockquote><p><span>lined with 与某物相似或处于相同水平</span></p><blockquote><p><span>The company&#39;s actions are not in line with their stated values.</span></p><p><span>该公司的行动与其所宣称的价值观不符。</span></p></blockquote><p><span>carry around: 随身携带：携带某物随时随地移动或旅行。</span></p><blockquote><p><span>I always </span><strong><span>carry around</span></strong><span> a small umbrella in case it rains.</span></p><p><span>我总是随身携带一把小雨伞以防下雨。</span></p></blockquote><p><span>weird </span></p><ul><li><p><em><span>adj.</span></em><span>奇怪的，不寻常的；怪异的，超自然的</span></p></li><li><p><em><span>n.</span></em><span>命运；预言者</span></p></li><li><p><em><span>v.</span></em><span>&lt;美，非正式&gt;使心生疑惑，使感到疏远</span></p></li></ul><blockquote><p><span>Some of the music was </span><strong><span>weird</span></strong><span>.</span></p><p><span>这音乐有些地方有点怪。</span></p></blockquote><p><span>scrapbooks </span><em><span>n.</span></em><span>剪贴簿（scrapbook 的复数）</span></p><blockquote><p><span>Today people collect many things in </span><strong><span>scrapbooks</span></strong><span>.</span></p><p><span>如今，人们在剪贴簿里收集许多东西。</span></p></blockquote></blockquote><p><span>There’s not as big of a difference between collecting and creating as you might think. A lot of the writers I know see the act of reading and the act of writing as existing on opposite ends of the same </span><u><span>spectrum</span></u><span>: The reading feeds the writing, which feeds the reading. “I’m basically a </span><u><span>curator</span></u><span>,” says the writer and former bookseller </span><em><span>Jonathan Lethem</span></em><span>. “Making books has always felt very connected to my bookselling experience, that of wanting to draw people’s attention to things that I liked, to shape things that I liked into new shapes.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>spectrum </span><em><span>n.</span></em><span>范围，幅度；光谱；波谱，频谱；余象</span></p><blockquote><p><span>Red and violet are at opposite ends of the </span><strong><span>spectrum</span></strong><span>.</span></p><p><span>红色和紫色位于光谱的两端。</span></p></blockquote><p><span>curator </span><em><span>n.</span></em><span>（博物馆）馆长，（动物园）园长</span></p><blockquote><p><span>Let&#39;s say a museum </span><strong><span>curator</span></strong><span> comes to you with a problem.</span></p><p><span>假设一个博物馆馆长带着一个问题来找你。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>收藏和创作之间的区别并不像你想象的那么大。阅读和写作被很多人认为是频谱的两端，阅读喂养写作、而写作又回过来喂养阅读！</span></p><p><span>“做书总是感觉和我的图书销售经历紧密相连，我想把人们的注意力吸引到我喜欢的东西上，把我喜欢的东西塑造成新的形状。”</span></p></blockquote><p><mark style="background:#f8e272;"><span>Our tastes make us what we are, but they can also </span><u><span>cast a shadow over</span></u><span> our own work</span></mark><span>. “All of us who do creative work, we get into it because we have good taste,” says public radio personality </span><em><span>Ira Glass</span></em><span>. “</span><mark style="background:#f8e272;"><span>But there is this gap. For the first couple years you make stuff, it’s just not that good. It’s trying to be good, it has potential, but it’s not. But your taste, the thing that got you into the game, is still killer</span></mark><span>.” Before we’re ready to </span><u><span>take the leap of</span></u><span> sharing our own work with the world, we can share our tastes in the work of others.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>cast a shadow over 蒙上阴影：用不愉快的事情破坏一个好的局面。</span></p><blockquote><p><span>The recent scandal has cast a shadow over the company&#39;s reputation.</span></p><p><span>最近的丑闻给公司的声誉蒙上了阴影。</span></p></blockquote><p><span>take the leap 冒险尝试：采取冒险的行动或决定，尤指在面临不确定性或风险时勇敢地迈出一步。</span></p><blockquote><p><span>She decided to take the leap and start her own business.</span></p><p><span>她决定冒险尝试，开始自己的事业。</span></p></blockquote></blockquote><p><span>Where do you get your inspiration? What sorts of things do you fill your head with? What do you read? Do you subscribe to anything? What sites do you visit on the Internet? What music do you listen to? What movies do you see? Do you look at art? What do you collect? What’s inside your </span><u><span>scrapbook</span></u><span>? What do you </span><u><span>pin</span></u><span> to the </span><u><span>corkboard</span></u><span> above your desk? What do you stick on your refrigerator? Who’s done work that you admire? Who do you steal ideas from? Do you have any heroes? Who do you follow online? Who are the practitioners you look up to in your field?</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>scrapbook </span><em><span>n.</span></em><span>剪贴簿</span></p><blockquote><p><span>Make a </span><strong><span>scrapbook</span></strong><span> page with pictures of a special event or fun day from the past and frame it.</span></p><p><span>制作一个剪贴簿页面，其中有过去某一特殊事件或有趣日子的照片，并将其框起来。</span></p></blockquote><p><span>pin to 固定在……上：将物体固定在另一个物体上。</span></p><blockquote><p><span>Imagine a stretchy wrapping paper that you </span><strong><span>pin</span></strong><span> </span><strong><span>to</span></strong><span> your gift at the vertices.</span></p><p><span>可以这样设想，将一块有弹性的包装纸钉在礼物的各顶点上。</span></p></blockquote><p><span>corkboard </span><em><span>n.</span></em><span>软木公告板；软木板</span></p><blockquote><p><span>That&#39;s why the internet is so much more fun than reading the </span><strong><span>corkboard</span></strong><span> at your laundromat.</span></p><p><span>那就是为什么互联网比起在你的自助洗衣店读软木公告板更有趣的原因。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>Your influences are all worth sharing because they </span><u><span>clue</span></u><span> people in to who you are and what you do—sometimes even more than your own work</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>clue</span></p><ul><li><p><em><span>n.</span></em><span>线索，提示；理解，想法</span></p></li><li><p><em><span>v.</span></em><span>给（某人）提供线索，使（某人）了解</span></p></li></ul><blockquote><p><span>I don&#39;t have a </span><strong><span>clue</span></strong><span> where she lives.</span></p><p><span>我完全不知道她住在哪里。</span></p></blockquote><p><span>clue in to the fact 让我们了解事实</span></p><blockquote><p><span>Lighting, however, also helped </span><strong><span>clue</span></strong><span> viewers </span><strong><span>in</span></strong><span> </span><strong><span>to</span></strong><span> </span><strong><span>the</span></strong><span> </span><strong><span>fact</span></strong><span> that this picture wasn&#39;t business as usual.</span></p><p><span>不过作品的用光也让观者注意到这些不是平常的商业图片。</span></p></blockquote><p><span>clue in 向某人提供信息或告知某人情况</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“You’re only as good as your record collection.”<br/>—DJ Spooky </p><hr style="background:brown"/><h3 id='no-guilty-pleasures'><span>No Guilty Pleasures.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“I don’t believe in guilty pleasures. If you f---ing like something, like it.”<br/>—Dave Grohl </p><hr style="background:brown"/><p><span>About twenty years ago, a </span><u><span>trashman</span></u><span> in New York City named </span><em><span>Nelson Molina</span></em><span> started collecting little bits and pieces of art and unique objects that he found discarded along his route. His collection, The Trash Museum, is housed on the second floor of the Sanitation Department garage on East 99th Street, and it now features more than a thousand paintings, posters, photographs, musical instruments, toys, and other </span><u><span>ephemera</span></u><span>. There isn’t a big </span><u><span>unifying</span></u><span> principle to the collection, just what </span><em><span>Molina</span></em><span> likes. He gets submissions from some of his fellow workers, but he says what goes on the wall and what doesn’t. “I tell the guys, just bring it in and I’ll decide if I can hang it.” At some point, </span><em><span>Molina</span></em><span> painted a sign for the museum that reads treasure in the trash by </span><em><span>nelson molina</span></em><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>trashman </span><em><span>n.</span></em><span>垃圾清理工</span></p><blockquote><p><span>The way most people look at you, youd think a </span><strong><span>trashman</span></strong><span> was a monster.</span></p><p><span>从大多数人看你的目光中，你就知道垃圾工在他们眼里是怪物。</span></p></blockquote><p><span>ephemera </span><code>/ ɪˈfemərə /</code><span> </span><em><span>n.</span></em><span>蜉蝣</span></p><blockquote><p><span>But what will fame be to an </span><strong><span>ephemera</span></strong><span> who no longer exists?</span></p><p><span>可是蜉蝣已死，还要身后名何用？</span></p></blockquote><p><span>unifying 使统一；（unify的ing形式）使成一体</span></p><blockquote><p><span>A zigzag metal roof, also incorporated into the Oppenheimer Park design, now acts as a </span><strong><span>unifying</span></strong><span> design element throughout the district.</span></p><p><span>一个之字形的金属屋顶也被纳入奥本海默公园的设计中，现在成为整个地区统一的设计元素。</span></p></blockquote></blockquote><p><span>“</span><u><span>Dumpster</span></u><span> diving” is one of the jobs of the artist—finding the treasure in other people’s trash, </span><u><span>sifting through</span></u><span> the debris of our culture, paying attention to the stuff that everyone else is ignoring, and taking inspiration from the stuff that people have </span><u><span>tossed aside</span></u><span> for whatever reasons. More than 400 years ago, </span><em><span>Michel de Montaigne</span></em><span>, in his essay “On Experience,” wrote, “In my opinion, the most ordinary things, the most common and familiar, if we could see them in their true light, would turn out to be the </span><u><span>grandest</span></u><span> </span><u><span>miracles</span></u><span> . . . and the most </span><u><span>marvelous</span></u><span> examples.” </span><mark style="background:#f8e272;"><span>All it takes to uncover hidden </span><u><span>gems</span></u><span> is a clear eye, an open mind, and a willingness to search for inspiration in places other people aren’t willing or able to go</span></mark><span>.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>dumpster diving何解？就是在别人不愿意或者不能够的地方寻找一些普通的东西，从普通中筛选出伟大！</span></p><p><span>原文对应的段落对我冲击比较大，建议回文细看！</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>Dumpster </span><em><span>n.</span></em><span>大垃圾桶</span></p><blockquote><p><span>A large, green </span><strong><span>Dumpster</span></strong><span>. A couple of the maintenance folks.</span></p><p><span>一个大的，绿色的垃圾桶；几个公路维护人员，我看见很多沥青。</span></p></blockquote><p><strong><span>dumpster diving</span></strong><span> 在公共垃圾容器中搜寻可食用的食物或保留一定使用价值的废弃物品的行为</span></p><blockquote><p><span>Dumpster diving is not only a way to save money, but also a way to reduce waste.</span></p><p><span>垃圾桶潜水不仅是省钱的一种方式，也是减少浪费的一种方式。</span></p></blockquote><p><span>sift: </span></p><ul><li><p><em><span>v.</span></em><span>筛（面粉或颗粒较细的物质）；（使）通过筛具般撒下，落下；细查，详审；使分开，剔除（sift sth. out）；（雪、灰或光线等）轻轻撒落，轻轻飘落</span></p></li><li><p><em><span>n.</span></em><span>筛，筛选；筛过的原料</span></p></li></ul><blockquote><p><strong><span>Sift</span></strong><span> out the wheat from the chaff.</span></p><p><span>把小麦的壳筛出来。</span></p></blockquote><p><span>sifting through 仔细查看一组物品或信息收集，以找到某些东西</span></p><blockquote><p><span>I need to sift through these resumes to find the best candidate for the job.</span></p><p><span>我需要仔细查看这些简历，找到最适合这份工作的候选人。</span></p></blockquote><p><span>toss aside </span><u><span>丢弃：扔掉或抛弃某物</span></u><span>。</span></p><blockquote><p><span>We </span><strong><span>tossed</span></strong><span> </span><strong><span>aside</span></strong><span> our best values, making them look like a hollow charade.</span></p><p><span>我们把我们的最佳价值扔到一边，使它们看起来像个无解的猜谜。</span></p></blockquote><p><span>grandest 庄严的 重大的 豪华的 壮丽的（grand 的最高级）</span></p><blockquote><p><span>It was really the </span><strong><span>grandest</span></strong><span> deception in the world.</span></p><p><span>这真是世界上最堂皇的欺诈。</span></p></blockquote><p><span>miracles </span><code>/ ˈmɪrək(ə)l /</code><span> </span><em><span>n.</span></em><span>奇迹（miracle 的复数）；神迹</span></p><blockquote><p><strong><span>Miracles</span></strong><span> happen every day.</span></p><p><span>奇迹每天都在发生。</span></p></blockquote><p><span>marvelous </span><code>/ ˈmɑːrvələs /</code><span> </span><em><span>adj.</span></em><span>了不起的；非凡的；令人惊异的；不平常的</span></p><blockquote><p><span>I had no idea you were a </span><strong><span>marvelous</span></strong><span> writer.</span></p><p><span>我真不知道原来你是一位了不起的作家。</span></p></blockquote><p><span>gems </span><em><span>n.</span></em><span>[宝]宝石（gem 的复数形式）</span></p><blockquote><p><span>The mask is formed of a gold-platinum alloy inset with emeralds and other </span><strong><span>gems</span></strong><span>.</span></p><p><span>这张面具是由黄金和白金的合金制成，并镶嵌翡翠和其他宝石。</span></p></blockquote></blockquote><p><span>We all love things that other people think are garbage. You have to have the courage to keep loving your garbage, because </span><mark style="background:#f8e272;"><span>what makes us unique is the diversity and </span><u><span>breadth</span></u><span> of our influences, the unique ways in which we mix up the parts of culture others have </span><u><span>deemed</span></u><span> “high” and the “low.”</span></mark></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>我们都爱别人视为“garbage”的东西。你必须要有勇气去保持对你的“garbage”的热爱！因为真正让我们独特的是我们影响的多样性和广度、是那种把别人视为或高质量或低质量的东西混合在一起的独特方式！</span></p><p><span>保持做自己！保持热爱！</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>breadth </span><code>/ bredθ /</code><span> </span><em><span>n.</span></em><span>宽度，幅度；广度，广泛性</span></p><blockquote><p><span>We won by a hair&#39;s </span><strong><span>breadth</span></strong><span>.</span></p><p><span>我们以些微之差赢了对手。</span></p></blockquote><p><span>deemed </span><em><span>v.</span></em><span>认为（deem 的过去式）</span></p><blockquote><p><span>The evening was </span><strong><span>deemed</span></strong><span> a great success.</span></p><p><span>大家认为这次晚会非常成功。</span></p></blockquote><p><span>deem </span><em><span>v.</span></em><span>认为，相信</span></p><blockquote><p><span>They </span><strong><span>deem</span></strong><span> travel an important part of their life.</span></p><p><span>他们认为旅行是他们生活中重要的一部分。</span></p></blockquote></blockquote><p><span>When you find things you </span><u><span>genuinely</span></u><span> enjoy, don’t let anyone else </span><strong><span>make you</span></strong><span> feel bad about it. Don’t feel guilty about the pleasure you take in the things you enjoy. Celebrate them. When you share your taste and your influences, </span><u><span>have the guts to own all of it</span></u><span>. Don’t give in to the pressure to </span><u><span>self-edit</span></u><span> too much. Don’t be the </span><u><span>lame</span></u><span> guys at the record store arguing over who’s the more “authentic” </span><u><span>punk</span></u><span> rock band. Don’t try to be </span><u><span>hip</span></u><span> or cool. </span><mark style="background:#f8e272;"><span>Being open and honest about what you like is the best way to connect with people who like those things, too</span></mark><span>.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你真的发现了你真正享受的东西，不要让任何人影响你对这件事的看法。就去坚持自己！为自己庆祝！</span></p><p><span>当你分享自己的taste以及influence的时候，勇敢接受一切！</span></p><p><span>对自己喜欢的保持开放、真诚是与同类爱好人群连接的最佳方式。</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>genuinely </span><code>/ ˈdʒenjuɪnli /</code><span> </span><em><span>adv.</span></em><u><span>真诚地</span></u><span>；的确</span></p><p><span>have the guts to own all of it  有勇气拥有这一切！</span></p><p><span>self-edit </span><em><span>v.</span></em><span>自我编辑：对自己的作品进行修改、修订或改进，以提高质量。</span></p><blockquote><p><span>It&#39;s important to self-edit your work before submitting it.</span></p><p><span>在提交作品之前，自我编辑是很重要的。</span></p></blockquote><p><span>lame</span></p><ul><li><p><em><span>adj.</span></em><span>瘸的，跛的，残疾的；（尤指借口或论据）站不住脚的，无说服力的；差劲的，拙劣的；</span><u><span>&lt;美，非正式&gt;幼稚的</span></u><span>，无能的（尤指社交方面）</span></p></li><li><p><em><span>v.</span></em><span>使（人或动物）跛（瘸），使残废</span></p></li><li><p><em><span>n.</span></em><span>金银锦缎</span></p></li></ul><blockquote><p><span>He was aware that she was </span><strong><span>lame</span></strong><span> in one leg.</span></p><p><span>他知道她有一条腿是瘸的。</span></p></blockquote><p><span>punk </span></p><ul><li><p><em><span>n.</span></em><span>废物；小阿飞；年轻无知的人</span></p></li><li><p><em><span>adj.</span></em><u><span>朋客</span></u><span>，崩客；无用的，低劣的</span></p></li></ul><blockquote><p><strong><span>Punk</span></strong><span> is passé.</span></p><p><span>朋克过时了。</span></p></blockquote><p><span>hip </span></p><ul><li><p><em><span>n.</span></em><span>臀部，髋；屋脊；野蔷薇果</span></p></li><li><p><em><span>adj.</span></em><u><span>时髦的</span></u></p></li><li><p><em><span>int.</span></em><span>加油！ 好哇！</span></p></li></ul><blockquote><p><span>She broke her </span><strong><span>hip</span></strong><span> in the fall.</span></p><p><span>她摔倒时折断了髋骨。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Do what you do best and link to the rest.”<br/>—Jeff Jarvis </p><hr style="background:brown"/><h3 id='credit-is-always-due'><u><span>Credit</span></u><span> Is Always </span><u><span>due</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>credit </span></p><ul><li><p><em><span>n.</span></em><span>信用，信贷，赊购；赞扬，信誉，声望；存款金额，余额；补助；退税，抵免；学分；带来荣耀的人（或事）；作品（指影片、电视节目、戏剧等）；信任，相信</span></p></li><li><p><em><span>v.</span></em><span>把（钱）记入总账，把钱存入（账户）；相信，信任；认为是……的功劳，给予承认；认为……有特定品质（或效果）</span></p></li></ul><blockquote><p><span>Does the hotel take </span><strong><span>credit</span></strong><span> cards?</span></p><p><span>这家旅馆接受信用卡付款吗？</span></p></blockquote><p><span>due </span></p><ul><li><p><em><span>adj.</span></em><span>到期的，预期的；应有的，应得的；应付的，应给的；适当的</span></p></li><li><p><em><span>adv.</span></em><span>正对着</span></p></li><li><p><em><span>n.</span></em><span>应得，所得；会费</span></p></li></ul><blockquote><p><span>The accident was </span><strong><span>due</span></strong><span> to excessive speed.</span></p><p><span>事故的原因在于速度过快。</span></p></blockquote></blockquote><p><mark style="background:#f8e272;"><span>If you share the work of others, it’s your duty to make sure that the </span><u><span>creators</span></u><span> of that work get proper credit</span></mark><span>. Crediting work in our copy-and-paste age of reblogs and retweets can seem like a </span><u><span>futile</span></u><span> effort, but it’s worth it, and it’s the right thing to do. You should always share the work of others as if it were your own, treating it with respect and care.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>如果你分享其他人的作品，你就有责任让作品的作者获取合适的credit。</span></p><p><span>在我们转发的作品中认可原创者的努力看似无用，但是他是值得的，也是正确且应该做的事！</span></p><p><span>你在对待别人的作品的时候要一如对待自己的一样，保持尊重和用心！</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>creators 创作者 造物主</span></p><blockquote><p><span>We are looking for smart </span><strong><span>creators</span></strong><span> to design an app to help communities meet with the challenges they face.</span></p><p><span>我们正在寻找聪明的创造者来设计一个应用程序，以帮助社区应对他们面临的挑战。</span></p></blockquote><p><span>futile </span><em><span>adj.</span></em><u><span>徒劳的，无用的</span></u><span>；不重要的；没有出息的</span></p><blockquote><p><span>It would be </span><strong><span>futile</span></strong><span> to protest.</span></p><p><span>抗议也无用。</span></p></blockquote></blockquote><p><span>When we </span><u><span>make the case for</span></u><span> crediting our sources, most of us concentrate on the </span><u><span>plight</span></u><span> of the original creator of the work. But that’s only half of the story—if you fail to properly attribute work that you share, you not only rob the person who made it, you rob all the people you’ve shared it with. Without attribution, they have no way to dig deeper into the work or find more of it.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>make the case for 为……辩护或提出论据：为某个观点或行动提供支持或辩护的理由或证据。</span></p><blockquote><p><span>Can you make the case for why we should invest in this project?</span></p><p><span>你能为我们为什么应该投资这个项目提出论据吗？</span></p></blockquote><p><span>plight </span></p><ul><li><p><em><span>n.</span></em><span>困境，窘境；誓约</span></p></li><li><p><em><span>v.</span></em><span>&lt;旧&gt; 宣誓，保证</span></p></li></ul><blockquote><p><span>We were deeply moved by her </span><strong><span>plight</span></strong><span>.</span></p><p><span>她的困境深深地打动了我们。</span></p></blockquote></blockquote><p><span>So, what makes for great attribution? </span><mark style="background:#f8e272;"><span>Attribution is all about providing context for what you’re sharing</span></mark><span>: </span><strong><span>what the work is, who made it, how they made it, when and where it was made, why you’re sharing it, why people should care about it, and where people can see some more work like it</span></strong><span>. Attribution is about putting little museum labels next to the stuff you share.Another form of attribution that we often neglect is </span><mark style="background:#f8e272;"><span>where we found the work that we’re sharing</span></mark><span>. It’s always good practice to give a </span><u><span>shout-out</span></u><span> to the people who’ve helped you </span><u><span>stumble onto</span></u><span> good work and also leave a </span><u><span>bread-crumb trail</span></u><span> that people you’re sharing with can follow back to the sources of your inspiration. I’ve come across so many interesting people online by </span><u><span>following “via” and “H/T” links</span></u><span> —I’d have been robbed of a lot of these connections if it weren’t for the generosity and </span><u><span>meticulous</span></u><span> attribution of many of the people I follow.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>“如果不是因为我关注的许多人的慷慨和细致的署名，我可能已经失去了很多这样的联系。”</span></p><p><span>对你参考的、别人的优秀的作品！我们应该给予贡献。那么什么是好的贡献，什么是不好的呢？</span></p><ul><li><p><span>如果你只关注作者在做作品的窘境，那就太单一了！不是很好！</span></p></li><li><p><span>如果你把作者做作品的所有背景都说了出来，并且给了一个传送门，甚至告知大家你是受谁启发意外获得这个资料的。都给它署名上！这才是好的贡献！</span></p></li></ul><p><span>时刻记住，保持尊重、保持连接！</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>shout-out </span><em><span>n.</span></em><span>公开表达致意</span></p><blockquote><p><span>And though Angelina Jolie was nowhere to be found, hers got a big </span><strong><span>shout</span></strong><span>-</span><strong><span>out</span></strong><span> from host Jon Stewart, who noted the number of actresses who are expecting for several times.</span></p><p><span>尽管颁奖礼上未见安吉莉娜•茱丽的身影，但几次提及怀孕女星的主持人乔恩·斯图尔特“颁给”她一个宝宝大奖。</span></p></blockquote><p><span>stumble onto 偶然发现：无意中发现或遇到某事物或情况。</span></p><blockquote><p><span>You may well </span><strong><span>stumble</span></strong><span> </span><strong><span>onto</span></strong><span> some very useful information indeed.</span></p><p><span>你很可能找到一些非常有用的信息。</span></p></blockquote><p><span>bread-crumb trail </span><u><span>面包屑导航</span></u><span>：一种网站导航方式，通过显示用户当前位置在网站结构中的层级关系，帮助用户了解他们在网站中的位置并快速返回上一级或主页。</span></p><blockquote><p><span>The website has a clear breadcrumb trail, making it easy for users to navigate.</span></p><p><span>该网站有清晰的面包屑导航，方便用户浏览。</span></p></blockquote><p><span>meticulous </span><em><span>adj.</span></em><span>一丝不苟的，注意细节的</span></p><blockquote><p><span>He has been a </span><strong><span>meticulous</span></strong><span> manager, a manager par excellence.</span></p><p><span>他是位一丝不苟的经理，一位出类拔萃的经理。</span></p></blockquote></blockquote><p><span>Online, </span><mark style="background:#f8e272;"><span>the most important form of attribution is a </span><u><span>hyperlink</span></u><span> pointing back to the website of the creator of the work</span></mark><span>. This sends people who come across the work back to the original source. The number one rule of the Internet: People are lazy. If you don’t include a link, no one can click it. Attribution without a link online </span><u><span>borders on</span></u><span> useless: 99.9 percent of people are not going to bother Googling someone’s name.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>在网络上分享或者表达对别人作品的尊敬最有效的方式就是放一个超链接！</span></p><p><span>人群是懒惰的！没有人会去google一个没有连接的东西。没有链接的贡献等同于</span><strong><span>无</span></strong><span>！</span></p></blockquote><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>hyperlink </span><em><span>n.</span></em><span>超链接</span></p><blockquote><p><span>Creating </span><strong><span>hyperlink</span></strong><span> details links.</span></p><p><span>创建超链接的细节信息链接。</span></p></blockquote><p><span>border on 接近；近似</span></p><blockquote><p><span>Such designs can </span><strong><span>border</span></strong><span> </span><strong><span>on</span></strong><span> camp or tacky, in the wrong hands。</span></p><p><span>如果搭配不当，这种设计看上去像是去露营或是捡破烂的。</span></p></blockquote></blockquote><p><span>All of this raises a question: What if you want to share something and you don’t know where it came from or who made it? The answer: </span><mark style="background:#f8e272;"><span>Don’t share things you can’t properly credit. Find the right credit, or don’t share</span></mark><span>.</span></p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [1010]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">10</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [1010] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#stick-around"><u>Stick Around</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n17"><a class="md-toc-inner" href="#dont-quit-your-show">Don't Quit Your Show.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" href="#chain-smoke"><u>Chain-Smoke</u>.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n173"><a class="md-toc-inner" href="#go-away-so-you-can-come-back">Go Away so You Can Come Back.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n323"><a class="md-toc-inner" href="#start-over-begin-again">Start Over. Begin Again.</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n427"><a class="md-toc-inner" href="#what-now">What Now?</a></span></p></div><h2 id='stick-around'><u><span>Stick Around</span></u><span>.</span></h2><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stick around: </span><em><span>v.</span></em><span>逗留；在附近徘徊</span></p><blockquote><p><strong><span>Stick</span></strong><span> </span><strong><span>around</span></strong><span>; we&#39;ll need you to help us later.</span></p><p><span>别走开，过一会儿我们还需要你帮忙呢。</span></p></blockquote></blockquote><h3 id='dont-quit-your-show'><span>Don&#39;t Quit Your Show.</span></h3><p><span>Every career is full of </span><u><span>ups and downs</span></u><span>, and just like with stories, when you’re in the middle of living out your life and career, you don’t know whether you’re up or down or what’s about to happen next. “If you want a happy ending,” actor </span><em><span>Orson Welles</span></em><span> wrote, “that depends, of course, on where you stop your story.” Author </span><em><span>F. Scott Fitzgerald</span></em><span> wrote, “There are no second acts in American life,” but if you look around you’ll notice that not only are there second acts, there are third, fourth, and even fifth ones. (If you’re reading the </span><u><span>obituaries</span></u><span> every morning, by now you already know this.)</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>ups and downs: 起起落落，波折：指生活、事业或情感等方面的顺利与困难，成功与失败。</span></p><blockquote><p><span>Life is full of </span><strong><span>ups and downs</span></strong><span>, but we must keep moving forward.</span></p><p><span>生活充满了起起落落，但我们必须继续前进。</span></p></blockquote><p><span>live out: 离开工作地点居住：离开工作地点而不住在那里的情况，通常用于描述佣人等在雇主家工作但不住在雇主家的情况。</span></p><blockquote><p><span>We </span><strong><span>live</span></strong><span> </span><strong><span>out</span></strong><span> in the sticks.</span></p><p><span>我们住在偏远的乡村。</span></p></blockquote><p><span>obituaries: </span><em><span>n.</span></em><span>讣(fù)告；讣闻（obituary </span><code>/ oʊˈbɪtʃueri /</code><span> 的复数形式）</span></p><blockquote><p><span>Look at the Steve Jobs </span><strong><span>obituaries</span></strong><span>.</span></p><p><span>看看史蒂芬·乔布斯的讣告吧。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>每个职业都充满了起起落落。就像故事里描述的那样，如果你处于事业中期，你是不会知道你处于事业的中期这个事实的，因为你是局内人。你不知道接下来会发生什么。但是如果你想要一个happy ending，你就要环顾四周，找到生活的第二幕、第三幕...</span></p></blockquote><p><span>The people who get what </span><u><span>they’re after</span></u><span> are very often the ones who just stick around long enough. It’s very important not to quit </span><u><span>prematurely</span></u><span>. The comedian </span><em><span>Dave Chappelle</span></em><span> was doing a stand-up gig in Dallas not long ago and he started joking about walking away from his </span><u><span>lucrative</span></u><span> deal with Comedy Central for his program, </span><strong><span>Chappelle’s Show</span></strong><span>. He said he was asked to come to a high school class and give some advice. “</span><mark style="background:#f8e272;"><span>I guess, whatever you do, don’t quit your show</span></mark><span>,” he said. “Life is very hard without a show, kids.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>be after 寻找，</span><u><span>寻求</span></u><span>；追赶</span></p><blockquote><p><span>Intruders may </span><strong><span>be</span></strong><span> </span><strong><span>after</span></strong><span> your systems for one of two reasons: to gain access to information that they should not have, or to alter the behavior of a system in some way.</span></p><p><span>入侵者可能为了两个原因之一而入侵您的系统：为了获取他们本不应该拥有的信息，或者为了以某种方式改变系统的正常运行状况。</span></p></blockquote><p><span>prematurely </span><em><span>adv.</span></em><span>过早地</span></p><blockquote><p><span>Her hair became </span><strong><span>prematurely</span></strong><span> white.</span></p><p><span>她的头发过早地苍白了。</span></p></blockquote><p><span>lucrative </span><em><span>adj.</span></em><span>获利多的，赚大钱的</span></p><blockquote><p><span>Thousands of ex-army officers have found </span><strong><span>lucrative</span></strong><span> jobs in private security firms.</span></p><p><span>成千上万的退役军官在私人保安公司找到了薪水丰厚的工作。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要过早退出，stick around long enough. Life is very hard without a show. Do not quit your show.</span></p></blockquote><p><span>“In our business you don’t quit,” says comedian </span><em><span>Joan Rivers</span></em><span>. “You’re holding on to the ladder. When they cut off your hands, hold on with your elbow. When they cut off your arms, hold on with your teeth. You don’t quit because you don’t know where the next job is coming from.”</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不论如何别退出。（我理解的是：不要过早放弃！）</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Work is never finished, only abandoned.”<br/>—Paul Valéry </p><hr style="background:brown"/><p><span>You can’t </span><u><span>plan on</span></u><span> anything; you can only </span><u><span>go about</span></u><span> your work, as </span><em><span>Isak Dinesen</span></em><span> wrote, “every day, without hope or despair.” You can’t </span><u><span>count on</span></u><span> success; you can only </span><u><span>leave open the possibility</span></u><span> for it, and be ready to jump on and take the ride when it comes for you.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>plan on 期望；</span><u><span>根据预期未来行动</span></u></p><blockquote><p><span>I didn&#39;t </span><strong><span>plan on</span></strong><span> winning the lottery, but it happened!</span></p><p><span>我没有预料到会中彩票，但事实就是这样！</span></p></blockquote><p><span>go about</span></p><blockquote><p><span>1．忙于某事：指忙于从事某项活动或任务。</span></p><p><span>She always has a lot of projects to go about.</span></p><p><span>她总是有很多项目要忙。</span></p><p><span>2．处理（问题或任务）：指着手解决或处理问题或任务。</span></p><p><span>Let&#39;s discuss how to go about solving this issue.</span></p><p><span>让我们讨论如何着手解决这个问题。</span></p><p><span>3．在……中流传：指在某个地方或群体中传播或流传。</span></p><p><span>Rumors started to go about after the scandal.</span></p><p><span>丑闻曝光后，谣言开始传开。</span></p><p><span>4．（指帆船）改变航向：指帆船从一侧转向另一侧。</span></p><p><span>The ship had to go about to avoid the storm.</span></p><p><span>为了避开风暴，船只不得不改变航向。</span></p></blockquote><p><span>count on 依赖，指望，信任：指在需要时期望某人或某事物提供帮助或支持。</span></p><blockquote><p><span>I know I can </span><strong><span>count on</span></strong><span> you to keep our secret.</span></p><p><span>我知道我可以依赖你保守我们的秘密。</span></p></blockquote><p><span>leave open the possibility of  留下……的可能性</span></p><blockquote><p><span>But vulnerabilities in many segments </span><strong><span>of</span></strong><span> </span><strong><span>the</span></strong><span> critical national infrastructure </span><strong><span>leave</span></strong><span> </span><strong><span>open</span></strong><span> </span><strong><span>the</span></strong><span> </span><strong><span>possibility</span></strong><span> </span><strong><span>of</span></strong><span> bioterrorism and cyberterrorism, to name just two.</span></p><p><span>但是国家主要基础设施很多部门公开性成为攻击点，给生物恐怖袭击和网络恐怖袭击有可乘之机，暂时把这两种袭击这样称呼。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>不要计划；着手处理；不要指望成功；你可以为成功留下可能性，当它来的时候准备跳上去搭乘它。</span></p></blockquote><p><span>One time my coworker </span><em><span>John Croslin</span></em><span> and I came back from our lunch break and our building’s parking lot was completely full. We </span><u><span>circled</span></u><span> the </span><u><span>sweltering</span></u><span> lot with a few other cars for what seemed like ages, and just when we were about to give up, a spot opened and </span><em><span>John</span></em><span> pulled right in. As he shut off the car he said, “</span><mark style="background:#f8e272;"><span>You gotta play till the ninth </span><u><span>inning</span></u><span>, man</span></mark><span>.” Good advice for both the </span><u><span>parking lot</span></u><span> and life in general.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>circled </span></p><ul><li><p><em><span>adj.</span></em><span>包围的，圆圈的</span></p></li><li><p><em><span>v.</span></em><u><span>环绕</span></u><span>；包围（circle 的过去分词）</span></p></li></ul><blockquote><p><span>An eagle </span><strong><span>circled</span></strong><span> high overhead.</span></p><p><span>一只鹰在头顶上空盘旋。</span></p></blockquote><p><span>sweltering </span><em><span>adj.</span></em><u><span>闷热的</span></u><span>；热得难受的</span></p><blockquote><p><span>In the </span><strong><span>sweltering</span></strong><span> haze of summer-noon.</span></p><p><span>在闷热蒸腾的夏天正午。</span></p></blockquote><p><span>inning </span><em><span>n.</span></em><u><span>（棒球的）一局</span></u><span>；（荒地等的）围垦；执政期；</span><u><span>轮到显身手的机会</span></u></p><blockquote><p><span>He struck out in the third </span><strong><span>inning</span></strong><span>.</span></p><p><span>他在第三局三击不中而出局了。</span></p></blockquote><p><span>parking lot 停车场：指专门供车辆停放的场所，通常设有标记、指示牌等设施。</span></p><blockquote><p><span>The </span><strong><span>parking lot</span></strong><span> was full, so I had to park on the street.</span></p><p><span>停车场已经满了，所以我只能在街上停车。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>You gotta play till the ninth inning, man.</span>
+<span>要坚持打到第9局！Buddy!</span></p></blockquote><h3 id='chain-smoke'><u><span>Chain-Smoke</span></u><span>.</span></h3><p><span>A few years ago, there was a reality TV show on Bravo called Work of Art, where every week artists competed against one another for some cash and a chance at landing a museum show. If you won the week’s challenge, you were granted </span><u><span>immunity</span></u><span> for the next round, and you could breathe a little easier for the next week. The host would say something like, “Congratulations, </span><em><span>Austin</span></em><span>. You’ve created a work of art. You have immunity for the next challenge.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>chain-smoking </span><em><span>v.</span></em><span>连续抽烟（chain-smoke 的现在分词）</span></p><blockquote><p><span>She was nervous and edgy, still </span><strong><span>chain</span></strong><span>-</span><strong><span>smoking</span></strong><span>.</span></p><p><span>她紧张，急躁不安，还在一支接一支地抽烟。</span></p></blockquote><p><span>immunity </span><em><span>n.</span></em><span>免疫力；</span><u><span>免除，豁免</span></u></p><blockquote><p><span>The vaccine provides longer </span><strong><span>immunity</span></strong><span> against flu.</span></p><p><span>这种疫苗对流感的免疫效力时间较长。</span></p></blockquote></blockquote><p><span>If only life were like “reality” TV! As every author knows, your last book isn’t going to write your next one for you. A successful or failed project is no guarantee of another success or failure. Whether you’ve just won big or lost big, you still have to face the question “What’s next?”</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>生活不像真人秀，上一局赢了可以豁免直接通过下一局。每个作家都知道，你的上一本书不会为你写下一本书。一个项目的成功或失败不能保证另一个项目的成功或失败。</span>
+<span>不算你赢了还是输了，下一步是什么？你总要面对的！</span></p></blockquote><p><span>If you look to artists who’ve managed to achieve </span><u><span>lifelong</span></u><span> careers, you detect the same pattern: </span><mark style="background:#ffaabf;"><span>They all have been able to </span><u><span>persevere</span></u><span>, regardless of success or failure</span></mark><span>. Director </span><em><span>Woody Allen</span></em><span> has averaged a film a year for more than 40 years because he never takes time off: The day he finishes editing a film is the day he starts writing the script for the next. </span><em><span>Bob Pollard</span></em><span>, the lead singer and songwriter for Guided by Voices, says he never gets writer’s block because he never stops writing. </span><mark style="background:#f8e272;"><span>Author </span><em><span>Ernest Hemingway</span></em><span> would stop in the middle of a sentence at the end of his day’s work so he knew where to start in the morning. Singer/songwriter </span><em><span>Joni Mitchell</span></em><span> says that whatever she feels is the weak link in her last project gives her inspiration for the next.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>lifelong </span><em><span>adj.</span></em><span>终身的</span></p><blockquote><p><span>It had been her </span><strong><span>lifelong</span></strong><span> ambition.</span></p><p><span>这是她终身追求的目标。</span></p></blockquote><p><span>persevere </span><em><span>v.</span></em><span>锲而不舍，坚持不懈；固执己见（在辩论中）</span></p><blockquote><p><span>You have to </span><strong><span>persevere</span></strong><span> with difficult students.</span></p><p><span>对难教的学生你必须坚持诲人不倦的精神。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>成功的艺术家，总是锲而不舍，不管他们成功了还是失败了。</span>
+<span>The day he finishes editing a film is the day he starts writing the script for the next.（一个接一个）</span>
+<span>he never gets writer’s block because he never stops writing.（他永远不会有写作障碍，因为他永远不停止写作）</span>
+<span>这真是个好方法啊！我也尝试过，确实挺有意思！共鸣共鸣。</span></p></blockquote><blockquote><ul><li><p><u><span>Author </span><em><span>Ernest Hemingway</span></em><span> would stop in the middle of a sentence at the end of his day’s work so he knew where to start in the morning.</span></u><span> </span></p></li><li><p><u><span>Singer/songwriter </span><em><span>Joni Mitchell</span></em><span> says that whatever she feels is the weak link in her last project gives her inspiration for the next.</span></u></p></li></ul></blockquote><p><span>Add all this together and you get a way of working I call </span><u><span>chain-smoking</span></u><span>. </span><mark style="background:#f8e272;"><span>You avoid </span><u><span>stalling out</span></u><span> in your career by never losing </span><u><span>momentum</span></u></mark><span>. Here’s how you do it: </span><mark style="background:#a5c4ff;"><span>Instead of taking a break in between projects, waiting for feedback, and worrying about what’s next, use the end of one project to light up the next one</span></mark><span>. </span><mark style="background:#f8e272;"><span>Just do the work that’s in front of you, and when it’s finished, ask yourself what you missed, what you could’ve done better, or what you couldn’t get to, and jump right into the next project</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>stall out </span></p><blockquote><p><span>1．熄火；停止或退出</span></p><p><span>2．减速、停止并持续存在</span></p></blockquote><blockquote><p><span>The storm is expected to stall out over the city, bringing heavy rain and strong winds.</span></p></blockquote><blockquote><p><span>预计风暴将在城市上空减速停止，带来大雨和强风。</span></p></blockquote><p><span>momentum </span><em><span>n.</span></em><span>冲力，推力；动力，势头；动量，冲量</span></p><blockquote><p><span>The vehicle gained </span><strong><span>momentum</span></strong><span> as the road dipped.</span></p><p><span>那辆车顺着坡越跑冲力越大。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>结束一个项目之后，不要等待。use the end of one project to light up the next one. 一支接一支。</span>
+<span>圭臬：when it’s finished, ask yourself what you missed, what you could’ve done better, or what you couldn’t get to, and jump right into the next project.</span></p></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;"> “We work because it’s a <u style="color:blue">chain reaction</u>, each subject leads to the next.”<br/>—Charles Eames</p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>chain reaction 连锁反应：一系列相互关联的事件，每一个事件都引发下一个事件的发生。它可以是由同一初始事件引发的一系列事件，也可以是一种自持续的化学或核反应，产生能量或产物，进而引发同类反应的进一步发生。</span></p><blockquote><p><span>The accident caused a </span><strong><span>chain reaction</span></strong><span> of crashes on the highway.</span></p><p><span>这起事故在高速公路上引发了一连串的车祸。</span></p></blockquote></blockquote><h3 id='go-away-so-you-can-come-back'><span>Go Away so You Can Come Back.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The minute you stop wanting something you get it.”<br/>—Andy Warhol </p><hr style="background:brown"/><p><span>Chain-smoking is a great way to keep going, but at some point, you might burn out and need to go looking for a </span><u><span>match</span></u><span>. </span><mark style="background:#f8e272;"><span>The best time to find one is while taking a </span><u><span>sabbatical</span></u></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span style="color:brown; text-align:center; font-weight:bold;"><span>当你不再想要某样东西的时候，你就会得到它</span></span><span>。</span></p><p><span>match</span></p><ul><li><p><em><span>n.</span></em><span>比赛，竞赛；火柴；敌手，旗鼓相当的人；相配的人（或物）；非常相似的东西；婚姻，配偶；适合，匹配</span></p></li><li><p><em><span>v.</span></em><span>比得上，敌得过；使成对，使相配，使相称；与……一致，与……相符；使较量，使竞赛；适应，满足；等额提供</span></p></li></ul><blockquote><p><span>The </span><strong><span>match</span></strong><span> flared and went out.</span></p><p><span>火柴闪亮了一下就熄了。</span></p></blockquote><p><span>sabbatical </span><code>/ səˈbætɪkl /</code></p><ul><li><p><em><span>adj.</span></em><span>安息日的</span></p></li><li><p><em><span>n.</span></em><span>休假（美国某些大学给大学教师每七年一次的）</span></p></li></ul><blockquote><p><span>He&#39;s on </span><strong><span>sabbatical</span></strong><span>.</span></p><p><span>他正休假。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>Chain-smoking的工作方式固然好，但是你还是有可能会burn out。寻找match的方法，可选的一种说是给自己放个假吧！</span></p></blockquote><p><span>The designer </span><em><span>Stefan Sagmeister</span></em><span> </span><u><span>swears</span></u><span> by the power of the sabbatical—every seven years, he shuts down his studio and takes a year off. His thinking is that we dedicate the first 25 years or so of our lives to learning, the next 40 to work, and the last 15 to retirement, so why not take 5 years off retirement and use them to break up the work years? He says the sabbatical has turned out to be invaluable to his work: “Everything that we designed in the seven years following the first sabbatical had its roots in thinking done during that sabbatical.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>swear by 信赖：</span><u><span>对某物的效用全心信任、坚信不疑</span></u><span>。</span></p><blockquote><p><span>I </span><strong><span>swear</span></strong><span> </span><strong><span>by</span></strong><span> almighty God that I will tell the truth.</span></p><p><span>我向全能的上帝起誓，我以下所说句句属实。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>工作7年，休1年。</span></p></blockquote><p><span>I, too, have experienced this phenomenon: I spent my first two years out of college working a </span><u><span>nondemanding</span></u><span> part-time job in a library, doing nothing but reading and writing and drawing. I’d say I’ve spent the years since executing a lot of the ideas I had during that period. Now I’m </span><u><span>hitting</span></u><span> my seven-year </span><u><span>itch</span></u><span>, and I find myself needing another period to recharge and get inspired again.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>nondemanding </span><em><span>adj.</span></em><span>不苛求的，不过分要求的：对人或事物没有过高的要求或期望。</span></p><blockquote><p><span>He is a nondemanding boss who trusts his employees.</span></p><p><span>他是一个不苛求的老板，信任他的员工。</span></p></blockquote><p><u><span>Now I’m hitting my seven-year itch</span></u><span>: 现在我碰到了我的七年之痒了。</span></p><p><span>itch </span></p><ul><li><p><em><span>v.</span></em><span>（使）发痒；渴望，热望</span></p></li><li><p><em><span>n.</span></em><span>痒；&lt;非正式&gt;渴望，热望</span></p></li></ul><blockquote><p><span>She has an </span><strong><span>itch</span></strong><span> to travel.</span></p><p><span>她渴望旅行。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>七年之痒。哈哈，学个英文表述。很不错！</span>
+<span>hit my seven-year itch.</span></p></blockquote><p><span>Of course, a sabbatical isn’t something you can pull off without any preparation. </span><em><span>Sagmeister</span></em><span> says his first sabbatical took two years of planning and budgeting, and his clients were </span><u><span>warned</span></u><span> a full year in advance. And the reality is that most of us just don’t have the flexibility in our lives to be able to walk away from our work for a full year. Thankfully, we can all take practical sabbaticals—daily, weekly, or monthly breaks where we walk away from our work completely. Writer </span><em><span>Gina Trapani</span></em><span> has pointed out three prime spots to turn off our brains and take a break from our connected lives:</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>warned </span></p><ul><li><p><em><span>adj.</span></em><span>已警告的</span></p></li><li><p><em><span>v.</span></em><span>警告（warn 的过去分词）</span></p></li></ul><blockquote><p><span>He </span><strong><span>warned</span></strong><span> us against pickpockets.</span></p><p><span>他提醒我们要提防小偷。</span></p></blockquote><p><span>prime spot </span><u><span>黄金地段</span></u><span>：一个地理位置优越、人流量大或具有特殊价值的地区。</span></p><blockquote><p><span>The restaurant is located in a </span><strong><span>prime spot</span></strong><span> in the city center.</span></p><p><span>这家餐厅位于市中心的黄金地段。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>sabbatical不是直接休假，还是需要你做一点准备的。但是我们也没有那么灵活的时间，一次休一年。那怎样做呢？这里有3条prime spots:</span></p><ul><li><p><span>commute</span></p></li><li><p><span>exercise</span></p></li><li><p><span>nature</span></p></li></ul></blockquote><p><span>• </span><strong><span>Commute</span></strong><span>. A moving train or subway car is the perfect time to write, </span><u><span>doodle</span></u><span>, read, or just </span><u><span>stare out</span></u><span> the window. (If you </span><u><span>commute by car</span></u><span>, </span><u><span>audiobooks</span></u><span> are a great way to safely </span><u><span>tune out</span></u><span>.) A commute happens twice a day, and it nicely separates our work life from our home life.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>commute</span></p><ul><li><p><em><span>v.</span></em><span>通勤，上下班往返；减轻（刑罚）；代偿；（两个运算，两个量）可交换</span></p></li><li><p><em><span>n.</span></em><span>通勤，上下班交通路程</span></p></li></ul><blockquote><p><span>So how long is your </span><strong><span>commute</span></strong><span>?</span></p><p><span>那么你上下班路程要花多长时间？</span></p></blockquote><p><span>commute by car 开车上下班：使用汽车作为通勤交通工具。</span></p><blockquote><p><span>I usually commute by car because it&#39;s more convenient.</span></p><p><span>我通常开车上下班，因为更方便。</span></p></blockquote><p><span>doodle</span></p><ul><li><p><em><span>v.</span></em><span>（尤指厌烦或心不在焉时）乱涂；随意弹奏；闲混</span></p></li><li><p><em><span>n.</span></em><span>（心不在焉地）乱涂的图画；蠢人</span></p></li></ul><blockquote><p><span>I often </span><strong><span>doodle</span></strong><span> when I&#39;m on the phone.</span></p><p><span>我打电话时常常信手乱画。</span></p></blockquote><p><span>stare out 直视某人使其不舒服：直视某人的眼睛，使其感到不舒服并移开目光。</span></p><blockquote><p><span>Take two minutes to </span><strong><span>stare</span></strong><span> </span><strong><span>out</span></strong><span> the window.</span></p><p><span>花两分钟远眺窗外。</span></p></blockquote><p><span>audiobooks </span><em><span>n.</span></em><span>有声读物（把文字录制成语音的“有声书”）</span></p><blockquote><p><span>Around the spring festival in 2014, he started listening to </span><strong><span>audiobooks</span></strong><span> (音频书).</span></p><p><span>2014年的春节，他开始听音频书。</span></p></blockquote><p><span>tune out </span><em><span>v.</span></em><span>关掉；不理睬</span></p><blockquote><p><span>Children rapidly </span><strong><span>tune</span></strong><span> </span><strong><span>out</span></strong><span> if you go beyond them.</span></p><p><span>如果你的话超出了孩子们的理解力，他们很快就不听了。</span></p></blockquote></blockquote><p><span>• </span><strong><span>Exercise</span></strong><span>. Using our body relaxes our mind, and when our mind gets relaxed, it </span><u><span>opens up to</span></u><span> having new thoughts. </span><mark style="background:#a5c4ff;"><span>Jump on the </span><u><span>treadmill</span></u><span> and let your mind go</span></mark><span>. If you’re like me and you hate exercise, get a dog—dogs won’t let you get away with missing a day.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>open up to 向某人敞开心扉，坦诚相待</span></p><blockquote><p><span>A conversation like this will get them </span><strong><span>to</span></strong><span> start </span><strong><span>to</span></strong><span> like you and maybe even more </span><strong><span>open</span></strong><span> </span><strong><span>up</span></strong><span> </span><strong><span>to</span></strong><span> ideas that you have.</span></p><p><span>这样的对话会让他们开始喜欢你，甚至更愿意接受你的想法。</span></p></blockquote><p><span>treadmill </span><code>/ ˈtredmɪl /</code><span> </span><em><span>n.</span></em><span>跑步机；（过去通常用以惩罚犯人的）踏车；枯燥重复的工作</span></p><blockquote><p><span>She says she is able to take Zumba exercise classes three times a week and work out on the </span><strong><span>treadmill</span></strong><span> twice a week.</span></p><p><span>她说她每周能上三次尊巴健身课，并每周在跑步机上锻炼两次。</span></p></blockquote></blockquote><p><span>• </span><strong><span>Nature</span></strong><span>. Go to a park. Take a hike. Dig in your garden. Get outside in the fresh air. Disconnect from anything and everything electronic.</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>巧了，这3点我都有在做：</span></p><ol start='' ><li><p><span>通勤（摩托车 + podcast）</span></p></li><li><p><span>锻炼（游泳 | 羽球）</span></p></li><li><p><span>自然（种植茉莉花 &amp; 绿萝）</span></p></li></ol></blockquote><p><span>It’s very important to separate your work from the rest of your life. As my wife said to me, “If you never go to work, you never get to leave work.”</span></p><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Every two or three years, I <u style="color:blue">knock off</u> for a while. That way, I’m constantly the new girl in the <u style="color:blue">whorehouse</u>.”<br/>—Robert Mitchum </p><hr style="background:brown"/><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>knock off: </span></p><p><span>1．</span><u><span>停止做某事，尤指工作</span></u></p><blockquote><p><span>I&#39;m going to knock off early today and go to the movies.</span></p><p><span>我今天打算早点下班去看电影。</span></p></blockquote><p><span>2．制作副本，通常是非法的</span></p><p><span>3．敲击或打击某物，使其倒下或破碎</span></p><p><span>whorehouse </span><em><span>n.</span></em><span>青楼；妓院</span></p></blockquote><h3 id='start-over-begin-again'><strike><span>Start Over.</span></strike><span> Begin Again.</span></h3><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“Whenever Picasso learned how to do something, he abandoned it.”<br/>—Milton Glaser </p><hr style="background:brown"/><p><span>When you feel like you’ve learned whatever there is to learn from what you’re doing, it’s time to change course and find something new to learn so that you can move forward. </span><mark style="background:#f8e272;"><span>You can’t </span><u><span>be content with</span></u><span> </span><u><span>mastery</span></u><span>; you have to push yourself to become a student again</span></mark><span>. “Anyone who </span><u><span>isn’t embarrassed of</span></u><span> who they were last year probably isn’t learning enough,” writes author </span><em><span>Alain de Botton</span></em><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>be content with 以……为满足</span></p><blockquote><p><span>If Simon had not, early in life, learnt to </span><strong><span>be</span></strong><span> </span><strong><span>content</span></strong><span> </span><strong><span>with</span></strong><span> his life, he might never have been given those chances.</span></p><p><span>如果西蒙在早年没有学会满足于自己的生活，他可能永远不会有这样的机会。</span></p></blockquote><p><span>mastery </span><em><span>n.</span></em><u><span>精通，熟练掌握</span></u><span>；控制，驾驭</span></p><blockquote><p><span>She has </span><strong><span>mastery</span></strong><span> of several languages.</span></p><p><span>她精通数门语言。</span></p></blockquote><p><span>be embarrassed of: 感到尴尬</span></p><blockquote><p><span>Know that if your teen gets into hot water, he may </span><strong><span>be</span></strong><span> too </span><strong><span>embarrassed</span></strong><span> or afraid </span><strong><span>of</span></strong><span> your wrath and disappointment to tell you, even if you have a great relationship with your teen or — think you do.</span></p><p><span>了解你的孩子是不是遇到了麻烦，他很有可能因你潜在的愤怒与失望羞愧地不敢告诉你。即使你和孩子关系不错，或者你自己是这么认为的，这种情况也会发生。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>to move forward: 学会了一个新的，就去学另一个吧！</span>
+<span>不能因为熟练而满足，要把自己变成学生again。</span>
+<span>callback to ResearchMethod: 博士生与普通人的区别，不是三头六臂，其实是在学习方面更有策略，思考得更深。</span></p></blockquote><p><span>The comedian </span><em><span>Louis C.K.</span></em><span> worked on the same hour of material for 15 years, until he found out that his hero, </span><em><span>George Carlin</span></em><span>, </span><u><span>threw out</span></u><span> his material every year and started from scratch. </span><em><span>C.K.</span></em><span> was scared to try it, but once he did, it </span><u><span>set him free</span></u><span>. </span><mark style="background:#f8e272;"><span>“When you’re done telling jokes about airplanes and dogs, and you throw those away, what do you have left? You can only </span><u><span>dig</span></u><span> deeper. You start talking about your feelings and who you are. And then you do those jokes and they’re gone. You gotta dig deeper.”</span></mark><span> </span><mark style="background:#a8e195;"><span>When you get rid of old material, you push yourself further and come up with something better. When you throw out old work, what you’re really doing is making room for new work</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>throw out: </span></p><blockquote><p><span>1．扔掉，丢弃：将某物视为无价值或不必要而去除；</span></p><p><span>I need to throw out these old magazines.</span></p><p><span>我需要扔掉这些旧杂志。</span></p><p><span>2．开除，解雇：从某个地方、职位或工作中突然或意外地移除；</span></p><p><span>The company decided to throw out the manager for his poor performance.</span></p><p><span>公司决定因经理表现不佳而将其解雇。</span></p><p><span>3．拒绝接受或考虑，驳回；</span></p><p><span>4．显示，展示，使显现；</span></p><p><span>5．使困惑，使不安；</span></p><p><span>6．使突出，使显眼；</span></p><p><span>The bright red flowers throw out against the green leaves.</span></p><p><span>鲜红的花朵在绿叶的衬托下显得格外醒目。</span></p><p><span>7．在棒球比赛中，投出一个球使队友能够将跑垒者击出局</span></p></blockquote><p><span>set sb free: 释放某人：让某人获得自由，不再受到限制或束缚。</span></p><blockquote><p><span>The former president was demanding that he should be either put on trial or </span><strong><span>set</span></strong><span> </span><strong><span>free</span></strong><span>.</span></p><p><span>前总统一直要求要么对他进行审判，要么就无罪释放。</span></p></blockquote><p><span>dig </span></p><ul><li><p><em><span>v.</span></em><span>搜寻，寻找；&lt;非正式，旧&gt;喜欢；挖，掘</span></p></li><li><p><em><span>n.</span></em><span>挖苦，嘲讽；（用手指或肘部）轻碰，轻戳；考古发掘</span></p></li></ul><blockquote><p><span>Will you </span><strong><span>dig</span></strong><span> a little into his past and see what you find?</span></p><p><span>你稍微探究一下他的过去看看能发现什么，好吗？</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>断舍离的另一层体现。扔掉旧的，才能不断思考新的。清除旧的，就是为新的腾出空间。make room for new work.</span></p></blockquote><p><span>You have to have the courage to get rid of work and rethink things completely. “I need to sort of </span><u><span>tear down</span></u><span> everything I’ve done and rebuild from scratch,” said director </span><em><span>Steven Soderbergh</span></em><span> about his upcoming retirement from making films. “Not because I’ve figured everything out, I’ve just figured out what I can’t figure out and I need to tear it down and </span><u><span>start over again</span></u><span>.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>tear down 拆除、摧毁或破坏</span></p><blockquote><p><span>Years later, we decided to </span><strong><span>tear</span></strong><span> </span><strong><span>down</span></strong><span> our ugly house and build a beautiful one with a garden.</span></p><p><span>几年后，我们决定拆掉这个难看的房子，建一座带花园的漂亮房子。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>必须要有勇气去get rid of work，rethink things.</span>
+<span>figure out what you can&#39;t figure out. tear sth down to make room for new work.</span></p></blockquote><p><u><span>The thing is</span></u><span>, you never really </span><u><span>start over</span></u><span>. You don’t lose all the work that’s come before. Even if you try to </span><u><span>toss it aside</span></u><span>, the lessons that you’ve learned from it will </span><u><span>seep into</span></u><span> what you do next.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>The thing is 问题是：用于引出一个问题或解释原因。</span></p><blockquote><p><strong><span>The thing is</span></strong><span>, I&#39;ve been really busy with work and school.</span></p><p><span>问题是，我一直忙于工作和学习。</span></p></blockquote><p><span>start over </span><u><span>重新开始做某事，或者某事重新开始发生</span></u></p><blockquote><p><span>After failing the first time, she decided to start over and try again.</span></p><p><span>第一次失败后，她决定重新开始并再次尝试。</span></p></blockquote><p><span>toss aside 丢弃：扔掉或抛弃某物。</span></p><blockquote><p><span>His promotion to an executive manager made him </span><strong><span>toss</span></strong><span> </span><strong><span>aside</span></strong><span> all his care.</span></p><p><span>他提升成行政经理后，把所有的顾虑都抛开了。</span></p></blockquote><p><span>seep into 渗入：逐渐渗透进入某物或某地。</span></p><blockquote><p><span>Many of us thrive on competition, but it can </span><strong><span>seep</span></strong><span> </span><strong><span>into</span></strong><span> areas of our lives where we do not want it.</span></p><p><span>我们许多人靠竞争而发展，但竞争也会逐渐侵入到我们生活中不需要它的一些方面。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>事实上，你不可能什么都是重头再做一遍，因为你每次的经历都会为下一次提供经验、这些经验渗透到更深处以指导我们下一次工作。</span></p></blockquote><p><span>So don’t think of it as starting over. Think of it as beginning again. Go back to chapter one—</span><u><span>literally</span></u><span>!—and become an amateur. Look for something new to learn, and when you find it, dedicate yourself to learning it out in the open. Document your progress and share as you go so that others can learn along with you. Show your work, and when the right people show up, </span><u><span>pay close attention</span></u><span> to them, </span><mark style="background:#f8e272;"><span>because they’ll have a lot to show you</span></mark><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>literally </span><em><span>adv.</span></em><u><span>按照字面意义地，逐字地</span></u><span>；真正地，确实地；（用于夸张地强调）简直</span></p><blockquote><p><span>I </span><strong><span>literally</span></strong><span> jumped out of my skin.</span></p><p><span>我简直给吓了一大跳。</span></p></blockquote><p><span>pay close attention 特别留意</span></p><blockquote><p><strong><span>Pay close attention</span></strong><span> to what I am telling you.</span></p><p><span>要认真听我给你讲的话。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>描述不一样，思维不一样：start over v.s. begin again.</span>
+<span>start over: 重新开始：从头开始，重新进行某事。</span>
+<span>begin again: 重新开始：从头开始，重新进行某事。</span>
+<span>接下来：</span></p><ul><li><p><span>变成业余者；</span></p></li><li><p><span>寻找新事物去学习；当你找到的时候，全身心投入learn it out在公开场合；</span></p></li><li><p><span>记录你的进步并分享，这样其他人就可以和你一起学习；</span></p></li><li><p><span>show your work, share your work. 这样等到其他人出现的时候，特别留意他们，因为，她们将会有很多东西给你看！</span></p></li></ul></blockquote><h2 id='what-now'><span>What Now?</span></h2><ul><li><p><span>Go online and post what you’re working on right now with the tag #showyourwork.</span></p></li><li><p><u><span>Plan a “Show Your Work!” </span><strong><span>night</span></strong></u><span> with colleagues or friends. Use this book as a guide — share works-in-progress and your curiosities, tell stories, and teach one another.</span></p></li><li><p><span>Give a copy of this book away to somebody who needs to read it.</span></p></li></ul><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>night</span></p><ul><li><p><em><span>n.</span></em><span>夜间，夜晚；晚上，傍晚；&lt;文&gt;黄昏；</span><u><span>（特殊活动之）夜</span></u><span>；黑夜，夜色；挫败时期</span></p></li><li><p><em><span>adj.</span></em><span>夜晚的；夜晚使用的；夜间进行的；夜晚活动的</span></p></li><li><p><em><span>int.</span></em><span>晚安（goodnight 的简称）</span></p></li></ul><blockquote><p><span>Roses scented the </span><strong><span>night</span></strong><span> air.</span></p><p><span>夜空中弥漫着玫瑰花香。</span></p></blockquote></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>

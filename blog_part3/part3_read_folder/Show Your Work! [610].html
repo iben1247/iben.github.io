@@ -1,0 +1,627 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>Show Your Work! [610]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:40px; font-weight:bold;"> Show Your Work <i style="color:brown">06</i></h1>
+<p style="text-align:center; font-style:italic" >10 Ways to Share Your Creativity and Get Discovered</p><blockquote><p>🍖<a href='Show Your Work! [610] - 学习与消化.html'><span>消化版文件</span></a></p><p><span>Edited by </span><strong><a href='https://itaoo.github.io/'><span>Ben</span></a></strong><span>.</span>
+<span>Turn to </span><em><a href='https://itaoo.github.io/blog_part3/part3_read.html'><span>ContentPage</span></a></em></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#teach-what-you-know">Teach What You Know.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#share-your-trade-secrets">Share Your <u>Trade Secrets</u>.</a></span></p></div><h2 id='teach-what-you-know'><span>Teach What You Know.</span></h2><h3 id='share-your-trade-secrets'><span>Share Your </span><u><span>Trade Secrets</span></u><span>.</span></h3><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>trade secrets 商业机密：一家公司或组织拥有并保护的商业机密，包括技术、方法、流程、配方、设计等，这些机密对于该公司或组织的竞争力至关重要。</span></p><blockquote><p><span>The company&#39;s success is based on its trade secrets.</span></p><p><span>该公司的成功基于其商业机密。</span></p></blockquote></blockquote><hr style="background:brown"/><p style="color:brown; text-align:center; font-weight:bold;">“The <u style="color:blue">impulse</u> to keep to yourself what you have learned is not only <u style="color:blue">shameful</u>, it is destructive. Anything you do not give freely and <u style="color:blue">abundantly</u> becomes lost to you. <mark style="background:#f8e272;">You open your safe and find ashes.</mark>”<br/>—Annie Dillard </p><hr style="background:brown"/><p>&nbsp;</p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>impulse</span></p><ul><li><p><em><span>n.</span></em><u><span>冲动</span></u><span>；脉冲；推动力</span></p></li><li><p><em><span>adj.</span></em><span>一时兴起的，随兴的</span></p></li><li><p><em><span>v.</span></em><span>推动</span></p></li></ul><blockquote><p><span>Unable to resist the </span><strong><span>impulse</span></strong><span>, he glanced at the sea again.</span></p><p><span>他抑制不住冲动，又看了一眼大海。</span></p></blockquote><p><span>shameful </span><em><span>adj.</span></em><span>丢脸的，</span><u><span>可耻的</span></u></p><blockquote><p><span>It&#39;s </span><strong><span>shameful</span></strong><span> for him to tell a lie.</span></p><p><span>对他来说，撒谎是可耻的。</span></p></blockquote><p><span>abundantly </span><em><span>adv.</span></em><span>丰富地；大量地</span></p><blockquote><p><span>She made her wishes </span><strong><span>abundantly</span></strong><span> clear.</span></p><p><span>她充分表明了她的意愿。</span></p></blockquote></blockquote><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>要分享啊！不分享你的东西，就等于丢掉了他们！</span></p><blockquote><p><mark style="background:#f8e272;"><span>You open your safe and find ashes</span></mark><span>.</span></p><p><span>你打开保险箱，发现了灰烬。</span></p></blockquote></blockquote><p><span>The world of </span><u><span>barbecue</span></u><span> is </span><u><span>notoriously</span></u><span> secretive and competitive, so it was a little bit of a shock last winter for me to be standing behind the </span><u><span>legendary</span></u><span> Franklin Barbecue here in Austin, Texas, watching </span><u><span>pitmaster</span></u><span> and barbecue </span><u><span>wizard</span></u><span> </span><em><span>Aaron Franklin</span></em><span> explain how he smokes his famous </span><u><span>ribs</span></u><span> in front of </span><strong><span>a camera </span><u><span>crew</span></u></strong><span>. My friend </span><em><span>Sara Robertson</span></em><span>, a producer at the local PBS station KLRU, had invited me to watch a </span><u><span>taping</span></u><span> of BBQ with </span><em><span>Franklin</span></em><span>—a </span><u><span>crowdfunded</span></u><span> YouTube series designed to take viewers through every step of the barbecue process. In the series, </span><em><span>Franklin</span></em><span> explains how to </span><u><span>modify</span></u><span> an </span><u><span>off-the-shelf</span></u><span> smoker, how to select the right wood, how to build a fire, how to select a cut of meat, what temperature to smoke the meat at, and how to </span><u><span>slice up</span></u><span> the finished product.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>barbecue </span></p><ul><li><p><em><span>n.</span></em><span>户外烧烤；（户外烧烤用的）烤肉架；烧烤食物</span></p></li><li><p><em><span>v.</span></em><span>（在烤架上）烧烤</span></p></li></ul><blockquote><p><span>Let&#39;s have a </span><strong><span>barbecue</span></strong><span>!</span></p><p><span>我们来一次户外烧烤吧！</span></p></blockquote><p><span>notoriously </span><em><span>adv.</span></em><span>众所周知地，声名狼藉地</span></p><blockquote><p><span>The trains are </span><strong><span>notoriously</span></strong><span> unreliable.</span></p><p><span>火车不准点是出了名的。</span></p></blockquote><p><span>legendary </span><code>/ ˈledʒənderi /</code><span> </span><em><span>adj.</span></em><span>非常有名的，大名鼎鼎的；传说（中）的</span></p><blockquote><p><span>The Dutch battle against the sea is </span><strong><span>legendary</span></strong><span>.</span></p><p><span>荷兰人与大海的战斗是传奇的。</span></p></blockquote><p><span>pitmaster </span><em><span>n.</span></em><span>专业（或熟练的）烧烤师傅</span></p><p><span>wizard </span><code>/ ˈwɪzərd /</code></p><ul><li><p><em><span>n.</span></em><span>巫师，术士；</span><u><span>能手，奇才</span></u><span>；向导程序</span></p></li><li><p><em><span>adj.</span></em><span>卓越的，杰出的，极好的，奇妙的；男巫的，巫术的</span></p></li><li><p><em><span>vi.</span></em><span>练习巫术</span></p></li><li><p><em><span>vt.</span></em><span>召唤</span></p></li></ul><blockquote><p><span>This action opens the </span><strong><span>wizard</span></strong><span>.</span></p><p><span>该操作将会打开向导程序。</span></p></blockquote><p><span>ribs </span><em><span>n.</span></em><span>[解剖]肋骨；排骨（rib 的复数）</span></p><blockquote><p><span>She gave him a dig in the </span><strong><span>ribs</span></strong><span>.</span></p><p><span>她轻轻地戳了一下他的肋部。</span></p></blockquote><p><span>crew </span></p><ul><li><p><em><span>n.</span></em><span>全体船员，全体机组人员；一组工作人员；一伙人，一帮人；全体划船队员；赛艇运动；&lt;美，非正式&gt;（尤指演奏车库音乐的）一群乐师</span></p></li><li><p><em><span>v.</span></em><span>当船员，当空乘人员</span></p></li></ul><blockquote><p><span>Many </span><strong><span>crew</span></strong><span> members were up before reveille.</span></p><p><span>许多船员在起床号响起之前就已经醒了。</span></p></blockquote><p><span> </span><strong><span>a camera crew</span></strong><span> 电影摄制组</span></p><blockquote><p><span>Video captured by </span><strong><span>a</span></strong><span> </span><strong><span>camera</span></strong><span> </span><strong><span>crew</span></strong><span> in the lobby showed parents clinging to their children as they ran across the marble.</span></p><p><span>大厅内的一个摄制组拍摄的视频显示，有父母紧紧抓着孩子跑过大理石大厅。</span></p></blockquote><p><span>taping</span></p><ul><li><p><em><span>n.</span></em><span>磁带录音</span></p></li><li><p><em><span>v.</span></em><span>用磁带录音（tape 的 ing 形式）</span></p></li></ul><blockquote><p><span>He shouldn&#39;t be </span><strong><span>taping</span></strong><span> without the singer&#39;s permission.</span></p><p><span>他不应该未经歌手允许就录音。</span></p></blockquote><p><span>crowdfunded </span><em><span>adj.</span></em><span>众筹的，集资的</span></p><blockquote><p><span>The organization leads </span><strong><span>crowdfunded</span></strong><span> (众筹的) train journeys.</span></p><p><span>这个组织引导群众筹资进行火车旅行。</span></p></blockquote><p><span>modify </span><em><span>v.</span></em><span>修改，改进；修饰，限定；缓和，使温和；使改形，使转化；变（音）</span></p><blockquote><p><span>As a result, it may abandon or </span><strong><span>modify</span></strong><span> some rites.</span></p><p><span>因此，人们可能会摒弃或修改一些仪式。</span></p></blockquote><p><strong><span>off the shelf</span></strong><span> 现成的：指产品或物品已经制造好并且可以立即购买和使用的，而不需要定制或特别制作。</span></p><blockquote><p><span>I needed a new computer quickly, so I bought one off the shelf.</span></p><p><span>我需要一个新的电脑，所以我买了一个现成的。</span></p></blockquote><p><span>slice up</span></p><blockquote><p><span>1．切成薄片：将食物或其他物品切成薄片的动作。</span></p><p><span>2．分割：将整体分割成若干部分。</span></p><p><span>The company is planning to slice up the project into smaller tasks.</span></p><p><span>公司计划将项目分割成更小的任务。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>一个让人震惊的实例：在烧烤秘籍竞争如此激烈的时候，还有人会分享其中的烧烤方法，让作者十分震惊，我也是。</span></p></blockquote><p><span>I started eating at Franklin Barbecue in 2010 when it was served out of a </span><u><span>trailer</span></u><span> off </span><u><span>Interstate</span></u><span> 35. In only three years, </span><em><span>Franklin</span></em><span> has become one of the most famous barbecue joints in the world. (</span><em><span>Bon Appétit</span></em><span> called it “the best BBQ in Texas, if not America.”) </span><mark style="background:#f8e272;"><span>Six days a week, rain or 100-degree sunshine, there’s a line that goes around the block</span></mark><span>. And each one of those days, they sell out of meat. If ever it seemed like there was a business that would be intent to keep its secrets to itself, it would be this one.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>trailer</span></p><ul><li><p><em><span>n.</span></em><span>拖车，挂车；（卡车或货车的）载货挂车；</span><u><span>&lt;美&gt;旅行拖车，活动房屋</span></u><span>；（电影或电视节目的）预告片；无篷大车；运船平底驳船；拖尾物，蔓生物（尤指蔓生植物）；追踪者</span></p></li><li><p><em><span>v.</span></em><span>预告（电影，节目）；用拖车运输；乘拖车式活动房屋旅行</span></p></li></ul><blockquote><p><span>We hooked the </span><strong><span>trailer</span></strong><span> to the back of the car.</span></p><p><span>我们把拖车挂在汽车尾部。</span></p></blockquote><p><span>interstate</span></p><ul><li><p><em><span>adj.</span></em><span>州际的；州与州之间的</span></p></li><li><p><em><span>n.</span></em><u><span>（美）州际公路</span></u></p></li></ul><blockquote><p><span>Above all, the </span><strong><span>interstate</span></strong><span> system provides individuals with what they enrich most: personal freedom of mobility.</span></p><p><span>最重要的是，州际公路系统为个人提供了他们最富有的东西：个人行动自由。</span></p></blockquote></blockquote><blockquote><p><span>Six days a week, </span><u><span>rain or 100-degree sunshine</span></u><span>, there’s a line that goes around the block</span>
+<span>每周六天，不管下雨还是艳阳高照，整个街区都排起了长队</span></p><p><span>if ever: 如果有的话，如果曾经</span></p><blockquote><p><strong><span>If ever</span></strong><span> there was a time to act, it is now.</span></p><p><span>如果曾经有过行动的时刻，那就是现在。</span></p></blockquote><hr /><p><span>If ever it seemed like there was a business that would be intent to keep its secrets to itself, it would be this one.</span>
+<span>如果说有什么企业想要保守自己的秘密，那一定是这家公司。</span></p></blockquote><p><span>When I got to talk to </span><em><span>Aaron</span></em><span> and his wife, </span><em><span>Stacy</span></em><span>, during a break in filming, </span><mark style="background:#f8e272;"><span>they explained that the technique of barbecue is actually very simple, </span><strong><span>but it takes years and years to master</span></strong><span>. There’s an </span><u><span>intuition</span></u><span> that you only gain through the repetition of practice</span></mark><span>. </span><em><span>Aaron</span></em><span> told me that he trains all his employees the same way, but when he cuts into a </span><u><span>brisket</span></u><span>, he can tell you exactly who did the smoking.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>intuition: </span><code>/ ˌɪntuˈɪʃ(ə)n /</code><span> </span><em><span>n.</span></em><span>直觉力；直觉感知，直觉知识</span></p><blockquote><p><span>Her tact and </span><strong><span>intuition</span></strong><span> never failed.</span></p><p><span>她的得体和直觉从不出错。</span></p></blockquote><p><span>brisket </span><em><span>n.</span></em><span>胸部；胸肉</span></p><blockquote><p><span>Supporters ate piles of beef </span><strong><span>brisket</span></strong><span> and toasted marshmallows at the fire pit.</span></p><p><span>支持者们在火坑边吃着成堆的牛胸肉和烤棉花糖。</span></p></blockquote></blockquote><p><strong><span>Teaching doesn’t mean instant competition</span></strong><span>. Just because you know the master’s technique doesn’t mean you’re going to be able to emulate it right away. You can watch </span><em><span>Franklin’s</span></em><span> tutorials over and over, but are you ready to start spending 22 hours a day smoking meat that will sell out in two hours? </span><u><span>Probably not</span></u><span>. If you’re me, you’ll pay the $13 a pound even more </span><u><span>gladly</span></u><span>.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>probably not 很可能不是：表示对某事或某种情况的不确定性，认为很可能不会发生或不是真实的。</span></p><blockquote><p><span>I asked if he would come to the party, but he said probably not.</span></p><p><span>我问他是否会来参加派对，但他说很可能不会。</span></p></blockquote><p><span>gladly </span><em><span>adv.</span></em><span>乐意地；高兴地；欢喜地</span></p><blockquote><p><span>When I offered her my seat, she accepted it </span><strong><span>gladly</span></strong><span>.</span></p><p><span>我把座位让给她时，她欣然接受了。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>分享不代表别人就能会你的东西啊。这个需要不断的训练的技术，对于大师傅来说都是已经训练出了一种intuition了。而其他人似乎都是只看不练，所以你分享你的secret skill, 并不会让你处于竞争边缘。所谓学会了徒弟饿死了师傅，似乎并不是这样的。徒弟不训练，师傅一直是师傅！</span></p></blockquote><p><span>The </span><em><span>Franklins</span></em><span> also just </span><u><span>genuinely</span></u><span> love barbecue, and they go out of their way to share their knowledge. People often stop by with their own attempts at brisket, and </span><em><span>Aaron</span></em><span> is always </span><u><span>gracious</span></u><span> and patient when answering their questions. You don’t get the feeling that any of this is calculated, it’s just the way they operate—they started out as beginners, and so they feel an </span><u><span>obligation</span></u><span> to pass on what they’ve learned.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>genuinely </span><code>/ ˈdʒenjuɪnli /</code><span> </span><em><span>adv.</span></em><u><span>真诚地</span></u><span>；的确</span></p><blockquote><p><span>He </span><strong><span>genuinely</span></strong><span> cares about his employees.</span></p><p><span>他真诚地关心他的雇员。</span></p></blockquote><p><span>gracious</span></p><ul><li><p><em><span>adj.</span></em><span>有礼貌的，和蔼的；豪华舒适的，富足安逸的；（上帝）慈悲的；尊贵的，仁慈的（用于对王室成员的称呼）</span></p></li><li><p><em><span>inter.</span></em><span>天哪，哎呀</span></p></li></ul><blockquote><p><span>She is a lovely and </span><strong><span>gracious</span></strong><span> woman.</span></p><p><span>她是个可爱而和蔼的女人。</span></p></blockquote><p><span>obligation </span><em><span>n.</span></em><u><span>（法律上或道义上的）义务，责任</span></u><span>；恩惠，人情债；（承诺付款等的）合同，契约；必须要做的事情</span></p><blockquote><p><span>We have a moral </span><strong><span>obligation</span></strong><span> to protect the environment.</span></p><p><span>我们有道义责任保护环境。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>教学并不意味着马上就有竞争。因为立刻模仿是变不了大师的。谁会一遍遍地去做呢？</span></p><p><span>真诚地、礼貌地分享吧。会有惊喜的！</span></p></blockquote><p><span>Of course, many </span><u><span>chefs</span></u><span> and restaurateurs have become rich and famous by sharing their recipes and their techniques. In their book, </span><em><span>Rework</span></em><span>, </span><em><span>Jason Fried</span></em><span> and </span><em><span>David Heinemeier Hansson</span></em><span> encourage businesses to </span><u><span>emulate</span></u><span> chefs by </span><u><span>out-teaching</span></u><span> their competition. “What do you do? What are your ‘recipes’? What’s your ‘cookbook’? </span><mark style="background:#cebbfc;"><span>What can you tell the world about how you operate that’s informative, educational, and promotional?</span></mark><span>” They encourage businesses to figure out the </span><u><span>equivalent</span></u><span> of their own cooking show.</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>chefs </span><em><span>n.</span></em><span>大厨；主厨（chef 的复数）</span></p><blockquote><p><span>Our </span><strong><span>chefs</span></strong><span> use only the freshest produce available.</span></p><p><span>我们的厨师只用现有最新鲜的农产品。</span></p></blockquote><p><span>emulate </span></p><ul><li><p><em><span>v.</span></em><span>仿效，模仿；仿真；努力赶上</span></p></li><li><p><em><span>adj.</span></em><span>&lt;古&gt;争强好胜的</span></p></li></ul><blockquote><p><span>Sons are traditionally expected to </span><strong><span>emulate</span></strong><span> their fathers.</span></p><p><span>传统上认为儿子应该效仿他们的父亲。</span></p></blockquote><p><span>out teach your competitors: 教导你的竞争对手。</span></p><p><span>By actively seeking opportunities to learn, absorb and reinterpret knowledge, you build the thinking that will allow you to </span><strong><span>out</span></strong><span>-learn and, eventually, </span><strong><span>out</span></strong><span>-</span><strong><span>teach</span></strong><span> </span><strong><span>your</span></strong><span> </span><strong><span>competitors</span></strong><span>.</span></p><p><span>积极主动地寻找机会学习、吸收和重新理解知识让你建立起的思维模式将会使你学习得更多，并最终，你可以反过来教导你的竞争对手。</span></p><blockquote><p><span>培养自己的拥趸 Build an audience</span></p><p><span>普及知识，赢得竞争 Out-teach your competition</span></p><p><span>效仿大厨 Emulate chefs</span></p></blockquote><p><span>cookbook </span><em><span>n.</span></em><span>食谱</span></p><blockquote><p><span>That night, I looked through my father&#39;s books and saw the </span><strong><span>cookbook</span></strong><span> that he had given me a year before.</span></p><p><span>那天晚上，我翻了翻父亲的书，看到了他一年前给我的烹饪书。</span></p></blockquote><p><span>equivalent </span></p><ul><li><p><em><span>adj.</span></em><span>等同的，等效的</span></p></li><li><p><em><span>n.</span></em><span>对等的人（或事物），</span><u><span>对应的人（或事物）</span></u><span>；当量（equivalent weight）</span></p></li></ul><blockquote><p><span>His party has just suffered the </span><strong><span>equivalent</span></strong><span> of a near-fatal heart attack.</span></p><p><span>他的政党刚经受了相当于一次几乎致命的心脏病发作的打击。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>哇哦！Wa·O，分享的人，都已经变得富有了呢！哈哈~</span></p><p><span>想一想，如何效仿大厨（模仿很重要！模仿大师都在做的事，why？我觉得高手就是无招胜有招，别人都在执行的好的动作，我们不必深究背后的原因，就去效仿就行了。）</span></p></blockquote><p><span>Think about what you can share from your process that would inform the people you’re trying to reach. Have you learned a </span><u><span>craft</span></u><span>? What are your techniques? Are you skilled at using certain tools and materials? What kind of knowledge comes along with your job?</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>craft</span></p><ul><li><p><em><span>n.</span></em><span>工艺，手艺；船，艇，飞行器；诡计，骗术；行业，职业；手工艺品</span></p></li><li><p><em><span>v.</span></em><span>精心制作</span></p></li></ul><blockquote><p><span>The distinction between </span><strong><span>craft</span></strong><span> and fine art is more controversial.</span></p><p><span>工艺和美术之间的区别更有争议。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>思考一下，你能分享什么。这就是在告诉别人你想要达到什么样的目标。什么可以分享呢？这段又给了一些答案。</span></p></blockquote><p><span>The minute you learn something, turn around and teach it to others. Share your reading list. Point to helpful reference materials. Create some tutorials and post them online. </span><mark style="background:#a8e195;"><span>Use pictures, words, and video.</span></mark><span> Take people step-by-step through part of your process. As blogger </span><em><span>Kathy Sierra</span></em><span> says, “Make people better at something they want to be better at.”</span></p><blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>去帮助别人学她们想要学的。</span></p><p><span>把自己刚学的教给别人；分享自己的书单；告诉别人一个比较好的参考资料；在网络上创建一些教程或者博文。使用图片、文字、视频都可以！让别人一步步了解你正在做的事。让想变好的人，慢慢变好！</span></p></blockquote><p><span>Teaching people doesn’t </span><u><span>subtract</span></u><span> value from what you do, it actually adds to it. </span><mark style="background:#f8e272;"><span>When you teach someone how to do your work, you are, in effect, generating more interest in your work</span></mark><span>. </span><mark style="background:#a8e195;"><span>People feel closer to your work because you’re letting them in on what you know.</span></mark></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>subtract </span><em><span>vt.</span></em><span>减去，</span><u><span>删减</span></u><span>；减去，扣除</span></p><blockquote><p><span>The pupil could add and </span><strong><span>subtract</span></strong><span> but hadn&#39;t learned to divide.</span></p><p><span>这名小学生能做加法和减法，但还没学会做除法。</span></p></blockquote><p><mark><strong><span>感受</span></strong></mark></p><p><span>教别人，并不会让你失去什么，反而会让你增加点什么。例如，你教别人如何做你的工作，反而会让你更加对自己的工作感兴趣。人家也会感觉到和你的工作更亲近！</span></p></blockquote><p><u><span>Best of all</span></u><span>, when you share your knowledge and your work with others, you receive an education in return. Author </span><em><span>Christopher Hitchens</span></em><span> said that </span><mark style="background:#f8e272;"><span>the great thing about </span><strong><span>putting out a book</span></strong><span> is that “it brings you into contact with people whose opinions you should have </span><u><span>canvassed</span></u><span> before you ever </span><u><span>pressed pen to paper</span></u><span>.</span></mark><span> They write to you. They telephone you. They come to your bookstore events and give you things to read that you should have read already.” He said that having his work out in the world was “a free education that goes on for a lifetime.”</span></p><blockquote><p><strong><mark><span>Words &amp; phrases</span></mark></strong></p><p><span>best of all: 最好的一点，用于指代某个拥有许多优点的事物中最重要或最吸引人的部分</span></p><blockquote><p><span>The new car is fast, comfortable, and best of all, it&#39;s environmentally friendly.</span></p><p><span>这辆新车快速、舒适，最重要的是，它环保。</span></p></blockquote><p><span>canvass </span><code>/ ˈkænvəs /</code></p><ul><li><p><em><span>v.</span></em><span>游说，拉选票；征求意见；努力争取支持；详细讨论；提出（意见或计划）供考虑；细究，彻底检查</span></p></li><li><p><em><span>n.</span></em><span>拉选票，</span><u><span>征求意见</span></u><span>；讨论；细查</span></p></li></ul><blockquote><p><span>The party needs to </span><strong><span>canvass</span></strong><span> the uncommitted voters.</span></p><p><span>这个党需要向未表明态度的选民游说拉票。</span></p></blockquote><p><span>canvassed  </span><em><span>v</span></em><span>．</span></p><blockquote><ol start='' ><li><p><span>（尤指为政治目的）拉票，游说：为了赢得选票或支持而拜访或联系选民或其他人。</span></p></li></ol><p><span>The politician canvassed the neighborhood for votes.</span></p><p><span>这位政治家为了拉选票在附近游说。</span></p><ol start='2' ><li><p><span>仔细讨论，审议：详细讨论或审查某个问题或计划。</span></p></li></ol><p><span>The committee canvassed the issue thoroughly before making a decision.</span></p><p><span>委员会在做出决定之前对这个问题进行了详细的讨论。</span></p></blockquote><p><span>pressed pen to paper: 用笔写字</span></p><p><span>最重要的是，教，其实是最好的学！</span>
+<span>出书的好处在于“它让你接触到那些你在动笔之前就应该征求他们意见的人。”</span></p></blockquote></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
