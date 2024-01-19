@@ -161,6 +161,10 @@ jQuery(document).ready(function(){
  * Scroll Up
  */
 jQuery(document).ready(function(){
+	jQuery("#scroll-up").show();
+});
+/*
+jQuery(document).ready(function(){
 	jQuery("#scroll-up").hide();
 	jQuery(function () {
 		jQuery(window).scroll(function () {
@@ -177,7 +181,8 @@ jQuery(document).ready(function(){
 			return false;
 		});
 	});
-});
+}); 
+*/
 
 
 /**
