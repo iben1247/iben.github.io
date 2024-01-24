@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>口语E³ - Phase01</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='英语口语学习积累1000句计划）01'><span>英语口语学习积累（1000句计划）</span><code>01</code></h1><div style="text-align:center; font-size:1em" ><a href="https://itaoo.github.io/" style="color:brown" >Ben</a>
+    2024/01/19
+</div><blockquote><p>🏡<span> </span><a href="https://itaoo.github.io/blogs/blogs - OralEnglish.html"><span style="color:#990000; font-family:Comic Sans MS; font-size:12px; font-weight:bold;"><span>More records...</span></span></a></p><p><i style="color:brown"><span>Get the knowledge flowing and circulating!   </span></i><span> </span><strong><span>:)</span></strong></p><p><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="32.225ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 14243.6 748" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.186ex;"><defs><path id="MJX-190-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-190-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-190-TEX-N-A0" d=""></path><path id="MJX-190-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-190-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-190-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-190-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-190-TEX-I-1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path><path id="MJX-190-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-190-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-190-TEX-N-2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-190-TEX-N-31"></use><use data-c="30" xlink:href="#MJX-190-TEX-N-30" transform="translate(500,0)"></use><use data-c="30" xlink:href="#MJX-190-TEX-N-30" transform="translate(1000,0)"></use><use data-c="30" xlink:href="#MJX-190-TEX-N-30" transform="translate(1500,0)"></use></g><g data-mml-node="mtext" transform="translate(2000,0)"><use data-c="A0" xlink:href="#MJX-190-TEX-N-A0"></use></g><g data-mml-node="mi" transform="translate(2250,0)"><use data-c="1D460" xlink:href="#MJX-190-TEX-I-1D460"></use></g><g data-mml-node="mi" transform="translate(2719,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(3185,0)"><use data-c="1D45B" xlink:href="#MJX-190-TEX-I-1D45B"></use></g><g data-mml-node="mi" transform="translate(3785,0)"><use data-c="1D461" xlink:href="#MJX-190-TEX-I-1D461"></use></g><g data-mml-node="mi" transform="translate(4146,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(4612,0)"><use data-c="1D45B" xlink:href="#MJX-190-TEX-I-1D45B"></use></g><g data-mml-node="mi" transform="translate(5212,0)"><use data-c="1D450" xlink:href="#MJX-190-TEX-I-1D450"></use></g><g data-mml-node="mi" transform="translate(5645,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(6111,0)"><use data-c="1D460" xlink:href="#MJX-190-TEX-I-1D460"></use></g><g data-mml-node="mo" transform="translate(6857.8,0)"><use data-c="3D" xlink:href="#MJX-190-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(7913.6,0)"><use data-c="32" xlink:href="#MJX-190-TEX-N-32"></use><use data-c="30" xlink:href="#MJX-190-TEX-N-30" transform="translate(500,0)"></use></g><g data-mml-node="mtext" transform="translate(8913.6,0)"><use data-c="A0" xlink:href="#MJX-190-TEX-N-A0"></use></g><g data-mml-node="mi" transform="translate(9163.6,0)"><use data-c="1D460" xlink:href="#MJX-190-TEX-I-1D460"></use></g><g data-mml-node="mi" transform="translate(9632.6,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(10098.6,0)"><use data-c="1D45B" xlink:href="#MJX-190-TEX-I-1D45B"></use></g><g data-mml-node="mi" transform="translate(10698.6,0)"><use data-c="1D461" xlink:href="#MJX-190-TEX-I-1D461"></use></g><g data-mml-node="mi" transform="translate(11059.6,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(11525.6,0)"><use data-c="1D45B" xlink:href="#MJX-190-TEX-I-1D45B"></use></g><g data-mml-node="mi" transform="translate(12125.6,0)"><use data-c="1D450" xlink:href="#MJX-190-TEX-I-1D450"></use></g><g data-mml-node="mi" transform="translate(12558.6,0)"><use data-c="1D452" xlink:href="#MJX-190-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(13024.6,0)"><use data-c="1D460" xlink:href="#MJX-190-TEX-I-1D460"></use></g><g data-mml-node="mtext" transform="translate(13493.6,0)"><use data-c="A0" xlink:href="#MJX-190-TEX-N-A0"></use></g><g data-mml-node="mo" transform="translate(13743.6,0)"><use data-c="2217" xlink:href="#MJX-190-TEX-N-2217"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1000</mn><mtext>&nbsp;</mtext><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mo>=</mo><mn>20</mn><mtext>&nbsp;</mtext><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mtext>&nbsp;</mtext><mo>∗</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">1000 \ sentences = 20 \ sentences \ *</script><span> </span><code>50</code><span> </span></p><p><strong><a href='https://www.youtube.com/@DailyEasyEnglish'><span>Daily English</span></a></strong><span> @DailyEasyEnglish</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n337"><a class="md-toc-inner" href="#英语口语学习积累1000句计划）01">英语口语学习积累（1000句计划）<code>01</code></a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n344"><a class="md-toc-inner" href="#0001-how-are-you-doing---how-ya-doin"><u>0001</u> How are you doing? - How ya' doin?</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n381"><a class="md-toc-inner" href="#0002-what-do-you-do-for-a-living"><u>0002</u> What do you do for a living? </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n389"><a class="md-toc-inner" href="#0003-im-into-sports"><u>0003</u> I'm into sports. </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n406"><a class="md-toc-inner" href="#0004-my-knee-went-out"><u>0004</u> My knee went out.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n420"><a class="md-toc-inner" href="#0005-whats-up-this-weekend"><u>0005</u> What's up this weekend? </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n431"><a class="md-toc-inner" href="#0006-im-going-to-kick-back---im-gonna-kick-back"><u>0006</u> I'm going to kick back. - I'm gonna kick back.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n439"><a class="md-toc-inner" href="#0007-i-slept-in"><u>0007</u> I slept in.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n450"><a class="md-toc-inner" href="#0008-i-overslept"><u>0008</u> I overslept.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n465"><a class="md-toc-inner" href="#0009-im-gonna-stock-up-on-water"><u>0009</u> I'm gonna stock up on water.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n474"><a class="md-toc-inner" href="#0010-im-counting-on-you"><u>0010</u> I'm counting on you.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n493"><a class="md-toc-inner" href="#0011-i-had-a-long-week"><u>0011</u> I had a long week.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n501"><a class="md-toc-inner" href="#0012-tgif-thank-god-its-friday"><u>0012</u> TGIF! (Thank god, it's Friday!)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n509"><a class="md-toc-inner" href="#0013-thats-pure-nonsense"><u>0013</u> That's pure nonsense.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n529"><a class="md-toc-inner" href="#0014-did-you-get-out-ing"><u>0014</u> Did you get out ~ing?</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n543"><a class="md-toc-inner" href="#0015-to-do-away-with-something"><u>0015</u> (to) do away with (something)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n590"><a class="md-toc-inner" href="#0016-to-do-something-up"><u>0016</u> (to) do (something) up</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n598"><a class="md-toc-inner" href="#0017-to-do-up-something"><u>0017</u> (to) do up (something)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n622"><a class="md-toc-inner" href="#0018-to-do-it-over---do-wid-over"><u>0018</u> (to) do it over - do wi"d" over</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n635"><a class="md-toc-inner" href="#0019-because-of-"><u>0019</u> Because of ~~</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n656"><a class="md-toc-inner" href="#0020-thanks-to-"><u>0020</u> Thanks to ~~</a></span></p></div><h4 id='0001-how-are-you-doing---how-ya-doin'><u><span>0001</span></u><span> </span><span style="color:red; font-family:Whitney"><span>How are you doing?</span></span><span> - </span><span style="color:blue; font-family:Comic Sans MS"><span>How ya&#39; doin?</span></span></h4><blockquote><ul><li><p><span>你还好吗</span></p></li><li><p><span>你好吗</span></p></li><li><p><span>您工作还顺利吧</span></p></li></ul><blockquote><p><strong><span>How</span></strong><span> </span><strong><span>are</span></strong><span> </span><strong><span>you</span></strong><span> </span><strong><span>doing</span></strong><span> with your new job?</span></p><p><span>你的新工作做得怎么样？</span></p></blockquote><blockquote><p><strong><span>How</span></strong><span> </span><strong><span>are</span></strong><span> </span><strong><span>you</span></strong><span> </span><strong><span>doing</span></strong><span> this morning?</span></p><p><span>你今天早上过得怎样？</span></p></blockquote></blockquote><p><img src=".\Phase01\image-20231228155529724.png" referrerpolicy="no-referrer" alt="image-20231228155529724"></p><p><img src=".\Phase01\image-20231228155655059.png" referrerpolicy="no-referrer" alt="image-20231228155655059"></p><p><strong style="color:red"><span>※ 补充</span></strong></p><blockquote><p><span>-</span><span> </span><em><span>How&#39;s your mom?</span></em><span> 你妈妈还好吗？</span></p><ul><li><p><em><span>How&#39;s sb.?</span></em><span> 问候某人</span></p></li><li><p><em><span>How be sb. doing?</span></em><span> 某人还好吗？</span></p><blockquote><p><span>-</span><span> </span><em><span>How are you doing?</span></em><span> 你过得还好吗?</span>
+<span>-</span><span> </span><em><span>Oh, same old.</span></em><span> 老样子</span></p></blockquote></li></ul><p><span>-</span><span> </span><em><span>How was your holiday?</span></em><span> 你假期(过得)如何？(事情已经过去，用过去时态)</span></p><ul><li><p><em><span>How was sth.?</span></em><span> 什么事情怎么样啦？</span></p><ul><li><p><em><span>How was your weekend?</span></em><span> 周末过得怎么样啊？</span></p></li></ul><blockquote><p><span>-</span><span> </span><em><span>How was your night?</span></em><span> 今晚过的怎么样？</span>
+<span>-</span><span> </span><em><span>Same old, same old.</span></em><span> 和往常一样</span></p></blockquote></li></ul></blockquote><hr /><h4 id='0002-what-do-you-do-for-a-living'><u><span>0002</span></u><span> </span><span style="color:red; font-family:Whitney"><span>What do you do for a living?</span></span><span> </span></h4><blockquote><p><strong><span>What</span></strong><span> </span><strong><span>do</span></strong><span> </span><strong><span>you</span></strong><span> </span><strong><span>do</span></strong><span> </span><strong><span>for</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>living</span></strong><span> ?</span></p><p><span>你靠什么谋生？</span></p><p><span>I&#39;m an editor. </span><strong><span>What</span></strong><span> </span><strong><span>do</span></strong><span> </span><strong><span>you</span></strong><span> </span><strong><span>do</span></strong><span> </span><strong><span>for</span></strong><span> </span><strong><span>a</span></strong><span> </span><strong><span>living</span></strong><span>?</span></p><p><span>我是一名编辑。你是干哪一行的？</span></p></blockquote><p><img src=".\Phase01\image-20231229095051909.png" referrerpolicy="no-referrer" alt="image-20231229095051909"></p><p><img src=".\Phase01\image-20231229095106895.png" referrerpolicy="no-referrer" alt="image-20231229095106895"></p><h4 id='0003-im-into-sports'><u><span>0003</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I&#39;m into sports.</span></span><span> </span></h4><blockquote><p><span>be into </span><code>美/ bi ˈɪntə /</code></p><ul><li><p><span>喜欢；对……有兴趣；被迷住，被……深深吸引</span></p></li></ul><blockquote><p><span>Well, </span><strong><span>I</span></strong><span> </span><strong><span>am</span></strong><span> much more </span><strong><span>into</span></strong><span> architecture.</span></p><p><span>嗯，我更喜欢建筑。</span></p></blockquote></blockquote><blockquote><p><em><span>I&#39;m getting into frisbee these days.</span></em><span> 我最近对飞盘很感兴趣。</span></p><ul><li><p><span style="color:red"><em><span>I&#39;m getting into...</span></em><span> 我(开始)对...产生兴趣/我最近迷上了...</span></span></p></li><li><p><em><span>I&#39;m getting into gardening these days.</span></em><span> 我最近对园艺很感兴趣。</span></p></li></ul></blockquote><p><img src=".\Phase01\image-20231230154521159.png" referrerpolicy="no-referrer" alt="image-20231230154521159"></p><h4 id='0004-my-knee-went-out'><u><span>0004</span></u><span> </span><span style="color:red; font-family:Whitney"><span>My knee went out.</span></span></h4><blockquote><p><span>go out 外出：离开家或工作场所去其他地方，通常是为了娱乐或社交。</span></p><p><span>这里表达的是身体上的肢体部位疼痛，没有办法像正常一样。</span></p><blockquote><p><span>My knee went out.</span></p><p><span>My back went out.</span></p><p><span>My shoulder went out.</span></p><p><span>My neck went out.</span></p></blockquote><p><span>I hope nothing is </span><strong><span>going out</span></strong><span> on you. </span></p><p><span>我希望你什么疼痛都不会有。</span></p></blockquote><p><img src=".\Phase01\image-20231231140322653.png" referrerpolicy="no-referrer" alt="image-20231231140322653"></p><center><span style="color:red; font-style:italic">Strong音(N)后面跟上了Weak音(t)，省略(t)</span></center><p><img src=".\Phase01\image-20231231140343835.png" referrerpolicy="no-referrer" alt="image-20231231140343835"></p><h4 id='0005-whats-up-this-weekend'><u><span>0005</span></u><span> </span><span style="color:red; font-family:Whitney"><span>What&#39;s up this weekend?</span></span><span> </span></h4><blockquote><blockquote><p><strong><span>what&#39;s up</span></strong><span> this weekend?</span></p><p><span>这个周末有什么事吗?</span></p></blockquote><p><strong><span>what&#39;s up</span></strong><span>?</span></p><p><span>&lt;非正式&gt;你好，出了什么事？</span></p><p><strong><span>What&#39;s</span></strong><span> </span><strong><span>up</span></strong><span> with you, chuck?</span></p><p><span>你怎么了，亲爱的？</span></p></blockquote><p><img src=".\Phase01\image-20240101124250178.png" referrerpolicy="no-referrer" alt="image-20240101124250178"></p><p><img src=".\Phase01\image-20240101124108938.png" referrerpolicy="no-referrer" alt="image-20240101124108938"></p><h4 id='0006-im-going-to-kick-back---im-gonna-kick-back'><u><span>0006</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I&#39;m going to kick back.</span></span><span> - </span><span style="color:blue; font-family:Comic Sans MS"><span>I&#39;m gonna kick back.</span></span></h4><blockquote><p><span>kick back </span><code>美/ kɪk bæk /</code><span> 放松，休息：指采取放松的姿势或态度；也指花时间放松，悠闲自在。</span></p><blockquote><p><span>For many men, the end of the workday is a time to </span><strong><span>kick</span></strong><span> </span><strong><span>back</span></strong><span>.</span></p><p><span>对很多男人来说，下班后是放松的时候。</span></p></blockquote></blockquote><p><img src=".\Phase01\image-20240102215850989.png" referrerpolicy="no-referrer" alt="image-20240102215850989"></p><p><img src=".\Phase01\image-20240102215932314.png" referrerpolicy="no-referrer" alt="image-20240102215932314"></p><h4 id='0007-i-slept-in'><u><span>0007</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I slept in.</span></span></h4><blockquote><p><span>“Sleep in” 的意思是“</span><strong><span>睡懒觉、晚起床</span></strong><span>”。 </span></p><p><span>比如，大家都会趁周末不上班、不上学的时候，赖在床上多睡一会。</span></p><p><span>sleep in </span><code>美/ sliːp ɪn /</code></p><ul><li><p><span>在工作地点睡觉：指在工作地点睡觉。</span></p></li><li><p><span>故意睡懒觉：指故意晚起睡懒觉。</span></p></li></ul></blockquote><p><img src=".\Phase01\image-20240103104709061.png" referrerpolicy="no-referrer" alt="image-20240103104709061"></p><h4 id='0008-i-overslept'><u><span>0008</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I overslept.</span></span></h4><p><kbd><span style="color:red"><span>2024年1月4日</span></span></kbd></p><ul><li><p><strong><span>睡过头了</span></strong><span>（希望早起，却睡过头了）</span></p></li></ul><p><span>oversleep </span><code>美/ ˌoʊvərˈsliːp /</code></p><ul><li><p><em><span>vt.</span></em><span>使睡过头</span></p></li><li><p><em><span>vi.</span></em><span>睡过头</span></p></li></ul><blockquote><p><span>You have work to do tomorrow, so drink less in case you </span><strong><span>oversleep</span></strong><span>.</span></p><p><span>你明天还有事要做，少喝点酒才不会睡过头。</span></p></blockquote><p><img src=".\Phase01\image-20240104085204322.png" referrerpolicy="no-referrer" alt="image-20240104085204322"></p><h4 id='0009-im-gonna-stock-up-on-water'><u><span>0009</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I&#39;m gonna stock up on water.</span></span></h4><p><kbd><span style="color:red"><span>2024年1月5日</span></span></kbd></p><blockquote><p><span>stock up on 储备：为未来需要或最终使用而获取（某物）的库存。</span></p><blockquote><p><span>The authorities have urged people to </span><strong><span>stock</span></strong><span> </span><strong><span>up</span></strong><span> </span><strong><span>on</span></strong><span> fuel.</span></p><p><span>当局已敦促人们大量储备燃料。</span></p></blockquote></blockquote><p><img src=".\Phase01\image-20240105153339750.png" referrerpolicy="no-referrer" alt="image-20240105153339750"></p><p><img src=".\Phase01\image-20240105153343057.png" referrerpolicy="no-referrer" alt="image-20240105153343057"></p><h4 id='0010-im-counting-on-you'><u><span>0010</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I&#39;m counting on you.</span></span></h4><p><kbd><span style="color:red"><span>2024年1月6日</span></span></kbd></p><blockquote><ul><li><p><span>我就指望你了</span></p></li></ul><p><strong><span>I</span></strong><span> </span><strong><span>am</span></strong><span> </span><strong><span>counting</span></strong><span> </span><strong><span>on</span></strong><span> </span><strong><span>you</span></strong><span> to keep your word. Don&#39;t let me down.</span></p><p><span>我指望着你信守诺言呢。别让我失望。</span></p></blockquote><p><span>count on</span></p><ul><li><p><span>依靠，指望：指对某人或某事有信心，相信他/它会提供帮助或支持。</span></p></li><li><p><span>指望，期待：指对某事有期望或希望，相信它会发生或实现。</span></p></li></ul><blockquote><p><span>We can&#39;t </span><strong><span>count</span></strong><span> </span><strong><span>on</span></strong><span> the good weather lasting.</span></p><p><span>我们不能指望这样好的天气会持久。</span></p></blockquote><p><img src=".\Phase01\image-20240106105956035.png" referrerpolicy="no-referrer" alt="image-20240106105956035"></p><p><img src=".\Phase01\image-20240106105928047.png" referrerpolicy="no-referrer" alt="image-20240106105928047"></p><h4 id='0011-i-had-a-long-week'><u><span>0011</span></u><span> </span><span style="color:red; font-family:Whitney"><span>I had a long week.</span></span></h4><p><kbd><span style="color:red"><span>2024年1月7日</span></span></kbd></p><p><span>long week 漫长的一周：指时间过得很慢，一周的时间感觉像很长的一段时间。</span></p><blockquote><p><span>After </span><strong><span>a</span></strong><span> </span><strong><span>long</span></strong><span> </span><strong><span>week</span></strong><span>, you can come and work on your project have </span><strong><span>a</span></strong><span> couple of beers and hang out.</span></p><p><span>辛苦工作一周后，你可以来这里，编织东西、喝两杯啤酒、也可以相约出去玩耍。</span></p></blockquote><p><img src=".\Phase01\image-20240107095005830.png" referrerpolicy="no-referrer" alt="image-20240107095005830"></p><p><img src=".\Phase01\image-20240107095026114.png" referrerpolicy="no-referrer" alt="image-20240107095026114"></p><h4 id='0012-tgif-thank-god-its-friday'><u><span>0012</span></u><span> </span><span style="color:red; font-family:Whitney"><span>TGIF! (Thank god, it&#39;s Friday!)</span></span></h4><p><kbd><span style="color:red"><span>2024年1月8日</span></span></kbd></p><blockquote><p><span>TGIF </span><code>美/ ˌtiː dʒiː aɪ ˈef /</code><span> </span><em><span>abbr.</span></em><span>感谢上帝今天已是星期五（thank God it&#39;s Friday）</span></p><p><strong><span>TGIF</span></strong><span> (Thank God it&#39;s Friday) is now here and you just have to get it done.</span></p><p><span>谢天谢地，现在就是周五啦，赶紧去搞定吧。</span></p><p><span>FNL = Friday Night Life.</span></p></blockquote><p><img src=".\Phase01\image-20240108162055882.png" referrerpolicy="no-referrer" alt="image-20240108162055882"></p><h4 id='0013-thats-pure-nonsense'><u><span>0013</span></u><span> </span><span style="color:red; font-family:Whitney"><span>That&#39;s pure nonsense.</span></span></h4><p><kbd><span style="color:red"><span>2024年1月9日</span></span></kbd></p><blockquote><p><span>That&#39;s pure nonsense.</span></p><p><span>那纯粹是胡说八道。</span></p><p><span>nonsense </span><code>美/ ˈnɑːnsens /</code></p><ul><li><p><em><span>n.</span></em><span>荒谬的想法（看法），胡说；愚蠢的行为，胡闹；无意义的话（字句）</span></p></li><li><p><em><span>adj.</span></em><span>无意义的，荒谬的</span></p></li><li><p><em><span>int.</span></em><span>胡说，废话</span></p></li></ul><blockquote><p><span>You&#39;re talking </span><strong><span>nonsense</span></strong><span> !</span></p><p><span>你在胡说八道！</span></p></blockquote><blockquote><p><span>That&#39;s nonsense.</span></p><p><span>那是胡说八道：表示对某种说法或观点的不认同或不信任。</span></p></blockquote></blockquote><p><img src=".\Phase01\image-20240109104411879.png" referrerpolicy="no-referrer" alt="image-20240109104411879"></p><h4 id='0014-did-you-get-out-ing'><u><span>0014</span></u><span> </span><span style="color:red; font-family:Whitney"><span>Did you get out ~ing?</span></span></h4><p><kbd><span style="color:red"><span>2024年1月10日</span></span></kbd></p><blockquote><blockquote><p><span>out: 强调的是外面（outside），out of your normal routine, out of your normal schedule.</span></p><p><span>你出去买东西了吗?</span></p></blockquote><p><span>Did you get out shopping?</span></p><p><span>Did you go shopping?</span></p><p><span>Did you get out dancing last night?</span></p><p><span>Did you go out dancing last night?</span></p><p><span>Did you go dancing last night?</span></p><p><span>美国人、英国人、澳大利亚人或者其他说英语的人，非常喜欢短语或者两个词的短语</span></p></blockquote><p><img src=".\Phase01\image-20240110095438357.png" referrerpolicy="no-referrer" alt="image-20240110095438357"></p><p><img src=".\Phase01\image-20240110095601984.png" referrerpolicy="no-referrer" alt="image-20240110095601984"></p><h4 id='0015-to-do-away-with-something'><u><span>0015</span></u><span> </span><span style="color:red; font-family:Whitney"><span>(to) do away with (something)</span></span></h4><p><kbd><span style="color:red"><span>2024年1月11日</span></span></kbd></p><p><span>(to) do away with </span><code>美/ duː əˈweɪ wɪð /</code></p><ul><li><p><span>废除、消除或摆脱：摒弃或取消某物或某种做法。</span></p></li></ul><blockquote><p><span>The long-range goal must be to </span><strong><span>do</span></strong><span> </span><strong><span>away</span></strong><span> </span><strong><span>with</span></strong><span> nuclear weapons altogether.</span></p><p><span>长远目标一定是销毁所有的核武器。</span></p></blockquote><p><span>(to) get rid of</span></p><ul><li><p><span>摆脱：采取行动以消除或不再受到（不需要的事物或人）的影响或困扰。</span></p></li></ul><blockquote><p><span>I began to suspect (that) they were trying to </span><strong><span>get</span></strong><span> </span><strong><span>rid</span></strong><span> </span><strong><span>of</span></strong><span> me.</span></p><p><span>我开始觉察出，他们试图摆脱掉我。</span></p></blockquote><p><img src=".\Phase01\image-20240111102859817.png" referrerpolicy="no-referrer" alt="image-20240111102859817"></p><p><img src=".\Phase01\image-20240111102748036.png" referrerpolicy="no-referrer" alt="image-20240111102748036"></p><p><span>knuckle cracking </span><code>美/ ˈnʌkl ˈkrækɪŋ /</code></p><ul><li><p><span>指关节爆裂声：指通过操纵关节产生声音和相关的“爆裂”感觉。有时由物理治疗师、脊椎按摩师、整骨师和土耳其浴室的按摩师进行，以追求各种效果。</span></p></li></ul><blockquote><p><span>The US researchers behind that study concluded: &#39;The chief morbid consequence of </span><strong><span>knuckle</span></strong><span> </span><strong><span>cracking</span></strong><span> would appear to be its annoying effect on the observer. &#39;</span></p><p><span>这项研究的美国研究员总结道：“掰指关节的主要不良后果在于，关节的响声会让周围的人感到不舒服。”</span></p></blockquote><p><span>knuckle </span><code>美/ ˈnʌkl /</code></p><ul><li><p><em><span>n.</span></em><span>关节；指关节；指节；膝关节；肘</span></p></li><li><p><em><span>vi.</span></em><span>开始认真工作</span></p></li><li><p><em><span>vt.</span></em><span>用指关节敲打</span></p></li></ul><blockquote><p><span>If you rap it with your </span><strong><span>knuckle</span></strong><span>, you hear the thwack of gypsum rather than the ring of cold metal.</span></p><p><span>如果用指关节击之，你能听见石膏的闷响，而非冷冰冰的金属发出的鸣响。</span></p></blockquote><p><span>crack </span><code>美/ kræk /</code></p><ul><li><p><em><span>v.</span></em><span>破裂，裂开；崩溃，垮掉；砸开，砸碎；破译，解决；重击，猛击；（使）发出爆裂声，劈啪作响；（嗓音）变嘶哑；说（笑话），开（玩笑）；阻止，打击；开瓶，（尤指）开瓶饮酒；使（碳氢化合物）裂化</span></p></li><li><p><em><span>n.</span></em><span>裂缝，裂纹；缝隙，窄缝；瑕疵，缺点；爆裂声，噼啪声；尝试，试图；破解信息，破解码；俏皮话，粗鲁的话；重击，猛击；好时光，友好愉快的交谈；嗓音变哑；强效可卡因；&lt;非正式&gt;股沟</span></p></li><li><p><em><span>adj.</span></em><span>优秀的，训练有素的</span></p></li></ul><blockquote><p><span>The ice started to </span><strong><span>crack</span></strong><span>.</span></p><p><span>冰开始裂了。</span></p></blockquote><h4 id='0016-to-do-something-up'><u><span>0016</span></u><span> </span><span style="color:red; font-family:Whitney"><span>(to) do (something) up</span></span></h4><p><kbd><span style="color:red"><span>2024年1月12日</span></span></kbd></p><blockquote><p><span>通俗解释：就是庆祝一些活动，经常跟上一些派对、婚礼等等。</span></p><p><span>to make it very exciting, a lot of fun.</span></p><p><span>do sth up = do up sth. 两种说法都行。</span></p></blockquote><p><img src=".\Phase01\image-20240112181633135.png" referrerpolicy="no-referrer" alt="image-20240112181633135"></p><p><img src=".\Phase01\image-20240112181650947.png" referrerpolicy="no-referrer" alt="image-20240112181650947"></p><h4 id='0017-to-do-up-something'><u><span>0017</span></u><span> </span><span style="color:red; font-family:Whitney"><span>(to) do up (something)</span></span></h4><p><kbd><span style="color:red"><span>2024年1月17日</span></span></kbd></p><blockquote><p><span style="color:red"><span>把衣服收紧；把帽子戴上；把拉链拉上（防止天冷）；把领带系好；</span></span></p><p><span>do up sth</span></p><ul><li><p><span>整理，收拾：把某物收拾整齐，使其看起来更有序。</span></p></li><li><p><span>翻新，修缮：对某物进行修理或改造，使其看起来更好。</span></p></li></ul><p><span>do up</span></p><ul><li><p><span>整理（如清洁或修理）以供穿戴或使用：指准备（如清洁或修理）以供穿戴或使用。</span></p></li><li><p><span>包装：指包装起来。</span></p></li><li><p><span>装饰：指用装饰物装饰。</span></p></li><li><p><span>用尽，耗尽：指用尽或耗尽。</span></p></li><li><p><span>扣紧：指扣紧。</span></p></li></ul></blockquote><p><img src=".\Phase01\image-20240117111851172.png" referrerpolicy="no-referrer" alt="image-20240117111851172"></p><p><img src=".\Phase01\image-20240117111902810.png" referrerpolicy="no-referrer" alt="image-20240117111902810"></p><h4 id='0018-to-do-it-over---do-wid-over'><u><span>0018</span></u><span> </span><span style="color:red; font-family:Whitney"><span>(to) do it over</span></span><span> - </span><span style="color:blue; font-family:Comic Sans MS"><span>do wi&quot;d&quot; over</span></span></h4><p><kbd><span style="color:red"><span>2024年1月18日</span></span></kbd></p><blockquote><p><span>do it again（再做一次）</span></p><p><span>do it over</span></p><ul><li><p><span>重新做某事或重复做某事：指在之前的行动或任务出现错误或不满意时，重新进行或重复进行。</span></p></li></ul><blockquote><p><span>It&#39;s all wrong—you&#39;ll have to </span><strong><span>do</span></strong><span> </span><strong><span>it</span></strong><span> </span><strong><span>over</span></strong><span>.</span></p><p><span>完全错了。你得重做一遍。</span></p></blockquote></blockquote><p><img src=".\Phase01\image-20240118144141615.png" referrerpolicy="no-referrer" alt="image-20240118144141615"></p><p><img src=".\Phase01\image-20240118143916860.png" referrerpolicy="no-referrer" alt="image-20240118143916860"></p><h4 id='0019-because-of-'><u><span>0019</span></u><span> </span><span style="color:red; font-family:Whitney"><span>Because of ~~</span></span></h4><p><kbd><span style="color:red"><span>2024年1月19日</span></span></kbd></p><blockquote><p><span>because of</span></p><ul><li><p><span>因为：表示某事发生的原因或原因所在。</span></p></li></ul><p><span>The road is closed </span><strong><span>because</span></strong><span> </span><strong><span>of</span></strong><span> the snow.</span></p><p><span>这条路因下雪而封闭。</span></p></blockquote><p><span>Because of sth., I couldn&#39;t do sth. </span><mark style="background:#f8e272;"><span>[positive situation]</span></mark></p><p><span>用来作为一个excuse</span></p><blockquote><p><span>excuse </span><code>美/ ɪkˈskjuːs /</code></p><ul><li><p><em><span>n.</span></em><span>借口，托词；正当理由；宽恕，赦免；拙劣样品，蹩脚货；&lt;美&gt;（医生或父母为学生写的）病假条，请假条</span></p></li><li><p><em><span>v.</span></em><span>原谅，宽恕；辩解，开脱；准许……离开；同意免除</span></p></li></ul><p><span>She served up the usual </span><strong><span>excuse</span></strong><span>.</span></p><p><span>她给出的借口还是老一套。</span></p></blockquote><p><img src=".\Phase01\image-20240119103205897.png" referrerpolicy="no-referrer" alt="image-20240119103205897"></p><h4 id='0020-thanks-to-'><u><span>0020</span></u><span> </span><span style="color:red; font-family:Whitney"><span>Thanks to ~~</span></span></h4><p><kbd><span style="color:red"><span>2024年1月19日</span></span></kbd></p><p><span>Thanks to sth., I could do sth. </span><mark style="background:#f8e272;"><span>[positive situation]</span></mark></p><blockquote><p><span>thanks to </span><code>美/ θæŋks tu /</code></p><ul><li><p><span>由于；因为：表示某事发生或某人取得成功是由于某种帮助或原因。</span></p></li></ul><p><strong><span>Thanks</span></strong><span> </span><strong><span>to</span></strong><span> a new directive, food labelling will be more specific.</span></p><p><span>由于官方的一项新指令，食品标签将会更明确具体。</span></p></blockquote><p><img src=".\Phase01\image-20240119103607918.png" referrerpolicy="no-referrer" alt="image-20240119103607918"></p><blockquote><p><span>lotion </span><code>美/ ˈloʊʃn /</code></p><ul><li><p><em><span>n.</span></em><span>洁肤液，护肤液，润肤乳</span></p></li></ul><p><span>She rubbed the </span><strong><span>lotion</span></strong><span> into her skin.</span></p><p><span>她把润肤液揉搓进皮肤里。</span></p></blockquote><p>&nbsp;</p></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
