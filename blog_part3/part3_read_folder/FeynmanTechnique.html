@@ -1,0 +1,664 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="../../assets/markdownStyle/iconSetup.css">
+	
+	<!--右边底部的向上箭头，能够返回到文章最开始的地方2/2 动态效果-->
+	<script type="text/javascript" src="../../assets/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../assets/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	
+	
+	<!--https://www.dofactory.com/html/rel/icon-->
+	<link rel="icon" href="../../images/ico/signature.png" sizes="32x32">
+	<link rel="icon" href="../../images/ico/signature.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../images/ico/signature.png">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #ec962a;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+	color: red;
+    background-color: rgb(255, 255, 0)
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+u {
+    text-decoration: red underline; 
+	text-decoration-thickness: 15%;
+  }
+  
+em {
+	font-weight: bold;
+    font-style: italic;
+}
+  
+
+
+</style><title>再读《费曼学习法》</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 style="text-align:center; font-size:30px; font-weight:bold;"><strong style="color:grey; font-size:30px;">[读书笔记] </strong>《费曼学习法》 
+<p style="text-align:center; font-weight:bold; font-style:italic; font-size: 20px; color:brown" >用输出倒逼输入</p></h1>
+<div style="text-align:center; font-size:1em" >
+    <a href="https://itaoo.github.io/" style="color:brown" >Cook</a>
+    2024.04.19
+</div><blockquote><p><i style="color:brown"><span>Get the knowledge flowing and circulating!  </span><strong><span>:)</span></strong><span> </span></i></p></blockquote><p style="text-align:center; font-size:20px; font-weight:bold;"> 目录 </p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n22"><a class="md-toc-inner" href="#前言">前言</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n409"><a class="md-toc-inner" href="#简单高效的思维模式">简单高效的思维模式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n559"><a class="md-toc-inner" href="#费曼学习5步曲">费曼学习5步曲</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n707"><a class="md-toc-inner" href="#appendix-ⅰ-原书目录纸质版）">Appendix Ⅰ: 原书目录（纸质版）</a></span></p></div><p><span>这本书是女朋友买的，一直放在书架上。</span></p><p><span>名字也很诱人：</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>费曼学习法 —— 用输出倒逼输入</span></span></p><p><span>今儿（我就来读读~）</span></p><hr /><p>&nbsp;</p><h2 id='前言'><span>前言</span></h2><p><span>这本书看到大概1/3的位置时，总觉得并不是费曼说的方法，而是作者对费曼的学习方法的理解和输出，大多都是自己的话，只是部分篇章引用了费曼的话而已。</span></p><ul><li><p><span>从这个角度来看，有点像是投机取巧，利用费曼的名气来帮助自己卖书；</span></p></li></ul><p><span>其次，这本书主要是讲道理、讲概念一类的工作。感觉并没有很好地用实际的例子来讲解。所以，也给了我一个启发：好的描述还是要配上实例才行，不然感觉空中楼阁，无法捉摸，没有落脚点。</span></p><p><span>但是，这本书也是有些不错的地方的，有些观念也是能引起我的共鸣的。下面我就详细写写给我引起共鸣的一些内容。</span></p><hr /><p>&nbsp;</p><p><kbd><span>开始</span></kbd><span>...</span></p><p><span>作者首先以一个疑惑（我也一直存在的疑惑）开头：</span><span style="color:red; font-family:楷体; font-weight:bold;"><span>为什么看了很多书还是没有吸收到知识。合上书之后，只觉自己记忆的少之又少，能用到的更是寥寥无几</span></span><span>。</span></p><p><span>作者给出的答案是：</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>虽然付出了学习的过程，储存了知识，却仍然不具备输出（应用）这些知识的能力</span></span><span>。</span></p><blockquote><p><span>高强度的被动学习在短期提高了人们的知识储备量，反映在考试成绩上是很棒的。但在知识的实际应用上依然处于初级的阶段。</span><u><span>所以，刚走出校园的年轻人尽管知识渊博，在实践上却不得其门</span></u><span>，花很长的时间，付出很大的代价，才能将学到的东西转化为工作的能力。</span></p><p><span>@page002（实体书：前言）</span></p></blockquote><p>&nbsp;</p><p><span>谁是费曼？答：我的偶像之一！</span></p><blockquote><p><span>物理学家</span><u><span>理查德·费曼</span></u><span>的一生有着足以铭刻史册的学术成就，他也因自己独特的教学方式广为人知，深受推崇。</span></p><p><span>在大学教授物理学时，他</span><span style="color:red"><span>总是能够深入浅出地将复杂的专业理论讲得通俗易懂，无论多么抽象、晦涩的概念，都能用非常生活化的例子表达出来，风趣幽默，一点也不枯燥。</span></span><span>学生喜欢上他的课。后来，越来越多的人便采用他的这种方法，最终形成了人们众所周知的“费曼学习法”。</span></p><p><span>它的核心是——</span><span style="color:blue"><span>当你准备学习一门新知识时，必须站在传授者的立场，假设自己要向别人讲解这门知识。</span></span></p><p><span>那么你一定要用最简洁、清晰和易于理解的语言表达出来，才能让行外的人也能听懂。</span></p><p><span>费曼说：“最好是几岁的小孩也能明白你在说什么。”为此，他制定了一个简单易行的流程：</span></p><ul><li><p><mark><span>第一，确立你要学习的目标；</span></mark><span> 一本书 or 一个技能</span></p></li><li><p><mark><span>第二，理解你要学习的对象；</span></mark><span> 准备好相关资料，选择多个信息来源</span></p></li><li><p><mark><span>第三，以教代学，用输出代替输入；</span></mark><span> 模拟一个传授的场景，用自己的语言把这些知识讲给别人听</span></p></li><li><p><mark><span>第四，进行回顾和反思；</span></mark><span> 对阻碍、模糊、疑义进行重新学习、回顾和反思，再输出一次</span></p></li><li><p><mark><span>第五，实现知识的简化和吸收。</span></mark><span> 简化和整合，实现知识的内化和有效的应用</span></p></li></ul><p><span>@page003（实体书：前言）</span></p></blockquote><p><span>作者强调：</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>无法对外输出的学习就不能称之为学习。</span></span></p><p><kbd style="border:1px dotted #990000; font-size:25px; color: red; font-family: comic sans ms, 隶书"><span>学习的目的是输出（应用）</span></kbd></p><p>&nbsp;</p><p><span>虽然我们学的内容是新的，但是大多数新的东西都是基于旧有的，并非凭空产生的。所以，我们的大脑有种能力：将旧有的知识拼接组合成新的，然后传递到负责记忆和行动的部门，转化为具体的成果或知识。</span></p><p><span>大脑这种运转方式是非常富有联想力的表现，同时也塑造了两种根深蒂固的学习模式：</span></p><p><span>❶ 越熟悉的概念，大脑越喜欢；</span></p><p><span>❷ 在不同的概念之间强行建立联系，也是大脑的特长。</span></p><p><span>第❶种模式会抑制我们对新知识的创造力和接收度。</span></p><p><span>第❷种是非常好的，怎样触发呢？</span><kbd><span>学会输出</span></kbd><span>。</span></p><p><span style="color:blue; font-family:楷体; font-weight:bold;"><span>知识的输出越多，我们对于陌生事物的联想就越丰富，学习的创新性就越强，最终成功地突破旧知识的框架，得出有价值的新知识。</span></span></p><blockquote><p><span>人类所有的新知识都是由旧的知识构成和解释的。</span><span style="color:red"><span>我们获取新知识的过程，本质上便是通过大脑的有机联想，将新的概念插入到旧的体系中，再在动态的学习中将之转化成一个合乎逻辑的富有张力和强劲生命力的知识系统</span></span><span>。这就是为什么费曼主张用“</span><mark><span>以教代学</span></mark><span>”的输出模式来进行学习的原因。</span></p><p><span>@page007（实体书：前言）</span></p></blockquote><blockquote><p><span>费曼认为，</span><u><span>输出不仅仅是学习的最佳方式，同时也是学习的终极目的</span></u><span>——</span><span style="color:limegreen"><span>当我们要学习一种新知识时，用最直白的语言去阐述它时，大脑就会从记忆库中提取那些熟悉的信息，在旧的知识和新的概念中产生强大的关联，新的知识便容易得到大脑彻底的理解</span></span><span>。最重要的一步是，你要反复地进行这一过程，使大脑多进行创造性的联想，我们对新知识的吸收和应用的能力才会变得更强。</span></p><p><span>@page007（实体书：前言）</span></p></blockquote><p>&nbsp;</p><p><span style="color:red"><span>新知识基于旧知识。输出的时候，会迫使大脑去熟悉的旧知识中寻找解释新知识的内容，从而建立了新、旧知识之间的联系</span></span><span>。</span></p><p>&nbsp;</p><p><span>以教代学。</span></p><p><span>输出式学习。</span></p><p>&nbsp;</p><p><kbd><span>正确的学习</span></kbd><span>：</span><mark style="background:#ffaabf;"><span>有目的地主动学习，在小组讨论的基础上不断地接触新信息，总结分析，消化吸收，再做出选择</span></mark><span>。</span></p><blockquote><p><span>传统学习方法的特点：</span></p><ul><li><p><span>第一，以输入为主。死记硬背，或叠加阅读量，量变达成质变。</span></p></li><li><p><span>第二，教条主义。盲目崇信书上的理论或框架，视野狭窄。</span></p></li><li><p><span>第三，标准化应用。严格按照学到的知识去实践，遇到问题生搬硬套，缺乏创新。</span></p></li></ul><p><span>@page004（实体书：第一章）</span></p></blockquote><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    padding: 20px;
+">对此，我的看法是不同的。大多数情况下，我们都没有很好的方法去学习，尽管书中说了顶级的学习思维是输出、以教促学。但是具体的问题还得不断的摸索和分析才能找到适配个人情况的学习方法。而“传统的学习方法”却可以让我们有一个基本的学习路线，作为基础让我们动态调整；而且，很多知识还是需要“量的堆积”or“严格实践”的，不管什么学习，都是脱离不开的。</div><p><span>机械式背诵 → 标准化应用（标准化考试）</span></p><p>💡<span> 英语角 → 汉语角</span></p><p><strong style="color:red"><span>※</span></strong><span> </span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>当你将输出作为输入的辅助工具时，学习的效果可以立时提升百倍。</span></span></p><p><span style="color:red"><span>作者认为：升级自己的思维，明确好方向，学习就从来都是一件很简单的事情。</span></span></p><p>&nbsp;</p><p><span>一个错误的设想：</span><span style="color:red"><del><span>好像知识对当下是无用的，对未来才是无价之宝。学习一门知识是为了建设自己的未来</span></del><span>。</span></span></p><blockquote><p><span>我悟了啊~</span></p><p><span>真正高质量的学习，一定能够让人融入真实的世界。</span><u><span>学习最重要的是“真实”，它必须让人可以与时代同步，理解身边正在发生的一切，促进我们对知识的运用和创新</span></u><span>。换言之，通过学习，我们要与真实的世界建立有效的联系。这些年来，我所见过的优秀人才，他们在学习一门知识时从来不会用它构画一个虚无的将来，而是专注地将知识与现实场景紧密地结合。</span><mark style="background:#ffaabf;"><span>读懂这句话，对理解费曼技巧会有很大的帮助</span></mark><span>。</span></p><p><span>@page008（实体书：第一章）</span></p><p><span style="color:blue"><span>学习是为了当下（去理解身边的发生的事情、促进对已有知识的应用——学以致用，去利用既有的知识去创新），是有目的的，不是为了虚无缥缈的未来。</span></span></p></blockquote><p>&nbsp;</p><p><span>正确的心态：</span><span style="color:blue; font-family:楷体; font-weight:bold;"><span>只有将学习从功利性的导向中收回来，专注于如何吃透一门知识，怎样让这些知识</span><u><span>在今天就可以让自己变得更好</span></u><span>，你才能真正地提高学习能力</span></span><span>。</span></p><p>&nbsp;</p><p><span>费曼认为：</span><span style="color:red"><span>好的学习方法能够为一个人创造</span><mark><span>宏大的视野</span></mark><span>和对世界</span><mark><span>犀利的理解力</span></mark><span>。</span></span></p><p><span>费曼学习法为我们提供的三种与众不同的能力：</span></p><ol start='' ><li><p><strong><span>远见</span></strong></p><p><span>通过解读知识传递给我们的信息 → </span><strong><span>判断未来趋势</span></strong></p></li><li><p><strong><span>穿透力</span></strong></p><p><span>从碎片化的知识中看清事物的本质 → 快速解决问题，</span><strong><span>掌握事物的规律</span></strong></p></li><li><p><strong><span>智慧</span></strong></p><p><span>通过以输出的方式浓缩、重演知识 → 汲取精华，使知识为我所用，适配环境，</span><strong><span>形成自己的知识体系</span></strong></p></li></ol><p>&nbsp;</p><p><span>我们必须深刻明白，学习究竟是为了让我们获得什么。</span><mark style="background:#ffaabf;"><span>带有意向性的学习，带有目的的学习</span></mark><span>。</span></p><p><strong><span>学习，究其根本是思维方式的比拼，不是知识存储的较量，也不是学位的竞争。</span></strong></p><p>&nbsp;</p><p><strong><span>更强大的学习能力</span></strong><span>：不是由你学到的知识量决定的，而是由你学习、掌握、理解并运用知识的能力决定的。</span></p><p><kbd><span>学习不单单和知识有关，还与我们的思维方式息息相关。</span></kbd></p><p>&nbsp;</p><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+            "><center><span style="color:white">----分割线----<br/> <kbd style="background:yellow">1st</kbd> @2024.04.14</span></center></div><p>&nbsp;</p><p><span>当下的现实情况（相较于20年前）</span></p><ul><li><p><span>时间：不再充足；</span></p></li><li><p><span>信息来源：过于丰富；</span></p></li><li><p><span>信息本身：难辨真假。</span></p></li></ul><p><mark style="background:#f8e272;"><span>今天的互联网，不但让知识碎片化，还肢解了我们的思维</span></mark><span>。</span></p><p>&nbsp;</p><p><span>费曼：</span></p><ul><li><p><span>对华而不实的东西毫无兴趣，他已经对知识的理解到了一种收发自如的境界。</span></p></li></ul><ul><li><p><span>他可以轻松地向任何一个人解读最复杂的知识，并且保证对方能够听懂。</span></p></li><li><p><span>非常理解“</span><strong><span>记住知识</span></strong><span>”和“</span><strong><span>了解知识</span></strong><span>”之间的差别（他成功最重要的原因之一）。</span></p></li></ul><p><span style="color:#990000; font-family:楷体; font-weight:bold;"><span>费曼学习法</span></span><span>（亦成为</span><span style="color:#990000; font-family:楷体; font-weight:bold;"><span>费曼技巧</span></span><span>）的优势：</span></p><ul><li><p><span>不但能节省时间，而且还能在有限的时间里提供最高的学习效能。</span></p></li><li><p><mark><span>正确的学习是</span></mark><span>：我们了解了这些知识的内核（不是仅仅记住知识的名称，存储知识的内容），知道它们是怎么回事；我们也可以从自己的视角重新解读它们，并且向外传播，让更多的人知道。这两者绝非一回事！</span></p></li></ul><ul><li><p><span>提供了4个关键词</span></p><ul><li><p><span>Concept（概念）</span></p></li><li><p><span>Teach（以教代学）</span></p></li><li><p><span>Review（评价）</span></p></li><li><p><span>Simplify（简化）</span></p></li></ul><hr /><p><span>5个步骤（本书的进一步提炼）</span></p><ul><li><p><span>确立目标</span></p></li><li><p><span>理解目标</span></p></li><li><p><span>输出</span></p></li><li><p><span>回顾</span></p></li><li><p><span>简化</span></p></li></ul></li><li><p><span>通俗地说：验证我们是否真正掌握了一种知识，就看能否用直白浅显的语言把它讲清楚。无论它多么复杂，都可以让一个从未接触过这个知识的旁观者听明白。</span></p></li></ul><p><span>我们可以参考的做法：</span><mark style="background:#a5c4ff;"><span>一边学习和成长，一边用输出的方式将学到的内容普及给受众，产生良性的正反馈</span></mark><span>。</span></p><p>&nbsp;</p><h3 id='简单高效的思维模式'><span>简单高效的思维模式</span></h3><p><span>@page015（实体书：第二章）</span></p><p><kbd style="background:#f8e272"><span>1</span></kbd><span> 正反馈（也叫“放大反馈”）</span></p><ul><li><p><kbd><span>系统性地思考</span></kbd><span>的一个重要概念之一！</span></p></li></ul><ul><li><p><span>如同一个增长的引擎，是一个驱动系统加速发生变化的过程，可以在思考的过程中实现“自增强”。</span></p></li></ul><p><strong style="color:red"><span>※</span></strong><span> 我们非常需要做的一件事！</span></p><p><kbd style="border:1px dotted #990000; font-size:15px; color: red; font-family: comic sans ms, 隶书"><span>Good Demo</span></kbd></p><blockquote><p><span>比如，我每天锻炼身体，跑步，健身，能够让我感觉良好。我会向朋友介绍我的锻炼经验，然后继续坚持锻炼，总结出更好的健身方法，于是我的感觉越发良好。这便是一个正反馈。</span><span style="color:blue"><span>我们向团队成员分享一个技术信息、工作经验，能够活跃沟通的氛围，良好的沟通氛围能够激发员工的思考积极性，努力学习并踊跃地实践，再加入讨论，共同输出更多高质量的经验，这也是一个正反馈的过程。重点是你不要独自钻研和学习，要多和外界互动</span></span><span>。</span></p></blockquote><p><kbd style="background:#a8e195"><span>2</span></kbd><span> 输出加快思考的成熟</span></p><ul><li><p><span>马太效应：</span><strong><span>“任何个体、群体或地区，一旦在某一个方面（如金钱、名誉、地位等）获得成功和进步，就会产生一种积累优势，就会有更多的机会取得更大的成功和进步。”</span></strong></p><p><span>它表达的内涵是：只要我们在某一个领域获得了一点优势，就可以不断扩大这个优势，成果也会越来越大。</span></p><p><span>我的理解：</span><mark style="background:#ffaabf;"><span>优秀的人，在其他的领域也会变得优秀</span></mark><span>！</span></p><blockquote><p><span>费曼学习法的作用就是一种马太效应。在对某个知识的学习和思考中，</span><mark style="background:#f8e272;"><span>一次成功的输出也会同时增强输入的能力，从而使得下一次输出的成功可能性更大，下一次取得的成果又会促进再下一次的学习和思考</span></mark><span>，壮大自己的知识体系和应用能力，加快思考的成熟。</span></p></blockquote><p><kbd style="border:1px dotted #990000; font-size:15px; color: red; font-family: comic sans ms, 隶书"><span>Good Demo</span></kbd><span>：如何阅读科普著作</span></p><ul><li><p><span>传统方法：重复阅读，检索资料，加深理解。</span></p></li><li><p><span>费曼思路：准备一份阅读笔记，抽离核心内容，一边读、一遍向别人阐述主要观点，把观点分别归纳为不同的问题，每个问题都有一个原书的观点，同时也有自己的理解，要把这些讲给别人听。</span></p><blockquote><p><span>在输出的过程中，你想学到的东西也在向大脑输入。</span><mark style="background:#ffaabf;"><span>这是一个爆炸式的、积极的化学反应，你会发现时间被大大缩短，过去通读五遍才能理解的内容，用这个方法只用两遍，即整理、输出和复述、简化</span></mark><span>。在加快记忆的同时，学习的质量也得到了提升。</span></p></blockquote></li></ul></li></ul><p><kbd style="background:#a5c4ff"><span>3</span></kbd><span> 让思考可以量化</span></p><ul><li><p><span>我们对任何问题的量化思考都体现在6个方面。</span></p><ul><li><p><span>方向 → 锁定思考的主要方向（主攻的方向，找到它是第一步）</span></p></li><li><p><span>归纳 → 确立思考的主要逻辑（更有针对性）</span></p></li><li><p><span>验证 → 验证思考的效果（通过“输出”来验证自己学到的知识）</span></p></li><li><p><span>反馈 → 反馈正确和错误（从听众那里得到）</span></p></li><li><p><span>简化 → 把复杂的思考过程简单化（制作一张缩略图or简报，提炼出思考的要点：一目了然）</span></p></li><li><p><span>吸收 → 消化思考的成果（转换吸收，把思考的成果边为自己的、可以应用的内容）</span></p></li></ul><p><strong style="color:red"><span>※</span></strong><span> 更重要的是，在思考的过程中</span><span style="color:blue"><span>逐渐形成</span></span><span>自己简单高效的模式。</span></p><p><span style="color:blue; font-family:楷体; font-weight:bold;"><span>越有力量的智慧实践起来越简单！</span></span></p></li></ul><p>&nbsp;</p><h3 id='费曼学习5步曲'><span>费曼学习5步曲</span></h3><p><span>@page019（实体书：第二章）</span></p><p><span style="color:blue; font-family:仿宋; font-weight:bold"><span>每个步骤都有它的原则和应用技巧！</span></span></p><p><span>Step1. 目标 -- </span></p><ul><li><p><span>选择自己想要掌握的知识和技能，并且要真正地理解学习它的必要性，在这个前提下产生专注力。</span></p><p><kbd><span>专注是一切成功学习的基础</span></kbd><span>。</span></p></li></ul><p><span>Step2. 理解 -- 归类知识、筛选优质知识和合适的学习方式</span></p><ul><li><p><span>对想学的知识、概念进行归类、解构和对比，系统地理解这些内容，存优去劣。</span></p></li></ul><p><span>Step3. 输出 -- 找到传授的场景，像别人阐述自己的见解</span></p><ul><li><p><span>用别人能理解的方式及最简单的语言解释自己对知识的理解。</span></p></li></ul><p><span>Step4. 回顾 -- 回顾和反思，发现问题</span></p><ul><li><p><span>找到不理解或错误的地方，二次查补修正，直到可以二次输出</span></p></li></ul><p><span>Step5. 简化 -- 把知识内化进自己的知识体系，为我所用</span></p><ul><li><p><span>不断地简化、吸收，直至内化</span></p><p><kbd><span>内化是一切学习的终极目的</span></kbd><span>。</span></p></li></ul><p><span style="color:red; font-family:隶书; font-size:20px"><span>如果不能将知识成功地转化为自己需要的东西，学习的质量就会大打折扣！</span></span></p><p>&nbsp;</p><div style="
+    border-radius: 25px; 
+    border: 2px solid #990000;
+    background: #990000;
+            "><center><span style="color:white">----分割线----<br/> <kbd style="background:yellow">2nd</kbd> @2024.04.19</span></center></div><p>&nbsp;</p><p>&nbsp;</p><h2 id='appendix-ⅰ-原书目录纸质版）'><span>Appendix Ⅰ: 原书目录（纸质版）</span></h2><ul><li><p><strong><span>STEP ONE学习的本质</span></strong>
+<span>第一章 掌握一门知识有多难 … 003</span>
+<span>第二章 何为“费曼学习法” … 012</span></p></li><li><p><strong><span>STEP TWO 确立一个学习对象</span></strong>
+<span>第三章 我们为什么学习 … 025</span>
+<span>第四章 聚焦目标 … 031</span>
+<span>第五章 规划：和目标建立“强联系” … 039</span>
+<span>第六章 费曼技巧：目标原则 … 048</span></p></li><li><p><strong><span>STEP THREE 理解我们要学习的知识</span></strong>
+<span>第七章 归类和对比知识的来源 … 055</span>
+<span>第八章 形成一张思维和流程导图 … 066</span>
+<span>第九章 阅读与记忆的原则 … 077</span>
+<span>第十章 第一次复述 … 081</span>
+<span>第十一章 费曼技巧：系统化原则 … 087</span></p></li><li><p><strong><span>STEP FOUR输出是最强大的学习力</span></strong>
+<span>第十二章 以教代学 … 093</span>
+<span>第十三章 用“输出”倒逼“输入” … 103</span>
+<span>第十四章 第二次复述 … 114</span>
+<span>第十五章 费曼技巧：输出原则 … 121</span></p></li><li><p><strong><span>STEP FIVE回顾和反思</span></strong>
+<span>第十六章 怀疑和探索让我们更聪明 … 127</span>
+<span>第十七章 寻找反证 … 142</span>
+<span>第十八章 “内容留存率”决定了我们学习的效能 … 154</span>
+<span>第十九章 费曼技巧：回顾原则 … 164</span></p></li><li><p><strong><span>STEP SIX简化和吸收</span></strong>
+<span>第二十章 好东西太多，也会消化不良 … 169</span>
+<span>第二十一章 纵向拓展和精进 … 181</span>
+<span>第二十二章 深度挖掘，实现知识的内化 … 190</span>
+<span>第二十三章 第三次复述 … 195</span>
+<span>第二十四章 费曼技巧：简化原则 … 200</span>
+<span>后 记 … 206</span></p></li></ul></div></div>
+<a href=".typora-export-content" id="scroll-up" style="display: block;">
+		<i class="material-icons md-20 md-middle"></i>
+	</a></body>
+</html>
